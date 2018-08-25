@@ -58,19 +58,45 @@ This layer provides us with management and control and also helps us to transfer
 
 TCP:
 
-    - provides verification of delivery
-    - provides ability to make sure that the sent packets are ordered in proper way
-    - allows retransmissions of packets if they are bad
+-   provides verification of delivery
+-   provides ability to make sure that the sent packets are ordered in proper way
+-   allows retransmissions of packets if they are bad
 
 UDP:
 
-    - does not provide verification of delivery
-    - is going to just stream packages
-    - is mostly used for:
-        - video or music streaming
-        - VOIP call (Skype)
-        - because verifying that package is delivered is going to take time, and in this situations we want the fastest response time possible. So our PC will just push new packages without verifying before sending another package, like TCP does.
+-   does not provide verification of delivery
+-   is going to just stream packages
+-   is mostly used for:
+    -   video or music streaming
+    -   VOIP call (Skype)
+    -   because verifying that package is delivered is going to take time, and in this situations we want the fastest response time possible. So our PC will just push new packages without verifying before sending another package, like TCP does.
 
 ### OSI Model Layer 5 Session
 
 Session layer of the OSI model is the traffic control layer. This is where traffic between computers is controlled and where connections are established, managed and terminated. This layer decides who can send when, and who can send what, what type of protocol will be used. Basically, this layer controls whole conversation happening with layers 1 through 4.
+
+### OSI Model Layer 6 Presentation
+
+This layer translates applications into data so it can be understood and displayed by the application layer. This layer also formats the data for sending (encryption) so it can be decrypted once it is received.
+
+### OSI Model Layer 7 Application
+
+This is the layer which enables applications to access the network and helps to synchronize communications. It includes several protocols like:
+
+-   SMTP - for sending emails
+-   HTTP - for resolving web pages and browsing the internet
+-   FTP - File Transfer Protocol
+-   SSL - Secure Socket Layer
+-   SSH - Secure Shell
+-   ...
+
+## TCP/IP Model
+
+This model has four layers which are working together to perform network communications
+
+-   Network Interface (layers 1 and 2 of OSI Model)
+-   Internet Layer (layers 3 of OSI Model)
+-   Transport Layer (layer 4 of OSI Model)
+-   Application Layer (layers 4, 6 and 7 of OSI Model)
+
+> **N**ever **I**ngest **T**oxic **A**vocados
