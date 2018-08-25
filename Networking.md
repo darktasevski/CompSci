@@ -20,9 +20,9 @@ OSI model is the way of thinking about networks, that allows us to divide it int
     - Layer 4 - Transportation layer
     - Layer 5 - Session layer
     - Layer 6 - Presentation layer
-    - Layer 7 -	Application layer
+    - Layer 7 - Application layer
 
-> *P*lease *D*o *N*ot *T*hrow *S*ausage *P*izza *A*way
+> **P**lease **D**o **N**ot **T**hrow **S**ausage **P**izza **A**way
 
 ### OSI Model Layer 1 Physical
 
@@ -48,10 +48,29 @@ Also, we can't transfer data to other computer by it's MAC address, we need to u
 ```
                              packets
 Computer A |<-------router------------router-------------| Computer B
-NIC	MAC	IP |--------router------------router------------>| NIC MAC IP
+NIC MAC IP |--------router------------router------------>| NIC MAC IP
                       IP     packets    IP
 ```
 
 ### OSI Model Layer 4 Transport
 
-This layer provides us with management and control and also helps us to transfer data that we send and receive. It helps splits communications into different packages using either Transmission Control Protocol (TCP) or User Data Protocol (UDP). These protocols provide for either verification or no verification of delivery.
+This layer provides us with management and control and also helps us to transfer data that we send and receive. It helps splits communications into different packages using either Transmission Control Protocol (TCP) or User Data Protocol (UDP). These protocols provide for either verification or no verification of delivery, also this protocols are base for all other protocols.
+
+TCP:
+
+    - provides verification of delivery
+    - provides ability to make sure that the sent packets are ordered in proper way
+    - allows retransmissions of packets if they are bad
+
+UDP:
+
+    - does not provide verification of delivery
+    - is going to just stream packages
+    - is mostly used for:
+        - video or music streaming
+        - VOIP call (Skype)
+        - because verifying that package is delivered is going to take time, and in this situations we want the fastest response time possible. So our PC will just push new packages without verifying before sending another package, like TCP does.
+
+### OSI Model Layer 5 Session
+
+Session layer of the OSI model is the traffic control layer. This is where traffic between computers is controlled and where connections are established, managed and terminated. This layer decides who can send when, and who can send what, what type of protocol will be used. Basically, this layer controls whole conversation happening with layers 1 through 4.
