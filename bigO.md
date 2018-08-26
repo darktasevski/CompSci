@@ -14,8 +14,11 @@ Binary search is different. If the list is 100 items long, it takes at most 7 gu
 ## Big O notation
 
 **Big O establishes a worst-case run time**
+
 **Big O notation is special notation that tells you how fast an algorithm is.**
+
 **Algorithm running times grow at different rates**
+
 The run times for binary search and simple search don’t grow at the same rate. That is, as the number of items increases, binary search takes a little more time to run. But simple search takes a lot more time to run. So as the list of numbers gets bigger, binary search suddenly becomes a lot faster than simple search.
 That’s why it’s not enough to know how long an algorithm takes to run—you need to know how the running time increases as the list size increases. That’s where Big O notation comes in.
 

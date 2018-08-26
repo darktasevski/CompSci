@@ -10,6 +10,61 @@ In business, large networks can be used to advertise and sell products, order su
 
 Business and SOHO networks usually provide a shared connection to the Internet. The Internet is considered a "network of networks" because it is literally made up of thousands of local networks that are connected to each other.
 
+## Terms
+
+### MAC Addresses
+
+MAC stands for Media Access Control. MAC addresses are unique addresses that are encoded by the manufacturer onto network interface card (NIC). Each NIC has a globally unique MAC address but we typically don't route using MAC addresses, they're used just for OSI layer 2 - Data link layer. While we can't route using MAc addresses we can point information to specific devices and specific NICs using their MAC addresses. MAC address is what we can consider as our physical address of the NIC on our machine.
+
+### IP Addresses
+
+In contrast to MAC addresses we have IP addresses. They are able to be routed over networks around the world. They are level 3 in OSI model - Network layer. They aren't physical addresses, they're actually logical addresses that are mapped to a single physical address on a NIC.
+
+### EUI-64
+
+EUI-64 is another name for IPv6 global unicast. IPv6 is a much larger set of binary digits that can be used to create IP addresses than our current IPv4. Global unicast is an address that is specific for a single network interface across the world. So we can send information to an IPv6 address and it will routable around the world to a specific device. Because of this IPv6 is not a logical address mapped to a physical device or single MAC address, it is an address that is specific for a single device because we don't have to translate/transform this address to a MAC address in order to acquire a data link, our IPv6 would automatically do that for us, so it's considered as a layer 2 data link.
+
+### Frames
+
+Frames are layer 2 protocol delivery unit. Segments of data with a beginning and and end.
+
+### Packets
+
+Packet is layer 3 protocol delivery unit. Segments of data with a beginning and and end.
+
+### Switches
+
+Switches are devices on our network which allows us to connect to multiple devices that are on the same subnet.
+Switch is Layer 2 device, as the map to MAC addresses.
+
+### Routers
+
+Routers are referred to as a layer level 3 switch. They allow us to route addresses, IP addresses and send data across these multiple different networks because we're working with Ip addresses.
+
+### Multi Layer Switches
+
+Multi Layer Switches are devices that can operate both on layer 2 and layer 3. They are usually a devices that are performing switching functions, but they can also perform routing functions if needed.
+
+### Hub
+
+Hub is sort of like a dumb switch. A Hub just takes all incoming data that is receiving and then just sends it out to everybody that is connected to it. It allows us to pass data onto multiple computers in the network but it isn't going to do mapping of any MAC or IP addresses. They are layer 2 data link.
+
+### Encryption devices
+
+Encryption devices may be physical devices on our network that perform encryptions at one point and then decryption at another point. There are going to be layer 6 devices. Layer 6 is formatting our data, doing encryption and decryption among other things.
+
+### Cable
+
+Cable is layer 1 physical device, something we can plug in and connect.
+
+### Network Interface Card
+
+NIC is also layer 1 physical device.
+
+### Bridge
+
+Bridge is layer 2 dat link device, because it provides point to point connectivity.
+
 ## OSI Model
 
 OSI model is the way of thinking about networks, that allows us to divide it into layers. The OSI model consists of seven different layers:
