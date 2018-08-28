@@ -201,3 +201,36 @@ The visible prop is the most important, since this lets us show and hide the Mod
 ### AsyncStorage
 
 AsyncStorage is a simple key-value store provided by React Native for storing small quan- tities of string data (which we usually serialize as JSON). Like the name implies, saving and reading from this store both happen asynchronously. We can call AsyncStorage.getItem(key) and AsyncStorage.setItem(key, value) to store and retrieve a string value using a string key.
+
+## Core APIs
+
+-   `Alert` - Displays modal dialog windows for simple user input
+-   `BackHandler` - Controls the back button on Android
+-   `CameraRoll` - Returns images and videos stored on the device
+-   `Dimensions` - Returns the dimensions of the screen
+-   `Geolocation` - Returns the location of the device, and emits events when the location changes
+-   `Keyboard` - Emits events when the keyboard appears or disappears
+-   `NetInfo` - Returns network connectivity information, and emits events when the connectivity
+    changes
+-   `PixelRatio` - Translates from density-independent pixels to density-dependent pixels (more
+    detail on the later)
+-   `StatusBar` - Controls the visibility and color of the status bar
+
+### StatusBar
+
+The status bar works a little differently on iOS and Android. On iOS the status bar background is always transparent, so we can render content behind the status bar text. On Android, we can set the status bar background to transparent, or to a specific solid color. If we use a transparent status bar, we can render content behind it just like on iOS – unlike on iOS, by default the status bar text is white and there’s typically a semi-transparent black background. If we choose a solid color status bar, our app’s content renders below the status bar, and the height of our UI will be a little smaller. In our app, we’ll use a solid color status bar, since this will let us customize the color.
+
+### NetInfo
+
+The NetInfo APIs are a good example of React Native core APIs: these provide a uniform interface to the lower level native APIs on iOS and Android. React Native is essentially providing JavaScript bindings and smoothing out platform differences for us.
+We can call NetInfo.getConnectionInfo() to get the network connectivity status. NetInfo.getConnectionInfo() returns a promise which resolves to a string. If the device is connected, the string value will be 'wifi'
+or 'cellular' If the device isn’t connected, the promise will still resolve, but with the value 'none'.
+NetInfo provides the method addEventListener, which we can call with a callback function, which it will invoke each time the network status changes.
+
+```js
+const subscription = NetInfo.addEventListener('connectionChange', status => {
+	console.log('Network status changed', status);
+});
+```
+
+This example would log a new status each time the network connectivity changes. We can call subscription.remove() when we want to stop listening for changes – most of the time, we’ll do this when our component unmounts.

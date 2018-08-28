@@ -11,6 +11,9 @@ Binary search is different. If the list is 100 items long, it takes at most 7 gu
 -   Run time of algorithms is expressed in Big O notation.
 -   `O(log n)` is faster than `O(n)`, but it gets a lot faster as the list of items you’re searching grows.
 
+When you write Big O notation like O(n), it really means this. `c * n` where `c` is some fixed amount of time, and it's called `constant`. We usually ignore that constant, because if two algorithms have different Big O times, the constant doesn’t matter.
+But sometimes the constant can make a difference. Quicksort versus merge sort is one example. Quicksort has a smaller constant than merge sort. So if they’re both `O(n log n)` time, quicksort is faster. And quicksort is faster in practice because it hits the average case way more often than the worst case.
+
 ## Big O notation
 
 **Big O establishes a worst-case run time**
@@ -72,3 +75,93 @@ This is a terrible algorithm! This is one of the unsolved problems in computer s
 ### Selection sort
 
 Selection sort takes `O(n × n)` time or `O(n2)` time, so while it is a neat algorithm, it’s not very fast.
+
+-   D&C works by breaking a problem down into smaller and smaller pieces. If you’re using D&C on a list, the base case is probably an empty array or an array with one element.
+-   If you’re implementing quicksort, choose a random element as the pivot. The average runtime of quicksort is O(n log n)!
+-   The constant in Big O notation can matter sometimes. That’s why quicksort is faster than merge sort.
+-   The constant almost never matters for simple search versus binary search, because O(log n) is so much faster than O(n) when your list gets big.
+
+## Hash tables
+
+A hash function is a function where you put in any kind of data and you get back a number.
+
+In technical terminology, we’d say that a hash function “maps strings to numbers.” You might think there’s no discernable pattern to what number you get out when you put a string in. But there are some requirements for a hash function:
+
+-   It needs to be consistent. For example, suppose you put in “apple” and get back “4”. Every time you put in “apple”, you should get “4” back. Without this, your hash table won’t work.
+-   It should map different words to different numbers. For example, a hash function is no good if it always returns “1” for any word you put in. In the best case, every different word should map to a different number.
+
+The hash function tells you exactly where the price is stored, so you
+don’t have to search at all! This works because
+
+-   The hash function consistently maps a name to the same index. Every time you put in “avocado”, you’ll get the same number back. So you can use it the first time to find where to store the price of an avocado, and then you can use it to find where you stored that price.
+-   The hash function maps different strings to different indexes. “Avocado” maps to index 4. “Milk” maps to index 0. Everything maps to a different slot in the array where you can store its price.
+-   The hash function knows how big your array is and only returns valid indexes. So if your array is 5 items, the hash function doesn’t return 100 ... that wouldn’t be a valid index in the array.
+
+Put a hash function and an array together, and you get a data structure called a hash table. A hash table is the first data structure we'll learn that has some extra logic behind it. Arrays and lists map straight to memory, but hash tables are smarter. They use a hash function to intelligently figure out where to store elements.
+Hash tables are probably the most useful complex data structure
+you’ll learn. They’re also known as hash maps, maps, dictionaries, and associative arrays. And hash tables are fast! You can get an item from an array instantly. And hash tables use an array to store the data, so they’re equally fast.
+
+Any good language will have an implementation for hash tables. Python has hash tables; they’re called dictionaries. You can make a new hash table using the `dict` function:
+
+```python
+book = dict()
+
+book[“apple”] = 0.67 An apple costs 67 cents.
+book[“milk”] = 1.49 Milk costs $1.49.
+book[“avocado”] = 1.49
+print book # {‘avocado’: 1.49, ‘apple’: 0.67, ‘milk’: 1.49}
+print book[“avocado”] # 1.49
+```
+
+> A hash table maps keys to values.
+
+> In the average case, hash tables take O(1) for everything. O(1) is called constant time. In the worst case, a hash table takes O(n)—linear time—for everything,
+> which is really slow.
+
+To recap, hashes are good for
+
+-   Modeling relationships from one thing to another thing
+-   Filtering out duplicates
+-   Caching/memorizing data instead of making your server do work
+
+### Collisions
+
+To understand the performance of hash tables, you first need to understand what collisions are.
+Collision is when two keys are assigned the same slot. If you store the second one at that slot, you’ll overwrite the first one. Collisions are bad, and you need to work around them. There are many different ways to deal with collisions. The simplest one is this: if multiple keys map to the same slot, start a linked list at that slot.
+
+To avoid collisions, you need
+
+-   A low load factor
+-   A good hash function
+
+The load factor of a hash table is easy to calculate:
+
+```
+number of items
+in hash table
+ _____________
+total number of slots
+so:
+_____________
+| |2| |4| | // this 5 slots arr will have load factor of 2/5
+_______
+| |2| | // this 3 slots arr will have load factor of 1/3
+```
+
+Load factor measures how many empty slots remain in your hash table
+Having a load factor greater than 1 means you have more items than slots in your array. Once the load factor starts to grow, you need to add more slots to your hash table. This is called resizing. A good rule of thumb is, resize when your load factor is greater than `0.7`. Resizing is expensive, and you don’t want to resize too often. But averaged out, hash tables take O(1) even with resizing.
+
+A good hash function distributes values in the array evenly. A bad hash function groups values together and produces a lot of collisions.
+
+---
+
+Hash tables are a powerful data structure because they’re so fast and they let you model data in a different way. You might soon find that you’re using them all the time:
+
+-   You can make a hash table by combining a hash function
+    with an array.
+-   Collisions are bad. You need a hash function that minimizes collisions.
+-   Hash tables have really fast search, insert, and delete.
+-   Hash tables are good for modeling relationships from one item to another item.
+-   Once your load factor is greater than .07, it’s time to resize your hash table.
+-   Hash tables are used for caching data (for example, with a web server).
+-   Hash tables are great for catching duplicates.
