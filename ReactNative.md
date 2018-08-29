@@ -151,7 +151,17 @@ This component accepts all the same props as View, plus a few more:
 
 FlatList components are used for rendering large quantities of scrollable content. Instead of rendering a children prop, the FlatList renders each item in an input data array using the renderItem prop. The renderItem prop is a function which takes an item from the data array and maps it to a React Element. Each item in data should be an object with a unique id, so that React can determine when items have been rearranged.
 
-The FlatList is generally performant: it only renders the content on screen (clipping offscreen content), and only updates rows that have changed. The FlatList is built using a more generic component, the ScrollView, which we’ll use later in the chapter.
+The FlatList is generally performant: it only renders the content on screen (clipping offscreen content), and only updates rows that have changed. The FlatList is built using a more generic component, the ScrollView.
+
+`inverted` -
+In a messaging app, for example, we typically want new messages to appear at the bottom of the list. To accomplish this, we’ve have to add the inverted prop to our FlatList.
+
+`keyboardShouldPersistTaps`
+We use the keyboardShouldPersistTaps prop to configure what happens when we tap the FlatList. This prop has three possible options:
+
+-   never - Tapping the list will dismiss the keyboard and blur any focused elements. This is the default behavior.
+-   always - Tapping the list will have no effect on the keyboard or focus.
+-   handled - Tapping the list will dismiss the keyboard, unless the tap is handled by a child element first (e.g. tapping a message within the list). We want handled, so that we enable tapping messages without dismissing the keyboard.
 
 ### TextInput
 

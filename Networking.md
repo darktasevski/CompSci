@@ -216,3 +216,30 @@ We don't need gigantic range of IP addresses we have if we are using Class A IP 
 
 Each class separates our network id from our host id at a different point
 Subnet mask is what let us know what portion of the a IP address is a host portion and what portion is a network portion.
+
+### APIPA
+
+> APIPA stands for Automatic Private Internet Protocol Addressing.
+
+APIPA is an address which is automatically assigned to our IP address when no DHCP is received. When an APIPA address is received, it means something is wrong and the DHCP server needs to be checked to see any issues with connectivity. An APIPA address is unable to connect to the Internet and is unable to communicate with other computers.
+
+> APIPA will automatically assign us address in range: 169.254.x.x, id DHCP is unavailable
+
+A public IP address is a singularly unique address for a computer that could be located anywhere in the world and is globally routable, whereas a private IP address is an address that is not routable. There are four classes of private IP addresses:
+
+-   Class A
+-   Class B
+-   Class C
+
+Our home devices usualy have only private IP addresses, while router which is connecting us to the internet have a public IP address, by which anyone in the world can reach us.
+
+### CIDR
+
+Classless Inter Domain Routing (CIDR). CIDR allows us to have variable-length subnet masks. Subnet masks within CIDR are not within the standard classes of A,B or C and CIDR notation is used when standard subnet masks do not work and allows us to break up subnet masks and work with IP addresses.
+
+We display CIDR as `/n`, `n` can be anything from 1 to 31. This number is a prefix; when we break our subnet mask into individual bits, this number is going to be the number of those bits, starting from left to right that are all ones.
+
+```
+233.233.0.0 = /16 = 11111111.11111111.00000000.00000000
+255.240.0.0 = /12 = 11111111.11110000.00000000.00000000
+```

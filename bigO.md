@@ -106,8 +106,8 @@ Any good language will have an implementation for hash tables. Python has hash t
 ```python
 book = dict()
 
-book[“apple”] = 0.67 An apple costs 67 cents.
-book[“milk”] = 1.49 Milk costs $1.49.
+book[“apple”] = 0.67 # An apple costs 67 cents.
+book[“milk”] = 1.49 # Milk costs $1.49.
 book[“avocado”] = 1.49
 print book # {‘avocado’: 1.49, ‘apple’: 0.67, ‘milk’: 1.49}
 print book[“avocado”] # 1.49
@@ -148,7 +148,8 @@ _______
 | |2| | // this 3 slots arr will have load factor of 1/3
 ```
 
-Load factor measures how many empty slots remain in your hash table
+> Load factor measures how many empty slots remain in your hash table.
+
 Having a load factor greater than 1 means you have more items than slots in your array. Once the load factor starts to grow, you need to add more slots to your hash table. This is called resizing. A good rule of thumb is, resize when your load factor is greater than `0.7`. Resizing is expensive, and you don’t want to resize too often. But averaged out, hash tables take O(1) even with resizing.
 
 A good hash function distributes values in the array evenly. A bad hash function groups values together and produces a lot of collisions.
