@@ -16,6 +16,12 @@ Business and SOHO networks usually provide a shared connection to the Internet. 
 
 MAC stands for Media Access Control. MAC addresses are unique addresses that are encoded by the manufacturer onto network interface card (NIC). Each NIC has a globally unique MAC address but we typically don't route using MAC addresses, they're used just for OSI layer 2 - Data link layer. While we can't route using MAc addresses we can point information to specific devices and specific NICs using their MAC addresses. MAC address is what we can consider as our physical address of the NIC on our machine.
 
+These are the physical addresses for our network interface card and are unique worldwide. They have a hexadecimal format and are used in DNS, ARP and DHCP and are part of Layer 2 in the OSI model. MAC addresses allow us to make data link connections as well as point to point connections that are not routed through any router.
+
+MAC format is broken up into six section of two hexadecimal characters. Each hexadecimal character is made of four binary bits, which means that each section have 8 binary bits and whole address is made of 48 bits. Sections can be separated by dashes or colons.
+
+MAC addresses are used specially notably in DNS, ARP (address resolution protocol) and DHCP.
+
 ### IP Addresses
 
 In contrast to MAC addresses we have IP addresses. They are able to be routed over networks around the world. They are level 3 in OSI model - Network layer. They aren't physical addresses, they're actually logical addresses that are mapped to a single physical address on a NIC.
@@ -243,3 +249,11 @@ We display CIDR as `/n`, `n` can be anything from 1 to 31. This number is a pref
 233.233.0.0 = /16 = 11111111.11111111.00000000.00000000
 255.240.0.0 = /12 = 11111111.11110000.00000000.00000000
 ```
+
+## IPV4 vs IPV6
+
+AN IPV4 is a 32-bit address scheme, meaning it has 32 binary bits of data which are divided into four octets (sets of 8). This provides us with 4 billion addresses which should be enough, in theory. However, now we are running out with so many devices that connect to the Internet. That’s where IPV6 comes in, which provides us with a 128-bit address which provides trillions of addresses.
+
+IPV6 is represented in hexadecimal separated by colons (`:`).
+`0-9` and `a` to `f`
+Consecutive zeros can be replaced with double colon (`::`), it's good practice to use this to omit the most zeros, also, we can do this only one time. Also, we can omit leading zeros in hexadecimal groups.
