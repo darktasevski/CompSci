@@ -210,7 +210,9 @@ This way, you not only search your friends, but you search their friends, too. R
 > Question type 2: What is the shortest path from node A to node B? (Who is the closest mango seller?)
 
 Can you find the closest mango seller? For example, your friends are first-degree connections, and their friends are second-degree connections.
+
 You’d prefer a first-degree connection to a second-degree connection, and a second-degree connection to a third-degree connection, and so on. So you shouldn’t search any second-degree connections before you make sure you don’t have a first-degree connection who is a mango seller. Well, breadth-first search already does this! The way breadth-first search works, the search radiates out from the starting point. So you’ll check first-degree connections before second-degree connections.
+
 Another way to see this is, first-degree connections are added to the search list before second-degree connections.You just go down the list and check people to see whether each one is a mango seller. The first-degree connections will be searched before the second- degree connections, so you’ll find the mango seller closest to you. Breadth-first search not only finds a path from A to B, it also finds the shortest path.
 
 ### Queues
@@ -285,9 +287,8 @@ search("you")
 
 > Remember, graph[“you”] will give you a list of all your neighbors, like [“alice”, “bob”, “claire”]. Those all get added to the search queue.
 
-> Once you search a person, you should mark that person as searched and not search them again. So, before checking a person, it’s important to make sure they haven’t been checked already. To do that, you’ll keep a list of people you’ve already checked.
+> Once you search a person, you should mark that person as searched and not search them again. So, before checking a person, it’s important to make sure they haven’t been checked already. To do that, you’ll keep a list of people you’ve already checked. If you don’t do this, you could also end up in an infinite loop.
 
-If you don’t do this, you could also end up in an infinite loop.
 The algorithm will keep going until either
 
 -   A mango seller is found, or
