@@ -244,3 +244,29 @@ const subscription = NetInfo.addEventListener('connectionChange', status => {
 ```
 
 This example would log a new status each time the network connectivity changes. We can call subscription.remove() when we want to stop listening for changes – most of the time, we’ll do this when our component unmounts.
+
+### Alert
+
+The full method signature is Alert.alert(title, message?, buttons?, options?, type?):
+
+-   title - A string, shown in a large bold font, at the top of the dialog
+-   message - A string, typically longer, shown in a normal weight font below the title
+-   buttons - An array of objects containing text (a string), onPress (a callback function), and
+    optionally a style on iOS (styles can be one of default, cancel, or destructive).
+-   options - An object for controlling the dialog dismissal behavior on Android. Tapping outside the dialog will normally exit the dialog. This can be prevented by setting { cancelable: false
+    } or handled specially with { onDismiss: () => {} }.
+-   type - Allows text entry on iOS using one of the following options: default, plain-text,
+    secure-text, or login-password.
+
+### BackHandler (Android only)
+
+Like with NetInfo, we use the event listener pattern to handle back button press events:
+
+`BackHandler.addEventListener('hardwareBackPress', handlerFunction);`
+
+We can return true from our handlerFunction to indicate that we’ve handled the back button. By returning false, we indicate that we didn’t handle the event. Therefore, if any other functions have been registered, the next one registered should be called. These functions are called in the reverse of the order they were registered – the last handler registered will be called first. If no handler returns true, then the back button will exit to the home screen (the default back button behavior).
+
+### Refs
+
+React let’s us access the instance of any component we render using a ref prop. This is a special prop that we can supply a callback – the callback will be called with the instance as a parameter, after the component mounts (and before it unmounts). We can store a reference to the component instance.
+You can think of a component instance as the “this” when we access this.props or any method that’s part of our class.
