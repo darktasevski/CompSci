@@ -166,3 +166,146 @@ Hash tables are a powerful data structure because they’re so fast and they let
 -   Once your load factor is greater than .07, it’s time to resize your hash table.
 -   Hash tables are used for caching data (for example, with a web server).
 -   Hash tables are great for catching duplicates.
+
+## Graphs
+
+Graph algorithms are some of the most useful algorithms.
+
+-   A graph models a set of connections.
+-   Each graph is made up of nodes and edges.
+-   A node can be directly connected to many other nodes. Those nodes are called its neighbors.
+-   Graphs are a way to model how different things are connected to one another.
+
+### Breadth-first search
+
+The algorithm to solve a shortest-path problem is called breadth-first search.
+Breadth- first search is a kind of search algorithm that runs on graphs. It can help answer two types of questions:
+
+-   Question type 1: Is there a path from node A to node B?
+-   Question type 2: What is the shortest path from node A to node B?
+
+Breadth-first search allows you to find the shortest distance between two things. But shortest distance can mean a lot of things! You can use breadth-first search to:
+
+-   Write a checkers AI that calculates the fewest moves to victory
+-   Write a spell checker (fewest edits from your misspelling to a real
+    word—for example, READED -> READER is one edit)
+-   Find the doctor closest to you in your network
+
+#### “Is there a path?”
+
+> Question type 1: Is there a path from node A to node B? (Is there a mango seller in your network?)
+
+Suppose you’re the proud owner of a mango farm. You’re looking for a mango seller who can sell your mangoes. Are you connected to a mango seller on Facebook? Well, you can search through your friends. This search is pretty straightforward.
+
+-   First, make a list of friends to search.
+-   Now, go to each person in the list and check whether that person sells
+    mangoes.
+-   Suppose none of your friends are mango sellers. Now you have to search through your friends’ friends.
+-   Each time you search for someone from the list, add all of their friends to the list.
+
+This way, you not only search your friends, but you search their friends, too. Remember, the goal is to find one mango seller in your network. So if Alice isn’t a mango seller, you add her friends to the list, too. That means you’ll eventually search her friends—and then their friends, and so on. With this algorithm, you’ll search your entire network until you come across a mango seller. This algorithm is breadth-first search.
+
+#### Finding the shortest path
+
+> Question type 2: What is the shortest path from node A to node B? (Who is the closest mango seller?)
+
+Can you find the closest mango seller? For example, your friends are first-degree connections, and their friends are second-degree connections.
+You’d prefer a first-degree connection to a second-degree connection, and a second-degree connection to a third-degree connection, and so on. So you shouldn’t search any second-degree connections before you make sure you don’t have a first-degree connection who is a mango seller. Well, breadth-first search already does this! The way breadth-first search works, the search radiates out from the starting point. So you’ll check first-degree connections before second-degree connections.
+Another way to see this is, first-degree connections are added to the search list before second-degree connections.You just go down the list and check people to see whether each one is a mango seller. The first-degree connections will be searched before the second- degree connections, so you’ll find the mango seller closest to you. Breadth-first search not only finds a path from A to B, it also finds the shortest path.
+
+### Queues
+
+A queue works exactly like it does in real life. Suppose you and your friend are queueing up at the bus stop. If you’re before him in the queue, you get on the bus first. A queue works the same way. Queues are similar to stacks. You can’t access random elements in the queue. Instead, there are two only operations, enqueue and dequeue.
+
+The queue is called a FIFO data structure: First In, First Out. In contrast, a stack is a LIFO data structure: Last In, First Out.
+
+### Implementing the graph
+
+A graph consists of several nodes.
+And each node is connected to neighboring nodes. How do you express a relationship like “you -> bob”? Luckily, you know a data structure that lets you express relationships: a hash table!
+Remember, a hash table allows you to map a key to a value. In this case, you want to map a node to all of its neighbors.
+
+Here’s how you’d write it in Python:
+
+```python
+graph = {}
+graph[“you”] = [“alice”, “bob”, “claire”]
+```
+
+> Notice that “you” is mapped to an array. So graph[“you”] will give you an array of all the neighbors of “you”
+
+What about a bigger graph?
+
+```python
+graph = {}
+graph[“you”] = [“alice”, “bob”, “claire”]
+graph[“bob”] = [“anuj”, “peggy”]
+graph[“alice”] = [“peggy”]
+graph[“claire”] = [“thom”, “jonny”]
+graph[“anuj”] = []
+graph[“peggy”] = []
+graph[“thom”] = []
+graph[“jonny”] = []
+```
+
+> Hash tables have no ordering, so it doesn’t matter what order you add key/value pairs in
+
+Anuj, Peggy, Thom, and Jonny don’t have any neighbors. They have arrows pointing to them, but no arrows from them to someone else. This is called a directed graph—the relationship is only one way. So Anuj is Bob’s neighbor, but Bob isn’t Anuj’s neighbor. An undirected graph doesn’t have any arrows, and both nodes are each other’s neighbors.
+
+Here’s how the implementation will work in pseudocode:
+
+1. Keep a queue containing the people to check.
+2. Pop a person of the queue.
+3. Check if this person is mango seller.
+    - (3a) Yes? You're done!
+    - (3b) No? Add all their friends to the queue.
+4. Repeat.
+5. If the queue is empty there are no mango sellers in your network.
+
+```py
+from collections import deque
+def search(name):
+    search_queue = deque()      # Creates a new queue
+    search_queue += graph[name] # Adds all of your neighbors to the search queue
+    searched = [] # This array is how you keep track of which people you’ve searched before.
+
+    while search_queue: # While the queue isn’t empty ...
+        person = search_queue.popleft() # ... grabs the first person off the queue
+        if not person in searched: # Only search this person if you haven’t already searched them.
+            if person_is_seller(person):    # Checks whether the person is a mango seller
+                print person + " is a mango seller!"  # Yes, they’re a mango seller.
+                return True
+            else
+                search_queue += graph[person] # No, they aren’t. Add all of this person’s friends to the search queue.
+                searched.append(person) # Marks this person as searched
+        return False #If you reached here, no one in the queue was a mango seller.
+
+search("you")
+```
+
+> Remember, graph[“you”] will give you a list of all your neighbors, like [“alice”, “bob”, “claire”]. Those all get added to the search queue.
+
+> Once you search a person, you should mark that person as searched and not search them again. So, before checking a person, it’s important to make sure they haven’t been checked already. To do that, you’ll keep a list of people you’ve already checked.
+
+If you don’t do this, you could also end up in an infinite loop.
+The algorithm will keep going until either
+
+-   A mango seller is found, or
+-   The queue becomes empty, in which case there is no mango seller.
+
+#### Running time
+
+If you search your entire network for a mango seller, that means you’ll follow each edge (remember, an edge is the arrow or connection from one person to another). So the running time is at least `O(number of edges)`.
+You also keep a queue of every person to search. Adding one person to the queue takes constant time: `O(1)`. Doing this for every person will take `O(number of people)` total. Breadth-first search takes `O(number of people + number of edges)`, and it’s more commonly written as `O(V+E)` (V for number of vertices, E for number of edges).
+
+### Notes
+
+-   Breadth-first search tells you if there’s a path from A to B.
+-   If there’s a path, breadth-first search will find the shortest path.
+-   If you have a problem like “find the shortest X,” try modeling your problem as a graph, and use breadth-first search to solve.
+-   A directed graph has arrows, and the relationship follows the direction of the arrow (rama -> adit means “rama owes adit money”).
+-   Undirected graphs don’t have arrows, and the relationship goes both ways (ross - rachel means “ross dated rachel and rachel dated ross”).
+-   Queues are FIFO (First In, First Out).
+-   Stacks are LIFO (Last In, First Out).
+-   You need to check people in the order they were added to the search list, so the search list needs to be a queue. Otherwise, you won’t get the shortest path.
+-   Once you check someone, make sure you don’t check them again. Otherwise, you might end up in an infinite loop.
