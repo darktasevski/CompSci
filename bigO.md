@@ -338,10 +338,10 @@ while node is not None:                # If you’ve processed all the nodes, th
     for n in neighbors.keys():         # Go through all the neighbors of this node.
         new_cost = cost + neighbors[n] # If it’s cheaper to get to this neighbor
         if costs[n] > new_cost:        # by going through this node ...
-        costs[n] = new_cost            # ... update the cost for this node.
-        parents[n] = node              # This node becomes the new parent for this neighbor.
-processed.append(node)                 # Mark the node as processed.
-node = find_lowest_cost_node(costs) # Find the next node to process, and loop.
+            costs[n] = new_cost        # ... update the cost for this node.
+            parents[n] = node          # This node becomes the new parent for this neighbor.
+    processed.append(node)             # Mark the node as processed.
+    node = find_lowest_cost_node(costs) # Find the next node to process, and loop.
 ```
 
 ```py
