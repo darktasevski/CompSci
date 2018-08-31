@@ -52,6 +52,8 @@ KeyboardAvoidingView accepts a `behavior` prop with which we can customize how t
 
 The first thing we want to think about when understanding the layout of a screen is the dimensions of each component. A component must have both a non-zero width and height in order to render anything on the screen. If the width is 0, then nothing will render on the screen, no matter how large the height is. We're usually using `flex: 1` if we want for View to take up whole screen.
 
+In React Native, we specify dimensions in terms of logical pixels rather than physical pixels. There may be multiple physical pixels per logical pixels in a device with a high pixel density, e.g. retina display. When we make calculations that can result in non-integer dimensions, we should use PixelRatio to help us align to the nearest physical pixel - otherwise, there may be visual inconsistencies (e.g. some elements or margins appear larger than others).
+
 ### Yoga
 
 React Native uses the Yoga layout engine (also from Facebook). This is a cross-platform implementation of the flexbox algorithm. It matches the algorithm used by web browsers pretty closely, but with two important differences:
@@ -270,3 +272,36 @@ We can return true from our handlerFunction to indicate that we’ve handled the
 
 React let’s us access the instance of any component we render using a ref prop. This is a special prop that we can supply a callback – the callback will be called with the instance as a parameter, after the component mounts (and before it unmounts). We can store a reference to the component instance.
 You can think of a component instance as the “this” when we access this.props or any method that’s part of our class.
+
+### Geolocation
+
+The React Native geolocation API is slightly different than other APIs: we can access it directly from the global navigator object, rather than importing it at the top of the file.
+
+> The geolocation API in React Native is the same as the one found in modern web browsers. This means better compatibility between libraries and a lower learning curve if you’re coming from web development. On the web, the navigator object contains a lot of useful metadata about your web browser. In React Native, it’s really just a container for geolocation and potentially a handful of other browser APIs. Accessing a global variable feels a bit unusual in React Native, but is necessary to provide the exact same API on web and mobile.
+
+Depending on how we’re using geolocation, there are a few other APIs that might be useful:
+
+-   watchPosition(success, error?, options?) and clearWatch(watchID) can be used to receive notifications when location changes. We can also pass the options timeout (number in ms), maximumAge (number in ms), and enableHighAccuracy (bool) for more granular control.
+-   requestAuthorization() can be used to request access to device location. This can be a better experience than presenting an alert when a map is shown for the first time.
+-   getCurrentPosition(geo_success, geo_error?, geo_options?) gets our current position.
+
+### CameraRoll
+
+We can use CameraRoll.getPhotos(options) to request an array of images from the device. We can specify the number of images we want to get with the first option. We can use a cursor to iterate through the list of images by passing an after option (more on this soon). This API is asynchronous and returns a promise containing the image metadata, along with pagination info.
+
+Since this API is asynchronous, it may take some time for the first images to be returned. The more images we request, the longer it will take. It’s best to request just enough images to fill the entire screen: we want the API response as soon as we can, but we also want the screen to load all at once, rather than piecemeal.
+Calling CameraRoll.getPhotos(options) returns a promise, which resolves to an object containing:
+
+-   edges - An array of items, each containing a node object. The node object contains metadata about the image, such as timestamp and location. The node object also contains an image object with the filename, width, height, and uri of the image.
+-   page_info - An object containing a boolean has_next_page, a string end_cursor, and a string before_cursor.
+
+Before we can access the camera roll on Android, we’ll need to request the user’s permission to do so. We can use the Expo Permissions API to do this. We can await a call to Permissions.askAsync containing the permission we want access to, and check the returned object for whether request was granted.
+
+```js
+await Permissions.askAsync(Permissions.CAMERA_ROLL);
+if (status !== 'granted') {
+	// Denied
+} else {
+	// Good to go!
+}
+```
