@@ -299,7 +299,7 @@ The algorithm will keep going until either
 If you search your entire network for a mango seller, that means you’ll follow each edge (remember, an edge is the arrow or connection from one person to another). So the running time is at least `O(number of edges)`.
 You also keep a queue of every person to search. Adding one person to the queue takes constant time: `O(1)`. Doing this for every person will take `O(number of people)` total. Breadth-first search takes `O(number of people + number of edges)`, and it’s more commonly written as `O(V+E)` (V for number of vertices, E for number of edges).
 
-### Notes
+### Highlights
 
 -   Breadth-first search tells you if there’s a path from A to B.
 -   If there’s a path, breadth-first search will find the shortest path.
@@ -310,3 +310,55 @@ You also keep a queue of every person to search. Adding one person to the queue 
 -   Stacks are LIFO (Last In, First Out).
 -   You need to check people in the order they were added to the search list, so the search list needs to be a queue. Otherwise, you won’t get the shortest path.
 -   Once you check someone, make sure you don’t check them again. Otherwise, you might end up in an infinite loop.
+
+### Dijkstra’s algorithm
+
+While breadth-first algorithms gives you answer when you want to find shortest path, that's not necessarily the fastest path. You can search for the fastest one with a different algorithm called `Dijkstra’s algorithm`.
+
+There are four steps to Dijkstra’s algorithm:
+
+1. Find the “cheapest” node. This is the node you can get to in the least amount of time.
+2. Check whether there’s a cheaper path to the neighbors of this node. If so, update their costs.
+3. Repeat until you’ve done this for every node in the graph.
+4. Calculate the final path.
+
+When you work with Dijkstra’s algorithm, each edge in the graph has a number associated with it. These are called weights. A graph with weights is called a **weighted graph**. A graph without weights is called an **unweighted graph**.
+
+To calculate the shortest path in an unweighted graph, use breadth-first search. To calculate the shortest path in a weighted graph, use Dijkstra’s algorithm. Graphs can also have cycles. As an undirected graph means that both nodes point to each other. That’s a cycle!
+
+With an undirected graph, each edge adds another cycle. Dijkstra’s algorithm only works with directed acyclic graphs, called DAGs for short.
+
+**You can’t use Dijkstra’s algorithm if you have negative-weight edges. Negative-weight edges break the algorithm.**
+
+```py
+node = find_lowest_cost_node(costs)    # Find the lowest-cost node that you haven’t processed yet.
+while node is not None:                # If you’ve processed all the nodes, this while loop is done.
+    cost = costs[node]
+    neighbors = graph[node]
+    for n in neighbors.keys():         # Go through all the neighbors of this node.
+        new_cost = cost + neighbors[n] # If it’s cheaper to get to this neighbor
+        if costs[n] > new_cost:        # by going through this node ...
+        costs[n] = new_cost            # ... update the cost for this node.
+        parents[n] = node              # This node becomes the new parent for this neighbor.
+processed.append(node)                 # Mark the node as processed.
+node = find_lowest_cost_node(costs) # Find the next node to process, and loop.
+```
+
+```py
+def find_lowest_cost_node(costs):
+    lowest_cost = float(“inf”)
+    lowest_cost_node = None
+
+    for node in costs: # Go through each node.
+        cost = costs[node]
+        if cost < lowest_cost and node not in processed: # If it's the lowest cost node so far and hasn't been processed yet
+            lowest_cost = cost # ... set it as the new lowest-cost node.
+            lowest_cost_node = node
+    return lowest_cost_node
+```
+
+#### Recap
+- Breadth-first search is used to calculate the shortest path for an unweighted graph.
+- Dijkstra’s algorithm is used to calculate the shortest path for a weighted graph.
+- Dijkstra’s algorithm works when all the weights are positive.
+- If you have negative weights, use the Bellman-Ford algorithm.
