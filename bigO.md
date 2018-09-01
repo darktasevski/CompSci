@@ -358,7 +358,17 @@ def find_lowest_cost_node(costs):
 ```
 
 #### Recap
-- Breadth-first search is used to calculate the shortest path for an unweighted graph.
-- Dijkstra’s algorithm is used to calculate the shortest path for a weighted graph.
-- Dijkstra’s algorithm works when all the weights are positive.
-- If you have negative weights, use the Bellman-Ford algorithm.
+
+-   Breadth-first search is used to calculate the shortest path for an unweighted graph.
+-   Dijkstra’s algorithm is used to calculate the shortest path for a weighted graph.
+-   Dijkstra’s algorithm works when all the weights are positive.
+-   If you have negative weights, use the Bellman-Ford algorithm.
+
+## Greedy algorithms
+
+A greedy algorithm is simple: at each step, pick the optimal move. In technical terms: at each step you pick the locally optimal solution, and in the end you’re left with the globally optimal solution.
+
+-   Greedy algorithms optimize locally, hoping to end up with a global optimum.
+-   NP-complete problems have no known fast solution.
+-   If you have an NP-complete problem, your best bet is to use an approximation algorithm.
+-   Greedy algorithms are easy to write and fast to run, so they make good approximation algorithms.

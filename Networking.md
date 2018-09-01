@@ -257,3 +257,11 @@ AN IPV4 is a 32-bit address scheme, meaning it has 32 binary bits of data which 
 IPV6 is represented in hexadecimal separated by colons (`:`).
 `0-9` and `a` to `f`
 Consecutive zeros can be replaced with double colon (`::`), it's good practice to use this to omit the most zeros, also, we can do this only one time. Also, we can omit leading zeros in hexadecimal groups.
+
+## Subnetting
+
+Subnetting is adding additional networks to a standard A, B and C private IP address ranges. Sub netting allows us to take an IP address range or an IP address and find potential hosts.
+
+Let us say that we have an IP network of `192.168.0.x`. As this address is standard class 3 IP address, without subnetting we have a potential of 254 hosts (we don't include our broadcast(255) and localhost (127)).
+
+All subnets ahve the beginning and the end number that we can't use. The first number is going to be our network ID, and it's always going to be an even IP address, it's going to end with an even number. The last number is going to be our broadcast IP address, and this one will always end with odd number.

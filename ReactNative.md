@@ -305,3 +305,42 @@ if (status !== 'granted') {
 	// Good to go!
 }
 ```
+
+## The keyboard
+
+Keyboard handling can be challenging for many reasons:
+
+-   The keyboard is enabled, rendered, and animated natively, so we have much less control over its behavior than if it were a component (where we control the lifecycle).
+-   We have to handle a variety of asynchronous events when the keyboard is shown, hidden, or resized, and update our UI accordingly. These events are somewhat different on iOS and Android, and even slightly different in the simulator compared to a real device.
+-   The keyboard works differently on iOS and Android at a fundamental level. On iOS, the keyboard appears on top of the existing UI; the existing UI doesn’t resize to avoid the keyboard. On Android, the keyboard resizes the UI above it; the existing UI will shrink to fit in the available space. We generally want interactions to feel similar on both platforms, despite this fundamental difference.
+-   Keyboards interact specially with certain native elements e.g. ScrollView. On iOS, dragging downward on a ScrollView can dismiss the keyboard at the same rate of the pan gesture.
+-   Keyboards are user-customizable on both platforms, meaning there’s an almost unlimited number of shapes and sizes our UI has to handle.
+
+On iOS, the keyboard uses an animation with a special easing curve that’s hard to replicate in JavaScript, so we’ll hook into the native animation directly using the LayoutAnimation API. LayoutAnimation is one of the two main ways to animate our UI (the other being Animated).
+
+> Most React Native components accept an onLayout function prop. This is conceptually similar to a React lifecycle method: the function we pass is called every time the component updates its dimensions. We need to be careful when calling setState within this function, since setState may cause the component to re-render, in which case onLayout will get called again... and now we’re stuck in an infinite loop!
+
+### LayoutAnimation
+
+`LayoutAnimation` is the only way we can match the exact animation of the keyboard. It’s used internally by the built-in KeyboardAvoidingView component, so it’s safe for us to use despite being considered experimental.
+Currently `LayoutAnimation` is disabled by default on Android, so we need to enable it by calling `UIManager.setLayoutAnimationEnabledExperimental(true)`.
+
+```js
+if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
+	UIManager.setLayoutAnimationEnabledExperimental(true);
+}
+```
+
+> The `UIManager` object contains a variety of APIs for getting access to native UI elements for measuring, but we won’t use it for anything else here.
+
+`LayoutAnimation` automatically handles animating elements that should change size or appear/disappear between calls to render. We call `LayoutAnimation.create` to define an animation configuration, and then `LayoutAnimation.configureNext` to enqueue the animation to run the next time render is called.
+
+The LayoutAnimation.create API takes three parameters:
+
+-   duration - The duration of the animation
+-   easing - The curve of the animation. We choose from a predefined set of curves: spring, linear,
+    easeInEaseOut, easeIn, easeOut, keyboard. The keyboard curve is the key to matching the
+    keyboard’s animation curve – although it only exists on iOS.
+-   creationProp - The style to animate when a new element is added: opacity or scaleXY.
+
+> If we want to call this every time the component will rerender, `componentWillReceiveProps` is the best place to do that.
