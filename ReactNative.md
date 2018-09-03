@@ -344,3 +344,60 @@ The LayoutAnimation.create API takes three parameters:
 -   creationProp - The style to animate when a new element is added: opacity or scaleXY.
 
 > If we want to call this every time the component will rerender, `componentWillReceiveProps` is the best place to do that.
+
+## Navigation
+
+Navigation is a major piece of any mobile application with multiple screens. With a navigation system in place, a user can access any part of an application. It also allows us to structure and separate how data is handled in the app.
+
+Handling navigation in a mobile application is fundamentally different from a website. For a website, the state of a user’s location is usually kept in the browser’s URL. Although the browser maintains a history of pages visited in order to allow the user to move back and forth, the browser only stores page URLs and is otherwise stateless. On mobile, the entire history stack is maintained and can be accessed.
+
+On mobile, we have more control and flexibility over history management. We can keep a **history stack** that includes details of each route including parameters and part of the application state.
+
+### Navigation in React Native
+
+One of the primary navigation patterns in a mobile app is a stack-based pattern. In this pattern, only one screen can be seen by the user at any given time. Navigating involves pushing the new screen onto the navigation stack.
+
+It is important to realize that this pattern, among others, uses different native components for iOS and Android. For example, building a stack-based navigation flow between screens can be done using `UINavigationController` for iOS and connecting `Activities` for Android.
+
+There are two primary approaches to navigation in React. We can either include actual native iOS/Android navigational elements or use JavaScript to create the required animations and components that we need.
+
+#### Native navigation
+
+The first way we can add navigation is to use native iOS/Android navigational components.
+
+In an **iOS** application, views are used to build the UI and display content to the user. A view controller (or the UIViewController class) is used to control a set of views and allows us to connect our UI with our application data. By including multiple view controllers in our app, we can build different screens as well as transition between them.
+
+In **Android**, activities are used to create single screens to define our UI. We can use tasks in order to define a stack of activities known as the back stack. The startActivity method can be used to start a new activity. When this happens, the activity is pushed onto the activity stack. In order to return to the previous screen, the physical back button on every Android device can be pressed in order to run the finish method on the activity. This closes the current activity, pops it off the stack and returns the user back to the previous activity.
+
+In **React Native**, all of our component code executes on a JavaScript thread. These components then bridge to a separate main thread responsible for rendering native iOS and Android views.
+
+##### Pros
+
+The primary benefit of this approach is a smoother navigation experience for the user. This is because purely native iOS/Android navigation APIs can be used with all of our navigation happening within the native thread. This approach works well when including React Native in an existing native iOS or Android application. Using the same navigation components and transitions throughout the app means that different screens in the app will feel consistent regardless of whether they’re written natively or with React Native.
+Additionally, if an operating system update modifies the style or functionality of navigation components, you won’t have to wait for the same modifications to be made in your JavaScript- based navigation library.
+
+##### Cons
+
+One of the issues with this navigation approach is that it usually involves more work. This is because we need to ensure navigation works for both iOS and Android, using their respective native navigational components.
+
+Moreover, we will also have to eject from Expo and take care of linking and bridging any native modules ourselves. This means we cannot build an application with native iOS navigation components if we do not own a Mac computer.
+
+Another potential problem with this solution is that it can be significantly harder to modify or create new navigation patterns. In order to customize how navigation is performed, we would have to dive in to the native code and understand how the underlying navigation APIs work before being able to change them.
+
+#### Navigation with JavaScript
+
+The second approach to adding navigation to a React Native app is to use JavaScript to create components and navigation patterns that look and feel like their native counterparts. This is done solely using React Native built-in components and the Animated API for animations.
+
+With the Animated API, we can use animated versions of some built-in components such as View as well as create our own. We can create stack based navigation (as well as other navigation patterns) by nesting our screen components within an Animated component. We can then have our screens slide (or fade) in and out of our device when we need to allow the user to navigate throughout our application. We’ll have to maintain the hierarchy of screens entirely in JavaScript ourselves.
+
+##### Pros
+
+One of the advantages of using JavaScript-based navigation is that it can be simpler to build the components and animation mechanisms that can be used in both platforms instead of trying to create a bridge to all of the core native iOS/Android APIs that we would need. This also gives us more control and flexibility to customize specific navigation features instead of relying on what’s available in the native platforms. We can debug any issues we experience with navigation that is purely JavaScript-based without diving in to native code.
+
+Most of the work during an animation using the React Native Animated API is on the JavaScript thread. This means that every frame needs to go over the bridge to the native thread to update the views during a transition. Fortunately, we have the option to use the API’s native driver option to render natively driven animations. These animations are performed with animation calculations happening on the native thread. By building navigation with this, navigation animations will perform smoothly.
+
+Another benefit of keeping all of our navigation elements within the JavaScript thread means that we can take advantage of services such as `CodePush` to allow us to dynamically update the application’s JavaScript code (which includes our navigation) without rolling out a new build to our users.
+
+##### Cons
+
+There are also disadvantages with this approach. Firstly, the app can never feel exactly like a native application in terms of navigation. As much as we can try to mimic how navigation components and animations look like in the native layer, there may always be slight discrepancies. This can be a bigger problem if we happen to be including React Native components into an existing native iOS or Android application. Building transitions between screens built natively and screens built with React Native can be a challenge if we’re using only JavaScript for our navigation.
