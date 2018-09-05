@@ -401,3 +401,16 @@ Another benefit of keeping all of our navigation elements within the JavaScript 
 ##### Cons
 
 There are also disadvantages with this approach. Firstly, the app can never feel exactly like a native application in terms of navigation. As much as we can try to mimic how navigation components and animations look like in the native layer, there may always be slight discrepancies. This can be a bigger problem if we happen to be including React Native components into an existing native iOS or Android application. Building transitions between screens built natively and screens built with React Native can be a challenge if we’re using only JavaScript for our navigation.
+
+## Animation
+
+To achieve animations that look smooth, we’ll want our UI to render at 60 frames-per-second (fps). In other words, we need to render 1 frame roughly every 16 milliseconds (1000 milliseconds / 60 frames). If we perform expensive computations that take longer than 16 milliseconds within a single frame, our animations may start to look choppy and uneven. Thus, we must constantly pay attention to performance when working with animation.
+
+Performance issues tend to fall into a few specific categories:
+
+-   Calculating new layouts during animation: When we change a style attribute that affects the size or position of a component, React Native usually re-calculates the entire layout of the UI. This calculation happens on a native thread, but is still an expensive calculation that can result in choppy animations.
+-   Re-rendering components: When a component’s state or props change, React must de- termine how to reconcile these changes and update the UI to reflect them. React is fairly efficient by default, so components generally render quickly enough that we don’t optimize their performance. With animation, however, a large component that takes a few milliseconds to render may lead to choppy animations.
+-   Communicating between native code and JavaScript: Since JavaScript runs asynchronously, JavaScript code won’t start executing in response to a gesture until the frame after the gesture happens on the native side. If React Native must pass values back and forth between the native thread and the JavaScript engine, We can use `useNativeDriver` with our animations to mitigate this.
+
+When working with animations, we tend to write more asynchronous code than normal. We must often wait for an animation to complete before starting another animation (using an imperative API) or unmounting a component. The asynchronous control flow and imperative calls can quickly lead to confusing, buggy code.
+To keep our code clear and accurate, we should use a [state machine](https://en.wikipedia.org/wiki/Finite-state_machine) approach for our more complex components. We’ll define a set of named states for each component, and define transitions from one state to another. This is similar to the React component lifecycle: our component will transition through different states (similar to mounting, updating, unmounting, etc), and we can run a specific function every time the state changes.
