@@ -411,3 +411,113 @@ Dynamic programming is commonly used in:
 -   The values in the cells are usually what you’re trying to optimize.
 -   Each cell is a subproblem, so think about how you can divide your problem into subproblems.
 -   There’s no single formula for calculating a dynamic-programming solution.
+
+## k-nearest neighbors
+
+There are the two basic things you’ll do with KNN—classification and regression:
+
+-   Classification = categorization into a group
+-   Regression = predicting a response (like a number)
+
+### Introduction to machine learning
+
+KNN is a really useful algorithm, and it’s your introduction to the magical world of machine learning! Machine learning is all about making your computer more intelligent. You already saw one example of machine learning: building a recommendations system. Let’s look at some other examples.
+
+#### OCR
+
+OCR stands for optical character recognition. It means you can take a photo of a page of text, and your computer will automatically read the text for you. Google uses OCR to digitize books.
+
+### Notes
+
+-   KNN is used for classification and regression and involves looking at the k-nearest neighbors.
+-   Classification = categorization into a group.
+-   Regression = predicting a response (like a number).
+-   Feature extraction means converting an item (like a fruit or a user)
+    into a list of numbers that can be compared.
+-   Picking good features is an important part of a successful KNN algorithm.
+
+## Binary tree
+
+Searching for an element in a binary search tree takes O(log n) time on average and O(n) time in the worst case. Searching a sorted array takes O(log n) time in the worst case, so you might think a sorted array is better. But a binary search tree is a lot faster for insertions and deletions on average.
+
+Binary search trees have some downsides too: for one thing, you
+don’t get random access. You can’t say, “Give me the fifth element of this tree.” Those performance times are also on average and rely on the tree being balanced.
+
+There are special binary search trees that balance themselves. One example is the red-black tree.
+So when are binary search trees used? B-trees, a special type of binary tree, are commonly used to store data in databases.
+If you’re interested in databases or more-advanced data structures, check these out:
+
+-   B-trees
+-   Red-black trees
+-   Heaps
+-   Splay trees
+
+## The Fourier transform
+
+The Fourier transform is one of those rare algorithms: brilliant,
+elegant, and with a million use cases. The best analogy for the Fourier transform comes from Better Explained (a great website that explains math simply): given a smoothie, the Fourier transform will tell you the ingredients in the smoothie. Or, to put it another way, given a song, the transform can separate it into individual frequencies.
+
+It turns out that this simple idea has a lot of use cases. For example, if you can separate a song into frequencies, you can boost the ones you care about. You could boost the bass and hide the treble. The Fourier transform is great for processing signals. You can also use it to compress music. First you break an audio file down into its ingredient notes. The Fourier transform tells you exactly how much each note contributes to the overall song. So you can just get rid of the notes that aren’t important. That’s how the MP3 format works!
+
+Music isn’t the only type of digital signal. The JPG format is another compressed format, and it works the same way. People use the Fourier transform to try to predict upcoming earthquakes and analyze DNA.
+
+You can use it to build an app like Shazam, which guesses what song is playing. The Fourier transform has a lot of uses. Chances are high that you’ll run into it!
+
+## Parallel algorithms
+
+To make your algorithms faster, you need to change them to run in parallel across all the cores at once!
+
+Here’s a simple example. The best you can do with a sorting algorithm is roughly O(n log n). It’s well known that you can’t sort an array in O(n) time—unless you use a parallel algorithm! There’s a parallel version of quicksort that will sort an array in O(n) time.
+
+Parallel algorithms are hard to design. And it’s also hard to make sure they work correctly and to figure out what type of speed boost you’ll see. One thing is for sure—the time gains aren’t linear. So if you have two cores in your laptop instead of one, that almost never means your algorithm will magically run twice as fast. There are a couple of reasons for this:
+
+-   Overhead of managing the parallelism — Suppose you have to sort an array of 1,000 items. How do you divide this task among the two cores? Do you give each core 500 items to sort and then merge the two sorted arrays into one big sorted array? Merging the two arrays takes time.
+-   Load balancing — Suppose you have 10 tasks to do, so you give each core 5 tasks. But core A gets all the easy tasks, so it’s done in 10 seconds, whereas core B gets all the hard tasks, so it takes a minute. That means core A was sitting idle for 50 seconds while core B was doing all the work! How do you distribute the work evenly so both cores are working equally hard?
+
+### MapReduce
+
+There’s a special type of parallel algorithm that is becoming increasingly popular: the distributed algorithm. It’s fine to run a parallel algorithm on your laptop if you need two to four cores, but what if you need hundreds of cores? Then you can write your algorithm to run across multiple machines. The MapReduce algorithm is a popular distributed algorithm. You can use it through the popular open source tool
+Apache Hadoop.
+
+#### Why are distributed algorithms useful?
+
+Suppose you have a table with billions or trillions of rows, and you want to run a complicated SQL query on it. You can’t run it on MySQL, because it struggles after a few billion rows. Use MapReduce through Hadoop!
+Or suppose you have to process a long list of jobs. Each job takes 10 seconds to process, and you need to process 1 million jobs like this. If you do this on one machine, it will take you months! If you could run it across 100 machines, you might be done in a few days.
+Distributed algorithms are great when you have a lot of work to do and want to speed up the time required to do it. MapReduce in particular is built up from two simple ideas: the map function and the reduce function.
+
+## Bloom filters and HyperLogLog
+
+Suppose you’re running Reddit. When someone posts a link, you want to see if it’s been posted before. Stories that haven’t been posted before are considered more valuable. So you need to figure out whether this link has been posted before.
+
+Or suppose you’re Google, and you’re crawling web pages. You only want to crawl a web page if you haven’t crawled it already. So you need to figure out whether this page has been crawled before.
+
+Or suppose you’re running bit.ly, which is a URL shortener. You don’t want to redirect users to malicious websites. You have a set of URLs that are considered malicious. Now you need to figure out whether you’re redirecting the user to a URL in that set.
+
+All of these examples have the same problem. You have a very large set.
+
+Now you have a new item, and you want to see whether it belongs in that set. You could do this quickly with a hash. For example, suppose Google has a big hash in which the keys are all the pages it has crawled.
+You want to see whether you’ve already crawled adit.io for example. Look it up in the hash.
+adit.io is a key in the hash, so you’ve already crawled it. The average lookup time for hash tables is O(1). adit.io is in the hash, so you’ve already crawled it. You found that out in constant time. Pretty good!
+Except that this hash needs to be huge. Google indexes trillions of web pages. If this hash has all the URLs that Google has indexed, it will take up a lot of space. Reddit and bit.ly have the same space problem. When you have so much data, you need to get creative!
+
+### Bloom filters
+
+Bloom filters offer a solution. Bloom filters are probabilistic data structures. They give you an answer that could be wrong but is probably correct. Instead of a hash, you can ask your bloom filter if you’ve crawled this URL before. A hash table would give you an accurate answer. A bloom filter will give you an answer that’s probably correct:
+
+-   False positives are possible. Google might say, “You’ve already crawled this site,” even though you haven’t.
+-   False negatives aren’t possible. If the bloom filter says, “You haven’t crawled this site,” then you definitely haven’t crawled this site.
+
+    Bloom filters are great because they take up very little space. A hash table would have to store every URL crawled by Google, but a bloom filter doesn’t have to do that. They’re great when you don’t need an exact answer, as in all of these examples. It’s okay for bit.ly to say“We think this site might be malicious, so be extra careful.”
+
+### HyperLogLog
+
+Along the same lines is another algorithm called HyperLogLog. Suppose Google wants to count the number of unique searches performed by its users. Or suppose Amazon wants to count the number of unique items that users looked at today. Answering these questions takes a lot of space! With Google, you’d have to keep a log of all the unique searches. When a user searches for something, you have to see whether it’s already in the log. If not, you have to add it to the log. Even for a single day, this log would be massive!
+HyperLogLog approximates the number of unique elements in a set. Just like bloom filters, it won’t give you an exact answer, but it comes very close and uses only a fraction of the memory a task like this would otherwise take.
+If you have a lot of data and are satisfied with approximate answers, check out probabilistic algorithms!
+
+## Linear programming
+
+Linear programming is used to maximize something given some constraints. For example, suppose your company makes two products, shirts and totes. Shirts need 1 meter of fabric and 5 buttons. Totes need 2 meters of fabric and 2 buttons. You have 11 meters of fabric and 20 buttons. You make $2 per shirt and $3 per tote. How many shirts and totes should you make to maximize your profit?
+Here you’re trying to maximize profit, and you’re constrained by the amount of materials you have.
+
+All the graph algorithms can be done through linear programming instead. Linear programming is a much more general framework, and graph problems are a subset of that. Linear programming uses the Simplex algorithm.
