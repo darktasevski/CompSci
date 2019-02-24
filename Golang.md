@@ -10,13 +10,13 @@ Programs start running in package main.
 package main
 
 import (
-"fmt"
-"math"
-"math/rand"
+	"fmt"
+  "math"
+	"math/rand"
 )
 
 func main() {
-fmt.Println("My favorite number is", rand.Intn(10))
+	fmt.Println("My favorite number is", rand.Intn(10))
 }
 ```
 >Note: The environment in which these programs are executed is deterministic, so each time you run the example program `rand.Intn` will return the same number. (To see a different number, seed the number generator; see [`rand.Seed`](https://golang.org/pkg/math/rand/#Seed).
@@ -41,12 +41,12 @@ When importing a package, you can refer only to its exported names. Any "unexpor
 package main
 
 import (
-"fmt"
-"math"
+	"fmt"
+	"math"
 )
 
 func main() {
-fmt.Println(math.Pi)
+	fmt.Println(math.Pi)
 }
 ```
 
@@ -62,11 +62,11 @@ package main
 import "fmt"
 
 func add(x int, y int) int {
-return x + y
+	return x + y
 }
 
 func main() {
-fmt.Println(add(42, 13))
+	fmt.Println(add(42, 13))
 }
 ```
 >Notice that the type comes after the variable name.
@@ -79,14 +79,14 @@ In this example, we shortened
 ```go
 x int, y int
 
-#to
+// to
 
 x, y int
 
-# resulting in:
+// resulting in:
 
 func add(x, y int) int {
-return x + y
+	return x + y
 }
 ```
 A function can return any number of results.
@@ -95,12 +95,12 @@ The swap function returns two strings.
 
 ```go
 func swap(x, y string) (string, string) {
-return y, x
+	return y, x
 }
 
 func main() {
-a, b := swap("hello", "world")
-fmt.Println(a, b)
+	a, b := swap("hello", "world")
+	fmt.Println(a, b)
 }
 ```
 ### "Naked" return - Named return values
@@ -113,14 +113,113 @@ A return statement without arguments returns the named return values. This is kn
 
 ```go
 func split(sum int) (x, y int) {
-x = sum * 4 / 9
-y = sum - x
-return
+	x = sum * 4 / 9
+	y = sum - x
+	return
 }
 
 func main() {
-fmt.Println(split(17))
+	fmt.Println(split(17))
 }
 ```
 
 Naked return statements should be used only in short functions, as with the example shown here. They can harm readability in longer functions.
+
+### Variables
+
+The var statement declares a list of variables; as in function argument lists, the type is last.
+
+A var statement can be (scoped) at package or function level. We see both in this example.
+
+```go
+package main
+
+import "fmt"
+
+var c, python, java bool
+
+func main() {
+	var i int
+	fmt.Println(i, c, python, java)
+}
+```
+
+Variables declared without a corresponding initialization are zero-valued. For example, the zero value for an int is 0.
+
+The zero value is:
+ - 0 for numeric types,
+ - false for the boolean type, and
+ - "" (the empty string) for strings.
+
+```go
+func main() {
+	var i int
+	var f float64
+	var b bool
+	var s string
+	fmt.Printf("%v %v %v %q\n", i, f, b, s)
+}
+// Results in: 0 0 false ""
+```
+
+The `:=` syntax is shorthand for declaring and initializing a variable, e.g. for `var f string = "short"` in this case is same as ` f := "short"`.
+Inside a function, the `:=` short assignment statement can be used in place of a var declaration with implicit type.
+Outside a function, every statement begins with a keyword (var, func, and so on) and so the `:=` construct is not available.
+
+A var declaration can include initializers, one per variable.
+
+If an initializer is present, the type can be omitted; the variable will take the type of the initializer.
+```go
+var i, j int = 1, 2
+
+func main() {
+	var c, python, java = true, false, "no!"
+	fmt.Println(i, j, c, python, java)
+}
+
+// Results in 1 2 true false no!
+```
+
+### Basic types
+
+Go's basic types are
+```go
+bool
+
+string
+
+int  int8  int16  int32  int64
+uint uint8 uint16 uint32 uint64 uintptr
+
+byte // alias for uint8
+
+rune // alias for int32
+     // represents a Unicode code point
+
+float32 float64
+
+complex64 complex128
+```
+
+The `int`, `uint`, and `uintptr` types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit systems. When you need an integer value you should use `int` unless you have a specific reason to use a sized or unsigned integer type.
+
+```go
+package main
+
+import (
+	"fmt"
+	"math/cmplx"
+)
+
+var (
+	ToBe   bool       = false
+	MaxInt uint64     = 1<<64 - 1
+	z      complex128 = cmplx.Sqrt(-5 + 12i)
+)
+
+func main() {
+	fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe)
+	fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
+	fmt.Printf("Type: %T Value: %v\n", z, z)
+}
+```
