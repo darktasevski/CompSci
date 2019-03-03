@@ -106,20 +106,75 @@ end
 
 > Additionally, a method defined to accept one argument will raise an error if called with more than one argument.
 
+##### Default Arguments
+
+In order to define a method that optionally takes in an argument, we define our method to take in an argument with a default value. By defining our method with default arguments, we make it possible to call the method with optional arguments, i.e. with or without arguments.
+
+```rb
+#             assigning a default value
+def greeting(name = "Ruby programmer")
+  puts "Hello, #{name}"
+end
+```
+
+It is possible to define a method that takes in both required and default arguments. To do so, however, we must place the default argument at the end of the argument list in the method definition.
+
+```rb
+def greeting(name, language="Ruby")
+  puts "Hello, #{name}. We heard you are a great #{language} programmer."
+end
+```
+
 ### String Interpolation
 
 To interpolate, you wrap the variable like `#{this}`.
 
-```ruby
+```rb
 answer = "flamboyance"
 puts "A group of flamingos is called a #{answer}."
 ```
 
 > Another Way to Interpolate Variables into Strings
 
-```ruby
+```rb
 answer = "Flamboyance"
 puts "A group of flamingos is called a " + answer + "."
 ```
 
 Interpolation will only work on Strings wrapped in double quotes "". **Single quotes: '' do not support string interpolation**
+
+### Truthiness
+
+Many programming languages, including Ruby, have native `boolean` (true or false) data types. In Ruby they're expressed directly as `true` and `false`. These boolean values come in handy in programming when we want to implement control flow. Control flow is the idea that we can tell our program to execute certain lines of code based upon certain conditions.
+
+In Ruby only false and nil are falsey. Everything else is truthy (yes, even 0 is truthy).
+
+|     Value      | Truthy? |
+| :------------: | :-----: |
+|       0        |   yes   |
+|      " "       |   yes   |
+|    "hello"     |   yes   |
+|      nil       |   no    |
+|      6.7       |   yes   |
+|      true      |   yes   |
+|      TRUE      |   yes   |
+|     false      |   no    |
+|     FALSE      |   no    |
+|     [1,2]      |   yes   |
+| {:hi=>"there"} |   yes   |
+
+In Ruby there are three main boolean operators:
+
+-   `!` ("single-bang") which represents "NOT",
+-   `&&` ("double-ampersand") which represents "AND", and
+-   `||` ("double-pipe") which represents "OR".
+
+To check if two values are equal, we use the comparison operator represented with `==` ("double-equal-sign"). If two values are equal, then the statement will return `true`. If they are not equal, then it will return `false`.
+
+```rb
+1 == 1 #=> true
+
+1 == 7 #=> false
+```
+
+### Ruby Conditionals
