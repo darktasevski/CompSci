@@ -178,3 +178,100 @@ To check if two values are equal, we use the comparison operator represented wit
 ```
 
 ### Ruby Conditionals
+
+#### Implementing Control Flow
+
+There are a number of ways to tell your program to conditionally execute certain code, the basic forms of which are:
+
+-   if, else, and elsif statements,
+-   case statements,
+-   loops.
+
+```rb
+if 5 > 2
+  print "5 is greater than 2"
+end
+//
+if false
+   puts "This will never get printed because the above
+     statement evaluates to false."
+else
+   puts "This will get printed!"
+end
+//
+if dog == "hungry"
+  puts "Refilling food bowl."
+elsif dog == "thirsty"
+  puts "Refilling water bowl."
+else
+  puts "Reading newspaper."
+end
+
+```
+
+### Loops
+
+```rb
+10.times do
+  puts "Hi! I'm printed 10 times"
+end
+```
+
+#### The `loop` Keyword
+
+This is the simplest looping construct that we have in Ruby. It simply executes a block (the code that is between the `do` and `end` keywords).
+
+```rb
+loop do
+  puts "I have found the Time Machine!"
+end
+```
+
+This will output I have found the Time Machine! an infinite number of times, in other words it'll create infinite loop.
+We can use the `break` keyword inside the body of the loop to exit or abort the `loop` and continue with the rest of our code.
+
+```rb
+loop do
+  puts "You'll see this exactly once."
+  break # Exit the Loop
+end
+```
+
+Counter example:
+
+```rb
+counter = 0 # Start our counter at 0, we have never run the loop
+loop do # Start our loop
+  # increment our counter by 1 and set it equal to the sum of its current value, plus 1.
+  counter = counter + 1 # or  counter += 1
+
+  # Do Something
+  puts "Iteration #{counter} of the loop"
+
+  if counter >= 10 # If our counter is 10 or more
+    break # Stop the loop
+  end
+end
+```
+
+#### While and Until Loops
+
+The `while` construct is a little different from the loop construct that we looked at earlier. The while construct will keep executing a block as long as a specific condition is true.
+
+```rb
+counter = 0
+while counter < 20
+  puts "The current number is less than 20."
+  counter += 1
+end
+```
+
+`until` is simply the inverse of a `while` loop. An `until` keyword will keep executing a block until a specific condition is true. In other words, the block of code following until will execute while the condition is false. One helpful way to think about it is to read until as "if not".
+
+```rb
+counter = 0
+until counter == 20
+  puts "The current number is less than 20."
+  counter += 1
+end
+```
