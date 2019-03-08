@@ -17,26 +17,26 @@
 
 The `eval(..)` function in JavaScript takes a string as an argument, and treats the contents of the string as if it had actually been authored code at that point in the program. In other words, you can programmatically generate code inside of your authored code, and run the generated code as if it had been there at author time.
 
-```
+```js
 function foo(str, a) {
-	eval( str ); // cheating!
-	console.log( a, b );
+	eval(str); // cheating!
+	console.log(a, b);
 }
 
 var b = 2;
-foo( "var b = 3;", 1 ); // 1 3
+foo('var b = 3;', 1); // 1 3
 ```
 
 > **Note**: `eval(..)` when used in a strict-mode program operates in its own lexical scope, which means declarations made inside of the `eval()` do not actually modify the enclosing scope.
 
-```
+```js
 function foo(str) {
-   "use strict";
-   eval( str );
-   console.log( a ); // ReferenceError: a is not defined
+	'use strict';
+	eval(str);
+	console.log(a); // ReferenceError: a is not defined
 }
 
-foo( "var a = 2" );
+foo('var a = 2');
 ```
 
 #### `with()`
@@ -44,11 +44,11 @@ foo( "var a = 2" );
 > This is frowned upon and deprecated!  
 > `with` is typically explained as a short-hand for making multiple property references against an object without repeating the object reference itself each time.
 
-```
+```js
 var obj = {
 	a: 1,
 	b: 2,
-	c: 3
+	c: 3,
 };
 // more "tedious" to repeat "obj"
 obj.a = 2;
@@ -64,24 +64,24 @@ with (obj) {
 
 One of reasons for this being deprecated:
 
-```
+```js
 function foo(obj) {
 	with (obj) {
 		a = 2;
 	}
 }
 var o1 = {
-	a: 3
+	a: 3,
 };
 var o2 = {
-	b: 3
+	b: 3,
 };
-foo( o1 );
-console.log( o1.a ); // 2
+foo(o1);
+console.log(o1.a); // 2
 
-foo( o2 );
-console.log( o2.a ); // undefined
-console.log( a ); // 2 -- Oops, leaked global!
+foo(o2);
+console.log(o2.a); // undefined
+console.log(a); // 2 -- Oops, leaked global!
 ```
 
 ### Block scope
@@ -90,7 +90,7 @@ console.log( a ); // 2 -- Oops, leaked global!
 
 Probably useful snippet of using block scope to garbage collect unneeded stuff
 
-```
+```js
 function process(data) {
 	// do something interesting
 }
@@ -124,11 +124,11 @@ Declarations themselves are hoisted, but assignments, even assignments of functi
 
 **Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.**
 
-```
+```js
 function foo() {
 	var a = 2;
 	function bar() {
-		console.log( a ); // 2
+		console.log(a); // 2
 	}
 	bar();
 }
@@ -139,11 +139,11 @@ From a purely academic perspective, what is said of the above snippet is that th
 
 And that weird way of binding functions in React is solved:
 
-```
+```js
 function foo() {
 	var a = 2;
 	function bar() {
-		console.log( a );
+		console.log(a);
 	}
 	return bar;
 }
@@ -165,9 +165,9 @@ By virtue of where it was declared, bar() has a lexical scope closure over that 
 
 Dynamic scope, doesn't concern itself with how and where functions and scopes are declared, but rather where they are called from. In other words, the scope chain is based on the call-stack, not the nesting of scopes in code.
 
-```
+```js
 function foo() {
-	console.log( a ); // 3  (not 2!)
+	console.log(a); // 3  (not 2!)
 }
 function bar() {
 	var a = 3;
