@@ -2148,3 +2148,254 @@ print(f"{colt} is totally rad (probably)")
 ```
 
 > There are also several other dunders to return classes in string formats (notably **str** and **format**)
+
+---
+
+## Generators and Decorators
+
+### Iterator & Iterable
+
+**Iterator** - an object that can be iterated upon. An object which returns data, one element at a time when next() is called on it
+
+**Iterable** - An object which will return an Iterator when iter() is called on it.
+
+"HELLO" is an iterable, but it is not an iterator.
+`iter("HELLO")` returns an iterator
+
+When `next()` is called on an iterator, the iterator returns the next item. It keeps doing so until it raises a StopIteration error.
+
+```python
+# Custom for loop
+def for_loop(iterable, func):
+    iterator = iter(iterable)
+    while True:
+        try:
+            thing = next(iterator)
+        except StopIteration:
+            break
+        else:
+            func(thing)
+```
+
+### Generators
+
+-   Generators are iterators
+-   Generators can be created with generator functions
+-   Generator functions use the yield keyword
+-   Generators can be created with generator expressions
+
+Functions vs Generator Functions:
+
+| Functions                              | Generator Functions               |
+| -------------------------------------- | --------------------------------- |
+| uses `return`                          | uses `yield`                      |
+| returns once                           | can `yield` multiple times        |
+| When invoked, returns the return value | When invoked, returns a generator |
+
+Why Generators?
+
+-   Lazy Evaluation
+    -   Also called calculation on demand
+    -   Only compute values as needed
+    -   Can help improve performance of your code
+
+```python
+# Generator example
+def count_up_to(max):
+    count = 1
+    while count <= max:
+        yield count
+        count += 1
+```
+
+-   Calling next on a generator with nothing left to yield will throw a StopIteration error
+-   When we loop over a generator, the loop will stop before the StopIteration error gets thrown
+
+#### Generator Expressions
+
+-   You can also create generators from generator expressions
+-   Generator expressions look a lot like list comprehensions
+-   Generator expressions use () instead of []
+
+```python
+def sum_of_nums():
+    total = 0
+    num = 1
+    while True: # WON'T STOP
+        total += num
+        yield total
+        num += 1
+
+s = sum_of_nums() # another generator!
+```
+
+> A number is called abundant if the sum of all of its proper divisors exceeds the number.
+
+`12 (1 + 2 + 3 + 4 + 6 > 12)` - abundant
+
+`4 (1 + 2 < 4)` - not abundant
+
+```python
+def is_abundant(n):
+    total = 0
+    for d in range(1,n):
+        if n % d == 0:
+            total += d
+    return total > n
+
+is_abundant(12) # True
+is_abundant(4) # False
+```
+
+### Decorators
+
+-   Decorators wrap other functions and enhance their behavior
+-   Decorators are examples of higher order functions
+-   Decorators have their own syntax, using "@" (syntactic sugar)
+-   Decorators are functions that enhance other functions
+-   Decorators use "@" as syntactic sugar
+-   In general, the functions that decorators return accept an unlimited number of positional and keyword arguments
+-   To preserve information about the decorated function, use wraps
+-   To write a decorator that accepts an argument, use another level of function nesting
+-   Decorators are useful for minimizing code duplication, analyzing functions, returning early from a function, and more!
+
+Decorator Pattern
+
+```python
+def my_decorator(fn):
+    def wrapper(*args, **kwargs):
+        # do some stuff with fn(*args, **kwargs)
+        pass
+    return wrapper
+```
+
+or:
+
+```python
+from functools import wraps
+# wraps preserves a function's metadata
+# when it is decorated
+
+def my_decorator(fn):
+    @wraps(fn)
+    def wrapper(*args, **kwargs):
+        # do some stuff with fn(*args, **kwargs)
+        pass
+    return wrapper
+```
+
+Decorators as Functions:
+
+```python
+def be_polite(fn):
+    def wrapper():
+        print("What a pleasure to meet you!")
+        fn()
+        print("Have a great day!")
+    return wrapper
+
+def greet():
+    print("My name is Colt.")
+
+greet = be_polite(greet)
+# we are decorating our function
+# with politeness!
+```
+
+Decorator Syntax:
+
+```python
+def be_polite(fn):
+    def wrapper():
+        print("What a pleasure to meet you!")
+        fn()
+        print("Have a great day!")
+    return wrapper
+
+@be_polite
+def greet():
+    print("My name is Matt.")
+
+# we don't need to set
+# greet = be_polite(greet)
+```
+
+Functions with Different Signatures
+
+```python
+def shout(fn):
+    def wrapper(name):
+        return fn(name).upper()
+    return wrapper
+
+@shout
+def greet(name):
+    return f"Hi, I'm {name}."
+
+@shout
+def order(main, side):
+    return f"Hi, I'd like the {main}, with a side of {side}, please."
+```
+
+Preserving Metadata example:
+
+```python
+def log_function_data(fn):
+    def wrapper(*args, **kwargs):
+        print(f"you are about to call {fn.__name__}")
+        print(f"Here's the documentation: {fn.__doc__}")
+        return fn(*args, **kwargs)
+    return wrapper
+
+@log_function_data
+def add(x,y):
+    '''Adds two numbers together.'''
+    return x + y;
+```
+
+Why Use Decorators?
+
+-   Removing code duplication across functions
+-   More easily perform function analytics/logging
+-   Exit out of a function early if certain conditions aren't met
+
+Some examples:
+
+```python
+from functools import wraps
+from time import time
+
+def speed_test(fn):
+    @wraps(fn)
+    def wrapper(*args, **kwargs):
+        t1 = time()
+        result = fn(*args, **kwargs)
+        t2 = time()
+        print(f"Time Elapsed: {t2 - t1} seconds.")
+        return result
+    return wrapper
+```
+
+```python
+from functools import wraps
+
+def ensure_no_kwargs(fn):
+    @wraps(fn)
+    def wrapper(*args, **kwargs):
+        if kwargs:
+            return "No keyword arguments allowed!"
+        return fn(*args)
+    return wrapper
+```
+
+```python
+def ensure_first_arg_is(val):
+    def inner(fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            if args and args[0] != val:
+                return f"Invalid! First argument must be {val}"
+            return fn(*args, **kwargs)
+        return wrapper
+    return inner
+```
