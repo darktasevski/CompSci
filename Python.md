@@ -806,3 +806,519 @@ names[0], names[1] = names[1], names[0]
 
 print(names) # ['Michelle', 'James']
 ```
+
+---
+
+## Objects aka Dictionaries
+
+Dictionaries are a fundamental data structure for organizing and describing data into key-value pairs
+
+```python
+obj = {
+    "name": "Object",
+    "is_dict": True,
+    "favorite_language": "Python",
+    44: "my favorite number!",
+    "num_of_items": 5
+}
+```
+
+A data structure that consists of key value pairs.
+
+We use the keys to describe our data and the values to represent the data
+
+We can create dictionaries with built in `dict()` method:
+
+```python
+another_dictionary = dict(key = 'value')
+another_dictionary # {'key': 'value'}
+```
+
+To access all values in dict use `.values()`:
+
+```python
+for value in obj.values():
+    print(value)
+```
+
+To access all keys and values in dict use `.items()`:
+
+```python
+for key,value in obj.items():
+    print(key,value)
+```
+
+Check if dictionary have a key:
+
+```python
+"name" in obj # True
+"awesome" in obj # False
+```
+
+Check if dictionary have a value:
+
+```python
+"Darko" in obj.values() # True
+"Nope!" in obj.values() # False
+```
+
+### Dictionary Methods
+
+`clear`
+
+Clears all the keys and values in a dictionary:
+
+```python
+d = dict(a=1,b=2,c=3)
+d.clear()
+d # {}
+```
+
+`copy`
+
+Makes a copy of a dictionary
+
+```python
+copy
+
+d = dict(a=1,b=2,c=3)
+c = d.copy()
+c # {'a': 1, 'b': 2, 'c': 3}
+c is d # False
+```
+
+`fromkeys`
+
+Creates key-value pairs from comma separated values:
+
+```python
+{}.fromkeys("a","b") # {'a': 'b'}
+{}.fromkeys(["email"], 'unknown') # {'email': 'unknown'}
+{}.fromkeys("a",[1,2,3,4,5]) # {'a': [1, 2, 3, 4, 5]}
+```
+
+`get`
+
+Retrieves a key in an object and return None instead of a KeyError if the key does not exist:
+
+```python
+d = dict(a=1,b=2,c=3)
+d['a'] # 1
+d.get('a') # 1
+d['b'] # 2
+d.get('b') # 2
+d['no_key'] # KeyError
+d.get('no_key') # None
+```
+
+`pop`
+
+Takes a single argument corresponding to a key and removes that key-value pair from the dictionary. Returns the value corresponding to the key that was removed.
+
+```python
+d = dict(a=1,b=2,c=3)
+d.pop() # TypeError: pop expected at least 1 arguments, got 0
+d.pop('a') # 1
+d # {'c': 3, 'b': 2}
+d.pop('e') # KeyError
+```
+
+`popitem`
+
+Removes a random key in a dictionary:
+
+```python
+d = dict(a=1,b=2,c=3,d=4,e=5)
+d.popitem() # ('d', 4)
+d.popitem('a') # TypeError: popitem() takes no arguments (1 given)
+```
+
+`update`
+
+Update keys and values in a dictionary with another set of key value pairs.
+
+```python
+first = dict(a=1,b=2,c=3,d=4,e=5)
+second = {}
+
+second.update(first)
+second # {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+
+# let's overwrite an existng key
+second['a'] = "AMAZING"
+
+# if we update again
+second.update(first) # {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+
+# the update overrides our values
+second # {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+```
+
+### Dictionary Comprehension
+
+-   iterates over keys by default
+
+-   to iterate over keys and values using .items()
+
+Syntax: `{ __ : __ for __ in __ }`
+
+```python
+numbers = dict(first=1, second=2, third=3)
+squared_numbers = {key: value ** 2 for key,value in numbers.items()}
+print(squared_numbers) # {'first': 1, 'second': 4, 'third': 9}
+
+{num: num**2 for num in [1,2,3,4,5]}
+
+more examples
+
+str1 = "ABC"
+str2 = "123"
+combo = {str1[i]: str2[i] for i in range(0,len(str1))}
+print(combo) # # {'A': '1', 'B': '2', 'C': '3'}
+```
+
+Conditional logic with dictionaries:
+
+```python
+num_list = [1,2,3,4]
+
+{ num:("even" if num % 2 == 0 else "odd") for num in num_list }
+
+# {1: 'odd', 2: 'even', 3: 'odd', 4: 'even'}
+```
+
+---
+
+## Tuples and Sets
+
+### Tuples
+
+It's an ordered collection or grouping of items!
+
+```python
+numbers = (1, 2, 3, 4)
+```
+
+But it is immutable - Can NEVER be changed!
+
+```python
+x = (1,2,3)
+3 in x # True
+x[0] = "change me!" # TypeError: 'tuple' object does not support item assignment
+```
+
+-   Tuples are faster than lists
+-   It makes your code safer
+-   Valid keys in a dictionary
+-   Some methods return them to you - like .items() when working with dictionaries!
+
+#### Creating / Accessing
+
+Create using () or the `tuple()` function
+
+Accessing is just like a list!
+
+```python
+first_tuple = (1, 2, 3, 3, 3)
+
+first_tuple[1] // 2
+first_tuple[2] // 3
+first_tuple[-1] // 3
+
+second_tuple = tuple(5, 1, 2)
+
+second_tuple[0] # 5
+second_tuple[-1] # 2
+```
+
+We can use a for loop to iterate over a tuple just like a list!
+
+```python
+names = ('Red', 'Blue', 'Rusty', 'Lassie')
+
+for name in names:
+    print(name)
+
+# Red
+# Blue
+# Rusty
+# Lassie
+```
+
+There are only two tuple methods:
+
+-   `count`: Returns the number of times a value appears in a tuple:
+    ```python
+        x = (1,2,3,3,3)
+        x.count(1) # 1
+        x.count(3) # 3
+    ```
+-   `index`: Returns the index at which a value is found in a tuple.
+    ```python
+        t = (1,2,3,3,3)
+        t.index(1) # 0
+        t.index(5) # ValueError: tuple.index(x): x not in tuple
+        t.index(3) # 2 - only the first matching index is returned
+    ```
+
+### Sets
+
+-   Sets are like formal mathematical sets.
+-   Sets do not have duplicate values
+-   Elements in sets aren't ordered.
+-   You cannot access items in a set by index.
+-   Sets can be useful if you need to keep track of a collection of elements, but don't care about ordering, keys or values and duplicates
+
+```python
+# Sets cannot have duplictes
+s = set({1, 2, 3, 4, 5, 5, 5}) # {1, 2, 3, 4, 5}
+
+# Creating a new set
+s = set({1, 4, 5})
+
+# Creates a set with the same values as above
+s = {1, 4, 5}
+
+4 in s
+# True
+
+8 in s
+# False
+
+numbers = {1,2,3,4}
+
+for number in numbers:
+    print(number)
+# 1
+# 2
+# 3
+# 4
+```
+
+#### Set Methods
+
+`add`
+
+Adds an element to a set. If the element is already in the set, the set doesn't change:
+
+```python
+s = set([1, 2, 3])
+
+s.add(4)
+
+s # {1, 2, 3, 4}
+
+s.add(4)
+
+s # {1, 2, 3, 4}
+```
+
+`remove`
+
+removes a value from the set - returns a KeyError if the value is not found
+
+```python
+set1 = {1,2,3,4,5,6}
+
+set1.remove(3)
+
+print(set1) # {1, 2, 4, 5, 6}
+```
+
+> if you need to avoid KeyErrors use `.discard()`
+
+`copy`
+
+Creates a copy of the set
+
+```python
+s = set([1,2,3])
+another_s = s.copy()
+another_s # {1, 2, 3}
+another_s is s # False
+```
+
+`clear`
+
+Removes all the contents of the set
+
+```python
+s = set([1, 2, 3])
+
+s.clear()
+
+s # set()
+```
+
+#### Set Comprehension
+
+set comprehension is useful when converting other data types to a set
+
+```python
+{x**2 for x in range(10)}
+
+# {0, 1, 64, 4, 36, 9, 16, 49, 81, 25}
+```
+
+```python
+def are_all_vowels_in_string(string):
+    return len({char for char in string if char in 'aeiou'}) == 5
+```
+
+---
+
+## Functions
+
+-   A process for executing a task
+-   It can accept input and return an output
+-   Useful for executing similar procedures over and over
+
+Syntax:
+
+```python
+def name_of_function ():
+    # block of runnable code
+```
+
+```python
+def say_hi():
+    print('Hi!')
+
+say_hi()
+# Hi
+```
+
+```python
+def say_hi():
+    return 'Hi!'
+
+greeting = say_hi()
+
+print(greeting) # 'Hi!'
+
+def add(a,b):
+    return a+b
+
+def multiply(first, second):
+    return first * second
+
+multiply(5,5) # 25
+multiply(2,2) # 4
+
+def is_odd_number(num):
+    if num % 2 != 0:
+        return True
+    return False
+```
+
+`return`:
+
+-   Exits the function
+-   Outputs whatever value is placed after the return keyword
+-   Pops the function off of the call stack
+
+Parameters vs Arguments:
+
+-   A parameter is a variable in a method definition.
+-   When a method is called, the arguments are the data you pass into the method's parameters.
+-   Parameter is variable in the declaration of function.
+-   Argument is the actual value of this variable that gets passed to function.
+
+### Default Parameters
+
+```python
+def add(a,b):
+    return a+b
+
+add() # does not work!
+
+# set default params
+def add(a=10, b=20):
+    return a+b
+
+add() # 30
+add(1,10) # 11
+
+```
+
+### Scope
+
+Variables created in functions are scoped in that function!
+
+```python
+name = 'Darko'
+
+def say_hello():
+    return f'Hello {name}'
+
+say_hello() # 'Hello Darko'
+
+# ---------------------
+def say_hello():
+    name = 'Darko'
+    return f'Hello {name}'
+
+say_hello() # 'Hello Darko'
+print(name) # NameError
+```
+
+### `global`
+
+Lets us reference variables that were originally assigned on the global scope:
+
+```python
+total = 0
+
+def increment():
+    global total
+    total += 1
+    return total
+
+increment() # 1
+```
+
+### `nonlocal`
+
+Lets us modify a parent's variables in a child (aka nested) function:
+
+```python
+def outer():
+    count = 0
+    def inner():
+        nonlocal count
+        count += 1
+        return count
+    return inner()
+```
+
+### Keyword Arguments
+
+```python
+def full_name(first, last):
+    return "Your name is {first} {last}"
+
+full_name(first='Colt', last='Steele') # Your name is Colt Steele
+
+full_name(last='Steele', first='Colt') # Your name is Colt Steele
+```
+
+They're useful when passing a dictionary to a function and unpacking it's values.
+
+**Different from Default Params**
+
+-   When you define a function and use an = you are setting a default parameter
+-   When you invoke a function and use an = you are making a keyword argument
+
+### Documenting functions
+
+Use `""" """`
+
+Essential when writing complex functions
+
+```python
+def say_hello():
+    """A simple function that returns the string hello"""
+    return "Hello!"
+
+say_hello.__doc__ # 'A simple function that returns the string hello'
+```
