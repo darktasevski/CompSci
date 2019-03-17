@@ -10,6 +10,61 @@ In business, large networks can be used to advertise and sell products, order su
 
 Business and SOHO networks usually provide a shared connection to the Internet. The Internet is considered a "network of networks" because it is literally made up of thousands of local networks that are connected to each other.
 
+## What happens when we enter google.com in browser:
+
+1. DNS Lookup - Like a Phonebook for the Internet!
+   We give it site url (google.com), and it finds it's server address (172.217.9.142)
+2. Computer makes a REQUEST to a server
+   Client makes GET (in this case) request to found server
+3. Server processes the REQUEST
+4. Server issues a RESPONSE
+5. Request/Response cycle
+
+## HTTP Headers
+
+-   Sent with both requests and responses
+-   Provide additional information about the request or response
+
+Header Examples
+
+Request Headers:
+
+-   Accept - Acceptable content-types for response (e.g. html, json, xml)
+-   Cache-Control - Specify caching behavior
+-   User-Agent - Information about the software used to make the request
+
+Response Headers:
+
+-   Access-Control-Allow-Origin - specify domains that can make requests
+-   Allowed - HTTP verbs that are allowed in requests
+
+## Response Status Codes
+
+-   2xx - Success
+-   3xx - Redirect
+-   4xx - Client Error (your fault!)
+-   5xx - Server Error (not your fault!)
+
+## HTTP Verbs
+
+GET:
+
+-   Useful for retrieving data
+-   Data passed in query string
+-   Should have no "side-effects"
+-   Can be cached
+-   Can be bookmarked
+
+POST:
+
+-   Useful for writing data
+-   Data passed in request body
+-   Can have "side-effects"
+-   Not cached
+-   Can't be bookmarked
+
+Plus many more...
+
 ## Terms
 
 ### MAC Addresses
