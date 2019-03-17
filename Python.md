@@ -2399,3 +2399,429 @@ def ensure_first_arg_is(val):
         return wrapper
     return inner
 ```
+
+---
+
+## Testing Python code
+
+Assertions
+
+-   We can make simple assertions with the assert keyword
+-   assert accepts an expression
+-   Returns None if the expression is truthy
+-   Raises an AssertionError if the expression is falsy
+-   Accepts an optional error message as a second argument
+
+```python
+def add_positive_numbers(x, y):
+    assert x > 0 and y > 0, "Both numbers must be positive!"
+    return x + y
+
+add_positive_numbers(1, 1) # 2
+add_positive_numbers(1, -1) # AssertionError: Both numbers must be positive!
+```
+
+> If a Python file is run with the -O flag, assertions will not be evaluated!
+
+`doctests`
+
+-   We can write tests for functions inside of the docstring
+-   Write code that looks like it's inside of a REPL
+
+```python
+def add(x, y):
+    """add together x and y
+
+    >>> add(1, 2)
+    3
+
+    >>> add(8, "hi")
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for +: 'int' and 'str'
+    """
+```
+
+un these tests with: `python3 -m doctest -v YOUR_FILE_NAME.py`
+
+### Unit testing
+
+-   Test smallest parts of an application in isolation (e.g. units)
+-   Good candidates for unit testing: individual classes, modules, or functions
+-   Bad candidates for unit testing: an entire application, dependencies across several classes or modules
+-   Python comes with a built-in module called unittest
+-   You can write unit tests encapsulated as classes that inherit from unittest.TestCase
+-   This inheritance gives you access to many assertion helpers that let you test the behavior of your functions
+-   You can run tests by calling unittest.main()
+
+```python
+# unittest Example
+
+# activities.py
+def eat(food, is_healthy):
+    pass
+
+def nap(num_hours):
+    pass
+
+# tests.py
+import unittest
+from activities import eat, nap
+
+class ActivityTests(unittest.TestCase):
+    pass
+
+if __name__ == "__main__":
+    unittest.main()
+```
+
+Commenting Tests:
+
+```python
+class SomeTests(unittest.TestCase):
+    def first_test(self):
+        """testing a thing"""
+        self.assertEqual(thing(), "something")
+
+    def second_test(self):
+        """testing another thing"""
+        self.assertEqual(another_thing(), "something else")
+```
+
+To see comments, run `python NAME_OF_TEST_FILE.py -v`
+
+Types of Assertions:
+
+-   `self.assertEqual(x, y)`
+-   `self.assertNotEqual(x, y)`
+-   `self.assertTrue(x)`
+-   `self.assertFalse(x)`
+-   `self.assertIsNone(x)`
+-   `self.assertIsNotNone(x)`
+-   `self.assertIn(x, y)`
+-   `self.assertNotIn(x, y)`
+-   ...and more!
+
+```python
+# Testing for Errors
+class SomeTests(unittest.TestCase):
+    def testing_for_error(self):
+        """testing for an error"""
+        with self.assertRaises(IndexError):
+            l = [1,2,3]
+            l[100]
+```
+
+#### Before and After Hooks
+
+`setUp` and `tearDown`
+
+-   For larger applications, you may want similar application state before running tests
+-   setUp runs before each test method
+-   tearDown runs after each test method
+-   Common use cases: adding/removing data from a test database, creating instances of a class
+
+```python
+# Example
+class SomeTests(unittest.TestCase):
+
+    def setUp(self):
+        # do setup here
+        pass
+
+    def test_first(self):
+        # setUp runs before
+        # tearDown runs after
+        pass
+
+    def test_second(self):
+        # setUp runs before
+        # tearDown runs after
+        pass
+
+    def tearDown(self):
+        # do teardown here
+        pass
+```
+
+## File I/O
+
+Reading Files:
+
+-   You can read a file with the `open` function
+-   `open` returns a file object to you
+-   You can read a file object with the `read` method
+
+```text
+story.txt
+
+This short story is really short.
+```
+
+```python
+file = open("story.txt")
+file.read()
+```
+
+### Cursor Movement
+
+-   Python reads files by using a cursor
+-   This is like the cursor you see when you're typing
+-   After a file is read, the cursor is at the end
+-   To move the cursor, use the `seek` method
+-   To read only part of a file, pass a number of characters into `read`, or use `readline`
+-   To get a list of all lines, use `readlines`
+-   You can close a file with the `close` method
+-   You can check if a file is closed with the `closed` attribute
+-   Once closed, a file can't be read again
+-   Always close files - it frees up system resources!
+-   You can also use `open` to write to a file
+-   Need to specify the "w" flag as the second argument
+
+```python
+file = open("story.txt")
+file.read()
+file.close()
+
+file.closed # True
+
+# Or:
+
+with open("story.txt") as file:
+    file.read()
+
+file.closed # True
+```
+
+```python
+with open("haiku.txt", "w") as file:
+    file.write("Writing files is great\n")
+    file.write("Here's another line of text\n")
+    file.write("Closing now, goodbye!")
+```
+
+Modes for Opening Files:
+
+-   r - Read a file (no writing) - this is the default
+-   w - Write to a file (previous contents removed)
+-   a - Append to a file (previous contents not removed)
+-   r+ - Read and write to a file (writing based on cursor)
+
+Truncating Files
+
+`file.truncate` - removes all text starting from the current cursor position
+
+### Reading CSV Files
+
+-   CSV files are a common file format for tabular data
+-   We can read CSV files just like other text files
+-   Python has a built-in CSV module to read/write CSVs more easily
+    -   `reader` - lets you iterate over rows of the CSV as lists
+    -   `DictReader` - lets you iterate over rows of the CSV as OrderedDicts
+    -   Keys are determined by the header row
+    -   An OrderedDict is like a dictionary, but it remembers the order in which keys were inserted
+    -   `writer` - creates a writer object for writing to CSV
+    -   `writerow` - method on a writer to write a row to the CSV
+    -   `DictWriter` - creates a writer object for writing using dictionaries
+    -   `fieldnames` - kwarg for the DictWriter specifying headers
+    -   `writeheader` - method on a writer to write header row
+    -   `writerow` - method on a writer to write a row based on a dictionary
+
+Using Dictionaries
+
+from csv import DictWriter
+with open("example.csv", "w") as file:
+headers = ["Character", "Move"]
+csv_writer = DictWriter(file, fieldnames=headers)
+csv_writer.writeheader()
+csv_writer.writerow({
+"Character": "Ryu",
+"Move": "Hadouken"
+})
+Dictionaries or Lists?
+
+```python
+from csv import reader
+with open("fighters.csv") as file:
+    csv_reader = reader(file)
+    for row in csv_reader:
+        # each row is a list!
+        print(row)
+```
+
+```python
+from csv import DictReader
+with open("fighters.csv") as file:
+    csv_reader = DictReader(file)
+    for row in csv_reader:
+        # each row is an OrderedDict!
+        print(row)
+```
+
+Readers accept a delimiter kwarg in case your data isn't separated by commas.
+
+```python
+from csv import reader
+with open("example.csv") as file:
+    csv_reader = reader(file, delimiter="|")
+    for row in csv_reader:
+        # each row is a list!
+        print(row)
+```
+
+```python
+from csv import writer
+with open("fighters.csv", "w") as file:
+    csv_writer = writer(file)
+    csv_writer.writerow(["Character", "Move"])
+    csv_writer.writerow(["Ryu", "Hadouken"])
+```
+
+```python
+# Writing by using Dictionaries
+from csv import DictWriter
+with open("example.csv", "w") as file:
+    headers = ["Character", "Move"]
+    csv_writer = DictWriter(file, fieldnames=headers)
+    csv_writer.writeheader()
+    csv_writer.writerow({
+        "Character": "Ryu",
+        "Move": "Hadouken"
+    })
+```
+
+## Web Scraping
+
+Web scraping is the process of downloading, extracting, and storing data from a web page
+
+Why Scrape?
+
+-   There's data on a site that you want to store or analyze
+-   You can't get by other means (e.g. an API)
+-   You want to programmatically grab the data (instead of lots of manual copying/pasting)
+
+Best practices:
+
+-   Keep in mind that s- ome websites don't want people scraping them
+-   consult the robots.txt file
+-   If making many requests, time them out
+-   If you're too aggressive, your IP can be blocked
+
+### Beautiful Soup
+
+-   To extract data from HTML, we'll use Beautiful Soup
+-   Install it with pip
+-   Beautiful Soup lets us navigate through HTML with Python
+-   Beautiful Soup does NOT download HTML - for this, we need the requests module
+    -   `BeautifulSoup(html_string, "html.parser")` - parse HTML
+    -   Once parsed, There are several ways to navigate:
+        -   By Tag Name
+        -   Using find - returns one matching tag
+        -   Using find_all - returns a list of matching tags
+
+#### Navigating with CSS Selectors
+
+`select` - returns a list of elements matching a CSS selector
+
+Selector Cheatsheet:
+
+-   Select by id of foo: #foo
+-   Select by class of bar: .bar
+-   Select children: div > p
+-   Select descendents: div p
+
+Selecting Elements by Attribute:
+
+```python
+# find an element with an id of foo
+soup.find(id="foo")
+soup.select("#foo")[0]
+
+# find all elements with a class of bar
+# careful! "class" is a reserved word in Python
+soup.find_all(class_="bar")
+soup.select(".bar")
+
+# find all elements with a data
+# attribute of "baz"
+# using the general attrs kwarg
+soup.find_all(attrs={"data-baz": True})
+soup.select("[data-baz]")
+```
+
+Accessing Data in Elements:
+
+-   `get_text` - access the inner text in an element
+-   `name` - tag name
+-   `attrs` - dictionary of attributes
+-   You can also access attribute values using brackets!
+
+#### Navigating with Beautiful Soup
+
+Via Tags:
+
+-   `parent` / `parents`
+-   `contents`
+-   `next_sibling` / `next_siblings`
+-   `previous_sibling` / `previous_siblings`
+
+Via Searching:
+
+-   `find_parent` / `find_parents`
+-   `find_next_sibling` / `find_next_siblings`
+-   `find_previous_sibling` / `find_previous_siblings`
+
+Common Issues with Web Scraping:
+
+-   Gnarly HTML
+-   Code tightly coupled to UI
+-   Sanitizing data after grabbing it
+-   Data that isn't part of HTML, but is loaded later!
+
+#### Other Tools
+
+-   Scrapy: https://scrapy.org/
+    -   A more streamlined way to build web crawlers, which can programmatically navigate across multiple pages
+    -   Can export to many different file formats from the command line
+-   Selenium: http://www.seleniumhq.org/
+    -   Allows you to open up a browser window from your code!
+    -   Often used with testing
+    -   Requires a driver for your browser of choice
+    -   Doesn't navigate through the page until all contents have loaded
+
+## REGEX
+
+A way of describing patterns within search strings.
+
+SOME REGEX SYNTAX:
+
+```regexp
+\d	    # digit 0-9
+\w	    # letter, digit, or underscore
+\s	    # whitespace character
+\D	    # not a digit
+\W	    # not a word character
+\S	    # not a whitespace character
+.	    # any character except line break
++	    # One or more
+{3}	    # Exactly x times.  {3} - 3 times
+{3,5}	# Three to five times
+{4,}	# Four or more times
+*	    # Zero or more times
+?	    # Once or none (optional)
+^	    # Start of string or line
+$	    # End of string or line
+\b	    # Word boundary
+|       # LOGICAL OR "Mr|Mrs|Ms"
+```
+
+```python
+#import regex module
+import re
+
+#define our phone number regex
+pattern = re.compile(r'\d{3} \d{3}-\d{4}')
+
+#search a string with our regex
+res = pattern.search('Call me at 415 555-4242!')
+```
