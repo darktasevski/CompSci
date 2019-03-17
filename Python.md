@@ -1322,3 +1322,829 @@ def say_hello():
 
 say_hello.__doc__ # 'A simple function that returns the string hello'
 ```
+
+### `*args`
+
+A special operator we can pass to functions
+
+Gathers remaining arguments as a tuple
+
+```python
+def sum_all_values(*args):
+    total = 0
+    for val in args:
+        total += val
+
+    return total
+
+sum_all_values(1, 2, 3) # 6
+
+sum_all_values(1, 2, 3, 4, 5) # 15
+
+# Another example
+
+def ensure_correct_info(*args):
+    if "Colt" in args and "Steele" in args:
+        return "Welcome back Colt!"
+
+    return "Not sure who you are..."
+
+ensure_correct_info() # Not sure who you are...
+
+ensure_correct_info(1, True, "Steele", "Colt")
+```
+
+### `**kwargs`
+
+A special operator we can pass to functions
+
+Gathers remaining keyword arguments as a dictionary
+
+```python
+def favorite_colors(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}'s favorite color is {value}")
+
+favorite_colors(rusty='green', colt='blue')
+
+# rusty's favorite color is green
+# colt's favorite color is blue
+
+def special_greeting(**kwargs):
+    if "Colt" in kwargs and kwargs["Colt"] == "special":
+        return "You get a special greeting Colt!"
+    elif "Colt" in kwargs:
+        return f"{kwargs["Colt"]} Colt!"
+
+    return "Not sure who this is..."
+
+special_greeting(Colt='Hello') # Hello Colt!
+special_greeting(Bob='hello') # Not sure who this is...
+special_greeting(Colt='special') # You get a special greeting Colt!
+```
+
+### Parameter Ordering
+
+1. parameters
+2. `*args`
+3. default parameters
+4. `**kwargs`
+
+```python
+def display_info(a, b, *args, instructor="Colt", **kwargs):
+  return [a, b, args, instructor, kwargs]
+
+display_info(1, 2, 3, last_name="Steele", job="Instructor")
+
+[1, 2, (3,), 'Colt', {'job': 'Instructor', 'last_name': 'Steele'}]
+```
+
+> (3,) - When you have a tuple with one item - Python needs to distinguish between parenthesis and a tuple!
+
+### Argument Unpacking
+
+We can use \* as an argument to a function to "unpack" values
+
+```python
+def sum_all_values(*args):
+    # there's a built in sum function - we'll see more later!
+    return sum(args)
+
+sum_all_values([1, 2, 3, 4]) # nope...
+sum_all_values((1, 2, 3, 4)) # this does not work either...
+
+sum_all_values(*[1, 2, 3, 4]) # 10
+sum_all_values(*(1, 2, 3, 4)) # 10
+```
+
+### Dictionary Unpacking
+
+We can use \*\* as an argument to a function to "unpack" dictionary values into keyword arguments
+
+```python
+def display_names(first, second):
+    return f"{first} says hello to {second}"
+
+names = {"first": "Colt", "second": "Rusty"}
+
+display_names(names) # nope..
+
+display_names(**names) "Colt says hello to Rusty"
+```
+
+```python
+def display_names(first, second):
+    return f"{first} says hello to {second}"
+
+names = {"first": "Colt", "second": "Rusty"}
+
+display_names(names) # nope..
+
+display_names(**names) "Colt says hello to Rusty"
+```
+
+## Lambdas
+
+Syntax:
+`lambda parameters : body of function`
+
+Lambdas are anonymous functions:
+
+```python
+first_lambda = lambda x: x + 5
+
+first_lambda(10) # 15
+
+first_lambda.__name__ # '<lambda>'
+
+add_values = lambda x, y: x + y
+
+multiply_values = lambda x, y: x * y
+
+add_values(10, 20) # 30
+
+multiply_values(10, 20) # 200
+```
+
+`map`
+
+A standard function that accepts at least two arguments, a function and an "iterable":
+
+-   iterable - something that can be iterated over (lists, strings, dictionaries, sets, tuples)
+-   runs the lambda for each value in the iterable and returns a map object which can be converted into another data structure
+
+```python
+l = [1, 2, 3, 4]
+doubles = list(map(lambda x: x * 2, l))
+doubles # [2, 4, 6, 8]
+
+names = [
+    {'first':'Rusty', 'last': 'Steele'},
+    {'first':'Colt', 'last': 'Steele', },
+    {'first':'Blue', 'last': 'Steele', }
+]
+first_names = list(map(lambda x: x['first'], names))
+first_names # ['Rusty', 'Colt', 'Blue']
+```
+
+`filter`
+
+-   There is a lambda for each value in the iterable.
+-   Returns filter object which can be converted into other iterables
+-   The object contains only the values that return true to the lambda
+
+```python
+l = [1,2,3,4]
+evens = list(filter(lambda x: x % 2 == 0, l))
+evens # [2,4]
+```
+
+Combining filter and map
+
+Given this list of names, return a new list with the string "Your instructor is " + each value in the array, but only if the value is less than 5 characters:
+
+```python
+names = ['Lassie', 'Colt', 'Rusty']
+
+list(map(lambda name: f"Your instructor is {name}",
+     filter(lambda value: len(value) < 5, names)))
+
+# ['Your instructor is Colt']
+
+# or by using list comprehension:
+[f"Your instructor is {name}" for name in names if len(name) < 5]
+```
+
+`reduce`
+
+runs a function of two arguments cumulatively to the items of iterable, from left to right, which reduces the iterable to a single value
+
+```python
+from functools import reduce
+
+l = [1,2,3,4]
+
+product = reduce(lambda x, y: x * y, l)
+
+l = [1,2,3,4]
+
+total = reduce(lambda x, y: x + y, l, 10)
+```
+
+> You will not be using reduce frequently so it's good to know it exists, but you will not find yourself using it since we have a better option in most cases. For almost all problems especially at this stage, use list comprehension - you will see it far more in the wild
+
+### Closures
+
+Accessing variables defined in outer functions after they have returned.
+
+-   private variables
+-   not using global variables
+
+Closures using `nonlocal`:
+
+```python
+def counter():
+    count = 0
+    def inner():
+        nonlocal count
+        count += 1
+        return count
+    return inner
+```
+
+Here we're making a variable count inside the counter function, which can only be accessed by counter and inner.
+Once we return inner, we can still remember count through closure!
+
+Closures using Objects:
+
+```python
+def counter():
+    counter.count = 0
+    def inner():
+        counter.count += 1
+        return counter.count
+    return inner
+```
+
+Here we're making a property on the counter function which can only be accessed by counter and inner.
+Once we return inner, we can still remember the count property through closure!
+
+Partial Application with Closures:
+
+```python
+def outer(a):
+    def inner(b):
+        return a+b
+    return inner
+
+result = outer(10)
+
+result(20) # 30
+```
+
+When you are just using (not modifying) a variable through closure, you don't need to use nonlocal or objects!
+
+### Built-in Functions
+
+`all`
+
+Return True if all elements of the iterable are truthy (or if the iterable is empty)
+
+```python
+all([0,1,2,3]) # False
+all([char for char in 'eio' if char in 'aeiou'])
+all([num for num in [4,2,10,6,8] if num % 2 == 0]) # True
+```
+
+`any`
+
+Return True if any element of the iterable is truthy. If the iterable is empty, return False.
+
+```python
+any([0, 1, 2, 3]) # True
+any([val for val in [1,2,3] if val > 2]) # True
+any([val for val in [1,2,3] if val > 5]) # False
+```
+
+`sorted`
+
+Returns a new sorted list from the items in iterable
+
+```python
+# sorted (works on anything that is iterable)
+more_numbers = [6,1,8,2]
+sorted(more_numbers) # [1, 2, 6, 8]
+print(more_numbers) # [6, 1, 8, 2]
+```
+
+`reversed`
+
+Return a reverse iterator.
+
+```python
+more_numbers = [6, 1, 8, 2]
+reversed(more_numbers) # <list_reverseiterator at 0x1049f7da0>
+print(list(reversed(more_numbers))) # [2, 8, 1, 6]
+```
+
+`max`
+
+Return the largest item in an iterable or the largest of two or more arguments.
+
+```python
+# max (strings, dicts with same keys)
+
+max([3,4,1,2]) # 4
+max((1,2,3,4)) # 4
+max('awesome') # 'w'
+max({1:'a', 3:'c', 2:'b'}) # 3
+```
+
+`min`
+
+Return the smallest item in an iterable or the smallest of two or more arguments.
+
+```python
+# min (strings, dicts with same keys)
+
+min([3,4,1,2]) # 1
+min((1,2,3,4)) # 1
+min('awesome') # 'a'
+min({1:'a', 3:'c', 2:'b'}) # 1
+```
+
+`len`
+
+Return the length (the number of items) of an object. The argument may be a sequence (such as a string, tuple, list, or range) or a collection (such as a dictionary, set)
+
+```python
+len('awesome') # 7
+len((1,2,3,4)) # 4
+len([1,2,3,4]) # 4
+len(range(0,10) # 10
+
+len({1,2,3,4}) # 4
+len({'a':1, 'b':2, 'c':2} # 3
+```
+
+`abs`
+
+Return the absolute value of a number. The argument may be an integer or a floating point number.
+
+```python
+abs(-5) # 5
+abs(5)  # 5
+```
+
+`sum`
+
+-   Takes an iterable and an optional start.
+-   Returns the sum of start and the items of an iterable from left to right and returns the total.
+-   start defaults to 0
+
+```python
+sum([1,2,3,4]) # 10
+sum([1,2,3,4], -10) # 0
+```
+
+`round`
+
+Return number rounded to ndigits precision after the decimal point. If ndigits is omitted or is None, it returns the nearest integer to its input.
+
+```python
+round(10.2) # 10
+round(1.212121, 2) # 1.21
+```
+
+`zip`
+
+-   Make an iterator that aggregates elements from each of the iterables.
+-   Returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences or iterables.
+-   The iterator stops when the shortest input iterable is exhausted.
+
+```python
+first_zip = zip([1,2,3], [4,5,6])
+list(first_zip) # [(1, 4), (2, 5), (3, 6)]
+dict(first_zip) # {1: 4, 2: 5, 3: 6}
+```
+
+Very common when working with more complex data structures!
+
+```python
+five_by_two = [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)]
+list(zip(*five_by_two))
+[(0, 1, 2, 3, 4), (1, 2, 3, 4, 5)]
+```
+
+## Error Handling
+
+In Python, it is strongly encouraged to use try/except blocks, to catch exceptions when we can do something about them.
+
+```python
+try:
+    foobar
+except NameError as err:
+    print(err)
+```
+
+When you use try/except, make sure that a specific type of exception is being handled.
+
+​If you want to except a handful of exceptions, you can pass a tuple of errors into the except block as well:
+
+```python
+try:
+    colt.hello
+except (TypeError, AttributeError):
+    print("That doesn't work with this thing.")
+```
+
+### Debugging with pdb
+
+To set breakpoints in our code we can use pdb by inserting this line:
+
+```python
+import pdb; pdb.set_trace()
+
+def add_then_multiply(num1, num2):
+    sum = num1 + num2
+    import pdb; pdb.set_trace()
+
+    product = sum * num1 * num2
+
+    return product
+```
+
+Inside of the debugger we can press c to continue and q to quit.
+
+## Modules
+
+```python
+import random
+
+random.choice(["apple", "banana", "cherry", "durian"])
+random.shuffle(["apple", "banana", "cherry", "durian"])
+```
+
+```python
+import random as omg_so_random
+
+omg_so_random.choice(["apple", "banana", "cherry", "durian"])
+omg_so_random.shuffle(["apple", "banana", "cherry", "durian"])
+```
+
+-   The from keyword lets you import parts of a module
+-   andy rule of thumb: only import what you need!
+-   If you still want to import everything, you can also use the from MODULE import \* pattern
+
+Different Ways to Import:
+
+-   `import random`
+-   `import random as omg_so_random`
+-   `from random import *`
+-   `from random import choice, shuffle`
+-   `from random import choice as gimme_one, shuffle as mix_up_fruits`
+
+### Custom Modules
+
+-   You can import from your own code too
+-   The syntax is the same as before
+-   import from the name of the Python file
+
+```python
+# file1.py
+
+def fn():
+    return "do some stuff"
+
+def other_fn():
+    return "do some other stuff"
+```
+
+```python
+#file2.py
+
+import file1
+
+file1.fn() # 'do some stuff'
+
+file1.other_fn() # 'do some other stuff'
+```
+
+### External Modules
+
+-   Built-in modules come with Python
+-   External modules are downloaded from the internet
+-   You can download external modules using pip
+
+### `__name__` variable
+
+-   When run, every Python file has a **name** variable
+-   If the file is the main file being run, its value is "**main**"
+-   Otherwise, its value is the file name
+
+```python
+if __name__ == "__main__":
+    # this code will only run
+    # if the file is the main file!
+```
+
+## HTTP requests with Python
+
+### `requests` Module
+
+-   Lets us make HTTP requests from our Python code!
+-   Installed using pip
+-   Useful for web scraping/crawling, grabbing data from other APIs, etc
+
+```python
+import requests
+
+response = requests.get("http://www.example.com")
+```
+
+We can alse set request headers:
+
+```python
+import requests
+
+response = requests.get(
+    "http://www.example.com",
+    headers={
+        "header1": "value1",
+        "header2": "value2"
+    },
+    params={
+        "key1": "value1",
+        "key2": "value2"
+    }
+)
+```
+
+POST request example:
+
+```python
+import requests
+import json
+
+response = requests.post(
+    "http://www.example.com",
+    data=json.dumps({
+        "key1": "value1",
+        "key2": "value2"
+    })
+)
+```
+
+## OOP in Python
+
+Classes in Python can have a special **init** method, which gets called every time you create an instance of the class (instantiate).
+
+```python
+class Vehicle:
+
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+```
+
+### Instantiating a Class
+
+Creating an object that is an instance of a class is called instantiating a class.
+
+```python
+v = Vehicle("Honda", "Civic", 2017)
+```
+
+### `self`
+
+**The `self` keyword refers to the current class instance.**
+
+**`self` must always be the first parameter to `__init__` and any methods and properties on class instances.**
+You never have to pass it directly when calling instance methods, including **init**
+
+```python
+class Person():
+
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def full_name(self):
+        return f"My name is {self.first_name} {self.last_name}"
+
+    def likes(self, thing):
+        return f"{self.first_name} likes {thing}!"
+
+p = Person("Darko", "T")
+p.full_name() # Darko T
+p.likes("Python") # Darko likes Python!
+```
+
+### Class Attributes
+
+We can also define attributes directly on a class that are shared by all instances of a class and the class itself.
+
+```python
+class Pet():
+
+    allowed = ("cat", "dog", "bird", "lizard", "rodent")
+
+    def __init__(self, kind, name):
+
+        if kind not in self.allowed:
+            raise ValueError(f"You can't have a {kind} as a pet here!")
+
+        self.kind = kind
+        self.name = name
+
+fluffy = Pet("cat", "Fluffy")
+fluffy.allowed
+("cat", "dog", "bird", "lizard", "rodent")
+Bro = Pet("bear", "Bro")
+# ValueError: You can't have a bear as a pet here!
+```
+
+### Class Methods
+
+Class methods are methods (with the `@classmethod` decorator) that are not concerned with instances, but the class itself.
+
+```python
+class Person():
+    # ...
+
+    @classmethod
+    def from_csv(cls, filename):
+        return cls(*params) # this is the same as calling Person(*params)
+
+Person.from_csv(my_csv)
+```
+
+The first argument is cls (for class) instead of self. Like self, it does not need to be passed in explicitly.
+
+Class methods are available on the class itself and any instances of the class, and are mostly used for building new instances of classes.
+
+### Inheritance
+
+In Python, inheritance works by passing the parent class as an argument to the definition of a child class:
+
+```python
+class Animal:
+    def make_sound(self, sound):
+        print(sound)
+
+    cool = True
+
+class Cat(Animal):
+    pass
+
+gandalf = Cat()
+gandalf.make_sound("meow")  # meow
+gandalf.cool  # True
+```
+
+### `super`
+
+The `super()` keyword allows us to call the **init** function of a parent class
+
+In the example below, we initialize the child with both its own **init** method and its parent's **init** method:
+
+```python
+class Animal:
+    def __init__(self, species):
+        self.species = species
+
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__("canine")
+        self.name = name
+
+bro = Dog("Bro")
+bro.name  # Bro
+bro.species  # canine
+```
+
+### Multiple Inheritance
+
+Python also allows classes to inherit from more than one parent class.
+
+```python
+class Aquatic:
+  def __init__(self,name):
+    self.name = name
+
+  def swim(self):
+    return f"{self.name} is swimming"
+
+  def greet(self):
+    return f"I am {self.name} of the sea!"
+
+class Ambulatory:
+  def __init__(self,name):
+    self.name = name
+
+  def walk(self):
+    return f"{self.name} is walking"
+
+  def greet(self):
+    return f"I am {self.name} of the land!"
+
+class Penguin(Aquatic, Ambulatory):
+  def __init__(self,name):
+    super().__init__(name=name)
+
+jaws = Aquatic("Jaws")
+lassie = Ambulatory("Lassie")
+captain_cook = Penguin("Captain Cook")
+
+jaws.swim() # 'Jaws is swimming'
+jaws.walk() # AttributeError: 'Aquatic' object has no attribute 'walk'
+jaws.greet() # 'I am Jaws of the sea!'
+
+lassie.swim() # AttributeError: 'Ambulatory' object has no attribute 'swim'
+lassie.walk() # 'Lassie is walking'
+lassie.greet() # 'I am Lassie of the land!'
+
+captain_cook.swim() # 'Captain Cook is swimming'
+captain_cook.walk() # 'Captain Cook is walking'
+captain_cook.greet() # 'I am Captain Cook of the sea!'
+```
+
+Penguin inherits from both Aquatic and Ambulatory, therefore instances of Penguin can call both the walk and swim methods.
+
+### Method Resolution Order (MRO)
+
+Whenever you create a class, Python sets a Method Resolution Order, or MRO, for that class, which is the order in which Python will look for methods on instances of that class.
+
+You can programmatically reference the MRO three ways:
+
+-   **mro** attribute on the class
+-   use the mro() method on the class
+-   use the builtin help(cls) method
+
+```python
+Penguin.__mro__
+
+# (<class 'multiple.Penguin'>, <class 'multiple.Aquatic'>,
+#  <class 'multiple.Ambulatory'>, <class 'object'>)
+
+Penguin.mro()
+
+# [__main__.Penguin, __main__.Aquatic, __main__.Ambulatory, object]
+
+help(Penguin) # best for HUMAN readability -> gives us a detailed chain
+```
+
+### Polymorphism & Inheritance
+
+The same class method works in a similar way for different classes
+
+A common implementation of this is to have a method in a base (or parent) class that is overridden by a subclass. This is called **method overriding**:
+
+-   Each subclass will have a different implementation of the method.
+-   If the method is not implemented in the subclass, the version in the parent class is called instead.
+
+```python
+class Animal():
+    def speak(self):
+        raise NotImplementedError("Subclass needs to implement this method")
+
+class Dog(Animal):
+    def speak(self):
+        return "woof"
+
+class Cat(Animal):
+    def speak(self):
+        return "meow"
+```
+
+### Special Methods
+
+you can declare special methods on your own classes to mimic the behavior of builtin objects, like so using **len**:
+
+```python
+class Human:
+    def __init__(self, height):
+        self.height = height  # in inches
+
+    def __len__(self):
+        return self.height
+
+Colt = Human(60)
+len(Colt)  # 60
+```
+
+The most common use-case for special methods is to make classes "look pretty" in strings.
+
+By default, our classes look ugly:
+
+```python
+class Human:
+    pass
+
+colt = Human()
+print(colt)  # <__main__.Human at 0x1062b8400>
+```
+
+We can use special methods to make it look way better!
+The **repr** method is one of several ways to provide a nicer string representation:
+
+```python
+class Human:
+
+    def __init__(self, name="somebody"):
+        self.name = name
+
+    def __repr__(self):
+        return self.name
+
+dude = Human()
+print(dude)  # "somebody"
+
+COPY
+colt = Human(name="Colt Steele")
+print(f"{colt} is totally rad (probably)")
+# "Colt Steele is totally rad (probably)"
+```
+
+> There are also several other dunders to return classes in string formats (notably **str** and **format**)
