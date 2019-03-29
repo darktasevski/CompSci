@@ -1,8 +1,14 @@
 # Math notes
 
+> Using KaTeX for some math notations and examples
+
 -   The **absolute value** is just the number's distance from the zero.
-    |5| = 5 `abs` of 5 is 5.  
-    |-10| = 10 `abs` of -10 is 10
+    $$
+    |5| = 5\enspace abs\enspace of\enspace 5\enspace is\enspace 5.
+    $$
+    $$
+    |-10| = 10\enspace abs\enspace of\enspace -10\enspace is\enspace 10.
+    $$
 -   **Addition** of the odd and even number will always result in the odd number.
 -   **Addition** of odd and odd number will always return even number (except for zero)
 -   **Zero** is even number.
@@ -199,3 +205,160 @@ $$
      -----
       0      // We're done, we have remainder of zero
 ```
+
+**Dividing by two digit numbers**
+
+$$
+186 / 31 = 31\sqrt{186} = 6
+$$
+
+because:
+
+$$
+31 \times 6 = 186
+$$
+
+### Remainders
+
+> Leftover value after we divide somethin that can't be divided evenly
+
+$$ 7/3 = 2r1 $$
+
+3 goes in the 7 two times, and once we divide that amount $(2 \times 3 = 6)$ we have 1 (remainder) left.
+
+> More examples in Remainder section in the notebook (it's really hard to write that in KaTeX).
+
+```js
+4√‾‾75 = 18r3
+  - 4     // 4 goes in 7 once; write 1; 4 x 1 = 4, 7 - 4 = 3
+  ----    // shift down 5
+    35    // 4 goes into 35 8 times; write 8; 4 x 8 = 32;
+    32
+    ---- // No numbers to shift down, we're left with the 3
+     3   // 4 goes into 3 zero times, so this will be a remainder
+```
+
+```js
+8√‾‾3771 = 0471r3
+  - 32    // 8 goes into 32 4 times; write 4
+    ----
+     57   // 8 goes into 57 7 times; write 7
+     56
+     ----
+      11  // 8 goes into 17 once; write 1
+       8
+      ----
+       3  // We're left with 3; 8 goes into 3 zero times, so this would be a remainder.
+```
+
+## Negative Numbers
+
+Opossite of an number is the number that is same distance from the zero, but on the other side of it.
+
+For example:
+opossite of 3 is -3, of the 5 is -5, 72 is -72 and so on...
+
+One way to think about it is that the number will have the same absolute value but the different sign.
+
+Example:
+
+Find |x| when $x = 5$, $x = -10$ and $x = -12$.
+
+> |x| (pipes) are the notation for the absolute values.
+
+$$
+|5| = 5, |-10| = 10, |-12| = 12
+$$
+
+> This is just a distance from the zero.
+
+### Calculating value as distance between the numbers
+
+<----a------b---->
+
+<----b------a---->
+
+$$ |a-b| = |b-a| $$
+or:
+
+$$
+|-2-3| = |-5| = 5
+$$
+
+$$
+|3-(-2)| = | 5 | = 5
+$$
+
+### Negative numbers addition
+
+$$
+15 + (-46) + 29 = -2
+$$
+
+$$
+-15-46-29 = -90
+$$
+
+### Multiplying negative numbers
+
+> Myltiplying negative with negative always yields a positive value
+> Myltiplying negative with positive always yields a negative number
+
+TODO: Some examples
+
+## Exponents
+
+$$
+2^3 = 2 \times 2 \times 2 = 8
+$$
+
+$$
+3^2 = 3 \times 3 = 9
+$$
+
+$$
+5^3 = 5 \times 5 \times 5 = 125
+$$
+
+The small number written above and to the right of thr number is called an **exponent**. The number underneath the exponent is called **the base**
+
+$$
+(-2)^3 = (-2) \times (-2) \times (-2) = 4 \times -2 = -8
+$$
+
+$$ 2^0  = 1 $$
+$$ 2^1 = 2 $$
+
+$$
+  (\frac{2}{5})^2 = \frac{2}{5} \times \frac{2}{5} = \frac{2 \times 2}{5 \times 5} = \frac{4}{25}
+$$
+
+$$
+(\frac{1}{2})^4 = \frac{1}{2 \times 2 \times 2 \times 2} = \frac{1}{16}
+$$
+
+**Some edge cases**:
+
+Zero to any non zero power will be equal to zero:
+
+$$
+0^1 = 1 \times 0 = 0
+$$
+
+$$
+0^2 = 1 \times 0 \times 0 = 0
+$$
+
+$$
+0^0 = undefined
+$$
+
+One to any power is going to be equal to one:
+
+$$
+(-1)^0 = 1
+$$
+
+$$
+(-1)^1 = -1
+$$
