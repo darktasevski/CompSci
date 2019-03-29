@@ -1,5 +1,11 @@
 # Code snippets
 
+-   [Git](#Git)
+-   [Javascript Strings](#JS)
+-   [Shell/Bash](#Shell-Bash)
+
+---
+
 ## Git
 
 ### Reset branch to the origin master
@@ -43,14 +49,6 @@ rm ./src/.env
 git commit
 ```
 
-## String ops
-
-### Replace spaces with underscores
-
-```js
-str.replace(/ /g, '_');
-```
-
 ## Shell/Bash
 
 ### Find processes at wanted port and kill em all
@@ -76,6 +74,12 @@ CTRL Y to paste from kill-ring
 ```
 
 ## JS
+
+### Replace spaces with underscores
+
+```js
+str.replace(/ /g, '_');
+```
 
 ### Check what device is used:
 
@@ -172,4 +176,92 @@ const partialApplication = (fn, ...initialArguments) => {
 		fn(...initialArguments, ...remainingArguments);
 	};
 };
+```
+
+### Create an array of the past seven days, inclusive
+
+```js
+[...Array(7).keys()].map(days => new Date(Date.now() - 86400000 * days));
+```
+
+If you swap the minus for a plus, it gives you the next seven days.
+
+### ### Generate a random alphanumerical string of length 11
+
+```js
+Math.random()
+	.toString(36)
+	.substring(2);
+```
+
+### _Quines_
+
+> A [quine](<https://en.wikipedia.org/wiki/Quine_(computing)>) is a program that outputs its own source code.
+
+```js
+// $=_=>`$=${$};$()`;$()
+$ = _ => `$=${$};$()`;
+$();
+
+// eval(I="'eval(I='+JSON.stringify(I)+')'")
+eval((I = "'eval(I='+JSON.stringify(I)+')'"))(
+	// For those who like their quines via alert
+	// (function a(){alert("("+a+")()")})()
+	function a() {
+		alert('(' + a + ')()');
+	}
+)();
+```
+
+### Get the current page’s query parameters as an object
+
+```js
+document.location.search
+	.replace(/(^\?)/, '')
+	.split('&')
+	.reduce(function(o, n) {
+		n = n.split('=');
+		o[n[0]] = n[1];
+		return o;
+	}, {});
+```
+
+### _Working clock_
+
+> it ticks every second, updating the page with the current time.
+
+```html
+<body
+	onload="setInterval(()=>document.body.innerHTML=new Date().toGMTString().slice(17,25))"
+></body>
+```
+
+### _Shuffle an array_
+
+```js
+// Return a shuffled copy of an Array-like
+arr => arr.slice().sort(() => Math.random() - 0.5);
+```
+
+### _Generate random hex code_
+
+```js
+// Generate a random hex code such as `#c618b2`
+'#' +
+	Math.floor(Math.random() * 0xffffff)
+		.toString(16)
+		.padEnd(6, '0');
+```
+
+### Fizz Buzz
+
+```js
+for (i = 0; ++i < 101; console.log(i % 5 ? f || i : f + 'Buzz')) f = i % 3 ? '' : 'Fizz';
+```
+
+### _Remove duplicates from array_
+
+```js
+// Remove duplicates from the iterable `arr`
+[...new Set(arr)];
 ```

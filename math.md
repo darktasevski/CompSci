@@ -2,6 +2,30 @@
 
 > Using KaTeX for some math notations and examples
 
+-   [General stuff and highlights](#General)
+-   [Multiplication](#Multiplication)
+    _ [Distributive property grid](#Distributive-property-grid)
+    _ [Multiplying with area model](#Multiplying-with-area-model)
+    _ [Standard algorithm example](#Standard-algorithm)
+    _ [Multiplication with 1 digit](#Multiplication-with-1-digit) \* [Multiplication with 2 digits](#Multiplication-with-2-digits)
+-   [Division](#Division)
+    -   [Division using place value](#Division-using-place-value)
+    -   [Division using distributive property](#Division-using-distributive-property)
+    -   [Division using long division](#Division-using-long-division)
+    -   [Dividing by two digit numbers](#Dividing-by-two-digit-numbers)
+-   [Remainders](#Remainders)
+-   [Negative Numbers](#Negative-Numbers)
+    -   [Absolute values](#Absolute-values)
+        -   [Calculating value as distance between the numbers](#Calculating-value-as-distance-between-the-numbers)
+    -   [Negative numbers addition](#Negative-numbers-addition)
+    -   [Multiplying negative numbers](#Multiplying-negative-numbers)
+-   [Exponents](#Exponents)
+    -   [Some edge cases](#Some-edge-cases)
+
+---
+
+## General
+
 -   The **absolute value** is just the number's distance from the zero.
     $$
     |5| = 5\enspace abs\enspace of\enspace 5\enspace is\enspace 5.
@@ -48,7 +72,8 @@ Simple hack:
          400 + 48 = 448
 ```
 
-**Distributive property grid**
+### Distributive property grid
+
 Example:
 
 ```js
@@ -61,7 +86,8 @@ Example:
        | 5040 + 442 | = 5481
 ```
 
-**Multiplying with area model**
+### Multiplying with area model
+
 6 x 7981 =
 | x | 7000 | 900 | 80 | 1 |
 |---|--------|------|-----|---|
@@ -100,9 +126,12 @@ We can multiply numbers by hand:
     | 300 | 120,000 | 24,000 | 300 | 144,300 |
     | | | | | 169,312 |
     This is area grid. We destructure numbers to thousands, hundreds, tens and ones and then multiply and add them together.
--   or by using **standard algorithm**:
 
-    ```js
+### Standard algorithm
+
+or by using **standard algorithm**:
+
+```js
       481
     x 352
     ------
@@ -117,10 +146,11 @@ We can multiply numbers by hand:
       (5 x 1) = 5 | 0
       (5 x 8) = 40, we put 0 and carry 4 results in: 0 5 | 0
       (5 x 4) = 20 + 4 (we carried) = 24 0 5 | 0 results in: 24,050
-    ```
+```
 
-    **Multiplication with 1 digit**:
-    This is simple, we just multiply number by number and carry values:
+### Multiplication with 1 digit
+
+This is simple, we just multiply number by number and carry values:
 
 ```js
   253 // 7 x 3 = 21                      write 1, carry 2
@@ -136,7 +166,7 @@ x  9   // 9 x 8 = 72 + 4 we carried = 76, write 6, carry 7
 72765  // 9 x 8 = 72, write 72, as this is last number
 ```
 
-**Multiplication with 2 digits**:
+### Multiplication with 2 digits
 
 ```js
 
@@ -151,7 +181,7 @@ x 27   // 7 x 3 = 21 + 4 we carried = 25, write 25 as this is last number
 
 ## Division
 
-**Division using place value**:
+### Division using place value
 
 $$
 5600 / 8 = (56 \times 100) / 8 = 56 / 8 = 7 \times 100 = 700
@@ -165,7 +195,7 @@ $$
 15000 / 15 = (15 \times 1000) / 15 = 15 / 15 = 1 \times 1000 = 1000
 $$
 
-**Division using distributive property**:
+### Division using distributive property
 
 $$
 846 / 2 = (800 / 2) + (40 / 2) + (6 / 2) = 400 + 20 + 3 = 423
@@ -177,7 +207,7 @@ $$
 963 / 9 = (900 / 9) + (63 / 9) = 100 + 7 = 100
 $$
 
-**Division using long division**:
+### Division using long division
 
 $$
 280 / 5 = 5\sqrt{280} = 56
@@ -206,7 +236,7 @@ $$
       0      // We're done, we have remainder of zero
 ```
 
-**Dividing by two digit numbers**
+### Dividing by two digit numbers
 
 $$
 186 / 31 = 31\sqrt{186} = 6
@@ -253,6 +283,8 @@ $$ 7/3 = 2r1 $$
 
 ## Negative Numbers
 
+### Absolute values
+
 Opossite of an number is the number that is same distance from the zero, but on the other side of it.
 
 For example:
@@ -272,7 +304,7 @@ $$
 
 > This is just a distance from the zero.
 
-### Calculating value as distance between the numbers
+#### Calculating value as distance between the numbers
 
 <----a------b---->
 
@@ -337,7 +369,7 @@ $$
 (\frac{1}{2})^4 = \frac{1}{2 \times 2 \times 2 \times 2} = \frac{1}{16}
 $$
 
-**Some edge cases**:
+### Some edge cases
 
 Zero to any non zero power will be equal to zero:
 

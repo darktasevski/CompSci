@@ -1,11 +1,11 @@
 # You Don't Know JS: Notes
 
--   [Scope and Closures](bear://x-callback-url/open-note?id=FB9951EE-695D-41F4-807F-DDC6017193E9-521-0000102458B87ED3&header=Scope%20and%20Closures)
-    _ [Cheating Lexical Scope: eval and with](bear://x-callback-url/open-note?id=FB9951EE-695D-41F4-807F-DDC6017193E9-521-0000102458B87ED3&header=Cheating%20Lexical%20Scope:)
-    _ [Block scope/Garbage collector snippet](bear://x-callback-url/open-note?id=FB9951EE-695D-41F4-807F-DDC6017193E9-521-0000102458B87ED3&header=Block%20scope)
-    _ [Hoisting](bear://x-callback-url/open-note?id=FB9951EE-695D-41F4-807F-DDC6017193E9-521-0000102458B87ED3&header=Hoisting)
-    _ [Closure](bear://x-callback-url/open-note?id=FB9951EE-695D-41F4-807F-DDC6017193E9-521-0000102458B87ED3&header=Closure) \* [Dynamic Scope](bear://x-callback-url/open-note?id=FB9951EE-695D-41F4-807F-DDC6017193E9-521-0000102458B87ED3&header=Dynamic%20Scope)
--   [this & Object Prototypes](bear://x-callback-url/open-note?id=FB9951EE-695D-41F4-807F-DDC6017193E9-521-0000102458B87ED3&header=this%20&%20Object%20Prototypes)
+-   [Scope and Closures](#Scope-and-Closures)
+    -   [Cheating Lexical Scope: eval and with](#Cheating-Lexical-Scope)
+    -   [Block scope/Garbage collector snippet](#Block-scope)
+    -   [Hoisting](#Hoisting)
+    -   [Closure](#Closure) \* [Dynamic Scope](#Dynamic-Scope)
+-   [this & Object Prototypes](#this-Object-Prototypes)
 
 ---
 
@@ -17,38 +17,38 @@
 
 The `eval(..)` function in JavaScript takes a string as an argument, and treats the contents of the string as if it had actually been authored code at that point in the program. In other words, you can programmatically generate code inside of your authored code, and run the generated code as if it had been there at author time.
 
-```js
+```
 function foo(str, a) {
-	eval(str); // cheating!
-	console.log(a, b);
+	eval( str ); // cheating!
+	console.log( a, b );
 }
 
 var b = 2;
-foo('var b = 3;', 1); // 1 3
+foo( "var b = 3;", 1 ); // 1 3
 ```
 
-> **Note**: `eval(..)` when used in a strict-mode program operates in its own lexical scope, which means declarations made inside of the `eval()` do not actually modify the enclosing scope.
+> _Note_: `eval(..)` when used in a strict-mode program operates in its own lexical scope, which means declarations made inside of the `eval()` do not actually modify the enclosing scope.
 
-```js
+```
 function foo(str) {
-	'use strict';
-	eval(str);
-	console.log(a); // ReferenceError: a is not defined
+   "use strict";
+   eval( str );
+   console.log( a ); // ReferenceError: a is not defined
 }
 
-foo('var a = 2');
+foo( "var a = 2" );
 ```
 
 #### `with()`
 
-> This is frowned upon and deprecated!  
+> This is frowned upon and deprecated!
 > `with` is typically explained as a short-hand for making multiple property references against an object without repeating the object reference itself each time.
 
-```js
+```
 var obj = {
 	a: 1,
 	b: 2,
-	c: 3,
+	c: 3
 };
 // more "tedious" to repeat "obj"
 obj.a = 2;
@@ -64,24 +64,24 @@ with (obj) {
 
 One of reasons for this being deprecated:
 
-```js
+```
 function foo(obj) {
 	with (obj) {
 		a = 2;
 	}
 }
 var o1 = {
-	a: 3,
+	a: 3
 };
 var o2 = {
-	b: 3,
+	b: 3
 };
-foo(o1);
-console.log(o1.a); // 2
+foo( o1 );
+console.log( o1.a ); // 2
 
-foo(o2);
-console.log(o2.a); // undefined
-console.log(a); // 2 -- Oops, leaked global!
+foo( o2 );
+console.log( o2.a ); // undefined
+console.log( a ); // 2 -- Oops, leaked global!
 ```
 
 ### Block scope
@@ -90,7 +90,7 @@ console.log(a); // 2 -- Oops, leaked global!
 
 Probably useful snippet of using block scope to garbage collect unneeded stuff
 
-```js
+```
 function process(data) {
 	// do something interesting
 }
@@ -122,13 +122,13 @@ Declarations themselves are hoisted, but assignments, even assignments of functi
 
 ### Closure
 
-**Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.**
+_Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope._
 
-```js
+```
 function foo() {
 	var a = 2;
 	function bar() {
-		console.log(a); // 2
+		console.log( a ); // 2
 	}
 	bar();
 }
@@ -139,11 +139,11 @@ From a purely academic perspective, what is said of the above snippet is that th
 
 And that weird way of binding functions in React is solved:
 
-```js
+```
 function foo() {
 	var a = 2;
 	function bar() {
-		console.log(a);
+		console.log( a );
 	}
 	return bar;
 }
@@ -159,15 +159,15 @@ But the "magic" of closures does not let this happen. That inner scope is in fac
 
 By virtue of where it was declared, bar() has a lexical scope closure over that inner scope of foo(), which keeps that scope alive for bar() to reference at any later time.
 
-**bar() still has a reference to that scope, and that reference is called closure.**
+_bar() still has a reference to that scope, and that reference is called closure._
 
 ### Dynamic Scope
 
 Dynamic scope, doesn't concern itself with how and where functions and scopes are declared, but rather where they are called from. In other words, the scope chain is based on the call-stack, not the nesting of scopes in code.
 
-```js
+```
 function foo() {
-	console.log(a); // 3  (not 2!)
+	console.log( a ); // 3  (not 2!)
 }
 function bar() {
 	var a = 3;
@@ -179,6 +179,6 @@ bar();
 
 Because when foo() cannot resolve the variable reference for a, instead of stepping up the nested (lexical) scope chain, it walks up the call-stack, to find where foo() was called from. Since foo() was called from bar(), it checks the variables in scope for bar(), and finds an a there with value 3.
 
-**The key contrast: lexical scope is write-time, whereas dynamic scope (and this!) are runtime. Lexical scope cares where a function was declared, but dynamic scope cares where a function was called from.**
+_The key contrast: lexical scope is write-time, whereas dynamic scope (and this!) are runtime. Lexical scope cares where a function was declared, but dynamic scope cares where a function was called from._
 
 ## this & Object Prototypes
