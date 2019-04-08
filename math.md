@@ -1,5 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 # Math notes
 
 > Using KaTeX for some math notations and examples
@@ -9,10 +7,11 @@
     -   [Quadrilaterals](#Quadrilaterals)
 -   [Fractions](#Fractions)
 -   [Multiplication](#Multiplication)
-    _ [Distributive property grid](#Distributive-property-grid)
-    _ [Multiplying with area model](#Multiplying-with-area-model)
-    _ [Standard algorithm example](#Standard-algorithm)
-    _ [Multiplication with 1 digit](#Multiplication-with-1-digit) \* [Multiplication with 2 digits](#Multiplication-with-2-digits)
+    -   [Distributive property grid](#Distributive-property-grid)
+    -   [Multiplying with area model](#Multiplying-with-area-model)
+    -   [Standard algorithm example](#Standard-algorithm)
+    -   [Multiplication with 1 digit](#Multiplication-with-1-digit)
+    -   [Multiplication with 2 digits](#Multiplication-with-2-digits)
 -   [Division](#Division)
     -   [Division using place value](#Division-using-place-value)
     -   [Division using distributive property](#Division-using-distributive-property)

@@ -1,5 +1,7 @@
 # Javascript Performance
 
+> Some notes regarding JS performance
+
 ## Avoid interaction with host objects
 
 THE PROBLEM:
