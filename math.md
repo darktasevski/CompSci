@@ -1,8 +1,13 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 # Math notes
 
 > Using KaTeX for some math notations and examples
 
 -   [General stuff and highlights](#General)
+-   [Geometry](#Geometry)
+    -   [Quadrilaterals](#Quadrilaterals)
+-   [Fractions](#Fractions)
 -   [Multiplication](#Multiplication)
     _ [Distributive property grid](#Distributive-property-grid)
     _ [Multiplying with area model](#Multiplying-with-area-model)
@@ -13,6 +18,7 @@
     -   [Division using distributive property](#Division-using-distributive-property)
     -   [Division using long division](#Division-using-long-division)
     -   [Dividing by two digit numbers](#Dividing-by-two-digit-numbers)
+    -   [Divisibility tests](#Divisibility-tests)
 -   [Remainders](#Remainders)
 -   [Negative Numbers](#Negative-Numbers)
     -   [Absolute values](#Absolute-values)
@@ -21,6 +27,11 @@
     -   [Multiplying negative numbers](#Multiplying-negative-numbers)
 -   [Exponents](#Exponents)
     -   [Some edge cases](#Some-edge-cases)
+    -   [Some examples](#Some-examples)
+-   [Square roots](#Square-roots)
+    -   [Perfect Squares](#Perfect-Squares)
+    -   [Calculating Square Roots](#Calculating-Square-Roots)
+    -   [Principal square root](#Principal-square-root)
 
 ---
 
@@ -47,18 +58,62 @@
     $8 - (-7) = 15$
     Negative and negative always result in positive value:
     $-2 - (-3) = 1$
--   **Geometry**: **Perimetar** je distanca potrebna da se obidje oko nekog objekta, ili matematički rečeno zbir svih strana geometrijske figure. Može se izračunati uz pomoć sledeće formule:
-    $$P = (d * c) * 2$$
-    ```
+
+---
+
+## Geometry
+
+```
               d
         |-----------|
       c |           |
         |-----------|
-    ```
--   **Geometry**: **Oblast(Area)** predstavlja celo područje unutrašnjeg dela geometrijske figure, mereno u jedinicama. Oblast pravougaone figure je definisan proizvod dve strane, i moze se izračunati uz pomoć sledeće formule:
-    $$O = d * c$$
+```
 
+**Area** is the space inside of a two-dimensional shape. We can also think of area as the amount of space a shape covers.
+
+**Oblast(Area)** predstavlja celo područje unutrašnjeg dela geometrijske figure, mereno u jedinicama. Oblast pravougaone figure je definisan proizvod dve strane, i moze se izračunati uz pomoć sledeće formule:
+$$O = d * c$$
+
+$$ height \times width = area $$
+
+**Perimeter** is the distance around the outside of a two-dimensional shape.To find the perimeter of a shape, we add all of the shape's side lengths.
+
+**Perimetar** je distanca potrebna da se obidje oko nekog objekta, ili matematički rečeno zbir svih strana geometrijske figure. Može se izračunati uz pomoć sledeće formule:
+$$P = (d * c) * 2$$
+$$ (height \times width) \times 2 = perimeter $$
+
+### Quadrilaterals
+
+> A quadrilateral is a polygon with four sides.
+
+**Parallelogram** is a quadrilateral where opossite sides are parallel - going in the same direction:
+
+![Parallelogram](https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F27%2FParallelogram_area_animated.gif%2F180px-Parallelogram_area_animated.gif&f=1)
+
+**Rhombus** is a type of parallelogram - the opossite sides have to be parallel and all sides must be equal.
+
+![Rhombus](https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.k6-geometric-shapes.com%2Fimages%2Fxquadrilateral-rhombus.jpg.pagespeed.ic.rP3WnWrXGM.jpg&f=1)
+
+> Square is a rhombus
+
+**Rectangle** is kind of parallelogram where all the corners are the right angles.
+
+![Rectangle](https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.tutorvista.com%2Fcms%2Fimages%2F38%2Fdiagonal-of-a-rectangle-example.JPG&f=1)
+
+**Square** is a parallelogram, rhombus and rectangle.
+
+## Fractions
+
+```js
+
+ 1  // Numerator
 ---
+ 2  // Denominator
+
+```
+
+### Comparing fractions
 
 ## Multiplication
 
@@ -181,6 +236,12 @@ x 27   // 7 x 3 = 21 + 4 we carried = 25, write 25 as this is last number
 
 ## Division
 
+Same rules as for multiplication regarding division with negative numbers:
+
+-   if we divide two negative numbers the result will always be a positive
+-   if we divide positive with negative number and vice versa the result will always be a negative number
+-   to test if something is divisible by 3, we can found out by adding up all the digits of the number and see if result is divisible by 3.
+
 ### Division using place value
 
 $$
@@ -248,9 +309,53 @@ $$
 31 \times 6 = 186
 $$
 
+### Dividing by zero
+
+Zero divided by any non-zero value will be equals to zero:
+
+$$
+\frac{0}{-5} = 0
+$$
+
+On the other hand, we don't have defined result for numbers divided by zero, traditionaly for this calculations the end result is `undefined`:
+
+$$
+\frac{-5}{0} = undefined
+$$
+
+$$
+\frac{0}{0} = undefined
+$$
+
+### Divisibility tests
+
+To test if something is **divisible by 2** you just need to look at ones place and see if it's even number/divisible by 2.
+
+To test if something is **divisible by 3** you have to add up all the digits inside number and see if the sum is divisible by 3.
+
+To test if something is **divisible by 4** you can look up the last two digits of the numbers and see if those are divisible by 4. If it's an odd number and not divisible by 2 number is also not divisible by 4.
+
+To test if something is **divisible by 5** you can look up if yoru final digit is equal to 5 or 0.
+
+To test if something is **divisible by 6** it must be divisible both by 2 and 3 in order to be divisible by 6.
+
+To test if the number is **divisible by 8** you only must check to see whether the last three digits of the number are divisible by 8. If they are, then the entire number is divisible by 8 too.
+
+To test if the number is **divisible by 7** you can use a weird trick: you must take the last digit of the number you’re testing and double it. Then, subtract this number from the rest of the remaining digits. If this new number is either 0 or if it’s a number that’s divisible by 7, then then original number is divisible by seven. (You may have to repeat this a couple of times if the divisibility of the resulting number is not immediately obvious).
+
+_Example 1_: Is the number 364 divisible by 7?
+Answer 1: Yes: Double the 4 to get 8. Subtract 8 from 36 to get 28. Since 28 is divisible by 7, we can now say for certain that 364 is also divisible by 7.
+
+_Example 2_: Is the number 8256 divisible by 7?
+Answer 2: No, Double 6 to get 12. Subtract 12 from 825 to get 813. 813 is slightly too large to tell whether it is divisible by 7 so we must repeat the process. Double 3 to get 6. Subtract 6 from 81 to get 75. Since 75 is not divisible by 7, neither is 813 or 8256. Therefore, 8256 is not divisible by 7.
+
+To test if something is **divisible by 9** you have to add up all the digits inside number and see if the sum is divisible by 9. _(Similar to division test for 3)_
+
+To test if something is divisible by 10 is really easy, you just have to check if the number last two digits of the number are divisible by 10, or if you have a zero in the ones place.
+
 ### Remainders
 
-> Leftover value after we divide somethin that can't be divided evenly
+> Leftover value after we divide something that can't be divided evenly
 
 $$ 7/3 = 2r1 $$
 
@@ -352,10 +457,24 @@ $$
 5^3 = 5 \times 5 \times 5 = 125
 $$
 
-The small number written above and to the right of thr number is called an **exponent**. The number underneath the exponent is called **the base**
+The small number written above and to the right of thr number is called an **exponent**. The number underneath the exponent is called **the base**.
+
+Here's an example where the base is 7, and the exponent is 5:
 
 $$
-(-2)^3 = (-2) \times (-2) \times (-2) = 4 \times -2 = -8
+7^5
+$$
+
+An exponent tells us to multiply the base by itself that number of times. In this example, it tells us to multiply the base of 7 by itself five times.
+
+$$
+7^5 = 1 \times 7 \times 7 \times 7 \times 7 \times 7
+$$
+
+---
+
+$$
+(-2)^3 = 1\times (-2) \times (-2) \times (-2) = 4 \times -2 = -8
 $$
 
 $$ 2^0  = 1 $$
@@ -370,6 +489,20 @@ $$
 $$
 
 ### Some edge cases
+
+Any number raised to the power zero is equal to 1 and not zero - [Transitive property of Equality](https://www.mathwords.com/t/transitive_property.htm):
+
+$$
+2^0 = 1
+$$
+
+> _This might be easier to understand if we explain it this way_: This asks - how many times we're going to multiply one times this (2) number? And answer is like: I'm going to take 1 and multiply it by 2 zero times, which means we're left with just 1.
+
+Any number to the first power is going to be equal that number:
+
+$$
+2^1 = 1 \times 2 = 2
+$$
 
 Zero to any non zero power will be equal to zero:
 
@@ -393,4 +526,80 @@ $$
 
 $$
 (-1)^1 = -1
+$$
+
+### Some examples
+
+Evaluate the expression
+$$ 5^x - 3^x $$
+for `x=2`
+
+## Square roots
+
+A square root of a number is a value that can be multiplied by itself to give the original number. A square root of 9 is 3 because when 3 is multiplied by itself we get 9.
+
+It is like asking: **What can we multiply by itself to get this?**
+
+`√` - This is the special symbol that means "square root", it is sort of like a tick,
+and actually started hundreds of years ago as a dot with a flick upwards. It is called the **radical**.
+
+### Perfect Squares
+
+The Perfect Squares (also called "Square Numbers") are the squares of the integers:
+| int | perfect square|
+|-----|---|
+| 0 | 0 |
+| 1 | 1 |
+| 2 | 4 |
+| 3 | 9 |
+| 4 | 16|
+| 5 | 25|
+| 6 | 36|
+| 7 | 49|
+| 8 | 64|
+| 9 | 81|
+| 10 | 100|
+| 11 | 121|
+| 12 | 144|
+| 13 | 169|
+| 14 | 196|
+| 15 | 225|
+
+### Calculating Square Roots
+
+It's kinda easy to work out the square root of a perfect square, but it is really hard to work out other square roots.
+
+Example: what is √10?
+
+Well, 3 × 3 = 9 and 4 × 4 = 16, so we can guess the answer is between 3 and 4.
+At this point, I get out my calculator and it says: `3.1622776601683793319988935444327`
+
+But the digits just go on and on, without any pattern.
+So even the calculator's answer **is only an approximation** !
+Numbers like this are called Irrational Numbers
+
+### Principal square root
+
+For example, √9 = 3
+but (-3)^2 = 9 too!
+
+Because of this, we can differentiate between the positive and negative sqare root values. When someone asks to find a Principal (positive) square root (√3) that means that he/she wants a positive number. If someone wants a negative square root that would be written as this: (-√3).
+
+`- √9 = - 3`
+
+---
+
+$$
+5 \sqrt{117} = 5 \times \sqrt{(3 \times 3 \times 13)} = 5\sqrt{3 \times 3} \sqrt{13} = 5\sqrt{9} \sqrt{13} = 15\sqrt{13}
+$$
+
+because 13 x 9 = 117, we then simplify 9 to 3 x 3 = 9, and sqrt(9) = 3; 5 x 3 = 15 x
+sqrt(13). We cannot factor it out as it's prime number.
+
+---
+
+26 don't have any perfect squares in it too, so we can leave it like this:
+
+$$
+3 \sqrt{26} = 3 \sqrt{26}
 $$
