@@ -1,3 +1,5 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 # Math notes
 
 > Using KaTeX for some math notations and examples
@@ -5,7 +7,19 @@
 -   [General stuff and highlights](#General)
 -   [Geometry](#Geometry)
     -   [Quadrilaterals](#Quadrilaterals)
+-   [Prime numbers](#Prime-numbers)
+    -   [Prime factorization](#Prime-factorization)
 -   [Fractions](#Fractions)
+    -   [Comparing fractions](#Comparing-fractions)
+    -   [Common denominators](#Common-denominators)
+    -   [Decomposing fractions](#Decomposing-fractions)
+    -   [Adding fractions with like denominators](#Adding-fractions-with-like-denominators)
+    -   [Subtracting fractions with like denominators](#Subtracting-fractions-with-like-denominators)
+    -   [Improper fractions](#Improper-fractions)
+    -   [Mixed numbers](#Mixed-numbers)
+        -   [Comparing improper fractions and mixed numbers](#Comparing-improper-fractions-and-mixed-numbers)
+        -   [Adding mixed numbers](#Adding-mixed-numbers)
+        -   [Subtracting mixed numbers](#Subtracting-mixed-numbers)
 -   [Multiplication](#Multiplication)
     -   [Distributive property grid](#Distributive-property-grid)
     -   [Multiplying with area model](#Multiplying-with-area-model)
@@ -102,6 +116,28 @@ $$ (height \times width) \times 2 = perimeter $$
 
 **Square** is a parallelogram, rhombus and rectangle.
 
+## Prime numbers
+
+### Prime factorization
+
+_Example:_ Find the least common multiples of numbers 6 and 8:
+
+Break apart numbers to it's prime numbers:
+
+```js
+    6         8
+  /   \     /   \
+ 2     3   2     4
+                / \
+               2   2
+```
+
+To find the least common multiple we need to multiply at least three 2 with one 3. We have 4 twos here, but both 6 and 8 have 2 so those cancel each other. So:
+
+$$ 2 \times 3 \times 2 \times 2 = 24 $$
+
+24 is the least common miltiply of the 6 and 8.
+
 ## Fractions
 
 ```js
@@ -109,10 +145,143 @@ $$ (height \times width) \times 2 = perimeter $$
  1  // Numerator
 ---
  2  // Denominator
-
 ```
 
 ### Comparing fractions
+
+$$
+\frac{1}{2} = \frac{2}{4} = \frac{4}{8}
+$$
+
+We can simplify fractions to see what other fractions are on the same line as another one:
+
+`6/15` we can see that both numerator and denominator are divisible by 3, so: `2/5` are the same as `6/15`
+
+We can do this other way to: `2/5` is the same as `4/10`. We multiply numerator and denominator by 2 and we will get an equal fraction.
+
+**If we have some fraction, and as long as we multiply numerator and denominator by same number we will get an equal fraction. Same with division**
+
+$$
+\frac{4}{6} = \frac{8}{12} \quad \frac{1}{5} = \frac{5}{25} \quad \frac{7}{12} = \frac{21}{36}
+$$
+
+### Common denominators
+
+> Note: The new fractions are equal to their original form, however they are often easier to work with when the denominators are the same.
+
+When fractions have the same denominator, we say they have common denominators.
+Having common denominators makes things like comparing, adding, and subtracting fractions easier.
+
+One way to find a common denominator for two (or more!) fractions is to list the multiples of each denominator until we find the smallest multiple they have in common.
+
+_Example:_ Find a common denominator for $\frac{7}{8}$ and $\frac{3}{10}$.
+
+The denominators are 8 and 10. Let's list multiples of each:
+Multiples of 8: 8,16,24,32,**40**,48,56,64,72,**80**...
+Multiples of 10: 10,20,30,**40**,50,60,70,**80**,90,100...
+
+40 and 80 are common multiples of 8 and 10. So, we can use either of these for a common denominator. Most often, we will use the smallest common denominator, so we can work with smaller numbers.
+
+Now we need to rewrite $\frac{7}{8}$ and $\frac{3}{10}$ with denominator of 40:
+
+$$ \frac{7}{8} \times \frac{5}{5} = \frac{35}{40} $$
+and
+$$ \frac{3}{10} \times \frac{4}{4} = \frac{12}{40} $$
+
+So, $\frac{7}{8}$ is same as $\frac{35}{40}$, and $\frac{3}{10}$ is same as $\frac{12}{40}$.
+
+### Decomposing fractions
+
+To decompose a number, we break it into smaller parts. For example: We can decompose 54 into 50 + 4.
+
+Fractions, like all numbers, can be decomposed in many ways.
+
+![Tape Diagram](https://1drv.ms/u/s!AuNztmFrhQbpg0XW-I6xHkWU3sM2)
+
+![Number Line](https://1drv.ms/u/s!AuNztmFrhQbpg0ZHWzijsBGTxqFn)
+
+### Adding fractions with like denominators
+
+Add and simplify the answer:
+
+$$
+\frac {3}{15} + \frac {7}{15} = ~?
+$$
+
+If the fraction are not a mixed numbers (don't have same denominators and wholes) and if they have the same denominator, **if you add these fractions your sum is going to have the same denominator** and the numerators are going to be the sum oof the numerator:
+
+$$
+\frac {3}{15} + \frac {7}{15} = \frac{3 + 7}{15} = \frac{10}{15}
+$$
+
+Now if we want to simplify this we're going to look for the greatest common factor in both 10 and 15, and at the first look it seems to be 5. So we can simplify this to: $\frac{2}{3}$
+
+### Subtracting fractions with like denominators
+
+Subtract and simplify the answer:
+
+Subtracting fractions is very similar to adding fractions. If we have the same denominator, the denominator in difference is going to be the same as the denominator in the two numbers we're subtracting. And numerator is going to be the difference between the numerators.
+
+$$
+  \frac{8}{18} - \frac{5}{18} = \frac{8-5}{18} = \frac{3}{18}
+$$
+
+We now can simplify this to, as both numbers are divisible by 3:
+
+$$
+\frac{3 / 3}{18 / 3} = \frac{1}{6}
+$$
+
+### Improper fractions
+
+> An improper fraction is a fraction where the numerator is greater than or equal to the denominator.
+> Here are some examples of improper fractions: $\frac{9}{4},\frac{5}{5},\frac{7}{3}$
+
+Improper fractions are just pure fractions where the numerator is greater than denominator. For example, this $5\frac{1}{4}$ is not a pure fraction, because we have a whole number mixed with fraction so we call this a **mixed number**. To rewrite this as an improper fraction we can multiply max pieces of fraction times whole number, $\frac{5\times4}{4} + \frac{1}{4}$ in this case. End result would be $\frac{21}{4}$
+
+### Mixed numbers
+
+> A mixed number is a number consisting of a whole number and a proper fraction.
+> Here are some examples of improper fractions: $4\frac{1}{2},1\frac{3}{8},12\frac{5}{6}$
+
+Given $\frac{7}{4}$, we can rewrite this to be a mixed number by using standard algorithm for division:
+
+```js
+  1
+  ___
+4/ 7  = 1 r3
+   4
+   --
+   3
+```
+
+Which gives us result of 1 whole and 3 remainder, so $\frac{7}{4}$ can be rewritten as $1\frac{3}{4}$.
+
+### Comparing improper fractions and mixed numbers
+
+We can usually convert fraction to a mixed number here and then compare wholes. If that can't do we can convert both of them into improper fractions, find the common denominator and then do the comparison (and simplify if you want to get fancy).
+
+### Adding mixed numbers
+
+$$
+2\frac{4}{7} + 3\frac{2}{7} = 5\frac{6}{7}
+$$
+
+$$
+3\frac{3}{5} + 5\frac{4}{5} = 8\frac{7}{5} = 9\frac{2}{5}
+$$
+
+### Subtracting mixed numbers
+
+$$
+2\frac{5}{8} - 1\frac{2}{8} = 1\frac{3}{8}
+$$
+
+$$
+3\frac{2}{5} - 2\frac{3}{5} = \frac{4}{5}
+$$
+
+![Visual example](https://monosnap.com/image/UsQOXLVtMTJJ27k2mc7akW3mxVjcLV.png)
 
 ## Multiplication
 
@@ -296,6 +465,30 @@ $$
       0      // We're done, we have remainder of zero
 ```
 
+### Quotients that are multiples of 10
+
+When dividing 240 by 3 we can omit the zero from the end and divide just 24 by 3, whis is equal to 8, and then we add back zero we removed at the start so the result is 80.
+
+$$
+  4200 / 7 = 42 / 7 = 6(00)
+$$
+
+### Canceling zeros when dividing
+
+Given:
+
+$$ 350 / 50 $$
+
+We can cancel out zeros and divide just `35 / 5` which is equal to 7.
+
+$$
+420 / 70 = 42 / 7 = 6
+$$
+
+$$
+5600 / 80 = 560 / 8 = 56 / 8 = 7(0)
+$$
+
 ### Dividing by two digit numbers
 
 $$
@@ -350,7 +543,7 @@ Answer 2: No, Double 6 to get 12. Subtract 12 from 825 to get 813. 813 is slight
 
 To test if something is **divisible by 9** you have to add up all the digits inside number and see if the sum is divisible by 9. _(Similar to division test for 3)_
 
-To test if something is divisible by 10 is really easy, you just have to check if the number last two digits of the number are divisible by 10, or if you have a zero in the ones place.
+To test if something is **divisible by 10** is really easy, you just have to check if the number last two digits of the number are divisible by 10, or if you have a zero in the ones place.
 
 ### Remainders
 
@@ -384,6 +577,15 @@ $$ 7/3 = 2r1 $$
       ----
        3  // We're left with 3; 8 goes into 3 zero times, so this would be a remainder.
 ```
+
+### Factors and multiplies
+
+$$factor ~ \times ~ factor = multiple$$
+
+Given $9 \times 2 = 18$ we can say that:
+
+-   9 and 2 are factors of 18
+-   18 is a multiple of 2
 
 ## Negative Numbers
 
