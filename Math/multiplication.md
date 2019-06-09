@@ -1,14 +1,15 @@
 # Multiplication
 
 - [Multiplication](#multiplication)
-  - [Distributive property grid](#distributive-property-grid)
-  - [Multiplying with area model](#multiplying-with-area-model)
-  - [Standard algorithm](#standard-algorithm)
-  - [Multiplication with 1 digit](#multiplication-with-1-digit)
-  - [Multiplication with 2 digits](#multiplication-with-2-digits)
-  - [Exponents](#exponents)
-    - [Some edge cases](#some-edge-cases)
-    - [Some examples](#some-examples)
+	- [Distributive property grid](#distributive-property-grid)
+	- [Multiplying with area model](#multiplying-with-area-model)
+	- [Standard algorithm](#standard-algorithm)
+	- [Multiplication with 1 digit](#multiplication-with-1-digit)
+	- [Multiplication with 2 digits](#multiplication-with-2-digits)
+	- [Strategies for multiplying multiples of 10, 100 and 1000](#strategies-for-multiplying-multiples-of-10-100-and-1000)
+	- [Exponents](#exponents)
+		- [Some edge cases](#some-edge-cases)
+		- [Some examples](#some-examples)
 
 ---
 
@@ -69,17 +70,30 @@ We can multiply numbers by hand:
 
 -   by using **area grid multiplication**:
     352 x 481 =
-    | x | 400 | 80 | 1 | |
-    |-----|---------|--------|-----|---------|
-    | 2 | 800 | 160 | 2 | 962 |
-    | 50 | 20,000 | 4,000 | 50 | 24,050 |
+
+    | x   | 400     | 80     | 1   | =       |
+    | --- | ------- | ------ | --- | ------- |
+    | 2   | 800     | 160    | 2   | 962     |
+    | 50  | 20,000  | 4,000  | 50  | 24,050  |
     | 300 | 120,000 | 24,000 | 300 | 144,300 |
-    | | | | | 169,312 |
+    |     |         |        |     | 169,312 |
+
     This is area grid. We destructure numbers to thousands, hundreds, tens and ones and then multiply and add them together.
 
 ## Standard algorithm
 
 or by using **standard algorithm**:
+
+$$
+\begin{alignedat}{2}
+   481 \\
+   \times 352 \\ \hline
+   962 \\
+   24050 \\
+  +\medspace 144300 \\ \hline
+   169312
+\end{alignedat}
+$$
 
 ```js
       481
@@ -129,7 +143,11 @@ x 27   // 7 x 3 = 21 + 4 we carried = 25, write 25 as this is last number
   972
 ```
 
----
+## Strategies for multiplying multiples of 10, 100 and 1000
+
+$800 \times 400 = (8 \times 100) \times (4 \times 100) = (8 \times 4) \times (100 \times 100) = 32 \times 10000 = 320000$
+
+Or simply, just multiply $8 \times 4$ and add number of zeroes to the result $32 \cancel{8} 00  \cancel{4} 00 = 32 0000$
 
 ## Exponents
 

@@ -1,30 +1,34 @@
 # Fractions and Decimals
 
+> Math snippets are written with $\href{https://katex.org/}{\KaTeX}$
+
 - [Fractions and Decimals](#fractions-and-decimals)
-  - [Comparing fractions](#comparing-fractions)
-  - [Common denominators](#common-denominators)
-  - [Decomposing fractions](#decomposing-fractions)
-  - [Adding fractions with like denominators](#adding-fractions-with-like-denominators)
-  - [Subtracting fractions with like denominators](#subtracting-fractions-with-like-denominators)
-  - [Improper fractions](#improper-fractions)
-  - [Mixed numbers](#mixed-numbers)
-  - [Comparing improper fractions and mixed numbers](#comparing-improper-fractions-and-mixed-numbers)
-  - [Adding mixed numbers](#adding-mixed-numbers)
-  - [Subtracting mixed numbers](#subtracting-mixed-numbers)
-  - [Multiplying fractions and whole numbers](#multiplying-fractions-and-whole-numbers)
-  - [Converting tenths and hundredths](#converting-tenths-and-hundredths)
-  - [Decimals](#decimals)
-    - [Rewriting fractions as decimals](#rewriting-fractions-as-decimals)
-    - [Multiplying Decimals](#multiplying-decimals)
+	- [Fractions](#fractions)
+		- [Comparing fractions](#comparing-fractions)
+		- [Common denominators](#common-denominators)
+		- [Decomposing fractions](#decomposing-fractions)
+		- [Adding fractions with like denominators](#adding-fractions-with-like-denominators)
+		- [Subtracting fractions with like denominators](#subtracting-fractions-with-like-denominators)
+		- [Improper fractions](#improper-fractions)
+		- [Mixed numbers](#mixed-numbers)
+		- [Comparing improper fractions and mixed numbers](#comparing-improper-fractions-and-mixed-numbers)
+		- [Adding mixed numbers](#adding-mixed-numbers)
+		- [Subtracting mixed numbers](#subtracting-mixed-numbers)
+		- [Multiplying fractions and whole numbers](#multiplying-fractions-and-whole-numbers)
+		- [Converting tenths and hundredths](#converting-tenths-and-hundredths)
+		- [Multiplying fractions with fractions](#multiplying-fractions-with-fractions)
+	- [Decimals](#decimals)
+		- [Rewriting fractions as decimals](#rewriting-fractions-as-decimals)
+		- [Multiplying Decimals](#multiplying-decimals)
+	- [Common fractions and decimals](#common-fractions-and-decimals)
 
-```js
+## Fractions
 
- 1  // Numerator
----
- 2  // Denominator
-```
+$$
+\frac{1}{2} = \frac{\text{Numerator}}{\text{Denominator}}
+$$
 
-## Comparing fractions
+### Comparing fractions
 
 $$
 \frac{1}{2} = \frac{2}{4} = \frac{4}{8}
@@ -42,7 +46,7 @@ $$
 \frac{4}{6} = \frac{8}{12} \quad \frac{1}{5} = \frac{5}{25} \quad \frac{7}{12} = \frac{21}{36}
 $$
 
-## Common denominators
+### Common denominators
 
 > Note: The new fractions are equal to their original form, however they are often easier to work with when the denominators are the same.
 
@@ -68,7 +72,7 @@ $$ \frac{3}{10} \times \frac{4}{4} = \frac{12}{40} $$
 
 So, $\frac{7}{8}$ is same as $\frac{35}{40}$, and $\frac{3}{10}$ is same as $\frac{12}{40}$.
 
-## Decomposing fractions
+### Decomposing fractions
 
 To decompose a number, we break it into smaller parts. For example: We can decompose 54 into 50 + 4.
 
@@ -78,7 +82,7 @@ Fractions, like all numbers, can be decomposed in many ways.
 
 ![Number Line](https://lh3.googleusercontent.com/FnwFIPqF-G2HQaBp6W6iBrk0GQ5QzgKQiAfBx5utovM-mS9Oo9_1iIdo6wJreihnyYUsh6hIBBJhh3B5bzQcP8MqyemsgVrbxX6c4k1d3prTFER6PAvI-8HTzK0WJeXM1tN28Jp6-UcRs28XcA2a75TylBcKtcJ_f7wyheMv2zgOEIP25QemaEsSOSik6TLA6dpx6x3DrGefaSXsu0skzWc1bmPCyVzFtbw6y00kH77sE8v4swSzK7aXC_uWxvM9EvlVt6hVLLQ0EPrwZaNPYTB2Amr5lY-45bEa3utW80LYjbKX2KPbVriK4-IRonQ_a64MExNsTYzL0AA815btRQWPfd0iPCwNAGfaJWaXWxi9PemJjYZmyZyTk2jm5XdctuOLBXubn9F3hPsI5g-GdeRCbJR3j7RLltMMZrP9paRnYCn_kLTawWHYa44yDyNwxO9Ya8o5vMUkdN7lPUQpAGv4OzxjuWKF5ZiWE85hC3D34b0pR_mSM8lB4PjrIq9SJmQ4_rolnd6uiDV57ZGU4ySi_O_iuz3yQkKaDnJ3X7MTGhir1xXcMm7l1ifR3qzrD9G7e-bv3e88Xwhr2oxh7x9QgmutvV8WlmbUKWHo1ol3AuoTD1TSrIQj9Zfl917ADUhVh9cbuxHbQe6lmLTx7pO6sGE7Mg=w309-h289-no)
 
-## Adding fractions with like denominators
+### Adding fractions with like denominators
 
 Add and simplify the answer:
 
@@ -94,7 +98,7 @@ $$
 
 Now if we want to simplify this we're going to look for the greatest common factor in both 10 and 15, and at the first look it seems to be 5. So we can simplify this to: $\frac{2}{3}$
 
-## Subtracting fractions with like denominators
+### Subtracting fractions with like denominators
 
 Subtract and simplify the answer:
 
@@ -110,14 +114,14 @@ $$
 \frac{3 / 3}{18 / 3} = \frac{1}{6}
 $$
 
-## Improper fractions
+### Improper fractions
 
 > An improper fraction is a fraction where the numerator is greater than or equal to the denominator.
 > Here are some examples of improper fractions: $\frac{9}{4},\frac{5}{5},\frac{7}{3}$
 
 Improper fractions are just pure fractions where the numerator is greater than denominator. For example, this $5\frac{1}{4}$ is not a pure fraction, because we have a whole number mixed with fraction so we call this a **mixed number**. To rewrite this as an improper fraction we can multiply max pieces of fraction times whole number, $\frac{5\times4}{4} + \frac{1}{4}$ in this case. End result would be $\frac{21}{4}$
 
-## Mixed numbers
+### Mixed numbers
 
 > A mixed number is a number consisting of a whole number and a proper fraction.
 > Here are some examples of improper fractions: $4\frac{1}{2},1\frac{3}{8},12\frac{5}{6}$
@@ -135,11 +139,11 @@ Given $\frac{7}{4}$, we can rewrite this to be a mixed number by using standard 
 
 Which gives us result of 1 whole and 3 remainder, so $\frac{7}{4}$ can be rewritten as $1\frac{3}{4}$.
 
-## Comparing improper fractions and mixed numbers
+### Comparing improper fractions and mixed numbers
 
 We can usually convert fraction to a mixed number here and then compare wholes. If that can't do we can convert both of them into improper fractions, find the common denominator and then do the comparison (and simplify if you want to get fancy).
 
-## Adding mixed numbers
+### Adding mixed numbers
 
 $$
 2\frac{4}{7} + 3\frac{2}{7} = 5\frac{6}{7}
@@ -149,7 +153,7 @@ $$
 3\frac{3}{5} + 5\frac{4}{5} = 8\frac{7}{5} = 9\frac{2}{5}
 $$
 
-## Subtracting mixed numbers
+### Subtracting mixed numbers
 
 $$
 2\frac{5}{8} - 1\frac{2}{8} = 1\frac{3}{8}
@@ -161,7 +165,7 @@ $$
 
 ![Visual example](https://monosnap.com/image/UsQOXLVtMTJJ27k2mc7akW3mxVjcLV.png)
 
-## Multiplying fractions and whole numbers
+### Multiplying fractions and whole numbers
 
 $$
 3 \times \frac{2}{5} = \frac{3 \times 2}{5} = \frac{6}{5} = 1\frac{1}{5}
@@ -171,9 +175,13 @@ $$
 3 \times \frac{3}{10} = \frac{3 \times 3}{10} = \frac{9}{10}
 $$
 
-## Converting tenths and hundredths
+### Converting tenths and hundredths
 
 $$ \frac{8}{10} = \frac{80}{100} $$
+
+### Multiplying fractions with fractions
+
+$\frac{3}{5} \times \frac{1}{4} = \frac{3 \times 1}{5 \times 4} = \frac{3}{20}$
 
 ---
 
@@ -181,7 +189,7 @@ $$ \frac{8}{10} = \frac{80}{100} $$
 
 > Decimals are fractions, but in **base 10**. For example, `10.1` would be $10 \frac{1}{10}$. `5.2` simplified as a fraction would be $5 \frac{1}{5}$, or $5 \frac{2}{10}$.
 
-"Decimal" comes from the Latin word "decimus" which means 10th.
+"Decimal" comes from the Latin word _decimus_ which means 10th.
 We chose this name because our number system is built around the number 10, also known as a "base-10 system". You can see how important the number 10 is to our number system when you notice that each place in any number represents a value of 10.
 
 `2.67`
@@ -244,3 +252,13 @@ Multiply... Count the spots behind the decimals... Put the decimal point in your
 ![Decimal multiplication v2](https://lh3.googleusercontent.com/Nc6X6YSmd-ShEJGtggFpuoGkAxpdOE24qTsejReZ5MZsFowuhfyaDW5Q_O72powYKmXMMRspmRTD_3IVWCty7yb5zMIIDlwcGmcm_8qQG88jFwd22ybM9CnqNaRD6uPrdUelxT-C4mz0HNzS6q6_AZyNslm5jugLXLyPTA64oGTeP5ipASXtuM3vEsKOO7wMDDlb61ysFuFCie-wIFERn8sCuRvhMU0gIVNuIzmHzKTPXHatUI7qM4FLJliLDghMYPhcptYsBIjph3c-VfJKKYqjTXahSdWzr0oK8yqT6kKdqIrzumWNhvvBPFoxyKpid1RFbFyhKmkqWBNtbyMbelNGrNMCGa5hz2Q04hLHHXU2Jq2JgYhzUQphMsJsa4wpkmKSA8LSUy3JSotzjihDtdbi64IJKwWpjyWOwXx126gVVn5tKSmT76yVK4WYtPnJnbmPlcMaus166lLqeAF_FOu1CY-7GUcHMcWoDjwpVsq_KIHFa-6L4Q2yoztFXtl7jIX2p75ual3qTaBFgZpIN0_7855g0dBY6X_kuhIPdJyMXzFcWnKynjV_X4AzkQYdiLKwP19sX0HhCv_HwuLMgbTvxRgQ8W1my8LPcExmfMv_ORQqUfbz_o7fWFmKH5Q945bQ08Yoy8k7FL-da8adOmJ1V-Yw_Q=w581-h298-no)
 
 ---
+
+## Common fractions and decimals
+
+Some fractions are so common that it's worth memorizing the decimal form. Here are a few of the most common fractions and their decimal forms:
+
+$\frac{1}{2} = 0.5$
+$\frac{1}{4} = 0.25$
+$\frac{1}{5} = 0.2$
+
+We can use these three common fractions to convert other fractions to decimals and decimals to fractions.

@@ -1,14 +1,14 @@
 # Geometry
 
 - [Geometry](#geometry)
-  - [Lines](#lines)
-  - [Angles](#angles)
-    - [Measuring angles](#measuring-angles)
-  - [Angle types](#angle-types)
-  - [Triangle types](#triangle-types)
-  - [Symmetry](#symmetry)
-  - [Quadrilaterals](#quadrilaterals)
-    - [Quadrilateral Summary](#quadrilateral-summary)
+	- [Lines](#lines)
+	- [Angles](#angles)
+		- [Measuring angles](#measuring-angles)
+	- [Angle types](#angle-types)
+	- [Triangle types](#triangle-types)
+	- [Symmetry](#symmetry)
+	- [Quadrilaterals](#quadrilaterals)
+		- [Quadrilateral Summary](#quadrilateral-summary)
 
 ---
 
