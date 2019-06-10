@@ -251,6 +251,60 @@ Multiply... Count the spots behind the decimals... Put the decimal point in your
 
 ![Decimal multiplication v2](https://lh3.googleusercontent.com/Nc6X6YSmd-ShEJGtggFpuoGkAxpdOE24qTsejReZ5MZsFowuhfyaDW5Q_O72powYKmXMMRspmRTD_3IVWCty7yb5zMIIDlwcGmcm_8qQG88jFwd22ybM9CnqNaRD6uPrdUelxT-C4mz0HNzS6q6_AZyNslm5jugLXLyPTA64oGTeP5ipASXtuM3vEsKOO7wMDDlb61ysFuFCie-wIFERn8sCuRvhMU0gIVNuIzmHzKTPXHatUI7qM4FLJliLDghMYPhcptYsBIjph3c-VfJKKYqjTXahSdWzr0oK8yqT6kKdqIrzumWNhvvBPFoxyKpid1RFbFyhKmkqWBNtbyMbelNGrNMCGa5hz2Q04hLHHXU2Jq2JgYhzUQphMsJsa4wpkmKSA8LSUy3JSotzjihDtdbi64IJKwWpjyWOwXx126gVVn5tKSmT76yVK4WYtPnJnbmPlcMaus166lLqeAF_FOu1CY-7GUcHMcWoDjwpVsq_KIHFa-6L4Q2yoztFXtl7jIX2p75ual3qTaBFgZpIN0_7855g0dBY6X_kuhIPdJyMXzFcWnKynjV_X4AzkQYdiLKwP19sX0HhCv_HwuLMgbTvxRgQ8W1my8LPcExmfMv_ORQqUfbz_o7fWFmKH5Q945bQ08Yoy8k7FL-da8adOmJ1V-Yw_Q=w581-h298-no)
 
+Another technique for multiplying decimals:
+
+Let's say that we want to multiply $9 \times 0.6$. We can simplify this a bit by reasoning that $0.6 = 6 / 10$ which means that $0.6$ is the same thing as `6` divided by `10`. Dividing by `10` is equivalent to moving the decimal place one place to the left, so `6.0` becomes `0.60`. What we can do now when multiplying $9 \times 0.6$ is to set up our calculation like this:
+
+$$
+9 \times 0.6 = \underbrace{(9 \times 0.6) / 10}_{54 / 10} = 5.4
+$$
+
+Some examples:
+
+$$
+0.1 \times 0.5 = \frac{1}{10} \times \frac{5}{10} = \frac{1 \times 5}{10 \times 10} = \frac{5}{100} = 0.05
+$$
+
+$$
+0.2 \times 0.8 = \frac{2}{10} \times \frac{8}{10} = \frac{2 \times 8}{10 \times 10} = \frac{16}{100} = 0.16
+$$
+
+$$
+0.8 \times 0.9 = \frac{8}{10} \times \frac{9}{10} = \frac{8 \times 9}{10 \times 10} = \frac{72}{100} = 0.72
+$$
+
+$$
+0.8 \times 7 = (8 \times 7) / 10 = 56  / 10 = 5.6
+$$
+
+$$
+5 \times 0.25 = (5 \times 25) / 100 = 125 / 100 = 1.25
+$$
+
+$$
+5 \times 0.75 = (5 \times 75) / 100 = 375 / 100 = 3.75
+$$
+
+$$
+4 \times 0.43 = (4 \times 43) / 100 = 172 / 100 = 1.72
+$$
+
+$$
+0.4 \times 0.62 = \frac{4}{10} \times \frac{62}{100} = \frac{4 \times 62}{10 \times 100} = \frac{248}{1000} = 0.248
+$$
+
+$$
+7.7 \times 0.7 = \frac{77}{10} \times \frac{7}{10} = \frac{77 \times 7}{10 \times 10} = \frac{539}{100} = 5.39
+$$
+
+$$
+1.2 \times 7.7 = \frac{12}{10} \times \frac{77}{10} = \frac{12 \times 77}{10 \times 10} = \frac{924}{100} = 9.24
+$$
+
+$$
+3.1 \times 3.4 = \frac{31}{10} \times \frac{34}{10} = \frac{31 \times 34}{10 \times 10} = \frac{1054}{100} = 10.54
+$$
+
 ---
 
 ## Common fractions and decimals
