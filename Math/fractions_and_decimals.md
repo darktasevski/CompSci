@@ -20,6 +20,7 @@
 	- [Decimals](#decimals)
 		- [Rewriting fractions as decimals](#rewriting-fractions-as-decimals)
 		- [Multiplying Decimals](#multiplying-decimals)
+		- [Developing strategies for multiplying decimals](#developing-strategies-for-multiplying-decimals)
 	- [Common fractions and decimals](#common-fractions-and-decimals)
 
 ## Fractions
@@ -303,6 +304,24 @@ $$
 
 $$
 3.1 \times 3.4 = \frac{31}{10} \times \frac{34}{10} = \frac{31 \times 34}{10 \times 10} = \frac{1054}{100} = 10.54
+$$
+
+### Developing strategies for multiplying decimals
+
+There are multiple strategies for multiplying decimals beside the **standard strategy**, here is a few examples of how we can multiply decimals by using several strategies.
+
+Let's say that we want to multiply $3 \times 0.25$. We can calculate this:
+
+Strategy one:
+
+$$
+3 \times 0.25 = (3 \times 25) / 100 = 75 \ 100 = 0.75
+$$
+
+Strategy two:
+
+$$
+3 \times 0.25 = 3 \times \frac{25}{100} = \frac{3 \times 25}{100} = \frac{75}{100} = 0.75
 $$
 
 ---
