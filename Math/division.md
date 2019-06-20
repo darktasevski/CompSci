@@ -1,14 +1,16 @@
 # Division
 
 - [Division](#division)
-  - [Division using place value](#division-using-place-value)
-  - [Division using distributive property](#division-using-distributive-property)
-  - [Division using long division](#division-using-long-division)
-  - [Quotients that are multiples of 10](#quotients-that-are-multiples-of-10)
-  - [Canceling zeros when dividing](#canceling-zeros-when-dividing)
-  - [Dividing by two digit numbers](#dividing-by-two-digit-numbers)
-  - [Dividing by zero](#dividing-by-zero)
-  - [Remainders](#remainders)
+	- [Division using place value](#division-using-place-value)
+	- [Division using distributive property](#division-using-distributive-property)
+	- [Division using long division](#division-using-long-division)
+	- [Quotients that are multiples of 10](#quotients-that-are-multiples-of-10)
+	- [Canceling zeros when dividing](#canceling-zeros-when-dividing)
+	- [Dividing by two digit numbers](#dividing-by-two-digit-numbers)
+	- [Dividing by zero](#dividing-by-zero)
+	- [Multi-digit division](#multi-digit-division)
+		- [Strategies for dividing multiples of 10, 100, and 1000](#strategies-for-dividing-multiples-of-10-100-and-1000)
+	- [Remainders](#remainders)
 
 ---
 
@@ -127,6 +129,27 @@ $$
 \frac{0}{0} = undefined
 $$
 
+## Multi-digit division
+
+### Strategies for dividing multiples of 10, 100, and 1000
+
+These are equal: $2400 / 30 = \frac{2400}{30}$ .
+We can then simplify this to: $2400 / 30 = \frac{2400}{30} = \frac{24 \times 100}{3 \times 10}$. Whats valuable about thinking this way is that we can separately divide 24 by 3 and 100 by 10, which gives us: $...=\frac{42}{3} \times \frac{100}{10} = 8 \times 10 = 80$.
+
+Another (a bit hacky) thing that we an do here is to evaluate $2400 / 30$, then divide 24 by 3, and from 2400 zeros cancel one because of one zero in 30, that would left us with 8 and 0 which grouped together gives us 80.
+
+Another example:
+
+$$
+3500 / 700 = \frac{3500}{700} = \frac{35 \times 100}{7 \times 100}=\frac{35}{7} \times \frac{100}{100} = 5 \times 1 = 1
+$$
+
+or, by simplifying and cancelling zeroes:
+
+$$
+3500 / 700 = 35\cancel{0}\cancel{0} / 7\cancel{0}\cancel{0} = 35 / 7 = 5
+$$
+
 ---
 
 ## Remainders
@@ -148,6 +171,16 @@ $$ 7/3 = 2r1 $$
     ---- // No numbers to shift down, we're left with the 3
      3   // 4 goes into 3 zero times, so this will be a remainder
 ```
+
+$$
+\begin{gathered}
+   4\surd75 = 18r3\\ \hline
+   - 4 \\ \hline
+35 \\
+-\medspace32\\ \hline
+3
+\end{gathered}
+$$
 
 ```js
 8√‾‾3771 = 0471r3
