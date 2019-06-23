@@ -2,26 +2,27 @@
 
 > Math snippets are written with $\href{https://katex.org/}{\KaTeX}$
 
-- [Fractions and Decimals](#fractions-and-decimals)
-	- [Fractions](#fractions)
-		- [Comparing fractions](#comparing-fractions)
-		- [Common denominators](#common-denominators)
-		- [Decomposing fractions](#decomposing-fractions)
-		- [Adding fractions with like denominators](#adding-fractions-with-like-denominators)
-		- [Subtracting fractions with like denominators](#subtracting-fractions-with-like-denominators)
-		- [Improper fractions](#improper-fractions)
-		- [Mixed numbers](#mixed-numbers)
-		- [Comparing improper fractions and mixed numbers](#comparing-improper-fractions-and-mixed-numbers)
-		- [Adding mixed numbers](#adding-mixed-numbers)
-		- [Subtracting mixed numbers](#subtracting-mixed-numbers)
-		- [Multiplying fractions and whole numbers](#multiplying-fractions-and-whole-numbers)
-		- [Converting tenths and hundredths](#converting-tenths-and-hundredths)
-		- [Multiplying fractions with fractions](#multiplying-fractions-with-fractions)
-	- [Decimals](#decimals)
-		- [Rewriting fractions as decimals](#rewriting-fractions-as-decimals)
-		- [Multiplying Decimals](#multiplying-decimals)
-		- [Developing strategies for multiplying decimals](#developing-strategies-for-multiplying-decimals)
-	- [Common fractions and decimals](#common-fractions-and-decimals)
+- [Fractions and Decimals](#Fractions-and-Decimals)
+	- [Fractions](#Fractions)
+		- [Comparing fractions](#Comparing-fractions)
+		- [Common denominators](#Common-denominators)
+		- [Decomposing fractions](#Decomposing-fractions)
+		- [Adding fractions with like denominators](#Adding-fractions-with-like-denominators)
+		- [Subtracting fractions with like denominators](#Subtracting-fractions-with-like-denominators)
+		- [Improper fractions](#Improper-fractions)
+		- [Mixed numbers](#Mixed-numbers)
+		- [Comparing improper fractions and mixed numbers](#Comparing-improper-fractions-and-mixed-numbers)
+		- [Adding mixed numbers](#Adding-mixed-numbers)
+		- [Subtracting mixed numbers](#Subtracting-mixed-numbers)
+		- [Multiplying fractions and whole numbers](#Multiplying-fractions-and-whole-numbers)
+		- [Converting tenths and hundredths](#Converting-tenths-and-hundredths)
+		- [Multiplying fractions with fractions](#Multiplying-fractions-with-fractions)
+	- [Decimals](#Decimals)
+		- [Rewriting fractions as decimals](#Rewriting-fractions-as-decimals)
+		- [Multiplying Decimals](#Multiplying-Decimals)
+		- [Developing strategies for multiplying decimals](#Developing-strategies-for-multiplying-decimals)
+		- [Division strategies for decimal quotients](#Division-strategies-for-decimal-quotients)
+	- [Common fractions and decimals](#Common-fractions-and-decimals)
 
 ## Fractions
 
@@ -322,6 +323,134 @@ Strategy two:
 
 $$
 3 \times 0.25 = 3 \times \frac{25}{100} = \frac{3 \times 25}{100} = \frac{75}{100} = 0.75
+$$
+
+### Division strategies for decimal quotients
+
+`3 / 2`:
+
+$$
+3 / 2 = \frac{3}{2} = \frac{2 + 1}{2} = \cancel{\frac{2}{2}} + \frac{1}{2} = 1\frac{1}{2}= 1\frac{5}{10}= 1.5
+$$
+
+$$
+30 \textcolor{#228B22}{tenths} / 2 = 15 \textcolor{#228B22}{tenths} = 1.5
+$$
+
+`34 / 4`:
+
+$$
+\frac{34}{4} = 8\frac{2}{4} = 8\frac{5}{10} = 8.5
+$$
+
+`8.4 / 7`:
+
+$$
+84\textcolor{#228B22}{tenths}  / 7 = 12 \textcolor{#228B22}{tenths} = 1.2
+$$
+
+$$
+\frac{84}{10} \div 7 = \frac{84}{10} \times \frac{1}{7} = \frac{84}{10 \times 7} = \frac{\cancel{84} \space 12}{10 \times \cancel{7} \space 1} =  \frac{12}{10} = 1.2
+$$
+
+`2.5 / 5`:
+
+$$
+2.5 \div 5 = \frac{25}{10} \times \frac{1}{5} = \frac{25}{10 \times 5} = \frac{\cancel{25} \space 5}{10 \times \cancel{5} \space 1} = \frac{5}{10} = 0.5
+$$
+
+`0.56 / 7`:
+
+$$
+0.56 \div 7 = \frac{56}{100} \times \frac{1}{7} = \frac{56}{100 \times 7} = \frac{\cancel{56}\space 8}{100 \times \cancel{7} \space 1} = \frac{8}{100} = 0.08
+$$
+
+`7 / 70`:
+
+$$
+\frac{7}{7 \times 10} = \frac{\cancel{7} \space 1}{\cancel{7} \space 1 \times 10} = \frac{1}{10} = 0.1
+$$
+
+$$
+7 \div (7 \times 10) =  7 \div 7 \div 10 = 1 \div 10 = 0.1
+$$
+
+`9 / 30`:
+
+$$
+9 \div 30 = 9 \div (3 \times 10) = (9 \div 3) \div 10 = 3 \div 10 = 0.3
+$$
+
+$$
+9 \div 30 = \frac{9}{3 \times 10} = \frac{\cancel{9} \space 3}{\cancel{3} \space 1 \times 10} = \frac{3}{10} = 0.3
+$$
+
+`7.8 / 60`:
+
+$$
+7.8 \div 60 = 7.8 \div 6 \div 10 = (7.8 \div 6) \div 10	= 1.3 \div 10 = 0.13
+$$
+
+`50 / 40`:
+
+$$
+50 \div 40 = \frac{50}{40} = \frac{5 \times 10}{4 \times 10} = \frac{5}{4} \times \frac{10}{10} = 1.25 \times 1 = 1.25
+$$
+
+`3000 / 400`:
+
+$$
+3000 \div 400 = \frac{3000}{400} = \frac{3 \times 1000}{4 \times 100} = \frac{3}{4} \times \frac{1000}{100} = 0.75 \times 10 = 7.5
+$$
+
+`30 / 1000`:
+
+$$
+30 \div 1000 = \frac{30}{1000} = \frac{3}{1} \times \frac{10}{1000} = 3 \times \frac{1}{100} = \frac{3}{100} = 0.03
+$$
+
+`0.8 / 0.2`:
+
+There are many ways to solve this problem:
+
+$$
+0.8 \div 0.2 = 8\space\textcolor{#228B22}{tenths} \div 2\space\textcolor{#228B22}{tenths} = 4
+$$
+
+$$
+0.8 \div 0.2 = \frac{0.8}{0.2} = \frac{0.8 \times 10}{0.2 \times 10} = \frac{8}{2} = 4
+$$
+
+`0.72 / 0.08`:
+
+$$
+0.72 \div 0.08 = \frac{0.72}{0.08} = \frac{72 \times 100}{8 \times 100} = \frac{72}{8} = 9
+$$
+
+`12 / 0.5`:
+
+$$
+12 \div 0.5 = 120\space\textcolor{#228B22}{tenths} \div 5\space\textcolor{#228B22}{tenths} = 24
+$$
+
+$$
+12 \div 0.5 = \frac{12}{0.5} = \frac{12 \times 10}{0.5 \times 10} = \frac{120}{5} = 24
+$$
+
+`4.2 / 0.3`:
+
+$$
+4.2 \div 0.3 = \frac{4.2}{0.3} = \frac{42 \times 10}{3 \times 10} = \frac{42\cancel{0}}{3\cancel{0}} = \frac{42}{3} = 14
+$$
+
+`4.5 / 0.15`:
+
+$$
+4.5 \div 0.15 = 450\space\textcolor{blue}{hundredths} \div 15\space\textcolor{blue}{hundredths} = 30
+$$
+
+$$
+4.5 \div 0.15 = \frac{4.5}{0.15} = \frac{4.5 \times 100}{0.15 \times 100} = \frac{450}{15} = 30
 $$
 
 ---
