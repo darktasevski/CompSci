@@ -21,6 +21,7 @@
 				- [Determining `this`](#Determining-this)
 				- [Ignored `this`](#Ignored-this)
 			- [Lexical `this`](#Lexical-this)
+		- [Objects](#Objects)
 
 ---
 
@@ -564,3 +565,46 @@ bar.call(obj2); // 2, not 3!
 ```
 
 The arrow-function created in `foo()` lexically captures whatever `foo()`s this is at its call-time. Since`foo()` was this-bound to `obj1`, bar (a reference to the returned arrow-function) will also be this-bound to `obj1`. The lexical binding of an arrow-function cannot be overridden (even with new!).
+
+### Objects
+
+Objects are the general building block upon which much of JS is built. They are one of the 6 primary types (called "language types" in the specification) in JS:
+
+-   string
+-   number
+-   boolean
+-   null
+-   undefined
+-   object
+
+Note that the simple primitives (`string`, `number`, `boolean`, `null`, and `undefined`) are not themselves objects. `null` is sometimes referred to as an object type, but this misconception stems from a bug in the language which causes `typeof null` to return the string "object" incorrectly (and confusingly). In fact, `null` is its own primitive type.
+
+`function` is a sub-type of object (technically, a "callable object"). Functions in JS are said to be "first class" in that they are basically just normal objects (with callable behavior semantics bolted on), and so they can be handled like any other plain object.
+
+`Arrays` are also a form of objects, with extra behavior. The organization of contents in arrays is slightly more structured than for general objects.
+
+The contents of an object consist of values (any type) stored at specifically named locations, which we call properties. It's important to note that while we say "contents" which implies that these values are actually stored inside the object, that's merely an appearance. The engine stores values in implementation-dependent ways, and may very well not store them in some object container. What is stored in the container are these property names, which act as pointers (technically, references) to where the values are stored.
+
+Consider:
+
+```js
+var myObject = {
+	a: 2,
+};
+
+myObject.a; // 2
+
+myObject['a']; // 2
+```
+
+To access the value at the location a in myObject, we need to use either the . operator or the [ ] operator. The .a syntax is usually referred to as "property" access, whereas the ["a"] syntax is usually referred to as "key" access. In reality, they both access the same location, and will pull out the same value, 2, so the terms can be used interchangeably.
+
+The main difference between the two syntaxes is that the . operator requires an Identifier compatible property name after it, whereas the [".."] syntax can take basically any UTF-8/unicode compatible string as the name for the property. To reference a property of the name "Super-Fun!", for instance, you would have to use the ["Super-Fun!"] access syntax, as Super-Fun! is not a valid Identifier property name.
+
+In objects, property names are always strings. If you use any other value besides a string (primitive) as the property, it will first be converted to a string. This even includes numbers, which are commonly used as array indexes, so be careful not to confuse the use of numbers between objects and arrays.
+
+Objects are collections of key/value pairs. The values can be accessed as properties, via `.propName` or `["propName"]` syntax. Whenever a property is accessed, the engine actually invokes the internal default `[[Get]]` operation (and `[[Put]]` for setting values), which not only looks for the property directly on the object, but which will traverse the `[[Prototype]]` chain if not found.
+
+Properties have certain characteristics that can be controlled through property descriptors, such as `writable` and `configurable`. In addition, objects can have their mutability (and that of their properties) controlled to various levels of immutability using `Object.preventExtensions(..)`, `Object.seal(..)`, and `Object.freeze(..)`.
+
+You can also iterate over the values in data structures (arrays, objects, etc) using the ES6 `for..of` syntax, which looks for either a built-in or custom `@@iterator` object consisting of a `next()` method to advance through the data values one at a time.
