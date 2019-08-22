@@ -1,5 +1,29 @@
 # Javascript
 
+- [Javascript](#Javascript)
+	- [Objects](#Objects)
+		- [Sealing, Preventing Extension, Freezing](#Sealing-Preventing-Extension-Freezing)
+			- [Sealing](#Sealing)
+			- [Preventing Extension](#Preventing-Extension)
+			- [Freezing](#Freezing)
+		- [Property Descriptors](#Property-Descriptors)
+			- [Value and Enumerable](#Value-and-Enumerable)
+			- [Writable and Configurable](#Writable-and-Configurable)
+			- [Getters and Setters](#Getters-and-Setters)
+	- [Symbols](#Symbols)
+	- [Proxies](#Proxies)
+		- [Get Proxy Trap](#Get-Proxy-Trap)
+		- [Has Proxy Trap](#Has-Proxy-Trap)
+		- [Set Proxy Trap](#Set-Proxy-Trap)
+		- [Delete Proxy Trap](#Delete-Proxy-Trap)
+		- [Object Keys Proxy Trap](#Object-Keys-Proxy-Trap)
+		- [Apply Proxy Trap](#Apply-Proxy-Trap)
+		- [Construct Proxy Trap](#Construct-Proxy-Trap)
+		- [Get/Set Prototype Proxy Traps](#GetSet-Prototype-Proxy-Traps)
+		- [Extensibility Proxy Traps](#Extensibility-Proxy-Traps)
+		- [Property Descriptors Proxy Traps](#Property-Descriptors-Proxy-Traps)
+		- [Proxies + Property Descriptors](#Proxies--Property-Descriptors)
+
 ## Objects
 
 Objects are everywhere in JavaScript. At their core they are complex key/value stores, commonly referred to as a “Hash Table” data structure. While one can add as many dynamically named properties to an Object as they like, for performance and security reasons it’s better to use a Map in those situations. Objects are better suited for handling a static number of properties with known keys (think class instances).

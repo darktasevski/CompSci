@@ -1,5 +1,20 @@
 # Big O Notation
 
+- [Big O Notation](#Big-O-Notation)
+		- [Time Complexity](#Time-Complexity)
+		- [Space Complexity](#Space-Complexity)
+			- [Example 1:](#Example-1)
+			- [Example 2:](#Example-2)
+		- [Drop the constants](#Drop-the-constants)
+			- [Example 3:](#Example-3)
+		- [Drop the non-dominant terms](#Drop-the-non-dominant-terms)
+		- [Multi-part algorithms](#Multi-part-algorithms)
+			- [Add the runtimes: O(A + B):](#Add-the-runtimes-OA--B)
+			- [Multiply the runtimes: O(A \* B):](#Multiply-the-runtimes-OA--B)
+		- [Amortized Time](#Amortized-Time)
+		- [Log N Runtimes](#Log-N-Runtimes)
+		- [Recursive Runtimes](#Recursive-Runtimes)
+
 The language and metric used to describe the efficiency of algorithms.
 
 Consider this scenario:

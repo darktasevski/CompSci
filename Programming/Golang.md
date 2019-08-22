@@ -1,4 +1,17 @@
-# Golang 
+# Golang
+
+- [Golang](#Golang)
+		- [Exported names](#Exported-names)
+		- [Functions](#Functions)
+		- ["Naked" return - Named return values](#%22Naked%22-return---Named-return-values)
+		- [Variables](#Variables)
+		- [Basic types](#Basic-types)
+			- [Type conversions](#Type-conversions)
+			- [Type inference](#Type-inference)
+		- [Constants](#Constants)
+	- [Flow controld](#Flow-controld)
+		- [For](#For)
+		- [If statements](#If-statements)
 
 > Notes and examples
 
@@ -19,11 +32,13 @@ func main() {
 fmt.Println("My favorite number is", rand.Intn(10))
 }
 ```
->Note: The environment in which these programs are executed is deterministic, so each time you run the example program `rand.Intn` will return the same number. (To see a different number, seed the number generator; see [`rand.Seed`](https://golang.org/pkg/math/rand/#Seed).
+
+> Note: The environment in which these programs are executed is deterministic, so each time you run the example program `rand.Intn` will return the same number. (To see a different number, seed the number generator; see [`rand.Seed`](https://golang.org/pkg/math/rand/#Seed).
 
 This code groups the imports into a parenthesized, "factored" import statement.
 
 You can also write multiple import statements, like:
+
 ```go
 import "fmt"
 import "math"
@@ -69,13 +84,14 @@ func main() {
 fmt.Println(add(42, 13))
 }
 ```
->Notice that the type comes after the variable name.
->(For more about why types look the way they do, see the [article on Go's declaration syntax](https://blog.golang.org/gos-declaration-syntax).)
 
+> Notice that the type comes after the variable name.
+> (For more about why types look the way they do, see the [article on Go's declaration syntax](https://blog.golang.org/gos-declaration-syntax).)
 
 When two or more consecutive named function parameters share a type, you can omit the type from all but the last.
 
 In this example, we shortened
+
 ```go
 x int, y int
 
@@ -89,6 +105,7 @@ func add(x, y int) int {
 return x + y
 }
 ```
+
 A function can return any number of results.
 
 The swap function returns two strings.
@@ -103,6 +120,7 @@ a, b := swap("hello", "world")
 fmt.Println(a, b)
 }
 ```
+
 ### "Naked" return - Named return values
 
 Go's return values may be named. If so, they are treated as variables defined at the top of the function.
@@ -147,9 +165,10 @@ fmt.Println(i, c, python, java)
 Variables declared without a corresponding initialization are zero-valued. For example, the zero value for an int is 0.
 
 The zero value is:
-- 0 for numeric types,
-- false for the boolean type, and
-- "" (the empty string) for strings.
+
+-   0 for numeric types,
+-   false for the boolean type, and
+-   "" (the empty string) for strings.
 
 ```go
 func main() {
@@ -162,13 +181,14 @@ fmt.Printf("%v %v %v %q\n", i, f, b, s)
 // Results in: 0 0 false ""
 ```
 
-The `:=` syntax is shorthand for declaring and initializing a variable, e.g. for `var f string = "short"` in this case is same as ` f := "short"`.
+The `:=` syntax is shorthand for declaring and initializing a variable, e.g. for `var f string = "short"` in this case is same as `f := "short"`.
 Inside a function, the `:=` short assignment statement can be used in place of a var declaration with implicit type.
 Outside a function, every statement begins with a keyword (var, func, and so on) and so the `:=` construct is not available.
 
 A var declaration can include initializers, one per variable.
 
 If an initializer is present, the type can be omitted; the variable will take the type of the initializer.
+
 ```go
 var i, j int = 1, 2
 
@@ -183,6 +203,7 @@ fmt.Println(i, j, c, python, java)
 ### Basic types
 
 Go's basic types are
+
 ```go
 bool
 
@@ -225,9 +246,11 @@ fmt.Printf("Type: %T Value: %v\n", z, z)
 ```
 
 #### Type conversions
+
 The expression T(v) converts the value v to the type T.
 
 Some numeric conversions:
+
 ```go
 var i int = 42
 var f float64 = float64(i)
@@ -248,17 +271,22 @@ var z uint = uint(f)
 fmt.Println(x, y, z)
 }
 ```
+
 Unlike in C, in Go assignment between items of different type requires an explicit conversion.
 
 #### Type inference
+
 When declaring a variable without specifying an explicit type (either by using the := syntax or var = expression syntax), the variable's type is inferred from the value on the right hand side.
 
 When the right hand side of the declaration is typed, the new variable is of that same type:
+
 ```go
 var i int
 j := i // j is an int
 ```
+
 But when the right hand side contains an untyped numeric constant, the new variable may be an int, float64, or complex128 depending on the precision of the constant:
+
 ```go
 i := 42           // int
 f := 3.142        // float64
@@ -266,6 +294,7 @@ g := 0.867 + 0.5i // complex128
 ```
 
 ### Constants
+
 Constants are declared like variables, but with the const keyword.
 
 Constants can be character, string, boolean, or numeric values.
@@ -292,11 +321,14 @@ fmt.Println("Go rules?", Truth)
 Go has only one looping construct, the for loop.
 
 The basic for loop has three components separated by semicolons:
-- the init statement: executed before the first iteration
-- the condition expression: evaluated before every iteration
-- the post statement: executed at the end of every iteration
-- 
+
+-   the init statement: executed before the first iteration
+-   the condition expression: evaluated before every iteration
+-   the post statement: executed at the end of every iteration
+-
+
 The init statement will often be a short variable declaration, and the variables declared there are visible only in the scope of the for statement.
+
 ```go
 func main() {
 sum := 0
@@ -312,6 +344,7 @@ fmt.Println(sum)
 The loop will stop iterating once the boolean condition evaluates to false.
 
 The init and post statements are optional:
+
 ```go
 func main() {
 sum := 1
@@ -321,7 +354,9 @@ sum += sum
 fmt.Println(sum)
 }
 ```
+
 and at this point we can drop the semicolons:
+
 ```go
 func main() {
 sum := 1
@@ -331,9 +366,11 @@ sum += sum
 fmt.Println(sum)
 }
 ```
+
 > Note the similarity with the while loop here
 
 If you omit the loop condition it loops forever, so an infinite loop is compactly expressed:
+
 ```go
 func main() {
 for {
@@ -344,6 +381,7 @@ for {
 ### If statements
 
 Go's if statements are like its for loops; the expression need not be surrounded by parentheses ( ) but the braces { } are required.
+
 ```go
 func sqrt(x float64) string {
 if x < 0 {
@@ -355,7 +393,8 @@ return fmt.Sprint(math.Sqrt(x))
 
 Like for, the if statement can start with a short statement to execute before the condition.
 
-*Variables declared by the statement are only in scope until the end of the if. Variables declared inside an if short statement are also available inside any of the else blocks.*
+_Variables declared by the statement are only in scope until the end of the if. Variables declared inside an if short statement are also available inside any of the else blocks._
+
 ```go
 package main
 

@@ -1,5 +1,94 @@
 # Python
 
+- [Python](#Python)
+	- [Math usage](#Math-usage)
+	- [Variables](#Variables)
+		- [Naming Conventions](#Naming-Conventions)
+	- [DATA TYPES](#DATA-TYPES)
+		- [Dynamic Typing](#Dynamic-Typing)
+	- [Strings](#Strings)
+		- [String Concatenation](#String-Concatenation)
+		- [Formatting Strings](#Formatting-Strings)
+		- [Converting Data Types (Coercion)](#Converting-Data-Types-Coercion)
+	- [Booleans and conditional logic](#Booleans-and-conditional-logic)
+		- [Conditional Statements](#Conditional-Statements)
+		- [Truthiness](#Truthiness)
+		- [Logical Operators](#Logical-Operators)
+			- [is vs. "=="](#is-vs-%22%22)
+	- [LOOPS](#LOOPS)
+		- [`for` loops](#for-loops)
+			- [ranges](#ranges)
+		- [`while` loops](#while-loops)
+		- [Controlled Exit](#Controlled-Exit)
+	- [Arrays aka Lists](#Arrays-aka-Lists)
+		- [List methods](#List-methods)
+		- [Slicing](#Slicing)
+			- [Tricks with Slices](#Tricks-with-Slices)
+		- [List Comprehension](#List-Comprehension)
+			- [LC with Conditional Logic:](#LC-with-Conditional-Logic)
+		- [Nested Lists](#Nested-Lists)
+		- [Swapping Values](#Swapping-Values)
+	- [Objects aka Dictionaries](#Objects-aka-Dictionaries)
+		- [Dictionary Methods](#Dictionary-Methods)
+		- [Dictionary Comprehension](#Dictionary-Comprehension)
+	- [Tuples and Sets](#Tuples-and-Sets)
+		- [Tuples](#Tuples)
+			- [Creating / Accessing](#Creating--Accessing)
+		- [Sets](#Sets)
+			- [Set Methods](#Set-Methods)
+			- [Set Comprehension](#Set-Comprehension)
+	- [Functions](#Functions)
+		- [Default Parameters](#Default-Parameters)
+		- [Scope](#Scope)
+		- [`global`](#global)
+		- [`nonlocal`](#nonlocal)
+		- [Keyword Arguments](#Keyword-Arguments)
+		- [Documenting functions](#Documenting-functions)
+		- [`*args`](#args)
+		- [`**kwargs`](#kwargs)
+		- [Parameter Ordering](#Parameter-Ordering)
+		- [Argument Unpacking](#Argument-Unpacking)
+		- [Dictionary Unpacking](#Dictionary-Unpacking)
+	- [Lambdas](#Lambdas)
+		- [Closures](#Closures)
+		- [Built-in Functions](#Built-in-Functions)
+	- [Error Handling](#Error-Handling)
+		- [Debugging with pdb](#Debugging-with-pdb)
+	- [Modules](#Modules)
+		- [Custom Modules](#Custom-Modules)
+		- [External Modules](#External-Modules)
+		- [`__name__` variable](#name-variable)
+	- [HTTP requests with Python](#HTTP-requests-with-Python)
+		- [`requests` Module](#requests-Module)
+	- [OOP in Python](#OOP-in-Python)
+		- [Instantiating a Class](#Instantiating-a-Class)
+		- [`self`](#self)
+		- [Class Attributes](#Class-Attributes)
+		- [Class Methods](#Class-Methods)
+		- [Inheritance](#Inheritance)
+		- [`super`](#super)
+		- [Multiple Inheritance](#Multiple-Inheritance)
+		- [Method Resolution Order (MRO)](#Method-Resolution-Order-MRO)
+		- [Polymorphism & Inheritance](#Polymorphism--Inheritance)
+		- [Special Methods](#Special-Methods)
+	- [Generators and Decorators](#Generators-and-Decorators)
+		- [Iterator & Iterable](#Iterator--Iterable)
+		- [Generators](#Generators)
+			- [Generator Expressions](#Generator-Expressions)
+		- [Decorators](#Decorators)
+	- [Testing Python code](#Testing-Python-code)
+		- [Unit testing](#Unit-testing)
+			- [Before and After Hooks](#Before-and-After-Hooks)
+	- [File I/O](#File-IO)
+		- [Cursor Movement](#Cursor-Movement)
+		- [Reading CSV Files](#Reading-CSV-Files)
+	- [Web Scraping](#Web-Scraping)
+		- [Beautiful Soup](#Beautiful-Soup)
+			- [Navigating with CSS Selectors](#Navigating-with-CSS-Selectors)
+			- [Navigating with Beautiful Soup](#Navigating-with-Beautiful-Soup)
+			- [Other Tools](#Other-Tools)
+	- [REGEX](#REGEX)
+
 > Notes and exercises
 
 Python is a dynamically-typed language with more than half a dozen types
@@ -2629,15 +2718,19 @@ Truncating Files
 
 Using Dictionaries
 
+```py
 from csv import DictWriter
+
 with open("example.csv", "w") as file:
 headers = ["Character", "Move"]
 csv_writer = DictWriter(file, fieldnames=headers)
 csv_writer.writeheader()
 csv_writer.writerow({
-"Character": "Ryu",
-"Move": "Hadouken"
+	"Character": "Ryu",
+	"Move": "Hadouken"
 })
+```
+
 Dictionaries or Lists?
 
 ```python

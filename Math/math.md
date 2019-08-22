@@ -2,13 +2,17 @@
 
 # Math notes
 
+- [Math notes](#Math-notes)
+	- [General](#General)
+	- [Units of mass volume and length](#Units-of-mass-volume-and-length)
+
 > Using KaTeX for some math notations and examples
 
 <!-- toc -->
 
-- [Math notes](#math-notes)
-  - [General](#general)
-  - [Units of mass volume and length](#units-of-mass-volume-and-length)
+- [Math notes](#Math-notes)
+	- [General](#General)
+	- [Units of mass volume and length](#Units-of-mass-volume-and-length)
 
 <!-- tocstop -->
 

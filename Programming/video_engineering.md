@@ -1,5 +1,23 @@
 # Video engineering
 
+- [Video engineering](#Video-engineering)
+		- [The Media Source Extensions](#The-Media-Source-Extensions)
+			- [The Source Buffers](#The-Source-Buffers)
+		- [What Is a Codec?](#What-Is-a-Codec)
+		- [What Is a Video Container Format?](#What-Is-a-Video-Container-Format)
+		- [What Is a Streaming Protocol?](#What-Is-a-Streaming-Protocol)
+			- [HTTP-Based Adaptive Streaming Protocols](#HTTP-Based-Adaptive-Streaming-Protocols)
+		- [Video on Demand vs. Live Streaming](#Video-on-Demand-vs-Live-Streaming)
+		- [What Is Encoding?](#What-Is-Encoding)
+		- [Multicasting vs. Simulcasting vs. Re-stream:](#Multicasting-vs-Simulcasting-vs-Re-stream)
+			- [What Is Simulcasting?](#What-Is-Simulcasting)
+		- [Transmuxing, Transcoding, Transizing, Transrating](#Transmuxing-Transcoding-Transizing-Transrating)
+		- [What Is Adaptive Bitrate Streaming?](#What-Is-Adaptive-Bitrate-Streaming)
+			- [How Does Adaptive Bitrate Streaming Work?](#How-Does-Adaptive-Bitrate-Streaming-Work)
+		- [What is constant bitrate (CBR)?](#What-is-constant-bitrate-CBR)
+		- [What is variable bitrate (VBR)?](#What-is-variable-bitrate-VBR)
+		- [In the real — web — world](#In-the-real--web--world)
+
 > Notes on about streaming and video development (mainly with js)
 
 **Some terms:**

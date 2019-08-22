@@ -1,16 +1,16 @@
 # Division
 
-- [Division](#division)
-	- [Division using place value](#division-using-place-value)
-	- [Division using distributive property](#division-using-distributive-property)
-	- [Division using long division](#division-using-long-division)
-	- [Quotients that are multiples of 10](#quotients-that-are-multiples-of-10)
-	- [Canceling zeros when dividing](#canceling-zeros-when-dividing)
-	- [Dividing by two digit numbers](#dividing-by-two-digit-numbers)
-	- [Dividing by zero](#dividing-by-zero)
-	- [Multi-digit division](#multi-digit-division)
-		- [Strategies for dividing multiples of 10, 100, and 1000](#strategies-for-dividing-multiples-of-10-100-and-1000)
-	- [Remainders](#remainders)
+- [Division](#Division)
+	- [Division using place value](#Division-using-place-value)
+	- [Division using distributive property](#Division-using-distributive-property)
+	- [Division using long division](#Division-using-long-division)
+	- [Quotients that are multiples of 10](#Quotients-that-are-multiples-of-10)
+	- [Canceling zeros when dividing](#Canceling-zeros-when-dividing)
+	- [Dividing by two digit numbers](#Dividing-by-two-digit-numbers)
+	- [Dividing by zero](#Dividing-by-zero)
+	- [Multi-digit division](#Multi-digit-division)
+		- [Strategies for dividing multiples of 10, 100, and 1000](#Strategies-for-dividing-multiples-of-10-100-and-1000)
+	- [Remainders](#Remainders)
 
 ---
 

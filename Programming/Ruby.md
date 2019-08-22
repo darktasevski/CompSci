@@ -1,5 +1,21 @@
 # Ruby
 
+- [Ruby](#Ruby)
+		- [Ruby Data Types](#Ruby-Data-Types)
+		- [`puts` and `print`](#puts-and-print)
+		- [Returning Values](#Returning-Values)
+			- [The Return Keyword](#The-Return-Keyword)
+		- [Methods](#Methods)
+			- [Arguments](#Arguments)
+				- [Default Arguments](#Default-Arguments)
+		- [String Interpolation](#String-Interpolation)
+		- [Truthiness](#Truthiness)
+		- [Ruby Conditionals](#Ruby-Conditionals)
+			- [Implementing Control Flow](#Implementing-Control-Flow)
+		- [Loops](#Loops)
+			- [The `loop` Keyword](#The-loop-Keyword)
+			- [While and Until Loops](#While-and-Until-Loops)
+
 > Notes and examples
 
 ### Ruby Data Types

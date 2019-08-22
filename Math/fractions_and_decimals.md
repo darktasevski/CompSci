@@ -11,12 +11,15 @@
 		- [Subtracting fractions with like denominators](#Subtracting-fractions-with-like-denominators)
 		- [Improper fractions](#Improper-fractions)
 		- [Mixed numbers](#Mixed-numbers)
+			- [Add and subtract mixed numbers with unlike denominators](#Add-and-subtract-mixed-numbers-with-unlike-denominators)
 		- [Comparing improper fractions and mixed numbers](#Comparing-improper-fractions-and-mixed-numbers)
 		- [Adding mixed numbers](#Adding-mixed-numbers)
 		- [Subtracting mixed numbers](#Subtracting-mixed-numbers)
 		- [Multiplying fractions and whole numbers](#Multiplying-fractions-and-whole-numbers)
 		- [Converting tenths and hundredths](#Converting-tenths-and-hundredths)
 		- [Multiplying fractions with fractions](#Multiplying-fractions-with-fractions)
+		- [Multiplying mixed numbers](#Multiplying-mixed-numbers)
+		- [Fractions as division](#Fractions-as-division)
 	- [Decimals](#Decimals)
 		- [Rewriting fractions as decimals](#Rewriting-fractions-as-decimals)
 		- [Multiplying Decimals](#Multiplying-Decimals)
@@ -141,6 +144,16 @@ Given $\frac{7}{4}$, we can rewrite this to be a mixed number by using standard 
 
 Which gives us result of 1 whole and 3 remainder, so $\frac{7}{4}$ can be rewritten as $1\frac{3}{4}$.
 
+#### Add and subtract mixed numbers with unlike denominators
+
+$$
+3 \frac{4}{9} - 1\frac{1}{6} = 2 + (\frac{4}{9} - \frac{1}{6}) = 2 + (\frac{16}{36} - \frac{6}{36}) = 2 \frac{10}{36}
+$$
+
+$$
+8\frac{1}{6} + 4 \frac{3}{4} = 12 + (\frac{2}{12} + \frac{9}{12}) = 2 \frac{11}{12}
+$$
+
 ### Comparing improper fractions and mixed numbers
 
 We can usually convert fraction to a mixed number here and then compare wholes. If that can't do we can convert both of them into improper fractions, find the common denominator and then do the comparison (and simplify if you want to get fancy).
@@ -184,6 +197,27 @@ $$ \frac{8}{10} = \frac{80}{100} $$
 ### Multiplying fractions with fractions
 
 $\frac{3}{5} \times \frac{1}{4} = \frac{3 \times 1}{5 \times 4} = \frac{3}{20}$
+
+![khan academy ss](https://photos.app.goo.gl/rYs9GTEQr1eqNA5k6)
+
+### Multiplying mixed numbers
+
+$$
+1\frac{3}{4} \times 7 \frac{1}{5} = \frac{7}{\cancel{4}^1} \times \frac{\cancel{36}^9}{9} = \frac{63}{5} = 12\frac{3}{5}
+$$
+
+> We can simplify numerators/denominators that are divisible by each other, as in above example 36 with 4. This makes multiplying a bit faster and easier.
+
+### Fractions as division
+
+The fraction bar and the division symbol mean the same thing, as in $1 \div 3$ is equal to $\frac{1}{3}$.
+We have 1 as the numerator, 3 is the denominator, and this is equal to the numerator divided by the denominator. 1 over 3 is the same thing as 1 divided by 3.
+
+Multiplication and division are related:
+
+$$
+ \begin{aligned} \greenE{\text{number of groups}} \times \maroonD{\text{size of groups}} = \purpleD{\text{total}} \\\\ \maroonD{\text{size of groups}} \times \greenE{\text{number of groups}} = \purpleD{\text{total}} \\\\ \\\\ \purpleD{\text{total}} \div \greenE{\text{number of groups}} =\maroonD{\text{size of groups}} \\\\ \purpleD{\text{total}} \div \maroonD{\text{size of groups}} =\greenE{\text{number of groups}} \end{aligned}
+$$
 
 ---
 

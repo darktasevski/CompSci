@@ -1,3 +1,13 @@
+# Heaps
+
+- [Heaps](#Heaps)
+	- [Binary Heap](#Binary-Heap)
+	- [Binary Heap vs Self-Balancing BST](#Binary-Heap-vs-Self-Balancing-BST)
+	- [Array Implementation?](#Array-Implementation)
+	- [Binomial Trees/Heaps](#Binomial-TreesHeaps)
+	- [Fibonacci Heap](#Fibonacci-Heap)
+	- [Importance](#Importance)
+
 ## Binary Heap
 
 Main operations for binary heap:

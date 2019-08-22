@@ -1,5 +1,11 @@
 # Negative Numbers
 
+- [Negative Numbers](#Negative-Numbers)
+	- [Absolute values](#Absolute-values)
+		- [Calculating value as distance between the numbers](#Calculating-value-as-distance-between-the-numbers)
+	- [Negative numbers addition](#Negative-numbers-addition)
+	- [Multiplying negative numbers](#Multiplying-negative-numbers)
+
 ## Absolute values
 
 Opossite of an number is the number that is same distance from the zero, but on the other side of it.
