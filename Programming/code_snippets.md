@@ -62,6 +62,12 @@ sudo lsof -i tcp:3000
 kill -9 <PID>
 ```
 
+### Copy your SSH public key on a remote machine for passwordless login - the easy way
+
+```sh
+ssh-copy-id username@hostname
+```
+
 ### Some command line shortcuts
 
 ```
@@ -71,6 +77,67 @@ Ctrl+e go to end of line
 CTRL U to kill (cut) the whole whole
 CTRL Y to paste from kill-ring
 
+```
+
+### Massive change of file extension (bash)
+
+Change the file extension in batch. Useful to create output file names with same input name but distinct extension by including logic inside the loop:
+
+```sh
+for file in *.txt; do mv "$file" "${file%.txt}.xml"; done
+```
+
+### Quickly rename a file
+
+```sh
+mv filename.{old,new}
+```
+
+### Replace spaces in filenames with underscores
+
+This command will replace all the spaces in all the filenames of the current directory with underscores. There are other commands that do this here, but this one is the easiest and shortest.
+
+```sh
+rename 'y/ /_/' *
+```
+
+### Delete all files in a folder that don't match a certain file extension
+
+Deletes all files in a folder that are NOT _.foo, _.bar or \*.baz files. Edit the pattern inside the brackets as you like. Show Sample Output
+
+```js
+
+rm !(*.foo|*.bar|*.baz)
+```
+
+### Sharing file through http 80 port
+
+From the other machine open a web navigator and go to ip from the machine who launch netcat, http://ip-address/ If you have some web server listening at 80 port then you would need stop them or select another port before launch net cat ;-) \* You need netcat tool installed
+
+```sh
+nc -v -l 80 < file.ext
+```
+
+### Copy a file using pv and watch its progress
+
+`pv` allows a user to see the progress of data through a pipeline, by giving information such as time elapsed, percentage completed (with progress bar), current throughput rate, total data transferred, and ETA. (man pv) Show Sample Output
+
+```sh
+pv sourcefile > destfile
+```
+
+### Start COMMAND, and kill it if still running after 5 seconds
+
+```sh
+timeout 5s COMMAND
+```
+
+### Broadcast your shell thru ports 5000, 5001, 5002 ...
+
+run `nc yourip 5000`, `nc yourip 5001` or `nc yourip 5002` elsewhere will produce an exact same mirror of your shell. This is handy when you want to show someone else some amazing stuff in your shell without giving them control over it.
+
+```sh
+script -qf | tee >(nc -kl 5000) >(nc -kl 5001) >(nc -kl 5002)
 ```
 
 ## JS
@@ -265,3 +332,53 @@ for (i = 0; ++i < 101; console.log(i % 5 ? f || i : f + 'Buzz')) f = i % 3 ? '' 
 // Remove duplicates from the iterable `arr`
 [...new Set(arr)];
 ```
+
+### _Cancelable Promise util_
+
+```js
+const cancelable = promise => {
+	let hasCancelled = false;
+
+	return {
+		promise: promise.then(v => {
+			if (hasCancelled) {
+				throw { isCancelled: true };
+			}
+
+			return v;
+		}),
+		cancel: () => (hasCancelled = true),
+	};
+};
+```
+
+When we call the cancelable function by giving it a promise we'll get an object that has a:
+
+-   `promise` property: original promise extended with a single `.then` handler that is able to cancel out all the following `.then` handlers appended to it later on. Cancellation is based on a local variable hasCancelled. If the flag turns to true before the promise resolves it throws with additional information and bypasses all the latter `.then` handlers. We should use this property instead of our original promise and append any required `.then` handlers to it.
+-   `cancel` method that changes the local hasCancelled flag to true
+
+Usage example:
+
+```js
+// mocked fetch function to simulate waiting for a result 10 seconds
+const fetchResult = () =>
+	new Promise(resolve => {
+		setTimeout(() => resolve('response'), 10000);
+	});
+
+const { promise: result, cancel } = cancelable(fetchResult());
+
+result.catch(error => {
+	if (error.isCancelled) console.log('Promise chain cancelled!');
+});
+result.then(res => console.log(`Handler 1: ${res}`));
+result.then(res => console.log(`Handler 2: ${res}`)).then(res => console.log(`Handler 3: ${res}`));
+
+// at any point in time we can cancel all of the above success handlers by using cancel function
+// catch handler can verify if cancellation is the reason of failure and do something based on it, in this case log out "Promise chain cancelled!"
+cancel();
+```
+
+It's important to note that by using this approach we can't cancel out any handlers that were attached directly to an original promise object passed to our util function. This mechanism is only able to cancel out .then handlers appended to the returned promise. A bit weird but it's not bad once you get used to it. You can still hold a reference to both the original and derived promise.
+
+Another note is that error with isCancelled flag ends up in the catch handler only when the original Promise eventually resolves. All of this is essentially a way for us to say: once and if this Promise resolves, skip the success handlers because we are not interested in handling this data anymore.

@@ -58,12 +58,10 @@ _5 x everything and 60 x everything_
 78 x 65 = (5 x 8 + 5 x 70) + (60 x 8 + 60 x 70) = (40 + 350) + (480 + 4200) = 5070
 
 ```js
-4200
- 480
- 350
-+ 40
-----
-5070
+4200;
+480;
+350 + 40;
+----5070;
 ```
 
 We can multiply numbers by hand:
@@ -163,7 +161,9 @@ $$
 5^3 = 5 \times 5 \times 5 = 125
 $$
 
-The small number written above and to the right of thr number is called an **exponent**. The number underneath the exponent is called **the base**.
+The small number written above and to the right of the number is called an **exponent** or **power**. The number underneath the exponent is called **the base**. This can sometimes be read as "Five to the third power" or "Five raised to the third power".
+
+> A number which is raised to the second power is said to be **squared**, and to the third power is said to be **cubed**.
 
 Here's an example where the base is 7, and the exponent is 5:
 
@@ -175,6 +175,63 @@ An exponent tells us to multiply the base by itself that number of times. In thi
 
 $$
 7^5 = 1 \times 7 \times 7 \times 7 \times 7 \times 7
+$$
+
+What is $2^6 \times 2^5$?
+
+$$
+\text{ \textbar the first term in the product is the product of 5 2's and the second is the product of the 6 2's, so all together we have 11 2's, Thus:}  \\
+2^6 \times 2^5 = 2^{11} = 2048
+$$
+
+What is $\frac{3^{15}}{3^{12}}$?
+
+> Evaluating the numerator and denominator and then performing the division is long and tedious and leaves much room for error. We can instead note that the twelwe 3's on the bottom cancel with twelve of the fifteen 3's on the top (because $\frac{3}{3} = 1$) leaving three 3's on top:
+
+$$
+\frac{3 \times 3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3}{3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3} = \frac{3 \times3 \times3}{1} = 27
+$$
+
+What about $3^6 \div 3^8$?
+
+$$
+\text{\textbar This is an expression with a negative exponent!} \\
+3^{6-8} = 3^{-2}
+$$
+
+What has happened here is that the six 3's on top cancle with six on the bottom, leaving two on the bottom. Thus, a negative exponent means the extra numbers are in the denominator. This means:
+
+$$
+\frac{3^6}{3^8} = 3^{6-8} = 3^{-2} = \frac{1}{3^2} = \frac{1}{9}
+$$
+
+> When dealing with the problems involving multiplication and division of expressions with negative exponents, we can treat them just as the expressions with positive exponents, for example $x^3x^{-2}=x^1$ and $x^3 \div x^{-2} = x^{3-(-2)} =x^5$.
+
+How about $(2^3)^5$?
+
+$$
+(2^3)^5 = 2^{3 \times 5} = 2^{15} = 32768
+$$
+
+> Hence, when an exponential expression is raised to a power, we multiply the exponent of the expression by the power to which the expression is raised.
+
+$$
+(3^5)^2 = 3^{5 \times 2} = 3^{10} \\
+(4^{-3})^{-2} = 4^{(-3)(-2)} = 4^6
+$$
+
+Whats the difference between $2^{3^4}$ and $(2^3)^4$?
+
+In $2^{3^4}$ the exponent itself is raised to the fourth power, while in $(2^3)^4$ the entire expression is raised to the fourth power. Thus,
+
+$$
+2^{3^4} = 2^{81}
+$$
+
+but
+
+$$
+(2^3)^4 = 2^{3 \times 4} = 2^{12}
 $$
 
 ---
@@ -200,6 +257,10 @@ Any number raised to the power zero is equal to 1 and not zero - [Transitive pro
 
 $$
 2^0 = 1
+$$
+
+$$
+3^3 \div 3^3 = 3^{3-3} = 3^0 = 1
 $$
 
 > _This might be easier to understand if we explain it this way_: This asks - how many times we're going to multiply one times this (2) number? And answer is like: I'm going to take 1 and multiply it by 2 zero times, which means we're left with just 1.

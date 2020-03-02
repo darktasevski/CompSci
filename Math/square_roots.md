@@ -1,3 +1,5 @@
+-   [Square roots](#square-roots) - [Perfect Squares](#perfect-squares) - [Calculating Square Roots](#calculating-square-roots) - [Principal square root](#principal-square-root) - [Simplifying square roots](#Simplifying-square-roots)
+
 # Square roots
 
 A square root of a number is a value that can be multiplied by itself to give the original number. A square root of 9 is 3 because when 3 is multiplied by itself we get 9.
@@ -67,4 +69,34 @@ sqrt(13). We cannot factor it out as it's prime number.
 
 $$
 3 \sqrt{26} = 3 \sqrt{26}
+$$
+
+## Simplifying square roots
+
+Roots are nice, but we prefer dealing with regular numbers as much as possible. So, for example, instead of √4 we prefer dealing with 2. What about roots that aren't equal to an integer, like √20? Still, we can write 20 as 4⋅5 and then use known properties to write √(4⋅5) as √4⋅√5, which is 2√5. We _simplified_ √20.
+
+Example, simplify $\sqrt{72}$:
+
+Firstly, let's factor 72:
+
+```
+			    72
+			   /  \
+			  2   36
+			     /	\
+			    2   18
+			       /  \
+			      2    9
+				  /  \
+                		  3  3
+```
+
+Which gives us:
+$$72 = 2 \times 2 \times 3 \times 3 \times 2 = 2^2 \times 3^2 \times 2$$
+So:
+
+$$
+\begin{aligned}
+\sqrt{72} &= \sqrt{2^2 \times 3^2 \times 2} \\ &= \sqrt{2^2} \times \sqrt{3^2} \times \sqrt{2} \\ &= 2 \times 3 \times \sqrt{2} \\ &= 6\sqrt{2}
+\end{aligned}
 $$
