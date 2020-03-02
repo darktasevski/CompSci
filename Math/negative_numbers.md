@@ -54,6 +54,6 @@ $$
 
 ## Multiplying negative numbers
 
-> Myltiplying negative with negative always yields a positive value Myltiplying negative with positive always yields a negative number
+> Multiplying negative with negative always yields a positive value Multiplying negative with positive always yields a negative number
 
 TODO: Some examples

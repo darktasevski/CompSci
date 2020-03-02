@@ -106,19 +106,21 @@ The _line of symmetry_ is the imaginary line where you could fold the image and 
 
 > A quadrilateral is a polygon with four sides.
 
-**Parallelogram** is a quadrilateral where opossite sides are parallel - going in the same direction:
+![Quadrilaterals](../static/Books/math/quadrilaterals.png)
 
-![Parallelogram](https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F27%2FParallelogram_area_animated.gif%2F180px-Parallelogram_area_animated.gif&f=1)
+**Parallelogram** is a quadrilateral where opposite sides are parallel - going in the same direction:
+
+![Parallelogram](../static/Books/math/parallelogram.gif)
 
 **Rhombus** is a type of parallelogram - the opossite sides have to be parallel and all sides must be equal.
 
-![Rhombus](https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.k6-geometric-shapes.com%2Fimages%2Fxquadrilateral-rhombus.jpg.pagespeed.ic.rP3WnWrXGM.jpg&f=1)
+![Rhombus](../static/Books/math/rhombus.jpeg)
 
 > Square is a rhombus
 
 **Rectangle** is kind of parallelogram where all the corners are the right angles.
 
-![Rectangle](https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.tutorvista.com%2Fcms%2Fimages%2F38%2Fdiagonal-of-a-rectangle-example.JPG&f=1)
+![Rectangle](../static/Books/math/quadrilateral-rectangle.gif)
 
 **Square** is a parallelogram, rhombus and rectangle.
 
