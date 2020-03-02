@@ -2,13 +2,9 @@
 
 > Using KaTeX for some math notations and examples
 
-<!-- toc -->
-
 -   [Math notes](#Math-notes)
     -   [General](#General)
     -   [Units of mass volume and length](#Units-of-mass-volume-and-length)
-
-<!-- tocstop -->
 
 ---
 
@@ -28,7 +24,7 @@ TODO: Move this to appropriate files
 -   **Zero** is even number.
 -   Simple **subtraction**:
 
-    ```
+    ```none
         340,567
         -86,415
         --------

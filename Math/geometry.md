@@ -33,35 +33,31 @@ $$ height \times width = area $$
 
 A **line** extends forever in both directions, like this:
 
-![Line](https://cdn.kastatic.org/ka-perseus-graphie/5fade265560eb6d89d57fb526850e0652b812127.png)
+![Line](../static/Books/math/line.png)
 
 A **line segment** is just part of a line. It has two endpoints, like this:
 
-![Segment](https://cdn.kastatic.org/ka-perseus-graphie/a26f5a5d1677c840eb556ced719307a3de52c26f.png)
+![Segment](../static/Books/math/line_segment.png)
 
 A **ray** starts at one point and continues on forever in one direction, like this:
 
-![Ray](https://cdn.kastatic.org/ka-perseus-graphie/5578ab3d6a0f66440403ed77729d93697631d889.png)
+![Ray](../static/Books/math/ray.png)
 
 **Perpendicular lines** are lines that meet at right angles.
 
-![Perpendicular](https://www.mathsisfun.com/geometry/images/perpendicular.svg)
+![Perpendicular](../static/Books/math/perpendicular.svg)
 
 Parallel lines are always the same distance apart from each other — no matter how far they are extended, they will never meet.
 
-![parallel.svg](https://www.mathsisfun.com/geometry/images/parallel.svg)
+![parallel.svg](../static/Books/math/parallels.svg)
 
 ## Angles
 
 An angle is two rays that share a vertex. Intersecting lines or line segments also form angles.
 
-[Angles pt.1.pdf](:storage/59987413-57e5-4048-b6ec-b2554f34c79f/d53bbd69.pdf)
-
 ### Measuring angles
 
-Angles are measured in degrees. The wider an angle is open, the greater its measure. If you compare these two angles, the first one is open wider.
-
-[Angles pt.2.pdf](:storage/59987413-57e5-4048-b6ec-b2554f34c79f/4a20ea1c.pdf)
+Angles are measured in degrees. The wider an angle is open, the greater its measure.
 
 ## Angle types
 

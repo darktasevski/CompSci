@@ -79,7 +79,7 @@ Example, simplify $\sqrt{72}$:
 
 Firstly, let's factor 72:
 
-```
+```none
        72
       /  \
      2   36
