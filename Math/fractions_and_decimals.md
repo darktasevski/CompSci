@@ -2,30 +2,30 @@
 
 > Math snippets are written with $\href{https://katex.org/}{\KaTeX}$
 
-- [Fractions and Decimals](#Fractions-and-Decimals)
-	- [Fractions](#Fractions)
-		- [Comparing fractions](#Comparing-fractions)
-		- [Common denominators](#Common-denominators)
-		- [Decomposing fractions](#Decomposing-fractions)
-		- [Adding fractions with like denominators](#Adding-fractions-with-like-denominators)
-		- [Subtracting fractions with like denominators](#Subtracting-fractions-with-like-denominators)
-		- [Improper fractions](#Improper-fractions)
-		- [Mixed numbers](#Mixed-numbers)
-			- [Add and subtract mixed numbers with unlike denominators](#Add-and-subtract-mixed-numbers-with-unlike-denominators)
-		- [Comparing improper fractions and mixed numbers](#Comparing-improper-fractions-and-mixed-numbers)
-		- [Adding mixed numbers](#Adding-mixed-numbers)
-		- [Subtracting mixed numbers](#Subtracting-mixed-numbers)
-		- [Multiplying fractions and whole numbers](#Multiplying-fractions-and-whole-numbers)
-		- [Converting tenths and hundredths](#Converting-tenths-and-hundredths)
-		- [Multiplying fractions with fractions](#Multiplying-fractions-with-fractions)
-		- [Multiplying mixed numbers](#Multiplying-mixed-numbers)
-		- [Fractions as division](#Fractions-as-division)
-	- [Decimals](#Decimals)
-		- [Rewriting fractions as decimals](#Rewriting-fractions-as-decimals)
-		- [Multiplying Decimals](#Multiplying-Decimals)
-		- [Developing strategies for multiplying decimals](#Developing-strategies-for-multiplying-decimals)
-		- [Division strategies for decimal quotients](#Division-strategies-for-decimal-quotients)
-	- [Common fractions and decimals](#Common-fractions-and-decimals)
+-   [Fractions and Decimals](#Fractions-and-Decimals)
+    -   [Fractions](#Fractions)
+        -   [Comparing fractions](#Comparing-fractions)
+        -   [Common denominators](#Common-denominators)
+        -   [Decomposing fractions](#Decomposing-fractions)
+        -   [Adding fractions with like denominators](#Adding-fractions-with-like-denominators)
+        -   [Subtracting fractions with like denominators](#Subtracting-fractions-with-like-denominators)
+        -   [Improper fractions](#Improper-fractions)
+        -   [Mixed numbers](#Mixed-numbers)
+            -   [Add and subtract mixed numbers with unlike denominators](#Add-and-subtract-mixed-numbers-with-unlike-denominators)
+        -   [Comparing improper fractions and mixed numbers](#Comparing-improper-fractions-and-mixed-numbers)
+        -   [Adding mixed numbers](#Adding-mixed-numbers)
+        -   [Subtracting mixed numbers](#Subtracting-mixed-numbers)
+        -   [Multiplying fractions and whole numbers](#Multiplying-fractions-and-whole-numbers)
+        -   [Converting tenths and hundredths](#Converting-tenths-and-hundredths)
+        -   [Multiplying fractions with fractions](#Multiplying-fractions-with-fractions)
+        -   [Multiplying mixed numbers](#Multiplying-mixed-numbers)
+        -   [Fractions as division](#Fractions-as-division)
+    -   [Decimals](#Decimals)
+        -   [Rewriting fractions as decimals](#Rewriting-fractions-as-decimals)
+        -   [Multiplying Decimals](#Multiplying-Decimals)
+        -   [Developing strategies for multiplying decimals](#Developing-strategies-for-multiplying-decimals)
+        -   [Division strategies for decimal quotients](#Division-strategies-for-decimal-quotients)
+    -   [Common fractions and decimals](#Common-fractions-and-decimals)
 
 ## Fractions
 
@@ -55,8 +55,7 @@ $$
 
 > Note: The new fractions are equal to their original form, however they are often easier to work with when the denominators are the same.
 
-When fractions have the same denominator, we say they have common denominators.
-Having common denominators makes things like comparing, adding, and subtracting fractions easier.
+When fractions have the same denominator, we say they have common denominators. Having common denominators makes things like comparing, adding, and subtracting fractions easier.
 
 One way to find a common denominator for two (or more!) fractions is to list the multiples of each denominator until we find the smallest multiple they have in common.
 
@@ -71,9 +70,7 @@ The denominators are 8 and 10. Let's list multiples of each:
 
 Now we need to rewrite $\frac{7}{8}$ and $\frac{3}{10}$ with denominator of 40:
 
-$$ \frac{7}{8} \times \frac{5}{5} = \frac{35}{40} $$
-and
-$$ \frac{3}{10} \times \frac{4}{4} = \frac{12}{40} $$
+$$ \frac{7}{8} \times \frac{5}{5} = \frac{35}{40} $$ and $$ \frac{3}{10} \times \frac{4}{4} = \frac{12}{40} $$
 
 So, $\frac{7}{8}$ is same as $\frac{35}{40}$, and $\frac{3}{10}$ is same as $\frac{12}{40}$.
 
@@ -121,15 +118,13 @@ $$
 
 ### Improper fractions
 
-> An improper fraction is a fraction where the numerator is greater than or equal to the denominator.
-> Here are some examples of improper fractions: $\frac{9}{4},\frac{5}{5},\frac{7}{3}$
+> An improper fraction is a fraction where the numerator is greater than or equal to the denominator. Here are some examples of improper fractions: $\frac{9}{4},\frac{5}{5},\frac{7}{3}$
 
 Improper fractions are just pure fractions where the numerator is greater than denominator. For example, this $5\frac{1}{4}$ is not a pure fraction, because we have a whole number mixed with fraction so we call this a **mixed number**. To rewrite this as an improper fraction we can multiply max pieces of fraction times whole number, $\frac{5\times4}{4} + \frac{1}{4}$ in this case. End result would be $\frac{21}{4}$
 
 ### Mixed numbers
 
-> A mixed number is a number consisting of a whole number and a proper fraction.
-> Here are some examples of improper fractions: $4\frac{1}{2},1\frac{3}{8},12\frac{5}{6}$
+> A mixed number is a number consisting of a whole number and a proper fraction. Here are some examples of improper fractions: $4\frac{1}{2},1\frac{3}{8},12\frac{5}{6}$
 
 Given $\frac{7}{4}$, we can rewrite this to be a mixed number by using standard algorithm for division:
 
@@ -210,8 +205,7 @@ $$
 
 ### Fractions as division
 
-The fraction bar and the division symbol mean the same thing, as in $1 \div 3$ is equal to $\frac{1}{3}$.
-We have 1 as the numerator, 3 is the denominator, and this is equal to the numerator divided by the denominator. 1 over 3 is the same thing as 1 divided by 3.
+The fraction bar and the division symbol mean the same thing, as in $1 \div 3$ is equal to $\frac{1}{3}$. We have 1 as the numerator, 3 is the denominator, and this is equal to the numerator divided by the denominator. 1 over 3 is the same thing as 1 divided by 3.
 
 Multiplication and division are related:
 
@@ -225,18 +219,13 @@ $$
 
 > Decimals are fractions, but in **base 10**. For example, `10.1` would be $10 \frac{1}{10}$. `5.2` simplified as a fraction would be $5 \frac{1}{5}$, or $5 \frac{2}{10}$.
 
-"Decimal" comes from the Latin word _decimus_ which means 10th.
-We chose this name because our number system is built around the number 10, also known as a "base-10 system". You can see how important the number 10 is to our number system when you notice that each place in any number represents a value of 10.
+"Decimal" comes from the Latin word _decimus_ which means 10th. We chose this name because our number system is built around the number 10, also known as a "base-10 system". You can see how important the number 10 is to our number system when you notice that each place in any number represents a value of 10.
 
 `2.67`
 
 All numbers to the left of the decimal are the actual numbers, like ones, tens, and hundreds. All numbers to the right of the decimal are the decimal, or even fraction, numbers, like tenths, hundredths, or thousandths. On that note, the one number to the right of the decimal, `2`, represents two wholes, which in fraction form pretty much makes it two. The two numbers to the right of the decimal, `6` and `7`, represent 67 out of `100`, or `67/100`. Add the fraction and the whole number together, and you get two and sixty-seven out of one-hundred, or `2 67/100`.
 
-_For example_, consider the number `209,451.26301`
-You would read this number:
-Two Hundred Nine Thousand Four Hundred Fifty One Point Twenty Six Thousand Three Hundred and One Hundred Thousandths
-You would normally write this number: 209,451.26301
-But you could also write this number:
+_For example_, consider the number `209,451.26301` You would read this number: Two Hundred Nine Thousand Four Hundred Fifty One Point Twenty Six Thousand Three Hundred and One Hundred Thousandths You would normally write this number: 209,451.26301 But you could also write this number:
 
 $$
 (2 \times 10^5) + (0 \times 10^4) + (9 \times 10^3) + (4 \times 10^2) + (5 \times 10^1) + (1 \times 10^0) + (2 \times 10^-1) + (6 \times 10^-2) + (3 \times 10^-3) + (0 \times 10^-4) + (1 \times 10^-5)
@@ -278,8 +267,7 @@ For example, we can $2.8 \times 7$ calculate as $28 \times 7$:
 
 ![Decimal multiplication](https://lh3.googleusercontent.com/ykYlVVtxh2trbOfgjha-1y7NNPWj3ZXAH8aSuejeD9NUXtrZc7bioDDayMM-kDRsLH1BwZjSvgp0aro8qYa0wt3zOErPyanf2_xMxbrc-QHhX_MGkyyxFJsDWdNz2BgOqibVZIXwtlKw8zOY7KVTmBsL3_YyZFZzhfq6rZ6_WDDC0kfyFZWBqRs-GA-N-xWWmcVloiFPUY588d7L2XQeHUfsfEJIH4jtjSi2fY1tL8doCQAsfQPCHOCJuNeQKYz0JTWnRQbVCerEtybDVQ0MT2BVypEBuxalhitoC1OSsa_AAq1fyO8UmGo2tp0A7YTzboRck6zb4wacr85GxPvEqCbpD_7Ew2Epf2W1PwkROKjb8KgUJib2MY8d1s74dQqiMT7_YSv6Aq76ejUjznRM-lSYP7CmwM10FVgYdoWS9gNIVVL50kTl1COsFjzFwTBKfR_ws5cE7fEmORHzHkoYuq-_OeR7IKI8QoQf2Kr29UburrIIZOopx3_X67l_-C1pT88i2r9BtOUNLbDPdq9LiBWJG_JPzeXP6wErYJx00Jn6TLbTQB73z9DHy-3kKoTfRk-RFiE9fTVoUf3XkoCpr5EoTN94_afAvDQiz1PBEOlScOMQSXXi7P0b2gbFAXiUGPGuFDfuwPAEXjNHbF0NKYDumUJttA=w551-h235-no)
 
-Here's another one:
-$3.1 \times 5.9$
+Here's another one: $3.1 \times 5.9$
 
 Before we get into it, what should our answer be close to? Do some rounding... 3 x 6 = 18... So, our answer should be around 18!
 
@@ -422,7 +410,7 @@ $$
 `7.8 / 60`:
 
 $$
-7.8 \div 60 = 7.8 \div 6 \div 10 = (7.8 \div 6) \div 10	= 1.3 \div 10 = 0.13
+7.8 \div 60 = 7.8 \div 6 \div 10 = (7.8 \div 6) \div 10 = 1.3 \div 10 = 0.13
 $$
 
 `50 / 40`:
@@ -493,8 +481,6 @@ $$
 
 Some fractions are so common that it's worth memorizing the decimal form. Here are a few of the most common fractions and their decimal forms:
 
-$\frac{1}{2} = 0.5$
-$\frac{1}{4} = 0.25$
-$\frac{1}{5} = 0.2$
+$\frac{1}{2} = 0.5$ $\frac{1}{4} = 0.25$ $\frac{1}{5} = 0.2$
 
 We can use these three common fractions to convert other fractions to decimals and decimals to fractions.

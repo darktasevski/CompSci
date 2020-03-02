@@ -1,14 +1,14 @@
 # Geometry
 
-- [Geometry](#Geometry)
-	- [Lines](#Lines)
-	- [Angles](#Angles)
-		- [Measuring angles](#Measuring-angles)
-	- [Angle types](#Angle-types)
-	- [Triangle types](#Triangle-types)
-	- [Symmetry](#Symmetry)
-	- [Quadrilaterals](#Quadrilaterals)
-		- [Quadrilateral Summary](#Quadrilateral-Summary)
+-   [Geometry](#geometry)
+-   [Lines](#lines)
+-   [Angles](#angles)
+    -   [Measuring angles](#measuring-angles)
+-   [Angle types](#angle-types)
+-   [Triangle types](#triangle-types)
+-   [Symmetry](#symmetry)
+-   [Quadrilaterals](#quadrilaterals)
+    -   [Quadrilateral Summary](#quadrilateral-summary)
 
 ---
 
@@ -21,16 +21,13 @@
 
 **Area** is the space inside of a two-dimensional shape. We can also think of area as the amount of space a shape covers.
 
-**Oblast(Area)** predstavlja celo područje unutrašnjeg dela geometrijske figure, mereno u jedinicama. Oblast pravougaone figure je definisan proizvod dve strane, i moze se izračunati uz pomoć sledeće formule:
-$$O = d * c$$
+**Oblast(Area)** predstavlja celo područje unutrašnjeg dela geometrijske figure, mereno u jedinicama. Oblast pravougaone figure je definisan proizvod dve strane, i moze se izračunati uz pomoć sledeće formule: $$O = d * c$$
 
 $$ height \times width = area $$
 
 **Perimeter** is the distance around the outside of a two-dimensional shape.To find the perimeter of a shape, we add all of the shape's side lengths.
 
-**Perimetar** je distanca potrebna da se obidje oko nekog objekta, ili matematički rečeno zbir svih strana geometrijske figure. Može se izračunati uz pomoć sledeće formule:
-$$P = (d * c) * 2$$
-$$ (height \times width) \times 2 = perimeter $$
+**Perimetar** je distanca potrebna da se obidje oko nekog objekta, ili matematički rečeno zbir svih strana geometrijske figure. Može se izračunati uz pomoć sledeće formule: $$P = (d *c)* 2$$ $$ (height \times width) \times 2 = perimeter $$
 
 ## Lines
 
@@ -62,8 +59,7 @@ An angle is two rays that share a vertex. Intersecting lines or line segments al
 
 ### Measuring angles
 
-Angles are measured in degrees.
-The wider an angle is open, the greater its measure. If you compare these two angles, the first one is open wider.
+Angles are measured in degrees. The wider an angle is open, the greater its measure. If you compare these two angles, the first one is open wider.
 
 [Angles pt.2.pdf](:storage/59987413-57e5-4048-b6ec-b2554f34c79f/4a20ea1c.pdf)
 

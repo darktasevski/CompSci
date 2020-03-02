@@ -1,44 +1,43 @@
 # Big O & Algorithms
 
-- [Big O & Algorithms](#Big-O--Algorithms)
-	- [Running time of an algorithm](#Running-time-of-an-algorithm)
-	- [Big O notation](#Big-O-notation)
-		- [Binary search](#Binary-search)
-		- [The traveling salesperson](#The-traveling-salesperson)
-		- [Selection sort](#Selection-sort)
-	- [Hash tables](#Hash-tables)
-		- [Collisions](#Collisions)
-	- [Graphs](#Graphs)
-		- [Breadth-first search](#Breadth-first-search)
-			- [“Is there a path?”](#Is-there-a-path)
-			- [Finding the shortest path](#Finding-the-shortest-path)
-		- [Queues](#Queues)
-		- [Implementing the graph](#Implementing-the-graph)
-			- [Running time](#Running-time)
-		- [Highlights](#Highlights)
-		- [Dijkstra’s algorithm](#Dijkstras-algorithm)
-			- [Recap](#Recap)
-	- [Greedy algorithms](#Greedy-algorithms)
-	- [Dynamic programming](#Dynamic-programming)
-		- [Recap](#Recap-1)
-	- [k-nearest neighbors](#k-nearest-neighbors)
-		- [Introduction to machine learning](#Introduction-to-machine-learning)
-			- [OCR](#OCR)
-		- [Notes](#Notes)
-	- [Binary tree](#Binary-tree)
-	- [The Fourier transform](#The-Fourier-transform)
-	- [Parallel algorithms](#Parallel-algorithms)
-		- [MapReduce](#MapReduce)
-			- [Why are distributed algorithms useful?](#Why-are-distributed-algorithms-useful)
-	- [Bloom filters and HyperLogLog](#Bloom-filters-and-HyperLogLog)
-		- [Bloom filters](#Bloom-filters)
-		- [HyperLogLog](#HyperLogLog)
-	- [Linear programming](#Linear-programming)
+-   [Big O & Algorithms](#Big-O--Algorithms)
+    -   [Running time of an algorithm](#Running-time-of-an-algorithm)
+    -   [Big O notation](#Big-O-notation)
+        -   [Binary search](#Binary-search)
+        -   [The traveling salesperson](#The-traveling-salesperson)
+        -   [Selection sort](#Selection-sort)
+    -   [Hash tables](#Hash-tables)
+        -   [Collisions](#Collisions)
+    -   [Graphs](#Graphs)
+        -   [Breadth-first search](#Breadth-first-search)
+            -   [“Is there a path?”](#Is-there-a-path)
+            -   [Finding the shortest path](#Finding-the-shortest-path)
+        -   [Queues](#Queues)
+        -   [Implementing the graph](#Implementing-the-graph)
+            -   [Running time](#Running-time)
+        -   [Highlights](#Highlights)
+        -   [Dijkstra’s algorithm](#Dijkstras-algorithm)
+            -   [Recap](#Recap)
+    -   [Greedy algorithms](#Greedy-algorithms)
+    -   [Dynamic programming](#Dynamic-programming)
+        -   [Recap](#Recap-1)
+    -   [k-nearest neighbors](#k-nearest-neighbors)
+        -   [Introduction to machine learning](#Introduction-to-machine-learning)
+            -   [OCR](#OCR)
+        -   [Notes](#Notes)
+    -   [Binary tree](#Binary-tree)
+    -   [The Fourier transform](#The-Fourier-transform)
+    -   [Parallel algorithms](#Parallel-algorithms)
+        -   [MapReduce](#MapReduce)
+            -   [Why are distributed algorithms useful?](#Why-are-distributed-algorithms-useful)
+    -   [Bloom filters and HyperLogLog](#Bloom-filters-and-HyperLogLog)
+        -   [Bloom filters](#Bloom-filters)
+        -   [HyperLogLog](#HyperLogLog)
+    -   [Linear programming](#Linear-programming)
 
 ## Running time of an algorithm
 
-If we have a list of 100 numbers, and want to find a number, with simple search this can take up up to 100 guesses.
-If it’s a list of 4 billion numbers, it takes up to 4 billion guesses. So the maximum number of guesses is the same as the size of the list. This is called **linear time**. `O(n)`
+If we have a list of 100 numbers, and want to find a number, with simple search this can take up up to 100 guesses. If it’s a list of 4 billion numbers, it takes up to 4 billion guesses. So the maximum number of guesses is the same as the size of the list. This is called **linear time**. `O(n)`
 
 Binary search is different. If the list is 100 items long, it takes at most 7 guesses. If the list is 4 billion items, it takes at most 32 guesses. Powerful, eh? Binary search runs in **logarithmic time** (or log time, as the natives call it). `O(log n)`
 
@@ -46,8 +45,7 @@ Binary search is different. If the list is 100 items long, it takes at most 7 gu
 -   Run time of algorithms is expressed in Big O notation.
 -   `O(log n)` is faster than `O(n)`, but it gets a lot faster as the list of items you’re searching grows.
 
-When you write Big O notation like O(n), it really means this. `c * n` where `c` is some fixed amount of time, and it's called `constant`. We usually ignore that constant, because if two algorithms have different Big O times, the constant doesn’t matter.
-But sometimes the constant can make a difference. Quicksort versus merge sort is one example. Quicksort has a smaller constant than merge sort. So if they’re both `O(n log n)` time, quicksort is faster. And quicksort is faster in practice because it hits the average case way more often than the worst case.
+When you write Big O notation like O(n), it really means this. `c * n` where `c` is some fixed amount of time, and it's called `constant`. We usually ignore that constant, because if two algorithms have different Big O times, the constant doesn’t matter. But sometimes the constant can make a difference. Quicksort versus merge sort is one example. Quicksort has a smaller constant than merge sort. So if they’re both `O(n log n)` time, quicksort is faster. And quicksort is faster in practice because it hits the average case way more often than the worst case.
 
 ## Big O notation
 
@@ -57,8 +55,7 @@ But sometimes the constant can make a difference. Quicksort versus merge sort is
 
 **Algorithm running times grow at different rates**
 
-The run times for binary search and simple search don’t grow at the same rate. That is, as the number of items increases, binary search takes a little more time to run. But simple search takes a lot more time to run. So as the list of numbers gets bigger, binary search suddenly becomes a lot faster than simple search.
-That’s why it’s not enough to know how long an algorithm takes to run—you need to know how the running time increases as the list size increases. That’s where Big O notation comes in.
+The run times for binary search and simple search don’t grow at the same rate. That is, as the number of items increases, binary search takes a little more time to run. But simple search takes a lot more time to run. So as the list of numbers gets bigger, binary search suddenly becomes a lot faster than simple search. That’s why it’s not enough to know how long an algorithm takes to run—you need to know how the running time increases as the list size increases. That’s where Big O notation comes in.
 
 When we talk about running time in Big O notation, `log` always means `log2`. When you search for an element using simple search, in the worst case you might have to look at every single element. So for a list of 8 numbers, you’d have to check 8 numbers at most. For binary search, you have to check `log n` elements in the worst case. For a list of 8 elements, log 8 == 3 (2 x 2 x 2), because 23 == 8. So for a list of 8 numbers, you would have to check 3 numbers at most. For a list of 1,024 elements, log 1,024 = 10, because 210 == 1,024. So for a list of 1,024 numbers, you’d have to check 10 numbers at most.
 
@@ -74,9 +71,7 @@ Here are five Big O run times that you’ll encounter a lot, sorted from fastest
 
 ### Binary search
 
-Binary search is an algorithm; its input is a sorted list of elements. If an element you’re looking for is in that list, binary search returns the position where it’s located. Otherwise, binary search returns null.
-In general, for any list of `n`, binary search will take `log2 n` steps to run in the worst case, whereas simple search (stupid search) will take `n` steps.
-Binary search only works when your list is in sorted order. For example, the names in a phone book are sorted in alphabetical order, so you can use binary search to look for a name.
+Binary search is an algorithm; its input is a sorted list of elements. If an element you’re looking for is in that list, binary search returns the position where it’s located. Otherwise, binary search returns null. In general, for any list of `n`, binary search will take `log2 n` steps to run in the worst case, whereas simple search (stupid search) will take `n` steps. Binary search only works when your list is in sorted order. For example, the names in a phone book are sorted in alphabetical order, so you can use binary search to look for a name.
 
 ```python
 def binary_search(list, item):
@@ -125,16 +120,13 @@ In technical terminology, we’d say that a hash function “maps strings to num
 -   It needs to be consistent. For example, suppose you put in “apple” and get back “4”. Every time you put in “apple”, you should get “4” back. Without this, your hash table won’t work.
 -   It should map different words to different numbers. For example, a hash function is no good if it always returns “1” for any word you put in. In the best case, every different word should map to a different number.
 
-The hash function tells you exactly where the price is stored, so you
-don’t have to search at all! This works because
+The hash function tells you exactly where the price is stored, so you don’t have to search at all! This works because
 
 -   The hash function consistently maps a name to the same index. Every time you put in “avocado”, you’ll get the same number back. So you can use it the first time to find where to store the price of an avocado, and then you can use it to find where you stored that price.
 -   The hash function maps different strings to different indexes. “Avocado” maps to index 4. “Milk” maps to index 0. Everything maps to a different slot in the array where you can store its price.
 -   The hash function knows how big your array is and only returns valid indexes. So if your array is 5 items, the hash function doesn’t return 100 ... that wouldn’t be a valid index in the array.
 
-Put a hash function and an array together, and you get a data structure called a hash table. A hash table is the first data structure we'll learn that has some extra logic behind it. Arrays and lists map straight to memory, but hash tables are smarter. They use a hash function to intelligently figure out where to store elements.
-Hash tables are probably the most useful complex data structure
-you’ll learn. They’re also known as hash maps, maps, dictionaries, and associative arrays. And hash tables are fast! You can get an item from an array instantly. And hash tables use an array to store the data, so they’re equally fast.
+Put a hash function and an array together, and you get a data structure called a hash table. A hash table is the first data structure we'll learn that has some extra logic behind it. Arrays and lists map straight to memory, but hash tables are smarter. They use a hash function to intelligently figure out where to store elements. Hash tables are probably the most useful complex data structure you’ll learn. They’re also known as hash maps, maps, dictionaries, and associative arrays. And hash tables are fast! You can get an item from an array instantly. And hash tables use an array to store the data, so they’re equally fast.
 
 Any good language will have an implementation for hash tables. Python has hash tables; they’re called dictionaries. You can make a new hash table using the `dict` function:
 
@@ -148,10 +140,7 @@ print book # {‘avocado’: 1.49, ‘apple’: 0.67, ‘milk’: 1.49}
 print book[“avocado”] # 1.49
 ```
 
-> A hash table maps keys to values.
-
-> In the average case, hash tables take O(1) for everything. O(1) is called constant time. In the worst case, a hash table takes O(n)—linear time—for everything,
-> which is really slow.
+> A hash table maps keys to values. In the average case, hash tables take O(1) for everything. O(1) is called constant time. In the worst case, a hash table takes O(n)—linear time—for everything, which is really slow.
 
 To recap, hashes are good for
 
@@ -161,8 +150,7 @@ To recap, hashes are good for
 
 ### Collisions
 
-To understand the performance of hash tables, you first need to understand what collisions are.
-Collision is when two keys are assigned the same slot. If you store the second one at that slot, you’ll overwrite the first one. Collisions are bad, and you need to work around them. There are many different ways to deal with collisions. The simplest one is this: if multiple keys map to the same slot, start a linked list at that slot.
+To understand the performance of hash tables, you first need to understand what collisions are. Collision is when two keys are assigned the same slot. If you store the second one at that slot, you’ll overwrite the first one. Collisions are bad, and you need to work around them. There are many different ways to deal with collisions. The simplest one is this: if multiple keys map to the same slot, start a linked list at that slot.
 
 To avoid collisions, you need
 
@@ -193,8 +181,7 @@ A good hash function distributes values in the array evenly. A bad hash function
 
 Hash tables are a powerful data structure because they’re so fast and they let you model data in a different way. You might soon find that you’re using them all the time:
 
--   You can make a hash table by combining a hash function
-    with an array.
+-   You can make a hash table by combining a hash function with an array.
 -   Collisions are bad. You need a hash function that minimizes collisions.
 -   Hash tables have really fast search, insert, and delete.
 -   Hash tables are good for modeling relationships from one item to another item.
@@ -213,8 +200,7 @@ Graph algorithms are some of the most useful algorithms.
 
 ### Breadth-first search
 
-The algorithm to solve a shortest-path problem is called breadth-first search.
-Breadth- first search is a kind of search algorithm that runs on graphs. It can help answer two types of questions:
+The algorithm to solve a shortest-path problem is called breadth-first search. Breadth- first search is a kind of search algorithm that runs on graphs. It can help answer two types of questions:
 
 -   Question type 1: Is there a path from node A to node B?
 -   Question type 2: What is the shortest path from node A to node B?
@@ -222,8 +208,7 @@ Breadth- first search is a kind of search algorithm that runs on graphs. It can 
 Breadth-first search allows you to find the shortest distance between two things. But shortest distance can mean a lot of things! You can use breadth-first search to:
 
 -   Write a checkers AI that calculates the fewest moves to victory
--   Write a spell checker (fewest edits from your misspelling to a real
-    word—for example, READED -> READER is one edit)
+-   Write a spell checker (fewest edits from your misspelling to a real word—for example, READED -> READER is one edit)
 -   Find the doctor closest to you in your network
 
 #### “Is there a path?”
@@ -233,8 +218,7 @@ Breadth-first search allows you to find the shortest distance between two things
 Suppose you’re the proud owner of a mango farm. You’re looking for a mango seller who can sell your mangoes. Are you connected to a mango seller on Facebook? Well, you can search through your friends. This search is pretty straightforward.
 
 -   First, make a list of friends to search.
--   Now, go to each person in the list and check whether that person sells
-    mangoes.
+-   Now, go to each person in the list and check whether that person sells mangoes.
 -   Suppose none of your friends are mango sellers. Now you have to search through your friends’ friends.
 -   Each time you search for someone from the list, add all of their friends to the list.
 
@@ -258,9 +242,7 @@ The queue is called a FIFO data structure: First In, First Out. In contrast, a s
 
 ### Implementing the graph
 
-A graph consists of several nodes.
-And each node is connected to neighboring nodes. How do you express a relationship like “you -> bob”? Luckily, you know a data structure that lets you express relationships: a hash table!
-Remember, a hash table allows you to map a key to a value. In this case, you want to map a node to all of its neighbors.
+A graph consists of several nodes. And each node is connected to neighboring nodes. How do you express a relationship like “you -> bob”? Luckily, you know a data structure that lets you express relationships: a hash table! Remember, a hash table allows you to map a key to a value. In this case, you want to map a node to all of its neighbors.
 
 Here’s how you’d write it in Python:
 
@@ -320,9 +302,7 @@ def search(name):
 search("you")
 ```
 
-> Remember, graph[“you”] will give you a list of all your neighbors, like [“alice”, “bob”, “claire”]. Those all get added to the search queue.
-
-> Once you search a person, you should mark that person as searched and not search them again. So, before checking a person, it’s important to make sure they haven’t been checked already. To do that, you’ll keep a list of people you’ve already checked. If you don’t do this, you could also end up in an infinite loop.
+> Remember, graph[“you”] will give you a list of all your neighbors, like [“alice”, “bob”, “claire”]. Those all get added to the search queue. Once you search a person, you should mark that person as searched and not search them again. So, before checking a person, it’s important to make sure they haven’t been checked already. To do that, you’ll keep a list of people you’ve already checked. If you don’t do this, you could also end up in an infinite loop.
 
 The algorithm will keep going until either
 
@@ -331,8 +311,7 @@ The algorithm will keep going until either
 
 #### Running time
 
-If you search your entire network for a mango seller, that means you’ll follow each edge (remember, an edge is the arrow or connection from one person to another). So the running time is at least `O(number of edges)`.
-You also keep a queue of every person to search. Adding one person to the queue takes constant time: `O(1)`. Doing this for every person will take `O(number of people)` total. Breadth-first search takes `O(number of people + number of edges)`, and it’s more commonly written as `O(V+E)` (V for number of vertices, E for number of edges).
+If you search your entire network for a mango seller, that means you’ll follow each edge (remember, an edge is the arrow or connection from one person to another). So the running time is at least `O(number of edges)`. You also keep a queue of every person to search. Adding one person to the queue takes constant time: `O(1)`. Doing this for every person will take `O(number of people)` total. Breadth-first search takes `O(number of people + number of edges)`, and it’s more commonly written as `O(V+E)` (V for number of vertices, E for number of edges).
 
 ### Highlights
 
@@ -420,8 +399,7 @@ Some general tips follow:
 
 -   Every dynamic-programming solution involves a grid.
 -   The values in the cells are usually what you’re trying to optimize. For the knapsack problem, the values were the value of the goods.
--   Each cell is a subproblem, so think about how you can divide
-    your problem into subproblems. That will help you figure out what the axes are.
+-   Each cell is a subproblem, so think about how you can divide your problem into subproblems. That will help you figure out what the axes are.
 
 ```md
 Computer scientists sometimes joke about using the Feynman algorithm. The Feynman algorithm is named after the famous physicist Richard Feynman, and it works like this:
@@ -467,20 +445,16 @@ OCR stands for optical character recognition. It means you can take a photo of a
 -   KNN is used for classification and regression and involves looking at the k-nearest neighbors.
 -   Classification = categorization into a group.
 -   Regression = predicting a response (like a number).
--   Feature extraction means converting an item (like a fruit or a user)
-    into a list of numbers that can be compared.
+-   Feature extraction means converting an item (like a fruit or a user) into a list of numbers that can be compared.
 -   Picking good features is an important part of a successful KNN algorithm.
 
 ## Binary tree
 
 Searching for an element in a binary search tree takes O(log n) time on average and O(n) time in the worst case. Searching a sorted array takes O(log n) time in the worst case, so you might think a sorted array is better. But a binary search tree is a lot faster for insertions and deletions on average.
 
-Binary search trees have some downsides too: for one thing, you
-don’t get random access. You can’t say, “Give me the fifth element of this tree.” Those performance times are also on average and rely on the tree being balanced.
+Binary search trees have some downsides too: for one thing, you don’t get random access. You can’t say, “Give me the fifth element of this tree.” Those performance times are also on average and rely on the tree being balanced.
 
-There are special binary search trees that balance themselves. One example is the red-black tree.
-So when are binary search trees used? B-trees, a special type of binary tree, are commonly used to store data in databases.
-If you’re interested in databases or more-advanced data structures, check these out:
+There are special binary search trees that balance themselves. One example is the red-black tree. So when are binary search trees used? B-trees, a special type of binary tree, are commonly used to store data in databases. If you’re interested in databases or more-advanced data structures, check these out:
 
 -   B-trees
 -   Red-black trees
@@ -489,8 +463,7 @@ If you’re interested in databases or more-advanced data structures, check thes
 
 ## The Fourier transform
 
-The Fourier transform is one of those rare algorithms: brilliant,
-elegant, and with a million use cases. The best analogy for the Fourier transform comes from Better Explained (a great website that explains math simply): given a smoothie, the Fourier transform will tell you the ingredients in the smoothie. Or, to put it another way, given a song, the transform can separate it into individual frequencies.
+The Fourier transform is one of those rare algorithms: brilliant, elegant, and with a million use cases. The best analogy for the Fourier transform comes from Better Explained (a great website that explains math simply): given a smoothie, the Fourier transform will tell you the ingredients in the smoothie. Or, to put it another way, given a song, the transform can separate it into individual frequencies.
 
 It turns out that this simple idea has a lot of use cases. For example, if you can separate a song into frequencies, you can boost the ones you care about. You could boost the bass and hide the treble. The Fourier transform is great for processing signals. You can also use it to compress music. First you break an audio file down into its ingredient notes. The Fourier transform tells you exactly how much each note contributes to the overall song. So you can just get rid of the notes that aren’t important. That’s how the MP3 format works!
 
@@ -511,14 +484,11 @@ Parallel algorithms are hard to design. And it’s also hard to make sure they w
 
 ### MapReduce
 
-There’s a special type of parallel algorithm that is becoming increasingly popular: the distributed algorithm. It’s fine to run a parallel algorithm on your laptop if you need two to four cores, but what if you need hundreds of cores? Then you can write your algorithm to run across multiple machines. The MapReduce algorithm is a popular distributed algorithm. You can use it through the popular open source tool
-Apache Hadoop.
+There’s a special type of parallel algorithm that is becoming increasingly popular: the distributed algorithm. It’s fine to run a parallel algorithm on your laptop if you need two to four cores, but what if you need hundreds of cores? Then you can write your algorithm to run across multiple machines. The MapReduce algorithm is a popular distributed algorithm. You can use it through the popular open source tool Apache Hadoop.
 
-#### Why are distributed algorithms useful?
+#### Why are distributed algorithms useful
 
-Suppose you have a table with billions or trillions of rows, and you want to run a complicated SQL query on it. You can’t run it on MySQL, because it struggles after a few billion rows. Use MapReduce through Hadoop!
-Or suppose you have to process a long list of jobs. Each job takes 10 seconds to process, and you need to process 1 million jobs like this. If you do this on one machine, it will take you months! If you could run it across 100 machines, you might be done in a few days.
-Distributed algorithms are great when you have a lot of work to do and want to speed up the time required to do it. MapReduce in particular is built up from two simple ideas: the map function and the reduce function.
+Suppose you have a table with billions or trillions of rows, and you want to run a complicated SQL query on it. You can’t run it on MySQL, because it struggles after a few billion rows. Use MapReduce through Hadoop! Or suppose you have to process a long list of jobs. Each job takes 10 seconds to process, and you need to process 1 million jobs like this. If you do this on one machine, it will take you months! If you could run it across 100 machines, you might be done in a few days. Distributed algorithms are great when you have a lot of work to do and want to speed up the time required to do it. MapReduce in particular is built up from two simple ideas: the map function and the reduce function.
 
 ## Bloom filters and HyperLogLog
 
@@ -530,10 +500,7 @@ Or suppose you’re running bit.ly, which is a URL shortener. You don’t want t
 
 All of these examples have the same problem. You have a very large set.
 
-Now you have a new item, and you want to see whether it belongs in that set. You could do this quickly with a hash. For example, suppose Google has a big hash in which the keys are all the pages it has crawled.
-You want to see whether you’ve already crawled adit.io for example. Look it up in the hash.
-adit.io is a key in the hash, so you’ve already crawled it. The average lookup time for hash tables is O(1). adit.io is in the hash, so you’ve already crawled it. You found that out in constant time. Pretty good!
-Except that this hash needs to be huge. Google indexes trillions of web pages. If this hash has all the URLs that Google has indexed, it will take up a lot of space. Reddit and bit.ly have the same space problem. When you have so much data, you need to get creative!
+Now you have a new item, and you want to see whether it belongs in that set. You could do this quickly with a hash. For example, suppose Google has a big hash in which the keys are all the pages it has crawled. You want to see whether you’ve already crawled adit.io for example. Look it up in the hash. adit.io is a key in the hash, so you’ve already crawled it. The average lookup time for hash tables is O(1). adit.io is in the hash, so you’ve already crawled it. You found that out in constant time. Pretty good! Except that this hash needs to be huge. Google indexes trillions of web pages. If this hash has all the URLs that Google has indexed, it will take up a lot of space. Reddit and bit.ly have the same space problem. When you have so much data, you need to get creative!
 
 ### Bloom filters
 
@@ -546,13 +513,10 @@ Bloom filters offer a solution. Bloom filters are probabilistic data structures.
 
 ### HyperLogLog
 
-Along the same lines is another algorithm called HyperLogLog. Suppose Google wants to count the number of unique searches performed by its users. Or suppose Amazon wants to count the number of unique items that users looked at today. Answering these questions takes a lot of space! With Google, you’d have to keep a log of all the unique searches. When a user searches for something, you have to see whether it’s already in the log. If not, you have to add it to the log. Even for a single day, this log would be massive!
-HyperLogLog approximates the number of unique elements in a set. Just like bloom filters, it won’t give you an exact answer, but it comes very close and uses only a fraction of the memory a task like this would otherwise take.
-If you have a lot of data and are satisfied with approximate answers, check out probabilistic algorithms!
+Along the same lines is another algorithm called HyperLogLog. Suppose Google wants to count the number of unique searches performed by its users. Or suppose Amazon wants to count the number of unique items that users looked at today. Answering these questions takes a lot of space! With Google, you’d have to keep a log of all the unique searches. When a user searches for something, you have to see whether it’s already in the log. If not, you have to add it to the log. Even for a single day, this log would be massive! HyperLogLog approximates the number of unique elements in a set. Just like bloom filters, it won’t give you an exact answer, but it comes very close and uses only a fraction of the memory a task like this would otherwise take. If you have a lot of data and are satisfied with approximate answers, check out probabilistic algorithms!
 
 ## Linear programming
 
-Linear programming is used to maximize something given some constraints. For example, suppose your company makes two products, shirts and totes. Shirts need 1 meter of fabric and 5 buttons. Totes need 2 meters of fabric and 2 buttons. You have 11 meters of fabric and 20 buttons. You make $2 per shirt and $3 per tote. How many shirts and totes should you make to maximize your profit?
-Here you’re trying to maximize profit, and you’re constrained by the amount of materials you have.
+Linear programming is used to maximize something given some constraints. For example, suppose your company makes two products, shirts and totes. Shirts need 1 meter of fabric and 5 buttons. Totes need 2 meters of fabric and 2 buttons. You have 11 meters of fabric and 20 buttons. You make $2 per shirt and $3 per tote. How many shirts and totes should you make to maximize your profit? Here you’re trying to maximize profit, and you’re constrained by the amount of materials you have.
 
 All the graph algorithms can be done through linear programming instead. Linear programming is a much more general framework, and graph problems are a subset of that. Linear programming uses the Simplex algorithm.

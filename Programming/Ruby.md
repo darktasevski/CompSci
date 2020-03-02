@@ -1,20 +1,22 @@
 # Ruby
 
-- [Ruby](#Ruby)
-		- [Ruby Data Types](#Ruby-Data-Types)
-		- [`puts` and `print`](#puts-and-print)
-		- [Returning Values](#Returning-Values)
-			- [The Return Keyword](#The-Return-Keyword)
-		- [Methods](#Methods)
-			- [Arguments](#Arguments)
-				- [Default Arguments](#Default-Arguments)
-		- [String Interpolation](#String-Interpolation)
-		- [Truthiness](#Truthiness)
-		- [Ruby Conditionals](#Ruby-Conditionals)
-			- [Implementing Control Flow](#Implementing-Control-Flow)
-		- [Loops](#Loops)
-			- [The `loop` Keyword](#The-loop-Keyword)
-			- [While and Until Loops](#While-and-Until-Loops)
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+-   [Ruby](#ruby)
+    -   [Ruby Data Types](#ruby-data-types)
+    -   [`puts` and `print`](#puts-and-print)
+    -   [Returning Values](#returning-values)
+        -   [The Return Keyword](#the-return-keyword)
+    -   [Methods](#methods)
+        -   [Arguments](#arguments)
+            -   [Default Arguments](#default-arguments)
+    -   [String Interpolation](#string-interpolation)
+    -   [Truthiness](#truthiness)
+    -   [Ruby Conditionals](#ruby-conditionals)
+        -   [Implementing Control Flow](#implementing-control-flow)
+    -   [Loops](#loops)
+        -   [The `loop` Keyword](#the-loop-keyword)
+        -   [While and Until Loops](#while-and-until-loops)
 
 > Notes and examples
 
@@ -118,9 +120,7 @@ def greeting(name)
 end
 ```
 
-> Once you define arguments for a method, they become required when you invoke or call the method. If you define a method that accepts a singular argument, when you call that method, you must supply a value for that argument, otherwise, you get an ArgumentError.
-
-> Additionally, a method defined to accept one argument will raise an error if called with more than one argument.
+> Once you define arguments for a method, they become required when you invoke or call the method. If you define a method that accepts a singular argument, when you call that method, you must supply a value for that argument, otherwise, you get an ArgumentError. Additionally, a method defined to accept one argument will raise an error if called with more than one argument.
 
 ##### Default Arguments
 
@@ -243,8 +243,7 @@ loop do
 end
 ```
 
-This will output I have found the Time Machine! an infinite number of times, in other words it'll create infinite loop.
-We can use the `break` keyword inside the body of the loop to exit or abort the `loop` and continue with the rest of our code.
+This will output I have found the Time Machine! an infinite number of times, in other words it'll create infinite loop. We can use the `break` keyword inside the body of the loop to exit or abort the `loop` and continue with the rest of our code.
 
 ```rb
 loop do

@@ -1,39 +1,39 @@
 # Networking
 
-- [Networking](#Networking)
-	- [What happens when we enter google.com in browser:](#What-happens-when-we-enter-googlecom-in-browser)
-	- [HTTP Headers](#HTTP-Headers)
-	- [Response Status Codes](#Response-Status-Codes)
-	- [HTTP Verbs](#HTTP-Verbs)
-	- [Terms](#Terms)
-		- [MAC Addresses](#MAC-Addresses)
-		- [IP Addresses](#IP-Addresses)
-		- [EUI-64](#EUI-64)
-		- [Frames](#Frames)
-		- [Packets](#Packets)
-		- [Switches](#Switches)
-		- [Routers](#Routers)
-		- [Multi Layer Switches](#Multi-Layer-Switches)
-		- [Hub](#Hub)
-		- [Encryption devices](#Encryption-devices)
-		- [Cable](#Cable)
-		- [Network Interface Card](#Network-Interface-Card)
-		- [Bridge](#Bridge)
-	- [OSI Model](#OSI-Model)
-		- [OSI Model Layer 1 Physical](#OSI-Model-Layer-1-Physical)
-		- [OSI Model Layer 2 Data Link](#OSI-Model-Layer-2-Data-Link)
-		- [OSI Model Layer 3 Network](#OSI-Model-Layer-3-Network)
-		- [OSI Model Layer 4 Transport](#OSI-Model-Layer-4-Transport)
-		- [OSI Model Layer 5 Session](#OSI-Model-Layer-5-Session)
-		- [OSI Model Layer 6 Presentation](#OSI-Model-Layer-6-Presentation)
-		- [OSI Model Layer 7 Application](#OSI-Model-Layer-7-Application)
-	- [TCP/IP Model](#TCPIP-Model)
-	- [IP Addresses](#IP-Addresses-1)
-		- [IP Address Classes](#IP-Address-Classes)
-		- [APIPA](#APIPA)
-		- [CIDR](#CIDR)
-	- [IPV4 vs IPV6](#IPV4-vs-IPV6)
-	- [Subnetting](#Subnetting)
+-   [Networking](#Networking)
+    -   [What happens when we enter google.com in browser:](#What-happens-when-we-enter-googlecom-in-browser)
+    -   [HTTP Headers](#HTTP-Headers)
+    -   [Response Status Codes](#Response-Status-Codes)
+    -   [HTTP Verbs](#HTTP-Verbs)
+    -   [Terms](#Terms)
+        -   [MAC Addresses](#MAC-Addresses)
+        -   [IP Addresses](#IP-Addresses)
+        -   [EUI-64](#EUI-64)
+        -   [Frames](#Frames)
+        -   [Packets](#Packets)
+        -   [Switches](#Switches)
+        -   [Routers](#Routers)
+        -   [Multi Layer Switches](#Multi-Layer-Switches)
+        -   [Hub](#Hub)
+        -   [Encryption devices](#Encryption-devices)
+        -   [Cable](#Cable)
+        -   [Network Interface Card](#Network-Interface-Card)
+        -   [Bridge](#Bridge)
+    -   [OSI Model](#OSI-Model)
+        -   [OSI Model Layer 1 Physical](#OSI-Model-Layer-1-Physical)
+        -   [OSI Model Layer 2 Data Link](#OSI-Model-Layer-2-Data-Link)
+        -   [OSI Model Layer 3 Network](#OSI-Model-Layer-3-Network)
+        -   [OSI Model Layer 4 Transport](#OSI-Model-Layer-4-Transport)
+        -   [OSI Model Layer 5 Session](#OSI-Model-Layer-5-Session)
+        -   [OSI Model Layer 6 Presentation](#OSI-Model-Layer-6-Presentation)
+        -   [OSI Model Layer 7 Application](#OSI-Model-Layer-7-Application)
+    -   [TCP/IP Model](#TCPIP-Model)
+    -   [IP Addresses](#IP-Addresses-1)
+        -   [IP Address Classes](#IP-Address-Classes)
+        -   [APIPA](#APIPA)
+        -   [CIDR](#CIDR)
+    -   [IPV4 vs IPV6](#IPV4-vs-IPV6)
+    -   [Subnetting](#Subnetting)
 
 The Internet is not owned by any individual or group. The Internet is a worldwide collection of interconnected networks, cooperating with each other to exchange information using common standards. Through telephone wires, fiber-optic cables, wireless transmissions, and satellite links, Internet users can exchange information in a variety of forms.
 
@@ -45,12 +45,10 @@ In business, large networks can be used to advertise and sell products, order su
 
 Business and SOHO networks usually provide a shared connection to the Internet. The Internet is considered a "network of networks" because it is literally made up of thousands of local networks that are connected to each other.
 
-## What happens when we enter google.com in browser:
+## What happens when we enter google.com in browser
 
-1. DNS Lookup - Like a Phonebook for the Internet!
-   We give it site url (google.com), and it finds it's server address (172.217.9.142)
-2. Computer makes a REQUEST to a server
-   Client makes GET (in this case) request to found server
+1. DNS Lookup - Like a Phonebook for the Internet! We give it site url (google.com), and it finds it's server address (172.217.9.142)
+2. Computer makes a REQUEST to a server Client makes GET (in this case) request to found server
 3. Server processes the REQUEST
 4. Server issues a RESPONSE
 5. Request/Response cycle
@@ -130,8 +128,7 @@ Packet is layer 3 protocol delivery unit. Segments of data with a beginning and 
 
 ### Switches
 
-Switches are devices on our network which allows us to connect to multiple devices that are on the same subnet.
-Switch is Layer 2 device, as the map to MAC addresses.
+Switches are devices on our network which allows us to connect to multiple devices that are on the same subnet. Switch is Layer 2 device, as the map to MAC addresses.
 
 ### Routers
 
@@ -199,8 +196,7 @@ Here we're going to perform network functions, and this is where fragmentation a
 
 IP addresses are logical addresses, they're not physical addresses hard-coded into our network interface cards (NIC). We can use same address for another computer if we want, and contrary to MAC addresses which are unique, IPs doesn't have to be unique. Our NIC have both MAC and IP addresses.
 
-Transferring data through MAC addresses over global scale is currently infeasible with way we currently have our network setup. We need to be able to take a computer's MAC address, to assign a particular IP address to that MAC address and then route a data through MAC addresses through networks.
-Also, we can't transfer data to other computer by it's MAC address, we need to use an IP address, because between us and the computer on other network we have to go through a router, and router needs to have an IP address, that it can use in order to transmit information.
+Transferring data through MAC addresses over global scale is currently infeasible with way we currently have our network setup. We need to be able to take a computer's MAC address, to assign a particular IP address to that MAC address and then route a data through MAC addresses through networks. Also, we can't transfer data to other computer by it's MAC address, we need to use an IP address, because between us and the computer on other network we have to go through a router, and router needs to have an IP address, that it can use in order to transmit information.
 
 ```
                              packets
@@ -272,8 +268,7 @@ IP addresses are logically mapped addresses that map to a physical address. IP a
 
 128 | 64 | 32 | 16 | 8 | 4| 2 | 1
 
-10110000.11111111.00000000.11110000 = 176.255.0.240
-192.168.1.1 = 11000000.10101000.00000001.00000001
+10110000.11111111.00000000.11110000 = 176.255.0.240 192.168.1.1 = 11000000.10101000.00000001.00000001
 
 ### IP Address Classes
 
@@ -310,8 +305,7 @@ Class D is used for multicasting
 
 We don't need gigantic range of IP addresses we have if we are using Class A IP address, unless we re Internet service provider.
 
-Each class separates our network id from our host id at a different point
-Subnet mask is what let us know what portion of the a IP address is a host portion and what portion is a network portion.
+Each class separates our network id from our host id at a different point Subnet mask is what let us know what portion of the a IP address is a host portion and what portion is a network portion.
 
 ### APIPA
 
@@ -344,9 +338,7 @@ We display CIDR as `/n`, `n` can be anything from 1 to 31. This number is a pref
 
 AN IPV4 is a 32-bit address scheme, meaning it has 32 binary bits of data which are divided into four octets (sets of 8). This provides us with 4 billion addresses which should be enough, in theory. However, now we are running out with so many devices that connect to the Internet. That’s where IPV6 comes in, which provides us with a 128-bit address which provides trillions of addresses.
 
-IPV6 is represented in hexadecimal separated by colons (`:`).
-`0-9` and `a` to `f`
-Consecutive zeros can be replaced with double colon (`::`), it's good practice to use this to omit the most zeros, also, we can do this only one time. Also, we can omit leading zeros in hexadecimal groups.
+IPV6 is represented in hexadecimal separated by colons (`:`). `0-9` and `a` to `f` Consecutive zeros can be replaced with double colon (`::`), it's good practice to use this to omit the most zeros, also, we can do this only one time. Also, we can omit leading zeros in hexadecimal groups.
 
 ## Subnetting
 

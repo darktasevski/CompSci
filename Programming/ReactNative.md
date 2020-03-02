@@ -1,42 +1,42 @@
 # React Native
 
-- [React Native](#React-Native)
-		- [Dimensions](#Dimensions)
-		- [Yoga](#Yoga)
-		- [Flex](#Flex)
-		- [Padding, margin, borders, and the box model](#Padding-margin-borders-and-the-box-model)
-	- [Core Components](#Core-Components)
-		- [View](#View)
-		- [Text](#Text)
-		- [SafeAreaView](#SafeAreaView)
-		- [TouchableOpacity](#TouchableOpacity)
-		- [Image](#Image)
-			- [Common image styles](#Common-image-styles)
-		- [ActivityIndicator](#ActivityIndicator)
-		- [FlatList](#FlatList)
-		- [TextInput](#TextInput)
-		- [ScrollView](#ScrollView)
-		- [Modal](#Modal)
-		- [AsyncStorage](#AsyncStorage)
-	- [Core APIs](#Core-APIs)
-		- [StatusBar](#StatusBar)
-		- [NetInfo](#NetInfo)
-		- [Alert](#Alert)
-		- [BackHandler (Android only)](#BackHandler-Android-only)
-		- [Refs](#Refs)
-		- [Geolocation](#Geolocation)
-		- [CameraRoll](#CameraRoll)
-	- [The keyboard](#The-keyboard)
-		- [LayoutAnimation](#LayoutAnimation)
-	- [Navigation](#Navigation)
-		- [Navigation in React Native](#Navigation-in-React-Native)
-			- [Native navigation](#Native-navigation)
-				- [Pros](#Pros)
-				- [Cons](#Cons)
-			- [Navigation with JavaScript](#Navigation-with-JavaScript)
-				- [Pros](#Pros-1)
-				- [Cons](#Cons-1)
-	- [Animation](#Animation)
+-   [React Native](#React-Native)
+    -   [Dimensions](#Dimensions)
+    -   [Yoga](#Yoga)
+    -   [Flex](#Flex)
+    -   [Padding, margin, borders, and the box model](#Padding-margin-borders-and-the-box-model)
+        -   [Core Components](#Core-Components)
+            -   [View](#View)
+            -   [Text](#Text)
+            -   [SafeAreaView](#SafeAreaView)
+            -   [TouchableOpacity](#TouchableOpacity)
+            -   [Image](#Image)
+                -   [Common image styles](#Common-image-styles)
+            -   [ActivityIndicator](#ActivityIndicator)
+            -   [FlatList](#FlatList)
+            -   [TextInput](#TextInput)
+            -   [ScrollView](#ScrollView)
+            -   [Modal](#Modal)
+            -   [AsyncStorage](#AsyncStorage)
+        -   [Core APIs](#Core-APIs)
+            -   [StatusBar](#StatusBar)
+            -   [NetInfo](#NetInfo)
+            -   [Alert](#Alert)
+            -   [BackHandler (Android only)](#BackHandler-Android-only)
+            -   [Refs](#Refs)
+            -   [Geolocation](#Geolocation)
+            -   [CameraRoll](#CameraRoll)
+        -   [The keyboard](#The-keyboard)
+            -   [LayoutAnimation](#LayoutAnimation)
+        -   [Navigation](#Navigation)
+            -   [Navigation in React Native](#Navigation-in-React-Native)
+                -   [Native navigation](#Native-navigation)
+                    -   [Pros](#Pros)
+                    -   [Cons](#Cons)
+                -   [Navigation with JavaScript](#Navigation-with-JavaScript)
+                    -   [Pros](#Pros-1)
+                    -   [Cons](#Cons-1)
+        -   [Animation](#Animation)
 
 > While universal WebView-powered apps were built with the idea of build once, run anywhere, React Native was built with the goal of learn once, write anywhere.
 
@@ -83,8 +83,7 @@ textStyle:{ textAlign: 'center', ...Platform.select({
 }), },
 ```
 
-Since the virtual keyboard can cover roughly half the device screen, this is a common problem that occurs when using text inputs in an application. Fortunately, React Native includes `KeyboardAvoidingView`, a component that solves this problem by allowing us to adjust where other components render in relation to the virtual keyboard. To be used instead of `View`.
-KeyboardAvoidingView accepts a `behavior` prop with which we can customize how the keyboard adjusts. It can change its height, position or bottom padding in relation to the position of the virtual keyboard.
+Since the virtual keyboard can cover roughly half the device screen, this is a common problem that occurs when using text inputs in an application. Fortunately, React Native includes `KeyboardAvoidingView`, a component that solves this problem by allowing us to adjust where other components render in relation to the virtual keyboard. To be used instead of `View`. KeyboardAvoidingView accepts a `behavior` prop with which we can customize how the keyboard adjusts. It can change its height, position or bottom padding in relation to the position of the virtual keyboard.
 
 ### Dimensions
 
@@ -106,8 +105,7 @@ The flex style attribute gives us the ability to define layouts that can expand 
 If a component has no siblings, as in the case of the top-level View rendered by App, things are straightforward:
 
 -   with a flex of 1, the component will expand to fill its parent entirely
--   with a flex value of 0, the component will shrink to the minimum space possible ( just large
-    enough for the component’s children to be visible, if it has any)
+-   with a flex value of 0, the component will shrink to the minimum space possible ( just large enough for the component’s children to be visible, if it has any)
 
 ### Padding, margin, borders, and the box model
 
@@ -134,14 +132,12 @@ React Native components aim to be as consistent as possible – many components 
 
 We use the Text component to render text on the screen. Text can be styled with font-specific attributes such as fontSize. It can use nearly all of the same styles as View, such as backgroundColor and width. However, Text has some key differences when it comes to layout.
 
-Unlike the View component, Text components have an intrinsic size. In other words, if we don’t specify a width or height, a Text component will still show up on the screen. Specifying a width, height, or flex attribute as part of the style will override the intrinsic dimensions
-of the Text. Text context will automatically wrap around by default when it fills the width of the component. This is configurable with the `numberOfLines` prop.
+Unlike the View component, Text components have an intrinsic size. In other words, if we don’t specify a width or height, a Text component will still show up on the screen. Specifying a width, height, or flex attribute as part of the style will override the intrinsic dimensions of the Text. Text context will automatically wrap around by default when it fills the width of the component. This is configurable with the `numberOfLines` prop.
 
 In addition, we use the following props frequently:
 
 -   numberOfLines - The number of lines to allow before truncating the text.
--   ellipsizeMode - How text should be truncated when it exceeds numberOfLines. One of 'head',
-    'middle', 'tail', 'clip' (iOS only).
+-   ellipsizeMode - How text should be truncated when it exceeds numberOfLines. One of 'head', 'middle', 'tail', 'clip' (iOS only).
 
 Like View elements, Text elements can have children. This is useful when you want to have multiple styles of text within the same paragraph. The Text element will inherit styles from its parent. If the parent has a fontSize of 16 and color of blue, a child Text element will have the same styles by default. The child Text element can be styled to override its parent’s styles as needed.
 
@@ -165,8 +161,7 @@ We use the Image component to render images on the screen. There are two ways to
 
 #### Common image styles
 
-We can use the resizeMode style (or prop – both work) to determine how the image is cropped in the case where the image data’s intrinsic dimensions are different than the dimensions of the Image component.
-The options for resizeMode are:
+We can use the resizeMode style (or prop – both work) to determine how the image is cropped in the case where the image data’s intrinsic dimensions are different than the dimensions of the Image component. The options for resizeMode are:
 
 -   cover: The image scales uniformly to fill the Image component. The image will be cropped by the bounding box of the component if they have different aspect ratios.
 -   contain: The image scales uniformly to fit within the component. The component’s background color will show if they have different aspect ratios.
@@ -174,8 +169,7 @@ The options for resizeMode are:
 -   repeat: The image repeats itself at its intrinsic dimensions to fill the component (iOS-only).
 -   center: The image maintains its intrinsic dimensions, and is centered within the component.
 
-We can use the aspectRatio style to render the image at a specific aspect ratio, regardless of its intrinsic dimensions. We provide a number value which represents the ratio of width to height. For example, if we set aspectRatio: 2, this means the ratio of width to height is 2 to 1 – the image will render twice as wide as it is tall.
-While most commonly used with images, the aspectRatio style can be used on any component, such as View or Text.
+We can use the aspectRatio style to render the image at a specific aspect ratio, regardless of its intrinsic dimensions. We provide a number value which represents the ratio of width to height. For example, if we set aspectRatio: 2, this means the ratio of width to height is 2 to 1 – the image will render twice as wide as it is tall. While most commonly used with images, the aspectRatio style can be used on any component, such as View or Text.
 
 ### ActivityIndicator
 
@@ -193,11 +187,9 @@ FlatList components are used for rendering large quantities of scrollable conten
 
 The FlatList is generally performant: it only renders the content on screen (clipping offscreen content), and only updates rows that have changed. The FlatList is built using a more generic component, the ScrollView.
 
-`inverted` -
-In a messaging app, for example, we typically want new messages to appear at the bottom of the list. To accomplish this, we’ve have to add the inverted prop to our FlatList.
+`inverted` - In a messaging app, for example, we typically want new messages to appear at the bottom of the list. To accomplish this, we’ve have to add the inverted prop to our FlatList.
 
-`keyboardShouldPersistTaps`
-We use the keyboardShouldPersistTaps prop to configure what happens when we tap the FlatList. This prop has three possible options:
+`keyboardShouldPersistTaps` We use the keyboardShouldPersistTaps prop to configure what happens when we tap the FlatList. This prop has three possible options:
 
 -   never - Tapping the list will dismiss the keyboard and blur any focused elements. This is the default behavior.
 -   always - Tapping the list will have no effect on the keyboard or focus.
@@ -208,21 +200,17 @@ We use the keyboardShouldPersistTaps prop to configure what happens when we tap 
 When working with TextInput, we’ll generally use the following props to capture user input:
 
 -   value - The current text in the input field.
--   onChangeText - A function called each time the text changes. The new value is the first
-    argument.
--   onSubmitEditing - A function called when the user presses the return/next key to submit/move
-    to the next field.
+-   onChangeText - A function called each time the text changes. The new value is the first argument.
+-   onSubmitEditing - A function called when the user presses the return/next key to submit/move to the next field.
 
 It’s common to store the current text in the state of the component that renders the TextInput. Each time the function we pass to onChangeText is called, we call setState to update the current text. When the user presses return, the function we passed to onSubmitEditing is called – we can then perform some action with the current text, and use setState to reset the current text to the empty string.
 
-When working with TextInput, we can use most of the same styles as Text (which includes the styles for View). A few styles don’t work quite as well as they do on Text though: borders tend not to render correctly, and padding and line height can conflict in unusual ways. If you’re having trouble styling a TextInput, you may want to wrap the TextInput in a View and style the View instead.
-A few other common props:
+When working with TextInput, we can use most of the same styles as Text (which includes the styles for View). A few styles don’t work quite as well as they do on Text though: borders tend not to render correctly, and padding and line height can conflict in unusual ways. If you’re having trouble styling a TextInput, you may want to wrap the TextInput in a View and style the View instead. A few other common props:
 
 -   autoCapitalize - For capitalizing characters as they’re typed. One of 'none', 'sentences', 'words', 'characters'.
 -   autoCorrect - Enable/disable auto-correct.
 -   editable - Enable/disable the text field.
--   keyboardType - The type of keyboard to display. Cross-platform values are 'default',
-    'numeric', 'email-address', 'phone-pad'.
+-   keyboardType - The type of keyboard to display. Cross-platform values are 'default', 'numeric', 'email-address', 'phone-pad'.
 -   multiline - Allow multiple lines of input text.
 -   placeholder - The text to show when the text field is empty
 -   placeholderTextColor - The color of the placeholder text
@@ -230,15 +218,13 @@ A few other common props:
 
 ### ScrollView
 
-The ScrollView is simpler than the FlatList: it will render all of its children in a vertically or horizontally scrollable list, without the additional complexity of the keyExtractor or renderItem props.
-The ScrollView is well suited for scrolling through small quantities of content (fewer than 20 items or so). **Content within a ScrollView is rendered even when it isn’t visible on the screen.** For large quantities of items, or cases where many children of the ScrollView are offscreen, you will likely want to use a FlatList component for better performance.
+The ScrollView is simpler than the FlatList: it will render all of its children in a vertically or horizontally scrollable list, without the additional complexity of the keyExtractor or renderItem props. The ScrollView is well suited for scrolling through small quantities of content (fewer than 20 items or so). **Content within a ScrollView is rendered even when it isn’t visible on the screen.** For large quantities of items, or cases where many children of the ScrollView are offscreen, you will likely want to use a FlatList component for better performance.
 
 You can think of a ScrollView as two separate views, one inside the other. The outer view has a bounded size, while the inner view can exceed the size of the outer view. If the inner view exceeds the size of the outer view, only a portion of it will be visible. When we pass children elements to the ScrollView, they are rendered inside this inner view. We call the inner view the “content container view”, and can style it separately from the outer view.
 
 ### Modal
 
-The Modal component lets us transition to an entirely different screen. This is most useful for simple apps, since for complex apps you’ll likely be using a navigation library which will come with its own way of doing modals.
-Common props include:
+The Modal component lets us transition to an entirely different screen. This is most useful for simple apps, since for complex apps you’ll likely be using a navigation library which will come with its own way of doing modals. Common props include:
 
 -   animationType - This controls how the modal animates in and out. One of 'none', 'slide', or 'fade' (defaults to 'none').
 -   onRequestClose - A function called when the user taps the Android back button.
@@ -260,10 +246,8 @@ AsyncStorage is a simple key-value store provided by React Native for storing sm
 -   `Dimensions` - Returns the dimensions of the screen
 -   `Geolocation` - Returns the location of the device, and emits events when the location changes
 -   `Keyboard` - Emits events when the keyboard appears or disappears
--   `NetInfo` - Returns network connectivity information, and emits events when the connectivity
-    changes
--   `PixelRatio` - Translates from density-independent pixels to density-dependent pixels (more
-    detail on the later)
+-   `NetInfo` - Returns network connectivity information, and emits events when the connectivity changes
+-   `PixelRatio` - Translates from density-independent pixels to density-dependent pixels (more detail on the later)
 -   `StatusBar` - Controls the visibility and color of the status bar
 
 ### StatusBar
@@ -272,10 +256,7 @@ The status bar works a little differently on iOS and Android. On iOS the status 
 
 ### NetInfo
 
-The NetInfo APIs are a good example of React Native core APIs: these provide a uniform interface to the lower level native APIs on iOS and Android. React Native is essentially providing JavaScript bindings and smoothing out platform differences for us.
-We can call NetInfo.getConnectionInfo() to get the network connectivity status. NetInfo.getConnectionInfo() returns a promise which resolves to a string. If the device is connected, the string value will be 'wifi'
-or 'cellular' If the device isn’t connected, the promise will still resolve, but with the value 'none'.
-NetInfo provides the method addEventListener, which we can call with a callback function, which it will invoke each time the network status changes.
+The NetInfo APIs are a good example of React Native core APIs: these provide a uniform interface to the lower level native APIs on iOS and Android. React Native is essentially providing JavaScript bindings and smoothing out platform differences for us. We can call NetInfo.getConnectionInfo() to get the network connectivity status. NetInfo.getConnectionInfo() returns a promise which resolves to a string. If the device is connected, the string value will be 'wifi' or 'cellular' If the device isn’t connected, the promise will still resolve, but with the value 'none'. NetInfo provides the method addEventListener, which we can call with a callback function, which it will invoke each time the network status changes.
 
 ```js
 const subscription = NetInfo.addEventListener('connectionChange', status => {
@@ -291,12 +272,9 @@ The full method signature is Alert.alert(title, message?, buttons?, options?, ty
 
 -   title - A string, shown in a large bold font, at the top of the dialog
 -   message - A string, typically longer, shown in a normal weight font below the title
--   buttons - An array of objects containing text (a string), onPress (a callback function), and
-    optionally a style on iOS (styles can be one of default, cancel, or destructive).
--   options - An object for controlling the dialog dismissal behavior on Android. Tapping outside the dialog will normally exit the dialog. This can be prevented by setting { cancelable: false
-    } or handled specially with { onDismiss: () => {} }.
--   type - Allows text entry on iOS using one of the following options: default, plain-text,
-    secure-text, or login-password.
+-   buttons - An array of objects containing text (a string), onPress (a callback function), and optionally a style on iOS (styles can be one of default, cancel, or destructive).
+-   options - An object for controlling the dialog dismissal behavior on Android. Tapping outside the dialog will normally exit the dialog. This can be prevented by setting { cancelable: false } or handled specially with { onDismiss: () => {} }.
+-   type - Allows text entry on iOS using one of the following options: default, plain-text, secure-text, or login-password.
 
 ### BackHandler (Android only)
 
@@ -308,8 +286,7 @@ We can return true from our handlerFunction to indicate that we’ve handled the
 
 ### Refs
 
-React let’s us access the instance of any component we render using a ref prop. This is a special prop that we can supply a callback – the callback will be called with the instance as a parameter, after the component mounts (and before it unmounts). We can store a reference to the component instance.
-You can think of a component instance as the “this” when we access this.props or any method that’s part of our class.
+React let’s us access the instance of any component we render using a ref prop. This is a special prop that we can supply a callback – the callback will be called with the instance as a parameter, after the component mounts (and before it unmounts). We can store a reference to the component instance. You can think of a component instance as the “this” when we access this.props or any method that’s part of our class.
 
 ### Geolocation
 
@@ -327,8 +304,7 @@ Depending on how we’re using geolocation, there are a few other APIs that migh
 
 We can use CameraRoll.getPhotos(options) to request an array of images from the device. We can specify the number of images we want to get with the first option. We can use a cursor to iterate through the list of images by passing an after option (more on this soon). This API is asynchronous and returns a promise containing the image metadata, along with pagination info.
 
-Since this API is asynchronous, it may take some time for the first images to be returned. The more images we request, the longer it will take. It’s best to request just enough images to fill the entire screen: we want the API response as soon as we can, but we also want the screen to load all at once, rather than piecemeal.
-Calling CameraRoll.getPhotos(options) returns a promise, which resolves to an object containing:
+Since this API is asynchronous, it may take some time for the first images to be returned. The more images we request, the longer it will take. It’s best to request just enough images to fill the entire screen: we want the API response as soon as we can, but we also want the screen to load all at once, rather than piecemeal. Calling CameraRoll.getPhotos(options) returns a promise, which resolves to an object containing:
 
 -   edges - An array of items, each containing a node object. The node object contains metadata about the image, such as timestamp and location. The node object also contains an image object with the filename, width, height, and uri of the image.
 -   page_info - An object containing a boolean has_next_page, a string end_cursor, and a string before_cursor.
@@ -360,8 +336,7 @@ On iOS, the keyboard uses an animation with a special easing curve that’s hard
 
 ### LayoutAnimation
 
-`LayoutAnimation` is the only way we can match the exact animation of the keyboard. It’s used internally by the built-in KeyboardAvoidingView component, so it’s safe for us to use despite being considered experimental.
-Currently `LayoutAnimation` is disabled by default on Android, so we need to enable it by calling `UIManager.setLayoutAnimationEnabledExperimental(true)`.
+`LayoutAnimation` is the only way we can match the exact animation of the keyboard. It’s used internally by the built-in KeyboardAvoidingView component, so it’s safe for us to use despite being considered experimental. Currently `LayoutAnimation` is disabled by default on Android, so we need to enable it by calling `UIManager.setLayoutAnimationEnabledExperimental(true)`.
 
 ```js
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
@@ -376,9 +351,7 @@ if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental
 The LayoutAnimation.create API takes three parameters:
 
 -   duration - The duration of the animation
--   easing - The curve of the animation. We choose from a predefined set of curves: spring, linear,
-    easeInEaseOut, easeIn, easeOut, keyboard. The keyboard curve is the key to matching the
-    keyboard’s animation curve – although it only exists on iOS.
+-   easing - The curve of the animation. We choose from a predefined set of curves: spring, linear, easeInEaseOut, easeIn, easeOut, keyboard. The keyboard curve is the key to matching the keyboard’s animation curve – although it only exists on iOS.
 -   creationProp - The style to animate when a new element is added: opacity or scaleXY.
 
 > If we want to call this every time the component will rerender, `componentWillReceiveProps` is the best place to do that.
@@ -411,8 +384,7 @@ In **React Native**, all of our component code executes on a JavaScript thread. 
 
 ##### Pros
 
-The primary benefit of this approach is a smoother navigation experience for the user. This is because purely native iOS/Android navigation APIs can be used with all of our navigation happening within the native thread. This approach works well when including React Native in an existing native iOS or Android application. Using the same navigation components and transitions throughout the app means that different screens in the app will feel consistent regardless of whether they’re written natively or with React Native.
-Additionally, if an operating system update modifies the style or functionality of navigation components, you won’t have to wait for the same modifications to be made in your JavaScript- based navigation library.
+The primary benefit of this approach is a smoother navigation experience for the user. This is because purely native iOS/Android navigation APIs can be used with all of our navigation happening within the native thread. This approach works well when including React Native in an existing native iOS or Android application. Using the same navigation components and transitions throughout the app means that different screens in the app will feel consistent regardless of whether they’re written natively or with React Native. Additionally, if an operating system update modifies the style or functionality of navigation components, you won’t have to wait for the same modifications to be made in your JavaScript- based navigation library.
 
 ##### Cons
 
@@ -450,5 +422,4 @@ Performance issues tend to fall into a few specific categories:
 -   Re-rendering components: When a component’s state or props change, React must de- termine how to reconcile these changes and update the UI to reflect them. React is fairly efficient by default, so components generally render quickly enough that we don’t optimize their performance. With animation, however, a large component that takes a few milliseconds to render may lead to choppy animations.
 -   Communicating between native code and JavaScript: Since JavaScript runs asynchronously, JavaScript code won’t start executing in response to a gesture until the frame after the gesture happens on the native side. If React Native must pass values back and forth between the native thread and the JavaScript engine, We can use `useNativeDriver` with our animations to mitigate this.
 
-When working with animations, we tend to write more asynchronous code than normal. We must often wait for an animation to complete before starting another animation (using an imperative API) or unmounting a component. The asynchronous control flow and imperative calls can quickly lead to confusing, buggy code.
-To keep our code clear and accurate, we should use a [state machine](https://en.wikipedia.org/wiki/Finite-state_machine) approach for our more complex components. We’ll define a set of named states for each component, and define transitions from one state to another. This is similar to the React component lifecycle: our component will transition through different states (similar to mounting, updating, unmounting, etc), and we can run a specific function every time the state changes.
+When working with animations, we tend to write more asynchronous code than normal. We must often wait for an animation to complete before starting another animation (using an imperative API) or unmounting a component. The asynchronous control flow and imperative calls can quickly lead to confusing, buggy code. To keep our code clear and accurate, we should use a [state machine](https://en.wikipedia.org/wiki/Finite-state_machine) approach for our more complex components. We’ll define a set of named states for each component, and define transitions from one state to another. This is similar to the React component lifecycle: our component will transition through different states (similar to mounting, updating, unmounting, etc), and we can run a specific function every time the state changes.

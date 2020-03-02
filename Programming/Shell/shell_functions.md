@@ -26,17 +26,15 @@ Function:
 
 <figcaption> <a href="https://xkcd.com/1168/">Slightly relevant xkcd 😄</a></figcaption>
 
-### Exit statuses
+## Exit statuses
 
-Before we dive into functions it's essential to know that every command executed in shell returns an exit status in the range of 0 to 255.
-De facto status for success is `0`, all others are codes for an error condition.
-This codes can be used in scripts for throwing and checking errors. Usually, we can find what various exit statuses mean by checking the documentation for that error code or look into the source code.
+Before we dive into functions it's essential to know that every command executed in shell returns an exit status in the range of 0 to 255. De facto status for success is `0`, all others are codes for an error condition. This codes can be used in scripts for throwing and checking errors. Usually, we can find what various exit statuses mean by checking the documentation for that error code or look into the source code.
 
 We can use `$?` to check the exit status of the previously executed command.
 
 ```shell
-$ ls dir/
-$ echo $?
+ls dir/
+echo $?
 ```
 
 If `dir` exists `echo $?` will return `0` status code, otherwise, it should return `2`, the error code for directory not found.
@@ -133,9 +131,7 @@ done
 
 #### Creating a function
 
-Let's get back to the functions.
-It's important to note that function must be defined before it's called, it is conventional to define functions at the start of the file, although this is not strictly necessary.
-The block of code defined as a function can be declared in one of three different ways, depending on the exact shell in use. The standard Bourne shell syntax uses the function name followed immediately by a pair of parentheses `()` and curly brackets `{}` around the code itself:
+Let's get back to the functions. It's important to note that function must be defined before it's called, it is conventional to define functions at the start of the file, although this is not strictly necessary. The block of code defined as a function can be declared in one of three different ways, depending on the exact shell in use. The standard Bourne shell syntax uses the function name followed immediately by a pair of parentheses `()` and curly brackets `{}` around the code itself:
 
 ```shell
 # The most common way
@@ -151,8 +147,7 @@ function mySecondFunc () {
 }
 ```
 
-There is a third syntax, which is not accepted by the Bourne shell, although bash and ksh both accept it. Instead of following the function name by a pair of parentheses, the function name is preceded by the keyword function:
-`function myFunc`
+There is a third syntax, which is not accepted by the Bourne shell, although bash and ksh both accept it. Instead of following the function name by a pair of parentheses, the function name is preceded by the keyword function: `function myFunc`
 
 As far as I've learned so far, the first one (without keyword `function`) is the most commonly used as it's accepted by all shells. The second syntax is also used frequently and by using the `function` keyword, it provides a more clear declaration that it is a function. Regarding the 3rd one, I couldn't find any information about it, except that it exists :|
 
@@ -238,5 +233,4 @@ helloFunc Shell World
 
 ---
 
-There is much more to be said about the functions in shellscript, so consider this post just as a small introduction to their usage in scripting. In the next post, I'll write a bit about Wildcards, Character Classes and about logging and debugging shellscript.
-Thanks for reading!
+There is much more to be said about the functions in shellscript, so consider this post just as a small introduction to their usage in scripting. In the next post, I'll write a bit about Wildcards, Character Classes and about logging and debugging shellscript. Thanks for reading!

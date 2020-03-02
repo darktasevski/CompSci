@@ -110,8 +110,8 @@ cheat sheet for  | 0 : an easy and fast way to convert anything to integer:
 ( {'2':'3'}|0 ) === 0;         // or a not empty object
 ( (function(){})|0 ) === 0;    // an empty function is typecast to 0 too
 ( (function(){ return 3;})|0 ) === 0;
-3 | '0px' === 3; 				  // magic
-(~~n) 						// replacement for Math.floor(n)
+3 | '0px' === 3;       // magic
+(~~n)       // replacement for Math.floor(n)
 // n|n and n&n always yield the same results as ~~n
 // although it doesn’t replace Math.floor() for negative numbers
 ```

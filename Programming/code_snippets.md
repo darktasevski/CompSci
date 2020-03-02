@@ -15,13 +15,13 @@ git fetch origin
 git reset --hard origin/master
 ```
 
-### Fix last commit message:
+### Fix last commit message
 
 ```bash
 git commit --amend
 ```
 
-### Change branch name:
+### Change branch name
 
 ```bash
 git branch -m relaese release
@@ -34,7 +34,7 @@ But if you have already pushed this branch, then there are a couple of extra ste
 ### git push origin release
 ```
 
-### Added a wrong file in the repo?
+### Added a wrong file in the repo
 
 ```bash
 git reset ./src/.env
@@ -132,7 +132,7 @@ pv sourcefile > destfile
 timeout 5s COMMAND
 ```
 
-### Broadcast your shell thru ports 5000, 5001, 5002 ...
+### Broadcast your shell thru ports 5000, 5001, 5002
 
 run `nc yourip 5000`, `nc yourip 5001` or `nc yourip 5002` elsewhere will produce an exact same mirror of your shell. This is handy when you want to show someone else some amazing stuff in your shell without giving them control over it.
 
@@ -148,7 +148,7 @@ script -qf | tee >(nc -kl 5000) >(nc -kl 5001) >(nc -kl 5002)
 str.replace(/ /g, '_');
 ```
 
-### Check what device is used:
+### Check what device is used
 
 ```js
 const userAgent = (window.navigator && window.navigator.userAgent) || '';
@@ -161,7 +161,7 @@ const isIE = Boolean(window.ActiveXObject) || /trident.*rv:1\d/i.test(userAgent)
 const isIOS = /iPad|iPhone|iPod/i.test(userAgent);
 ```
 
-### getScrollPosition:
+### getScrollPosition
 
 ```js
   getScrollPosition () {
@@ -172,7 +172,7 @@ const isIOS = /iPad|iPhone|iPod/i.test(userAgent);
     }
 ```
 
-### Set scroll position:
+### Set scroll position
 
 ```js
  setScrollPosition ({left = 0, top = 0}) {
@@ -186,7 +186,7 @@ const isIOS = /iPad|iPhone|iPod/i.test(userAgent);
     }
 ```
 
-### Get number from RGB color:
+### Get number from RGB color
 
 ```js
 color2Number = color => {
@@ -201,7 +201,7 @@ color2Number = color => {
 };
 ```
 
-### And number to color:
+### And number to color
 
 ```js
 number2Color = number => '#' + ('00000' + number.toString(16)).slice(-6);

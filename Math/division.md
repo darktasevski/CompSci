@@ -1,16 +1,16 @@
 # Division
 
-- [Division](#Division)
-	- [Division using place value](#Division-using-place-value)
-	- [Division using distributive property](#Division-using-distributive-property)
-	- [Division using long division](#Division-using-long-division)
-	- [Quotients that are multiples of 10](#Quotients-that-are-multiples-of-10)
-	- [Canceling zeros when dividing](#Canceling-zeros-when-dividing)
-	- [Dividing by two digit numbers](#Dividing-by-two-digit-numbers)
-	- [Dividing by zero](#Dividing-by-zero)
-	- [Multi-digit division](#Multi-digit-division)
-		- [Strategies for dividing multiples of 10, 100, and 1000](#Strategies-for-dividing-multiples-of-10-100-and-1000)
-	- [Remainders](#Remainders)
+-   [Division](#Division)
+    -   [Division using place value](#Division-using-place-value)
+    -   [Division using distributive property](#Division-using-distributive-property)
+    -   [Division using long division](#Division-using-long-division)
+    -   [Quotients that are multiples of 10](#Quotients-that-are-multiples-of-10)
+    -   [Canceling zeros when dividing](#Canceling-zeros-when-dividing)
+    -   [Dividing by two digit numbers](#Dividing-by-two-digit-numbers)
+    -   [Dividing by zero](#Dividing-by-zero)
+    -   [Multi-digit division](#Multi-digit-division)
+        -   [Strategies for dividing multiples of 10, 100, and 1000](#Strategies-for-dividing-multiples-of-10-100-and-1000)
+    -   [Remainders](#Remainders)
 
 ---
 
@@ -133,8 +133,7 @@ $$
 
 ### Strategies for dividing multiples of 10, 100, and 1000
 
-These are equal: $2400 / 30 = \frac{2400}{30}$ .
-We can then simplify this to: $2400 / 30 = \frac{2400}{30} = \frac{24 \times 100}{3 \times 10}$. Whats valuable about thinking this way is that we can separately divide 24 by 3 and 100 by 10, which gives us: $...=\frac{42}{3} \times \frac{100}{10} = 8 \times 10 = 80$.
+These are equal: $2400 / 30 = \frac{2400}{30}$ . We can then simplify this to: $2400 / 30 = \frac{2400}{30} = \frac{24 \times 100}{3 \times 10}$. Whats valuable about thinking this way is that we can separately divide 24 by 3 and 100 by 10, which gives us: $...=\frac{42}{3} \times \frac{100}{10} = 8 \times 10 = 80$.
 
 Another (a bit hacky) thing that we an do here is to evaluate $2400 / 30$, then divide 24 by 3, and from 2400 zeros cancel one because of one zero in 30, that would left us with 8 and 0 which grouped together gives us 80.
 

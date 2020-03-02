@@ -1,12 +1,12 @@
 # Factors, multiples and patterns
 
-- [Factors, multiples and patterns](#factors-multiples-and-patterns)
-  - [Divisibility Rules](#divisibility-rules)
-  - [Finding factors of a number](#finding-factors-of-a-number)
-  - [Factors and multiplies](#factors-and-multiplies)
-    - [Finding Factors Quickly](#finding-factors-quickly)
-  - [Prime Numbers](#prime-numbers)
-    - [Prime factorization](#prime-factorization)
+-   [Factors, multiples and patterns](#factors-multiples-and-patterns)
+    -   [Divisibility Rules](#divisibility-rules)
+    -   [Finding factors of a number](#finding-factors-of-a-number)
+    -   [Factors and multiplies](#factors-and-multiplies)
+        -   [Finding Factors Quickly](#finding-factors-quickly)
+    -   [Prime Numbers](#prime-numbers)
+        -   [Prime factorization](#prime-factorization)
 
 ---
 
@@ -32,11 +32,9 @@ To test if the number is **divisible by 8** you only must check to see whether t
 
 To test if the number is **divisible by 7** you can use a weird trick: you must take the last digit of the number you’re testing and double it. Then, subtract this number from the rest of the remaining digits. If this new number is either 0 or if it’s a number that’s divisible by 7, then then original number is divisible by seven. (You may have to repeat this a couple of times if the divisibility of the resulting number is not immediately obvious).
 
-_Example 1_: Is the number 364 divisible by 7?
-Answer 1: Yes: Double the 4 to get 8. Subtract 8 from 36 to get 28. Since 28 is divisible by 7, we can now say for certain that 364 is also divisible by 7.
+_Example 1_: Is the number 364 divisible by 7? Answer 1: Yes: Double the 4 to get 8. Subtract 8 from 36 to get 28. Since 28 is divisible by 7, we can now say for certain that 364 is also divisible by 7.
 
-_Example 2_: Is the number 8256 divisible by 7?
-Answer 2: No, Double 6 to get 12. Subtract 12 from 825 to get 813. 813 is slightly too large to tell whether it is divisible by 7 so we must repeat the process. Double 3 to get 6. Subtract 6 from 81 to get 75. Since 75 is not divisible by 7, neither is 813 or 8256. Therefore, 8256 is not divisible by 7.
+_Example 2_: Is the number 8256 divisible by 7? Answer 2: No, Double 6 to get 12. Subtract 12 from 825 to get 813. 813 is slightly too large to tell whether it is divisible by 7 so we must repeat the process. Double 3 to get 6. Subtract 6 from 81 to get 75. Since 75 is not divisible by 7, neither is 813 or 8256. Therefore, 8256 is not divisible by 7.
 
 To test if something is **divisible by 9** you have to add up all the digits inside number and see if the sum is divisible by 9. _(Similar to division test for 3)_
 
@@ -55,16 +53,7 @@ Given $9 \times 2 = 18$ we can say that:
 -   9 and 2 are factors of 18
 -   18 is a multiple of 2
 
-> Every number has 1 as a factor.
-> Every number has itself as a factor.
-
-> A **factor** is a whole number that can divide evenly into another number. The factors of 8 are 1, 2, 3 and 4, because all oof them divide evenly into 8.
-
-> A factor pair is 2 whole numbers that can be multiplied to get a certain product. The factor pairs of 8 are 1 and 8, because 1 x 8 = 8, and 2 and 4, because 2 x 4 = 8.
-
-> A **multiple** is a number that results when we multiply one whole number by another whole number. The first four multiples of 3 are 3, 6, 9 and 12. We can never list all of the multiples of a number.
-
-> Identifying multiples: We can check to see if a number is a multiple of another number by seeing if it can be divided evenly by the number. 15 is a multiple of 3 because 15 / 3 = 5
+> Every number has 1 as a factor. Every number has itself as a factor. A **factor** is a whole number that can divide evenly into another number. The factors of 8 are 1, 2, 3 and 4, because all oof them divide evenly into 8. A factor pair is 2 whole numbers that can be multiplied to get a certain product. The factor pairs of 8 are 1 and 8, because 1 x 8 = 8, and 2 and 4, because 2 x 4 = 8. A **multiple** is a number that results when we multiply one whole number by another whole number. The first four multiples of 3 are 3, 6, 9 and 12. We can never list all of the multiples of a number. Identifying multiples: We can check to see if a number is a multiple of another number by seeing if it can be divided evenly by the number. 15 is a multiple of 3 because 15 / 3 = 5
 
 ### Finding Factors Quickly
 

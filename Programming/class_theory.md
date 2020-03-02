@@ -1,6 +1,6 @@
 # Class Theory
 
-> @see https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch4.md
+> @see <https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch4.md>
 
 "Class/Inheritance" describes a certain form of code organization and architecture -- a way of modeling real world problem domains in our software.
 

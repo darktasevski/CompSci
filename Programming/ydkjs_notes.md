@@ -1,33 +1,33 @@
 # You Don't Know JS: Notes
 
-- [You Don't Know JS: Notes](#You-Dont-Know-JS-Notes)
-	- [Scope and Closures](#Scope-and-Closures)
-		- [Cheating Lexical Scope:](#Cheating-Lexical-Scope)
-			- [`eval`](#eval)
-			- [`with()`](#with)
-		- [Block scope](#Block-scope)
-			- [Garbage collectors](#Garbage-collectors)
-		- [Hoisting](#Hoisting)
-		- [Closure](#Closure)
-		- [Dynamic Scope](#Dynamic-Scope)
-	- [this & Object Prototypes](#this--Object-Prototypes)
-		- [What's this?](#Whats-this)
-			- [`this` binding rules](#this-binding-rules)
-				- [Default Binding](#Default-Binding)
-				- [Implicit Binding](#Implicit-Binding)
-					- [Implicitly Lost](#Implicitly-Lost)
-				- [Explicit Binding](#Explicit-Binding)
-				- [`new` Binding](#new-Binding)
-				- [Determining `this`](#Determining-this)
-				- [Ignored `this`](#Ignored-this)
-			- [Lexical `this`](#Lexical-this)
-		- [Objects](#Objects)
+-   [You Don't Know JS: Notes](#You-Dont-Know-JS-Notes)
+    -   [Scope and Closures](#Scope-and-Closures)
+        -   [Cheating Lexical Scope:](#Cheating-Lexical-Scope)
+            -   [`eval`](#eval)
+            -   [`with()`](#with)
+        -   [Block scope](#Block-scope)
+            -   [Garbage collectors](#Garbage-collectors)
+        -   [Hoisting](#Hoisting)
+        -   [Closure](#Closure)
+        -   [Dynamic Scope](#Dynamic-Scope)
+    -   [this & Object Prototypes](#this--Object-Prototypes)
+        -   [What's this?](#Whats-this)
+            -   [`this` binding rules](#this-binding-rules)
+                -   [Default Binding](#Default-Binding)
+                -   [Implicit Binding](#Implicit-Binding)
+                    -   [Implicitly Lost](#Implicitly-Lost)
+                -   [Explicit Binding](#Explicit-Binding)
+                -   [`new` Binding](#new-Binding)
+                -   [Determining `this`](#Determining-this)
+                -   [Ignored `this`](#Ignored-this)
+            -   [Lexical `this`](#Lexical-this)
+        -   [Objects](#Objects)
 
 ---
 
 ## Scope and Closures
 
-### Cheating Lexical Scope:
+### Cheating Lexical Scope
 
 #### `eval`
 
@@ -35,8 +35,8 @@ The `eval(..)` function in JavaScript takes a string as an argument, and treats 
 
 ```
 function foo(str, a) {
-	eval( str ); // cheating!
-	console.log( a, b );
+ eval( str ); // cheating!
+ console.log( a, b );
 }
 
 var b = 2;
@@ -57,14 +57,13 @@ foo( "var a = 2" );
 
 #### `with()`
 
-> This is frowned upon and deprecated!
-> `with` is typically explained as a short-hand for making multiple property references against an object without repeating the object reference itself each time.
+> This is frowned upon and deprecated! `with` is typically explained as a short-hand for making multiple property references against an object without repeating the object reference itself each time.
 
 ```
 var obj = {
-	a: 1,
-	b: 2,
-	c: 3
+ a: 1,
+ b: 2,
+ c: 3
 };
 // more "tedious" to repeat "obj"
 obj.a = 2;
@@ -72,9 +71,9 @@ obj.b = 3;
 obj.c = 4;
 // "easier" short-hand
 with (obj) {
-	a = 3;
-	b = 4;
-	c = 5;
+ a = 3;
+ b = 4;
+ c = 5;
 }
 ```
 
@@ -82,15 +81,15 @@ One of reasons for this being deprecated:
 
 ```
 function foo(obj) {
-	with (obj) {
-		a = 2;
-	}
+ with (obj) {
+  a = 2;
+ }
 }
 var o1 = {
-	a: 3
+ a: 3
 };
 var o2 = {
-	b: 3
+ b: 3
 };
 foo( o1 );
 console.log( o1.a ); // 2
@@ -108,17 +107,17 @@ Probably useful snippet of using block scope to garbage collect unneeded stuff
 
 ```
 function process(data) {
-	// do something interesting
+ // do something interesting
 }
 // anything declared inside this block can go away after!
 {
-	let someReallyBigData = { .. };
+ let someReallyBigData = { .. };
 
-	process( someReallyBigData );
+ process( someReallyBigData );
 }
 var btn = document.getElementById( "my_button" );
 btn.addEventListener( "click", function click(evt){
-	console.log("button clicked");
+ console.log("button clicked");
 }, /*capturingPhase=*/false );
 ```
 
@@ -128,13 +127,7 @@ All declarations in a scope, regardless of where they appear, are processed firs
 
 Declarations themselves are hoisted, but assignments, even assignments of function expressions, are not hoisted.
 
-> Note: Only the declarations themselves are hoisted, while any assignments or other executable logic are left in place. I
-
-> It's also important to note that hoisting is per-scope.
-
-> Function declarations are hoisted, function expressions are not.
-
-> Both function declarations and variable declarations are hoisted. But a subtle detail (that can show up in code with multiple "duplicate" declarations) is that functions are hoisted first, and then variables.
+> Note: Only the declarations themselves are hoisted, while any assignments or other executable logic are left in place. I It's also important to note that hoisting is per-scope. Function declarations are hoisted, function expressions are not. Both function declarations and variable declarations are hoisted. But a subtle detail (that can show up in code with multiple "duplicate" declarations) is that functions are hoisted first, and then variables.
 
 ### Closure
 
@@ -142,11 +135,11 @@ _Closure is when a function is able to remember and access its lexical scope eve
 
 ```
 function foo() {
-	var a = 2;
-	function bar() {
-		console.log( a ); // 2
-	}
-	bar();
+ var a = 2;
+ function bar() {
+  console.log( a ); // 2
+ }
+ bar();
 }
 foo();
 ```
@@ -157,11 +150,11 @@ And that weird way of binding functions in React is solved:
 
 ```
 function foo() {
-	var a = 2;
-	function bar() {
-		console.log( a );
-	}
-	return bar;
+ var a = 2;
+ function bar() {
+  console.log( a );
+ }
+ return bar;
 }
 var baz = foo();
 baz(); // 2 -- Whoa, closure was just observed, man.
@@ -183,11 +176,11 @@ Dynamic scope, doesn't concern itself with how and where functions and scopes ar
 
 ```
 function foo() {
-	console.log( a ); // 3  (not 2!)
+ console.log( a ); // 3  (not 2!)
 }
 function bar() {
-	var a = 3;
-	foo();
+ var a = 3;
+ foo();
 }
 var a = 2;
 bar();
@@ -301,7 +294,7 @@ for (i = 0; i < 10; i++) {
 console.log(foo.count); // 4
 ```
 
-### What's this?
+### What's this
 
 `this` is not an author-time binding but a runtime binding. It is contextual based on the conditions of the function's invocation. `this` binding has nothing to do with where a function is declared, but has instead everything to do with the manner in which the function is called.
 

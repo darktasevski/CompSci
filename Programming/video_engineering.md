@@ -1,22 +1,22 @@
 # Video engineering
 
-- [Video engineering](#Video-engineering)
-		- [The Media Source Extensions](#The-Media-Source-Extensions)
-			- [The Source Buffers](#The-Source-Buffers)
-		- [What Is a Codec?](#What-Is-a-Codec)
-		- [What Is a Video Container Format?](#What-Is-a-Video-Container-Format)
-		- [What Is a Streaming Protocol?](#What-Is-a-Streaming-Protocol)
-			- [HTTP-Based Adaptive Streaming Protocols](#HTTP-Based-Adaptive-Streaming-Protocols)
-		- [Video on Demand vs. Live Streaming](#Video-on-Demand-vs-Live-Streaming)
-		- [What Is Encoding?](#What-Is-Encoding)
-		- [Multicasting vs. Simulcasting vs. Re-stream:](#Multicasting-vs-Simulcasting-vs-Re-stream)
-			- [What Is Simulcasting?](#What-Is-Simulcasting)
-		- [Transmuxing, Transcoding, Transizing, Transrating](#Transmuxing-Transcoding-Transizing-Transrating)
-		- [What Is Adaptive Bitrate Streaming?](#What-Is-Adaptive-Bitrate-Streaming)
-			- [How Does Adaptive Bitrate Streaming Work?](#How-Does-Adaptive-Bitrate-Streaming-Work)
-		- [What is constant bitrate (CBR)?](#What-is-constant-bitrate-CBR)
-		- [What is variable bitrate (VBR)?](#What-is-variable-bitrate-VBR)
-		- [In the real — web — world](#In-the-real--web--world)
+-   [Video engineering](#video-engineering)
+    -   [The Media Source Extensions](#the-media-source-extensions)
+        -   [The Source Buffers](#the-source-buffers)
+    -   [What Is a Codec?](#what-is-a-codec)
+    -   [What Is a Video Container Format?](#what-is-a-video-container-format)
+    -   [What Is a Streaming Protocol?](#what-is-a-streaming-protocol)
+        -   [HTTP-Based Adaptive Streaming Protocols](#http-based-adaptive-streaming-protocols)
+    -   [Video on Demand vs. Live Streaming](#video-on-demand-vs-live-streaming)
+    -   [What Is Encoding?](#what-is-encoding)
+    -   [Multicasting vs. Simulcasting vs. Re-stream:](#multicasting-vs-simulcasting-vs-re-stream)
+        -   [What Is Simulcasting?](#what-is-simulcasting)
+    -   [Transmuxing, Transcoding, Transizing, Transrating](#transmuxing-transcoding-transizing-transrating)
+    -   [What Is Adaptive Bitrate Streaming?](#what-is-adaptive-bitrate-streaming)
+        -   [How Does Adaptive Bitrate Streaming Work?](#how-does-adaptive-bitrate-streaming-work)
+    -   [What is constant bitrate (CBR)?](#what-is-constant-bitrate-cbr)
+    -   [What is variable bitrate (VBR)?](#what-is-variable-bitrate-vbr)
+    -   [In the real — web — world](#in-the-real--web--world)
 
 > Notes on about streaming and video development (mainly with js)
 
@@ -62,14 +62,11 @@ MPEG-DASH streams include a list of the available segment URLs in a manifest, wh
 
 ### The Media Source Extensions
 
-The “Media Source Extensions” (more often shortened to just “MSE”) is a specification from the W3C that most browsers implement today. It was created to allow those complex media use cases directly with HTML and JavaScript.
-Those “extensions” add the MediaSource object to JavaScript. As its name suggests, this will be the source of the video, or put more simply, this is the object representing our video’s data.
+The “Media Source Extensions” (more often shortened to just “MSE”) is a specification from the W3C that most browsers implement today. It was created to allow those complex media use cases directly with HTML and JavaScript. Those “extensions” add the MediaSource object to JavaScript. As its name suggests, this will be the source of the video, or put more simply, this is the object representing our video’s data.
 
 #### The Source Buffers
 
-The video is not actually directly “pushed” into the MediaSource for playback, SourceBuffers are used for that.
-A MediaSource contains one or multiple instances of those. Each being associated with a type of content.
-To stay simple, let’s just say that we have only three possible types:
+The video is not actually directly “pushed” into the MediaSource for playback, SourceBuffers are used for that. A MediaSource contains one or multiple instances of those. Each being associated with a type of content. To stay simple, let’s just say that we have only three possible types:
 
 -   audio
 -   video
@@ -79,7 +76,7 @@ To stay simple, let’s just say that we have only three possible types:
 
 SourceBuffers are all linked to a single MediaSource and each will be used to add video’s data to the HTML5 video tag directly in JavaScript. For example, a frequent use case is to have two source buffers on our MediaSource: one for the video data, and the other for the audio.
 
-### What Is a Codec?
+### What Is a Codec
 
 Literally ‘coder-decoder’ or ‘compressor-decompressor,’ codecs apply algorithms to tightly compress a bulky video for delivery. The video is shrunk down for storage and transmission, and later decompressed for viewing.
 
@@ -89,11 +86,11 @@ H.264, also known as AVC (Advanced Video Coding), is the most common video codec
 
 Codec can be Lossy & Lossless: A codec can be hardware (like a physical appliance) or software that compresses audio and video into a file format for transmission then decodes the file to it can be played. Simply put, it's an algorithm. There are two kinds of codecs, lossy and lossless. Lossy codecs are typically used in streaming since they are smaller. Lossless codecs are used in storage and archiving media.
 
-### What Is a Video Container Format?
+### What Is a Video Container Format
 
 Video container formats, also called wrappers, hold all the components of a compressed stream. This could include the audio codec, video codec, closed captioning, and any associated metadata such as subtitles or preview images. Common containers include .mp4, .mov, .ts, and .wmv.
 
-### What Is a Streaming Protocol?
+### What Is a Streaming Protocol
 
 A protocol is a set of rules governing how data travels from one device to another. For instance, the Hypertext Transfer Protocol (HTTP) deals with hypertext documents and webpages. Online video delivery uses both streaming protocols and HTTP-based protocols. Streaming protocols like Real-Time Messaging Protocol (RTMP) offer fast video delivery, whereas HTTP-based protocols can help optimize the viewing experience.
 
@@ -117,17 +114,18 @@ Video streaming can take the form of both live and recorded content. With live s
 
 Video on demand (VOD), on the other hand, describes prerecorded content that internet-connected users can stream by request. Some top players in this space include Netflix, Amazon Prime, Hulu, and Sling. YouTube’s David After Dentist and Netflix’s Stranger Things are both examples of VOD content.
 
-### What Is Encoding?
+### What Is Encoding
 
 Video encoding refers to the process of converting raw video into a digital format that’s compatible with many devices. Videos are often reduced from gigabytes of data down to megabytes of data. This process involves a two-part compression tool called a codec.
 
-### Multicasting vs. Simulcasting vs. Re-stream:
+### Multicasting vs. Simulcasting vs. Re-stream
 
 -   Broadcasting one stream from a server to multiple destinations in single transmission is referred to as multicast.
 -   You can re-stream from a multicast address, but this is a re-broadcast and its not really live.
+
 -
 
-#### What Is Simulcasting?
+#### What Is Simulcasting
 
 > Simulcast is broadcasting across multiple platforms like Facebook Live and a web page, all live at the same time.
 
@@ -144,13 +142,13 @@ All of these are crucial during the live streaming video process as viewers watc
 
 Rather than creating one live stream at one bitrate, transcoding allows you to create multiple streams at different bitrates and resolutions. That way, your live streams can dynamically adapt to fit the screen sizes and internet speeds of all your viewers. This is known as adaptive bitrate (ABR) streaming.
 
-### What Is Adaptive Bitrate Streaming?
+### What Is Adaptive Bitrate Streaming
 
 Adaptive bitrate (ABR) streaming involves outputting multiple renditions of the original video stream to enable playback on a variety of devices and connection speeds. Content distributors use adaptive bitrate streaming to deliver high-quality streams to users with outstanding bandwidth and processing power, while also accommodating those lacking in the speed and power departments.
 
 The result? No buffering or stream interruptions. Plus, as a viewer’s signal strength goes from two bars to three, the stream automatically adjusts to deliver a superior rendition.
 
-#### How Does Adaptive Bitrate Streaming Work?
+#### How Does Adaptive Bitrate Streaming Work
 
 The first step to adaptive bitrate streaming is creating multiple renditions of the original stream to provide a variety of resolution and bitrate options. These transcoded files fall on an encoding ladder. At the bottom, a high-bitrate, high-frame-rate, high-resolution stream can be output for viewers with the most high-tech setups. At the top of the ladder, the same video in low quality is available for viewers with small screens and poor service.
 
@@ -158,16 +156,15 @@ During the process of transcoding, these renditions are broken into segments tha
 
 With adaptive bitrate streaming, mobile viewers with poor connections don’t have to wait for the stream to load. And for those plugged into high-speed internet, a higher-resolution alternative can play.
 
-### What is constant bitrate (CBR)?
+### What is constant bitrate (CBR)
 
 A constant bitrate means that data comes at the same rate all throughout the video. The problem with a constant bitrate is that, unless the stream is just a static image, video segments will change. Some segments will have more detail and some less. This translates to lower quality during complex segments and unused bandwidth on simple segments. Some streaming services will still use constant bitrates, but these instances are rare.
 
-### What is variable bitrate (VBR)?
+### What is variable bitrate (VBR)
 
 Variable bitrate is the data transfer method of choice for the majority of circumstances because encoders can adapt to the demands of each segment of video. VBR essentially allocates more data during complex segments and less data during simple segments. If your stream has a segment of someone standing in front of a plain white background, the encoder can determine that the video needs less data in order to look good and will transfer less. If a concert is being streamed, the encoder can see changing details and transfer more data when needed.
 
-There’s also such a thing as a simultaneous viewer limit that acts as a protection mechanism, preventing a broadcasting system from crashing. Thus, you have to decide how many simultaneous connections your server will support.
-To ensure frictionless mobile app streaming, you need to take into account the following:
+There’s also such a thing as a simultaneous viewer limit that acts as a protection mechanism, preventing a broadcasting system from crashing. Thus, you have to decide how many simultaneous connections your server will support. To ensure frictionless mobile app streaming, you need to take into account the following:
 
 -   Server-side and user-side bandwidth
 -   Processor decoding/recoding time
@@ -177,8 +174,7 @@ To ensure frictionless mobile app streaming, you need to take into account the f
 
 ### In the real — web — world
 
-The core concepts behind videos on the web lay on media segments being pushed dynamically in JavaScript.
-This behavior becomes quickly pretty complex, as there’s a lot of features a video player has to support:
+The core concepts behind videos on the web lay on media segments being pushed dynamically in JavaScript. This behavior becomes quickly pretty complex, as there’s a lot of features a video player has to support:
 
 -   it has to download and parse some sort of manifest file
 -   it needs to register user preferences (for example, the preferred languages)

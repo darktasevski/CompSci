@@ -10,7 +10,7 @@ _Also, note that the most of the code is tested only with the `bash` and `zsh` s
 
 **Conditional execution** means that you can choose to execute code only if certain conditions are met. Without this capability, all you would be able to do is execute one command after another after another. The ability to test a variety of things about the state of the system, and of the environment variables of the process, means that a shell script can do far more powerful things that would otherwise be possible. In this post, we are going to explore `test operators`, `if/then/else`conditionals, and `case` statements.
 
-### `test` aka `[`
+## `test` aka `[`
 
 With tests we can check for example: if the file exists, if a number is greater than another, compare if strings are equal...
 
@@ -36,9 +36,7 @@ test  -e /etc/passwd
 
 This tests if `etc/passwd` exists, and if it does this returns `true` - command exit status of `0`. If it doesn't exist the command exits with the exit status of `1` (more on exit statuses in next post).
 
-**Gotcha**: The spaces around the `[` and `]` symbols are required! For example:
-`[-e /etc/passwd ]` will not work; it is interpreted as `test-e /etc/passwd ]` which errors because `]` doesn't have a beginning `[`. `[` is actually a program, and just like `ls` and other programs, it must be surrounded by spaces.
-**Moral of the story: Put spaces around all your operators.**
+**Gotcha**: The spaces around the `[` and `]` symbols are required! For example: `[-e /etc/passwd ]` will not work; it is interpreted as `test-e /etc/passwd ]` which errors because `]` doesn't have a beginning `[`. `[` is actually a program, and just like `ls` and other programs, it must be surrounded by spaces. **Moral of the story: Put spaces around all your operators.**
 
 _Note_: You can reverse the results of the test with `!`:
 
@@ -84,13 +82,11 @@ arg1 -ge arg2 #True if arg1 is greater than or equal to arg2
 
 It is possible to combine tests, and/or chain multiple commands by using the `&&` and `||` operators. These perform a Logical AND and Logical OR, respectively.
 
--   `&& = AND`
-    `mkdir /tmp/bak && cp test.txt /tmp/bak`
+-   `&& = AND` `mkdir /tmp/bak && cp test.txt /tmp/bak`
 
     The command that follows `&&` will be executed if and only the previous command succeeds (aka exits with `0` exit status).
 
--   `|| = OR`
-    `cp test.txt /tmp/bak || cp test.txt /tmp`
+-   `|| = OR` `cp test.txt /tmp/bak || cp test.txt /tmp`
 
     The `||` operator performs a Logical OR, so when it only matters that one of the conditions is met, but not which one, this is the feature to use.
 
@@ -115,8 +111,7 @@ then
 fi
 ```
 
-Other than the line break after the `then`, all these line breaks are required or can be replaced with semicolons. To remind: the spaces around the `[` and `]` symbols are also required, so this can be reduced (pls don't) at best to:
-`if [ condition ];then statements;fi`
+Other than the line break after the `then`, all these line breaks are required or can be replaced with semicolons. To remind: the spaces around the `[` and `]` symbols are also required, so this can be reduced (pls don't) at best to: `if [ condition ];then statements;fi`
 
 > It is quite common to use the semicolon to put the then on the same line as the if.
 
@@ -184,9 +179,7 @@ This is _much_, _much_ more readable than the nested `else` code hell this could
 
 ### `case` statement
 
-`case` provides a much cleaner, easier-to-write, and far more readable alternative to the `if/then/else` construct, particularly when there are a lot of possible values to test for. With case, you list the values you want to identify and act upon, and then provide a block of code for each one.
-One common place for case statements use are system startup scripts.
-Syntax:
+`case` provides a much cleaner, easier-to-write, and far more readable alternative to the `if/then/else` construct, particularly when there are a lot of possible values to test for. With case, you list the values you want to identify and act upon, and then provide a block of code for each one. One common place for case statements use are system startup scripts. Syntax:
 
 ```shell
 case "$VAR" in

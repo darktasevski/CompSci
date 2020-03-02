@@ -1,93 +1,93 @@
 # Python
 
-- [Python](#Python)
-	- [Math usage](#Math-usage)
-	- [Variables](#Variables)
-		- [Naming Conventions](#Naming-Conventions)
-	- [DATA TYPES](#DATA-TYPES)
-		- [Dynamic Typing](#Dynamic-Typing)
-	- [Strings](#Strings)
-		- [String Concatenation](#String-Concatenation)
-		- [Formatting Strings](#Formatting-Strings)
-		- [Converting Data Types (Coercion)](#Converting-Data-Types-Coercion)
-	- [Booleans and conditional logic](#Booleans-and-conditional-logic)
-		- [Conditional Statements](#Conditional-Statements)
-		- [Truthiness](#Truthiness)
-		- [Logical Operators](#Logical-Operators)
-			- [is vs. "=="](#is-vs-%22%22)
-	- [LOOPS](#LOOPS)
-		- [`for` loops](#for-loops)
-			- [ranges](#ranges)
-		- [`while` loops](#while-loops)
-		- [Controlled Exit](#Controlled-Exit)
-	- [Arrays aka Lists](#Arrays-aka-Lists)
-		- [List methods](#List-methods)
-		- [Slicing](#Slicing)
-			- [Tricks with Slices](#Tricks-with-Slices)
-		- [List Comprehension](#List-Comprehension)
-			- [LC with Conditional Logic:](#LC-with-Conditional-Logic)
-		- [Nested Lists](#Nested-Lists)
-		- [Swapping Values](#Swapping-Values)
-	- [Objects aka Dictionaries](#Objects-aka-Dictionaries)
-		- [Dictionary Methods](#Dictionary-Methods)
-		- [Dictionary Comprehension](#Dictionary-Comprehension)
-	- [Tuples and Sets](#Tuples-and-Sets)
-		- [Tuples](#Tuples)
-			- [Creating / Accessing](#Creating--Accessing)
-		- [Sets](#Sets)
-			- [Set Methods](#Set-Methods)
-			- [Set Comprehension](#Set-Comprehension)
-	- [Functions](#Functions)
-		- [Default Parameters](#Default-Parameters)
-		- [Scope](#Scope)
-		- [`global`](#global)
-		- [`nonlocal`](#nonlocal)
-		- [Keyword Arguments](#Keyword-Arguments)
-		- [Documenting functions](#Documenting-functions)
-		- [`*args`](#args)
-		- [`**kwargs`](#kwargs)
-		- [Parameter Ordering](#Parameter-Ordering)
-		- [Argument Unpacking](#Argument-Unpacking)
-		- [Dictionary Unpacking](#Dictionary-Unpacking)
-	- [Lambdas](#Lambdas)
-		- [Closures](#Closures)
-		- [Built-in Functions](#Built-in-Functions)
-	- [Error Handling](#Error-Handling)
-		- [Debugging with pdb](#Debugging-with-pdb)
-	- [Modules](#Modules)
-		- [Custom Modules](#Custom-Modules)
-		- [External Modules](#External-Modules)
-		- [`__name__` variable](#name-variable)
-	- [HTTP requests with Python](#HTTP-requests-with-Python)
-		- [`requests` Module](#requests-Module)
-	- [OOP in Python](#OOP-in-Python)
-		- [Instantiating a Class](#Instantiating-a-Class)
-		- [`self`](#self)
-		- [Class Attributes](#Class-Attributes)
-		- [Class Methods](#Class-Methods)
-		- [Inheritance](#Inheritance)
-		- [`super`](#super)
-		- [Multiple Inheritance](#Multiple-Inheritance)
-		- [Method Resolution Order (MRO)](#Method-Resolution-Order-MRO)
-		- [Polymorphism & Inheritance](#Polymorphism--Inheritance)
-		- [Special Methods](#Special-Methods)
-	- [Generators and Decorators](#Generators-and-Decorators)
-		- [Iterator & Iterable](#Iterator--Iterable)
-		- [Generators](#Generators)
-			- [Generator Expressions](#Generator-Expressions)
-		- [Decorators](#Decorators)
-	- [Testing Python code](#Testing-Python-code)
-		- [Unit testing](#Unit-testing)
-			- [Before and After Hooks](#Before-and-After-Hooks)
-	- [File I/O](#File-IO)
-		- [Cursor Movement](#Cursor-Movement)
-		- [Reading CSV Files](#Reading-CSV-Files)
-	- [Web Scraping](#Web-Scraping)
-		- [Beautiful Soup](#Beautiful-Soup)
-			- [Navigating with CSS Selectors](#Navigating-with-CSS-Selectors)
-			- [Navigating with Beautiful Soup](#Navigating-with-Beautiful-Soup)
-			- [Other Tools](#Other-Tools)
-	- [REGEX](#REGEX)
+-   [Python](#Python)
+    -   [Math usage](#Math-usage)
+    -   [Variables](#Variables)
+        -   [Naming Conventions](#Naming-Conventions)
+    -   [DATA TYPES](#DATA-TYPES)
+        -   [Dynamic Typing](#Dynamic-Typing)
+    -   [Strings](#Strings)
+        -   [String Concatenation](#String-Concatenation)
+        -   [Formatting Strings](#Formatting-Strings)
+        -   [Converting Data Types (Coercion)](#Converting-Data-Types-Coercion)
+    -   [Booleans and conditional logic](#Booleans-and-conditional-logic)
+        -   [Conditional Statements](#Conditional-Statements)
+        -   [Truthiness](#Truthiness)
+        -   [Logical Operators](#Logical-Operators)
+            -   [is vs. "=="](#is-vs-%22%22)
+    -   [LOOPS](#LOOPS)
+        -   [`for` loops](#for-loops)
+            -   [ranges](#ranges)
+        -   [`while` loops](#while-loops)
+        -   [Controlled Exit](#Controlled-Exit)
+    -   [Arrays aka Lists](#Arrays-aka-Lists)
+        -   [List methods](#List-methods)
+        -   [Slicing](#Slicing)
+            -   [Tricks with Slices](#Tricks-with-Slices)
+        -   [List Comprehension](#List-Comprehension)
+            -   [LC with Conditional Logic:](#LC-with-Conditional-Logic)
+        -   [Nested Lists](#Nested-Lists)
+        -   [Swapping Values](#Swapping-Values)
+    -   [Objects aka Dictionaries](#Objects-aka-Dictionaries)
+        -   [Dictionary Methods](#Dictionary-Methods)
+        -   [Dictionary Comprehension](#Dictionary-Comprehension)
+    -   [Tuples and Sets](#Tuples-and-Sets)
+        -   [Tuples](#Tuples)
+            -   [Creating / Accessing](#Creating--Accessing)
+        -   [Sets](#Sets)
+            -   [Set Methods](#Set-Methods)
+            -   [Set Comprehension](#Set-Comprehension)
+    -   [Functions](#Functions)
+        -   [Default Parameters](#Default-Parameters)
+        -   [Scope](#Scope)
+        -   [`global`](#global)
+        -   [`nonlocal`](#nonlocal)
+        -   [Keyword Arguments](#Keyword-Arguments)
+        -   [Documenting functions](#Documenting-functions)
+        -   [`*args`](#args)
+        -   [`**kwargs`](#kwargs)
+        -   [Parameter Ordering](#Parameter-Ordering)
+        -   [Argument Unpacking](#Argument-Unpacking)
+        -   [Dictionary Unpacking](#Dictionary-Unpacking)
+    -   [Lambdas](#Lambdas)
+        -   [Closures](#Closures)
+        -   [Built-in Functions](#Built-in-Functions)
+    -   [Error Handling](#Error-Handling)
+        -   [Debugging with pdb](#Debugging-with-pdb)
+    -   [Modules](#Modules)
+        -   [Custom Modules](#Custom-Modules)
+        -   [External Modules](#External-Modules)
+        -   [`__name__` variable](#name-variable)
+    -   [HTTP requests with Python](#HTTP-requests-with-Python)
+        -   [`requests` Module](#requests-Module)
+    -   [OOP in Python](#OOP-in-Python)
+        -   [Instantiating a Class](#Instantiating-a-Class)
+        -   [`self`](#self)
+        -   [Class Attributes](#Class-Attributes)
+        -   [Class Methods](#Class-Methods)
+        -   [Inheritance](#Inheritance)
+        -   [`super`](#super)
+        -   [Multiple Inheritance](#Multiple-Inheritance)
+        -   [Method Resolution Order (MRO)](#Method-Resolution-Order-MRO)
+        -   [Polymorphism & Inheritance](#Polymorphism--Inheritance)
+        -   [Special Methods](#Special-Methods)
+    -   [Generators and Decorators](#Generators-and-Decorators)
+        -   [Iterator & Iterable](#Iterator--Iterable)
+        -   [Generators](#Generators)
+            -   [Generator Expressions](#Generator-Expressions)
+        -   [Decorators](#Decorators)
+    -   [Testing Python code](#Testing-Python-code)
+        -   [Unit testing](#Unit-testing)
+            -   [Before and After Hooks](#Before-and-After-Hooks)
+    -   [File I/O](#File-IO)
+        -   [Cursor Movement](#Cursor-Movement)
+        -   [Reading CSV Files](#Reading-CSV-Files)
+    -   [Web Scraping](#Web-Scraping)
+        -   [Beautiful Soup](#Beautiful-Soup)
+            -   [Navigating with CSS Selectors](#Navigating-with-CSS-Selectors)
+            -   [Navigating with Beautiful Soup](#Navigating-with-Beautiful-Soup)
+            -   [Other Tools](#Other-Tools)
+    -   [REGEX](#REGEX)
 
 > Notes and exercises
 
@@ -152,8 +152,7 @@ Most Python programmers prefer to use standard style conventions when naming thi
 
 ## DATA TYPES
 
-In any assignment, the assigned value must always be a valid data type.
-Python data types include:
+In any assignment, the assigned value must always be a valid data type. Python data types include:
 
 | data type | description                                                                          |
 | --------- | ------------------------------------------------------------------------------------ |
@@ -311,12 +310,12 @@ Besides False conditional checks, other things that are naturally falsy include:
 
 In Python, the following operators can be used to make Boolean Logic comparisons or statements:
 
-| Op  | What it does                                                                  | Example                                                          |
-| --- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| and | Truthy if both a AND b are true (logical conjunction)                         | <code>if a and b:<br/>print(c)</code>                            |
-| or  | Truthy if either a OR b are true (logical disjunction)                        | <code>if am_tired or is_bedtime:<br/>print("go to sleep")</code> |
-| not | Truthy if the opposite of a is true (logical negation)                        | <code>if not is_weekend:<br/>print("go to work")</code>          |
-| is  | is operator checks whether both the operands refer to the same object or not. |                                                                  |
+| Op | What it does | Example |
+| --- | --- | --- |
+| and | Truthy if both a AND b are true (logical conjunction) | <code>if a and b:<br/>print(c)</code> |
+| or | Truthy if either a OR b are true (logical disjunction) | <code>if am_tired or is_bedtime:<br/>print("go to sleep")</code> |
+| not | Truthy if the opposite of a is true (logical negation) | <code>if not is_weekend:<br/>print("go to work")</code> |
+| is | is operator checks whether both the operands refer to the same object or not. |  |
 
 #### is vs. "=="
 
@@ -367,33 +366,33 @@ from random import randint
 player = input("Player, make your move: ").lower()
 rand_num = randint(0,2)
 if rand_num == 0:
-	computer = "rock"
+ computer = "rock"
 elif rand_num == 1:
-	computer = "paper"
+ computer = "paper"
 else:
-	computer = "scissors"
+ computer = "scissors"
 
 print(f"Computer plays {computer}" )
 
 if player == computer:
-	print("It's a tie!")
+ print("It's a tie!")
 elif player == "rock":
-	if computer == "scissors":
-		print("player wins!")
-	else:
-		print("computer wins!")
+ if computer == "scissors":
+  print("player wins!")
+ else:
+  print("computer wins!")
 elif player == "paper":
-	if computer == "rock":
-		print("player wins!")
-	else:
-		print("computer wins!")
+ if computer == "rock":
+  print("player wins!")
+ else:
+  print("computer wins!")
 elif player == "scissors":
-	if computer == "paper":
-		print("player wins!")
-	else:
-		print("computer wins!")
+ if computer == "paper":
+  print("player wins!")
+ else:
+  print("computer wins!")
 else:
-	print("Please enter a valid move!")
+ print("Please enter a valid move!")
 
 ```
 
@@ -822,7 +821,7 @@ string_list = [str(num) for num in numbers]
 print(string_list) # ['1', '2', '3', '4', '5']
 ```
 
-#### LC with Conditional Logic:
+#### LC with Conditional Logic
 
 ```python
 numbers = [1, 2, 3, 4, 5, 6]
@@ -1137,12 +1136,15 @@ for name in names:
 There are only two tuple methods:
 
 -   `count`: Returns the number of times a value appears in a tuple:
+
     ```python
         x = (1,2,3,3,3)
         x.count(1) # 1
         x.count(3) # 3
     ```
+
 -   `index`: Returns the index at which a value is found in a tuple.
+
     ```python
         t = (1,2,3,3,3)
         t.index(1) # 0
@@ -1534,8 +1536,7 @@ display_names(**names) "Colt says hello to Rusty"
 
 ## Lambdas
 
-Syntax:
-`lambda parameters : body of function`
+Syntax: `lambda parameters : body of function`
 
 Lambdas are anonymous functions:
 
@@ -1641,8 +1642,7 @@ def counter():
     return inner
 ```
 
-Here we're making a variable count inside the counter function, which can only be accessed by counter and inner.
-Once we return inner, we can still remember count through closure!
+Here we're making a variable count inside the counter function, which can only be accessed by counter and inner. Once we return inner, we can still remember count through closure!
 
 Closures using Objects:
 
@@ -1655,8 +1655,7 @@ def counter():
     return inner
 ```
 
-Here we're making a property on the counter function which can only be accessed by counter and inner.
-Once we return inner, we can still remember the count property through closure!
+Here we're making a property on the counter function which can only be accessed by counter and inner. Once we return inner, we can still remember the count property through closure!
 
 Partial Application with Closures:
 
@@ -1989,8 +1988,7 @@ v = Vehicle("Honda", "Civic", 2017)
 
 **The `self` keyword refers to the current class instance.**
 
-**`self` must always be the first parameter to `__init__` and any methods and properties on class instances.**
-You never have to pass it directly when calling instance methods, including **init**
+**`self` must always be the first parameter to `__init__` and any methods and properties on class instances.** You never have to pass it directly when calling instance methods, including **init**
 
 ```python
 class Person():
@@ -2215,8 +2213,7 @@ colt = Human()
 print(colt)  # <__main__.Human at 0x1062b8400>
 ```
 
-We can use special methods to make it look way better!
-The **repr** method is one of several ways to provide a nicer string representation:
+We can use special methods to make it look way better! The **repr** method is one of several ways to provide a nicer string representation:
 
 ```python
 class Human:
@@ -2248,8 +2245,7 @@ print(f"{colt} is totally rad (probably)")
 
 **Iterable** - An object which will return an Iterator when iter() is called on it.
 
-"HELLO" is an iterable, but it is not an iterator.
-`iter("HELLO")` returns an iterator
+"HELLO" is an iterable, but it is not an iterator. `iter("HELLO")` returns an iterator
 
 When `next()` is called on an iterator, the iterator returns the next item. It keeps doing so until it raises a StopIteration error.
 
@@ -2726,8 +2722,8 @@ headers = ["Character", "Move"]
 csv_writer = DictWriter(file, fieldnames=headers)
 csv_writer.writeheader()
 csv_writer.writerow({
-	"Character": "Ryu",
-	"Move": "Hadouken"
+ "Character": "Ryu",
+ "Move": "Hadouken"
 })
 ```
 
@@ -2873,10 +2869,10 @@ Common Issues with Web Scraping:
 
 #### Other Tools
 
--   Scrapy: https://scrapy.org/
+-   Scrapy: <https://scrapy.org/>
     -   A more streamlined way to build web crawlers, which can programmatically navigate across multiple pages
     -   Can export to many different file formats from the command line
--   Selenium: http://www.seleniumhq.org/
+-   Selenium: <http://www.seleniumhq.org/>
     -   Allows you to open up a browser window from your code!
     -   Often used with testing
     -   Requires a driver for your browser of choice
@@ -2889,22 +2885,22 @@ A way of describing patterns within search strings.
 SOME REGEX SYNTAX:
 
 ```regexp
-\d	    # digit 0-9
-\w	    # letter, digit, or underscore
-\s	    # whitespace character
-\D	    # not a digit
-\W	    # not a word character
-\S	    # not a whitespace character
-.	    # any character except line break
-+	    # One or more
-{3}	    # Exactly x times.  {3} - 3 times
-{3,5}	# Three to five times
-{4,}	# Four or more times
-*	    # Zero or more times
-?	    # Once or none (optional)
-^	    # Start of string or line
-$	    # End of string or line
-\b	    # Word boundary
+\d     # digit 0-9
+\w     # letter, digit, or underscore
+\s     # whitespace character
+\D     # not a digit
+\W     # not a word character
+\S     # not a whitespace character
+.     # any character except line break
++     # One or more
+{3}     # Exactly x times.  {3} - 3 times
+{3,5} # Three to five times
+{4,} # Four or more times
+*     # Zero or more times
+?     # Once or none (optional)
+^     # Start of string or line
+$     # End of string or line
+\b     # Word boundary
 |       # LOGICAL OR "Mr|Mrs|Ms"
 ```
 

@@ -1,10 +1,10 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
+	"folders": [{
+		"path": "."
+	}],
 	"settings": {
-		"workbench.colorTheme": "Solarized Light"
+		"workbench.colorTheme": "Solarized Light",
+		"editor.formatOnSave": true,
+		"markdown.extension.tableFormatter.normalizeIndentation": true
 	}
 }

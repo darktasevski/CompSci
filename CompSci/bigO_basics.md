@@ -1,19 +1,19 @@
 # Big O Notation
 
-- [Big O Notation](#Big-O-Notation)
-		- [Time Complexity](#Time-Complexity)
-		- [Space Complexity](#Space-Complexity)
-			- [Example 1:](#Example-1)
-			- [Example 2:](#Example-2)
-		- [Drop the constants](#Drop-the-constants)
-			- [Example 3:](#Example-3)
-		- [Drop the non-dominant terms](#Drop-the-non-dominant-terms)
-		- [Multi-part algorithms](#Multi-part-algorithms)
-			- [Add the runtimes: O(A + B):](#Add-the-runtimes-OA--B)
-			- [Multiply the runtimes: O(A \* B):](#Multiply-the-runtimes-OA--B)
-		- [Amortized Time](#Amortized-Time)
-		- [Log N Runtimes](#Log-N-Runtimes)
-		- [Recursive Runtimes](#Recursive-Runtimes)
+-   [Big O Notation](#big-o-notation)
+    -   [Time Complexity](#time-complexity)
+    -   [Space Complexity](#space-complexity)
+        -   [Example 1:](#example-1)
+        -   [Example 2:](#example-2)
+    -   [Drop the constants](#drop-the-constants)
+        -   [Example 3:](#example-3)
+    -   [Drop the non-dominant terms](#drop-the-non-dominant-terms)
+    -   [Multi-part algorithms](#multi-part-algorithms)
+        -   [Add the runtimes: O(A + B):](#add-the-runtimes-oa--b)
+        -   [Multiply the runtimes: O(A \* B):](#multiply-the-runtimes-oa--b)
+    -   [Amortized Time](#amortized-time)
+    -   [Log N Runtimes](#log-n-runtimes)
+    -   [Recursive Runtimes](#recursive-runtimes)
 
 The language and metric used to describe the efficiency of algorithms.
 
@@ -42,10 +42,9 @@ Consider this scenario:
 -   Array of size 'n' requires O(n) space
 -   2D array of size 'n' \* n' requires O(n^2) space
 
-#### Example 1:
+#### Example 1
 
-Stack space in recursive calls
--- O(n) time and O(n) space:
+Stack space in recursive calls -- O(n) time and O(n) space:
 
 ```java
 int sum(int n) {
@@ -68,7 +67,7 @@ sum(4)
 
 Each of these calls is added to the call stack and takes up actual memory.
 
-#### Example 2:
+#### Example 2
 
 O(n) time, O(1) space
 
@@ -93,7 +92,7 @@ It is possible for O(n) code to run faster than O(1) code for specific inputs. B
 
 For this reason, constants are dropped in runtime. An algo that might be described as O(2n) is actually O(n).
 
-#### Example 3:
+#### Example 3
 
 ```java
 int min = Integer.MAX_VALUE;
@@ -120,12 +119,9 @@ Which one is faster? This question might only be answered at the assembly level 
 
 ### Drop the non-dominant terms
 
-O(n^2 + n) should be just O(n^2)
-O(n + log n) becomes O(n)
-O(5\*2^n + 1000n^100) becomes O(2^n)
+O(n^2 + n) should be just O(n^2) O(n + log n) becomes O(n) O(5\*2^n + 1000n^100) becomes O(2^n)
 
-However, the expression:
-O(b^2 + a) cannot be reduced (without some special knowledge of 'a' and 'b').
+However, the expression: O(b^2 + a) cannot be reduced (without some special knowledge of 'a' and 'b').
 
 Big O time describes the rate of increase!
 
@@ -133,7 +129,7 @@ Big O time describes the rate of increase!
 
 When to multiply runtimes vs add?
 
-#### Add the runtimes: O(A + B):
+#### Add the runtimes: O(A + B)
 
 ```java
 for (int a : arrA) {
@@ -146,7 +142,7 @@ for (int b : arrB) {
 
 -   Do A chunks of work, then B chunks of work
 
-#### Multiply the runtimes: O(A \* B):
+#### Multiply the runtimes: O(A \* B)
 
 ```java
 for (int a : arrA) {
@@ -222,13 +218,13 @@ int f(int n) {
 
 This tree will have depth N. Each (node) function call has 2 children. Therefore each level will have twice as many calls as the one above it.
 
-| Level | # Nodes |        Also expressed as...        | Or... |
-| ----- | :-----: | :--------------------------------: | ----: |
-| 0     |    1    |                                    |   2^0 |
-| 1     |    2    |      2 \* previous level = 2       |   2^1 |
-| 2     |    4    | 2 _ previous level = 2 _ 2^1 = 2^2 |   2^2 |
-| 3     |    8    | 2 _ previous level = 2 _ 2^2 = 2^3 |   2^3 |
-| 4     |   16    | 2 _ previous level = 2 _ 2^3 = 2^4 |   2^4 |
+| Level | # Nodes |       Also expressed as...       | Or... |
+| ----- | :-----: | :------------------------------: | ----: |
+| 0     |    1    |                                  |   2^0 |
+| 1     |    2    |     2 \* previous level = 2      |   2^1 |
+| 2     |    4    | 2 _previous level = 2_ 2^1 = 2^2 |   2^2 |
+| 3     |    8    | 2 _previous level = 2_ 2^2 = 2^3 |   2^3 |
+| 4     |   16    | 2 _previous level = 2_ 2^3 = 2^4 |   2^4 |
 
 The runtime for a recursive function making multiple calls: O(branches^depth), where branches is the number of times each recursive call branches. In this case, O(2^N).
 

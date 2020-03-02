@@ -1,17 +1,17 @@
 # Golang
 
-- [Golang](#Golang)
-		- [Exported names](#Exported-names)
-		- [Functions](#Functions)
-		- ["Naked" return - Named return values](#%22Naked%22-return---Named-return-values)
-		- [Variables](#Variables)
-		- [Basic types](#Basic-types)
-			- [Type conversions](#Type-conversions)
-			- [Type inference](#Type-inference)
-		- [Constants](#Constants)
-	- [Flow controld](#Flow-controld)
-		- [For](#For)
-		- [If statements](#If-statements)
+-   [Golang](#Golang)
+    -   [Exported names](#Exported-names)
+    -   [Functions](#Functions)
+    -   ["Naked" return - Named return values](#%22Naked%22-return---Named-return-values)
+    -   [Variables](#Variables)
+    -   [Basic types](#Basic-types)
+    -   [Type conversions](#Type-conversions)
+    -   [Type inference](#Type-inference)
+    -   [Constants](#Constants)
+        -   [Flow controld](#Flow-controld)
+            -   [For](#For)
+            -   [If statements](#If-statements)
 
 > Notes and examples
 
@@ -85,8 +85,7 @@ fmt.Println(add(42, 13))
 }
 ```
 
-> Notice that the type comes after the variable name.
-> (For more about why types look the way they do, see the [article on Go's declaration syntax](https://blog.golang.org/gos-declaration-syntax).)
+> Notice that the type comes after the variable name. (For more about why types look the way they do, see the [article on Go's declaration syntax](https://blog.golang.org/gos-declaration-syntax).)
 
 When two or more consecutive named function parameters share a type, you can omit the type from all but the last.
 
@@ -181,9 +180,7 @@ fmt.Printf("%v %v %v %q\n", i, f, b, s)
 // Results in: 0 0 false ""
 ```
 
-The `:=` syntax is shorthand for declaring and initializing a variable, e.g. for `var f string = "short"` in this case is same as `f := "short"`.
-Inside a function, the `:=` short assignment statement can be used in place of a var declaration with implicit type.
-Outside a function, every statement begins with a keyword (var, func, and so on) and so the `:=` construct is not available.
+The `:=` syntax is shorthand for declaring and initializing a variable, e.g. for `var f string = "short"` in this case is same as `f := "short"`. Inside a function, the `:=` short assignment statement can be used in place of a var declaration with implicit type. Outside a function, every statement begins with a keyword (var, func, and so on) and so the `:=` construct is not available.
 
 A var declaration can include initializers, one per variable.
 
@@ -325,6 +322,7 @@ The basic for loop has three components separated by semicolons:
 -   the init statement: executed before the first iteration
 -   the condition expression: evaluated before every iteration
 -   the post statement: executed at the end of every iteration
+
 -
 
 The init statement will often be a short variable declaration, and the variables declared there are visible only in the scope of the for statement.

@@ -1,15 +1,15 @@
 # Multiplication
 
-- [Multiplication](#multiplication)
-	- [Distributive property grid](#distributive-property-grid)
-	- [Multiplying with area model](#multiplying-with-area-model)
-	- [Standard algorithm](#standard-algorithm)
-	- [Multiplication with 1 digit](#multiplication-with-1-digit)
-	- [Multiplication with 2 digits](#multiplication-with-2-digits)
-	- [Strategies for multiplying multiples of 10, 100 and 1000](#strategies-for-multiplying-multiples-of-10-100-and-1000)
-	- [Exponents](#exponents)
-		- [Some edge cases](#some-edge-cases)
-		- [Some examples](#some-examples)
+-   [Multiplication](#multiplication)
+    -   [Distributive property grid](#distributive-property-grid)
+    -   [Multiplying with area model](#multiplying-with-area-model)
+    -   [Standard algorithm](#standard-algorithm)
+    -   [Multiplication with 1 digit](#multiplication-with-1-digit)
+    -   [Multiplication with 2 digits](#multiplication-with-2-digits)
+    -   [Strategies for multiplying multiples of 10, 100 and 1000](#strategies-for-multiplying-multiples-of-10-100-and-1000)
+    -   [Exponents](#exponents)
+        -   [Some edge cases](#some-edge-cases)
+        -   [Some examples](#some-examples)
 
 ---
 
@@ -39,10 +39,7 @@ Example:
 
 ## Multiplying with area model
 
-6 x 7981 =
-| x | 7000 | 900 | 80 | 1 |
-|---|--------|------|-----|---|
-| 6 | 42,000 | 5400 | 480 | 6 |
+6 x 7981 = | x | 7000 | 900 | 80 | 1 | |---|--------|------|-----|---| | 6 | 42,000 | 5400 | 480 | 6 |
 
 ```js
 = 42000
@@ -53,9 +50,7 @@ Example:
   47886
 ```
 
-We can do something like this too:
-_5 x everything and 60 x everything_
-78 x 65 = (5 x 8 + 5 x 70) + (60 x 8 + 60 x 70) = (40 + 350) + (480 + 4200) = 5070
+We can do something like this too: _5 x everything and 60 x everything_ 78 x 65 = (5 x 8 + 5 x 70) + (60 x 8 + 60 x 70) = (40 + 350) + (480 + 4200) = 5070
 
 ```js
 4200;
@@ -66,8 +61,7 @@ _5 x everything and 60 x everything_
 
 We can multiply numbers by hand:
 
--   by using **area grid multiplication**:
-    352 x 481 =
+-   by using **area grid multiplication**: 352 x 481 =
 
     | x   | 400     | 80     | 1   | =       |
     | --- | ------- | ------ | --- | ------- |
@@ -189,7 +183,7 @@ What is $\frac{3^{15}}{3^{12}}$?
 > Evaluating the numerator and denominator and then performing the division is long and tedious and leaves much room for error. We can instead note that the twelwe 3's on the bottom cancel with twelve of the fifteen 3's on the top (because $\frac{3}{3} = 1$) leaving three 3's on top:
 
 $$
-\frac{3 \times 3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3}{3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3} = \frac{3 \times3 \times3}{1} = 27
+\frac{3 \times 3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times 3 \times3 \times3 \times3 \times3 \times3}{3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3} = \frac{3 \times3 \times3}{1} = 27
 $$
 
 What about $3^6 \div 3^8$?
@@ -240,8 +234,7 @@ $$
 (-2)^3 = 1\times (-2) \times (-2) \times (-2) = 4 \times -2 = -8
 $$
 
-$$ 2^0  = 1 $$
-$$ 2^1 = 2 $$
+$$ 2^0  = 1 $$ $$ 2^1 = 2 $$
 
 $$
   (\frac{2}{5})^2 = \frac{2}{5} \times \frac{2}{5} = \frac{2 \times 2}{5 \times 5} = \frac{4}{25}
@@ -297,8 +290,6 @@ $$
 
 ### Some examples
 
-Evaluate the expression
-$$ 5^x - 3^x $$
-for `x=2`
+Evaluate the expression $$ 5^x - 3^x $$ for `x=2`
 
 ---

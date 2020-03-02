@@ -13,13 +13,11 @@ chmod 755 script.sh
 
 We can run then script with `./script.sh` in command line.
 
-### #!
+###
 
-`#!` (shebang) Specifies binary of the shell(interpreter) we want to execute script, for example:
-`#! /bin/bash` or `#! /bin/zsh`
+`#!` (shebang) Specifies binary of the shell(interpreter) we want to execute script, for example: `#! /bin/bash` or `#! /bin/zsh`
 
-When we execute the script that contains `#!` what actually happens is that interpreter is executed and path used to call the script is passed as an argument.
-With `sleepy.sh` example we can run script with `./sleepy.sh &`, where `&` is used (it seems) to return the PID of the script execution process, and then we can run `ps -fp [PID]` to see process info:
+When we execute the script that contains `#!` what actually happens is that interpreter is executed and path used to call the script is passed as an argument. With `sleepy.sh` example we can run script with `./sleepy.sh &`, where `&` is used (it seems) to return the PID of the script execution process, and then we can run `ps -fp [PID]` to see process info:
 
 ```shell
 UID PID PPID C STIME TTY TIME CMD
@@ -44,11 +42,9 @@ This is a Python script
 
 ### Variables
 
-Are storage locations that have name, you can think of them as name-value pairs.
-Syntax used to create a variable is: `VARIABLE_NAME="Value"`. It's important to note that variable names are case sensitive, and that, by convention, variable names should be all in uppercase. Also make sure to not use spaces after and before `=` sign, when declaring variable.
+Are storage locations that have name, you can think of them as name-value pairs. Syntax used to create a variable is: `VARIABLE_NAME="Value"`. It's important to note that variable names are case sensitive, and that, by convention, variable names should be all in uppercase. Also make sure to not use spaces after and before `=` sign, when declaring variable.
 
-**By default all variables are global, also they have to be defined before used.**
-Variables can be defined in the [functions](###Functions), but we cannot access them before function is called.
+**By default all variables are global, also they have to be defined before used.** Variables can be defined in the [functions](###Functions), but we cannot access them before function is called.
 
 ```shell
 function var(){
@@ -95,8 +91,7 @@ MY_SHELL="bash"
 echo "I'm ${MY_SHELL}ing on my keyboard!"
 ```
 
-Output: `I'm bashing on my keyboard`.
-Without curly braces this wouldn't work as the interpreter will take that `ing` following the name variable as a part of the variable name.
+Output: `I'm bashing on my keyboard`. Without curly braces this wouldn't work as the interpreter will take that `ing` following the name variable as a part of the variable name.
 
 We can also assign the output of the command to a variable:
 
@@ -135,8 +130,7 @@ Example:
 [-e /etc/passwd]
 ```
 
-this tests if `etc/passwd` exists, and if it does this returns `true` - command exit status of `0`, if it doesn't exists the command exits with the exit status of `1`.
-Some file operators:
+this tests if `etc/passwd` exists, and if it does this returns `true` - command exit status of `0`, if it doesn't exists the command exits with the exit status of `1`. Some file operators:
 
 ```shell
 -d FILE #True if the file is a directory
@@ -238,8 +232,7 @@ $2: "param2"
 $3: "param3"
 ```
 
-An practical example can be found in [archiveUser.sh](./archiveUser.sh)
-We can use `$@` sign when we want to loop through script parameters:
+An practical example can be found in [archiveUser.sh](./archiveUser.sh) We can use `$@` sign when we want to loop through script parameters:
 
 ```shell
 for USER in $@ # This will loop through all parameter passed to the script when executed
@@ -252,8 +245,7 @@ done
 
 The `read` command accepts STDIN
 
-Syntax: `read -p "PROMPT" VARIABLE`
-Example:
+Syntax: `read -p "PROMPT" VARIABLE` Example:
 
 ```shell
 read -p "Enter a user name: " USER
@@ -263,9 +255,7 @@ echo "Archiving user: $USER"
 
 ### Exit statuses
 
-Every time the script or command is executed it returns an exit status in range of 0 to 255.
-De facto status for success is `0`, all others are codes for an error condition.
-This codes can be used in scripts for error checking. We can find what various exit statuses mean we can check documentation for that error code, or look into source code.
+Every time the script or command is executed it returns an exit status in range of 0 to 255. De facto status for success is `0`, all others are codes for an error condition. This codes can be used in scripts for error checking. We can find what various exit statuses mean we can check documentation for that error code, or look into source code.
 
 We can use `$?` to check the exit status of the previously executed command.
 
@@ -275,8 +265,7 @@ ls /dir
 echo $?
 ```
 
-If dir exists `echo $?` will return `0` status code, otherwise it should return `2`, error code for directory not found.
-An practical example can be found in [checkConnection.sh](./checkConnection.sh).
+If dir exists `echo $?` will return `0` status code, otherwise it should return `2`, error code for directory not found. An practical example can be found in [checkConnection.sh](./checkConnection.sh).
 
 We can explicitly define the return codes with `exit` command:
 
@@ -287,9 +276,7 @@ exit 3
 etc...
 ```
 
-Simply use the `exit` command in your script and follow it with the integer in range of 0 to 255.
-If we do not specify the return code with the `exit` command, then the exit status of the previously executed command in the shellscript will be used as the exit status. This is also true if we do not include `exit` command at all.
-Whenever the `exit` command is reached the shellscript will stop running.
+Simply use the `exit` command in your script and follow it with the integer in range of 0 to 255. If we do not specify the return code with the `exit` command, then the exit status of the previously executed command in the shellscript will be used as the exit status. This is also true if we do not include `exit` command at all. Whenever the `exit` command is reached the shellscript will stop running.
 
 ```shell
 HOST="google.com"
@@ -308,12 +295,8 @@ exit 0
 
 We can chain together multiple commands with this logical operators.
 
--   `&& = AND`
-    `mkdir /tmp/bak && cp test.txt /tmp/bak`
-    The command following `&&` will always be executed if the previous command succeeds(aka exits with `0` exit status).
--   `|| = OR`
-    `cp test.txt /tmp/bak || cp test.txt /tmp`
-    On the other hand, the command following the `||` will only execute if the previous command fails(aka exits with non-zero exit status).
+-   `&& = AND` `mkdir /tmp/bak && cp test.txt /tmp/bak` The command following `&&` will always be executed if the previous command succeeds(aka exits with `0` exit status).
+-   `|| = OR` `cp test.txt /tmp/bak || cp test.txt /tmp` On the other hand, the command following the `||` will only execute if the previous command fails(aka exits with non-zero exit status).
 
 ```shell
 #! /bin/bash
@@ -323,9 +306,7 @@ ping -c 1 $HOST && echo "$HOST reachable."
 
 ### The semicolon
 
-If we want to ensure that all commands will be executed we can separate them with `;`:
-`cp test.txt /tmp/bak/ ; cp test.txt /tmp/`
-This is basically same as running this two commands on separate lines.
+If we want to ensure that all commands will be executed we can separate them with `;`: `cp test.txt /tmp/bak/ ; cp test.txt /tmp/` This is basically same as running this two commands on separate lines.
 
 It's important to note that `semicolon` does not check for exit statuses of the executed commands. The command following `;` will be always executed no matter if the previous command fails or succeeds.
 
@@ -337,9 +318,7 @@ One of the main reasons why we are using functions is to follow the DRY principl
 
 #### Creating a function
 
-It's important to note that function must be defined before it's called.
-We can pass parameters to the functions, and then access those params inside of the function.
-There are two ways to create a function in the shellscript:
+It's important to note that function must be defined before it's called. We can pass parameters to the functions, and then access those params inside of the function. There are two ways to create a function in the shellscript:
 
 ```shell
 function function-name() {
@@ -421,21 +400,17 @@ a*.txt # Selects all files that starts with letter a nad are txt files
 
 # ? - matches exactly one character
 ?.txt  # Selects all files that have exactly one character preceding .txt
-a? 	   # Selects all two letter files that starts with char a
+a?     # Selects all two letter files that starts with char a
 a?.txt # Selects all two letter files that starts with a and are txt files
 ```
 
 #### Character Classes
 
-`[]` is a character class. It matches any, but only one, of the characters included between the brackets:
-`[aeiou]`
-`ca[nt]*` - matches, for example: can, candy, catch, cat
+`[]` is a character class. It matches any, but only one, of the characters included between the brackets: `[aeiou]` `ca[nt]*` - matches, for example: can, candy, catch, cat
 
-We can also exclude characters in the match with `[!]`:
-`[!aeiou]*` - This matches all files that don't start with a vowel, for example: config, data, list etc.
+We can also exclude characters in the match with `[!]`: `[!aeiou]*` - This matches all files that don't start with a vowel, for example: config, data, list etc.
 
-We can also create ranges in character class with `[a-d]*` for example. This matches all files that start with a, b, c or d.
-`[1-3]*` matches all files that start with 1, 2 or 3.
+We can also create ranges in character class with `[a-d]*` for example. This matches all files that start with a, b, c or d. `[1-3]*` matches all files that start with 1, 2 or 3.
 
 Instead of creating custom ranges we can also use predefined named character classes. Those represents the most commonly used ranges:
 
@@ -446,8 +421,7 @@ Instead of creating custom ranges we can also use predefined named character cla
 -   [[:upper:]] - matches whitespace
 -   [[:space:]] - matches any uppercase letters
 
-If we want to match a wildcard character we can escape it with `\` escape character.
-`*\?` - Match all files that end with the question mark
+If we want to match a wildcard character we can escape it with `\` escape character. `*\?` - Match all files that end with the question mark
 
 Just for sanity stay away from naming files with \* or ?.
 
@@ -465,8 +439,7 @@ done
 
 ### Case statements
 
-Case statements are the alternative to if statements, as they are sometimes easier to read. One common place for case statements use are a system startup scripts.
-Syntax:
+Case statements are the alternative to if statements, as they are sometimes easier to read. One common place for case statements use are a system startup scripts. Syntax:
 
 ```shell
 case "$VAR" in
@@ -499,8 +472,7 @@ Note that the patterns are case sensitive.
 
 ### Logging
 
-You may want to keep record of what's happening during the execution of the shellscript.
-**Logs should answer who, what, when, where and why.**
+You may want to keep record of what's happening during the execution of the shellscript. **Logs should answer who, what, when, where and why.**
 
 Linux OS uses the `syslog` standard for the message logging. This allows programs and applications to generate messages that can be captured, processed and stored by the system logger. This eliminates need for each and every application having to implement a logging mechanism. This means that we can take advantage of this logging system in shellscripts.
 
@@ -604,9 +576,7 @@ We can also use `continue` statement if we want to skip over commands that are a
 
 There are options built-in into `bash` that can help with debugging and fixing errors in shellscripts.
 
-We can provide the first line in our script that starts with `#!` one or more modifiers, for example:
-`#! /bin/bash -x`, this is called `x-trace` or `tracing` and will print commands as they execute.
-We can run this via command line with `set -x` command, and to stop we can run `set +x`.
+We can provide the first line in our script that starts with `#!` one or more modifiers, for example: `#! /bin/bash -x`, this is called `x-trace` or `tracing` and will print commands as they execute. We can run this via command line with `set -x` command, and to stop we can run `set +x`.
 
 We can turn debugging on just for the portion of our script:
 

@@ -22,16 +22,13 @@ Shellscripting is writing a series of commands for the shell to execute. It can 
 
 Script's commands are being executed by the interpreter (shell), one by one, and everything you can type in the command line you can also put in the script.
 
-> Before running scripts, we need to set up permissions for execution with: `chmod 755 script.sh`
-
-> We can then run the script with `./script.sh` via command line.
+> Before running scripts, we need to set up permissions for execution with: `chmod 755 script.sh` We can then run the script with `./script.sh` via command line.
 
 ---
 
-### #!
+###
 
-`#!` (shebang) specifies binary of the shell (interpreter) we want to execute the script, for example:
-`#! /bin/bash`, `#! /bin/zsh` or for the best portability `#! /bin/sh` (this will run system shell).
+`#!` (shebang) specifies binary of the shell (interpreter) we want to execute the script, for example: `#! /bin/bash`, `#! /bin/zsh` or for the best portability `#! /bin/sh` (this will run system shell).
 
 _Note that the most of code in this series is tested only with `bash` and `zsh` shell, most sh scripts can be run by Bash without modification, but some stuff wont work._
 
@@ -69,11 +66,9 @@ This is a Python script
 
 ### Variables
 
-Variables are storage locations that have a name, and you can think of them as name-value pairs.
-Syntax used to create a variable is: `VARIABLE_NAME="Value"`. It's important to note that variable names are case sensitive, and that, by convention, variable names should be all in uppercase. Also make sure to not use spaces after and before `=` sign, when declaring a variable.
+Variables are storage locations that have a name, and you can think of them as name-value pairs. Syntax used to create a variable is: `VARIABLE_NAME="Value"`. It's important to note that variable names are case sensitive, and that, by convention, variable names should be all in uppercase. Also make sure to not use spaces after and before `=` sign, when declaring a variable.
 
-**By default all variables are global, also they have to be defined before used.**
-Variables can be defined in the functions (we'll talk about them eventually), but we cannot access them before a function is called.
+**By default all variables are global, also they have to be defined before used.** Variables can be defined in the functions (we'll talk about them eventually), but we cannot access them before a function is called.
 
 ```shell
 function var(){

@@ -1,28 +1,28 @@
 # Javascript
 
-- [Javascript](#Javascript)
-	- [Objects](#Objects)
-		- [Sealing, Preventing Extension, Freezing](#Sealing-Preventing-Extension-Freezing)
-			- [Sealing](#Sealing)
-			- [Preventing Extension](#Preventing-Extension)
-			- [Freezing](#Freezing)
-		- [Property Descriptors](#Property-Descriptors)
-			- [Value and Enumerable](#Value-and-Enumerable)
-			- [Writable and Configurable](#Writable-and-Configurable)
-			- [Getters and Setters](#Getters-and-Setters)
-	- [Symbols](#Symbols)
-	- [Proxies](#Proxies)
-		- [Get Proxy Trap](#Get-Proxy-Trap)
-		- [Has Proxy Trap](#Has-Proxy-Trap)
-		- [Set Proxy Trap](#Set-Proxy-Trap)
-		- [Delete Proxy Trap](#Delete-Proxy-Trap)
-		- [Object Keys Proxy Trap](#Object-Keys-Proxy-Trap)
-		- [Apply Proxy Trap](#Apply-Proxy-Trap)
-		- [Construct Proxy Trap](#Construct-Proxy-Trap)
-		- [Get/Set Prototype Proxy Traps](#GetSet-Prototype-Proxy-Traps)
-		- [Extensibility Proxy Traps](#Extensibility-Proxy-Traps)
-		- [Property Descriptors Proxy Traps](#Property-Descriptors-Proxy-Traps)
-		- [Proxies + Property Descriptors](#Proxies--Property-Descriptors)
+-   [Javascript](#Javascript)
+    -   [Objects](#Objects)
+        -   [Sealing, Preventing Extension, Freezing](#Sealing-Preventing-Extension-Freezing)
+            -   [Sealing](#Sealing)
+            -   [Preventing Extension](#Preventing-Extension)
+            -   [Freezing](#Freezing)
+        -   [Property Descriptors](#Property-Descriptors)
+            -   [Value and Enumerable](#Value-and-Enumerable)
+            -   [Writable and Configurable](#Writable-and-Configurable)
+            -   [Getters and Setters](#Getters-and-Setters)
+    -   [Symbols](#Symbols)
+    -   [Proxies](#Proxies)
+        -   [Get Proxy Trap](#Get-Proxy-Trap)
+        -   [Has Proxy Trap](#Has-Proxy-Trap)
+        -   [Set Proxy Trap](#Set-Proxy-Trap)
+        -   [Delete Proxy Trap](#Delete-Proxy-Trap)
+        -   [Object Keys Proxy Trap](#Object-Keys-Proxy-Trap)
+        -   [Apply Proxy Trap](#Apply-Proxy-Trap)
+        -   [Construct Proxy Trap](#Construct-Proxy-Trap)
+        -   [Get/Set Prototype Proxy Traps](#GetSet-Prototype-Proxy-Traps)
+        -   [Extensibility Proxy Traps](#Extensibility-Proxy-Traps)
+        -   [Property Descriptors Proxy Traps](#Property-Descriptors-Proxy-Traps)
+        -   [Proxies + Property Descriptors](#Proxies--Property-Descriptors)
 
 ## Objects
 
@@ -93,9 +93,7 @@ console.log(Object.getOwnPropertyDescriptor(obj, 'p'));
 
 ### Property Descriptors
 
-> If there’s one thing you should remember about them it is that _property descriptors let you lie_.
-
-> All Object Properties have Property Descriptors
+> If there’s one thing you should remember about them it is that _property descriptors let you lie_. All Object Properties have Property Descriptors
 
 If you think about the intuitive basics of an object, it’s that you can write a property to an object, and then read that property back, and nothing crazy should happen. Well, with property descriptors, one could modify the value when it’s being written, reply with a different value when being retrieved, or even throw an error at any point in time. The basic syntax for defining a property descriptor looks like the following:
 
@@ -218,8 +216,7 @@ console.log(s1 === s2); // false
 console.log(s1); // Symbol(debug)
 ```
 
-One if more important use cases for `Symbols` is `Symbols` as object keys.
-Here is an example of using a `Symbol` as a key within an object:
+One if more important use cases for `Symbols` is `Symbols` as object keys. Here is an example of using a `Symbol` as a key within an object:
 
 ```js
 const obj = {};

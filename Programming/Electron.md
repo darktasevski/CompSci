@@ -1,13 +1,13 @@
 # Electron
 
-- [Electron](#Electron)
-	- [The main process](#The-main-process)
-	- [Renderer processes](#Renderer-processes)
-	- [Electron VS. NW.js](#Electron-VS-NWjs)
-	- [Code samples and simple projects](#Code-samples-and-simple-projects)
-	- [Facilitating Interprocess Communication (IPC)](#Facilitating-Interprocess-Communication-IPC)
-		- [`remote` module](#remote-module)
-		- [Sending content from the `main` process to the `renderer` process](#Sending-content-from-the-main-process-to-the-renderer-process)
+-   [Electron](#Electron)
+    -   [The main process](#The-main-process)
+    -   [Renderer processes](#Renderer-processes)
+    -   [Electron VS. NW.js](#Electron-VS-NWjs)
+    -   [Code samples and simple projects](#Code-samples-and-simple-projects)
+    -   [Facilitating Interprocess Communication (IPC)](#Facilitating-Interprocess-Communication-IPC)
+        -   [`remote` module](#remote-module)
+        -   [Sending content from the `main` process to the `renderer` process](#Sending-content-from-the-main-process-to-the-renderer-process)
 
 > Notes and examples on Electron.js
 
@@ -43,7 +43,7 @@ If backward compatibility is a concern, then NW.js might be a better choice beca
 
 ## Code samples and simple projects
 
-https://github.com/Puritanic/Electron
+<https://github.com/Puritanic/Electron>
 
 ---
 

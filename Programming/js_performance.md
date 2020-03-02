@@ -16,13 +16,9 @@ THE SOLUTION(S):
 -   Use fast DOM traversal with document.getElementById()
 -   Store pointer references to in-browser objects.
 -   Keep your HTML super-lean (get rid of all those useless DIV and SPAN tags)
--   Batch your DOM changes, especially when updating styles.
-    When making calls to modify DOM make sure you batch them up so as to avoid repeated screen rendering, for example when applying styling changes. The ideal approach here is to make many styling changes in one go by adding or removing a class, rather than apply each individual style separately. This is because every DOM change prompts the browser to re-render the whole UI using the boxing model. If you need to move an item across the page using X+Y coordinates, make sure that these two are applied at the same time rather than separately.
+-   Batch your DOM changes, especially when updating styles. When making calls to modify DOM make sure you batch them up so as to avoid repeated screen rendering, for example when applying styling changes. The ideal approach here is to make many styling changes in one go by adding or removing a class, rather than apply each individual style separately. This is because every DOM change prompts the browser to re-render the whole UI using the boxing model. If you need to move an item across the page using X+Y coordinates, make sure that these two are applied at the same time rather than separately.
 -   Build DOM separately before adding it to the page.
--   Use buffered DOM inside scrollable DIVs.
-    You can use this technique to remove items from DOM that are not being visually rendered on screen, such as the area outside the viewport of a scrollable DIV, and append the nodes again when they are needed. This will reduce memory usage and DOM traversal speeds.
-    [Sencha \| Grid with Buffered Store](https://examples.sencha.com/extjs/6.7.0/examples/classic/grid/buffered-store.html)
-    [Sencha \| Buffer Rendered Grid](https://examples.sencha.com/extjs/6.7.0/examples/classic/grid/buffer-grid.html)
+-   Use buffered DOM inside scrollable DIVs. You can use this technique to remove items from DOM that are not being visually rendered on screen, such as the area outside the viewport of a scrollable DIV, and append the nodes again when they are needed. This will reduce memory usage and DOM traversal speeds. [Sencha \| Grid with Buffered Store](https://examples.sencha.com/extjs/6.7.0/examples/classic/grid/buffered-store.html) [Sencha \| Buffer Rendered Grid](https://examples.sencha.com/extjs/6.7.0/examples/classic/grid/buffer-grid.html)
 
 ## Manage and Actively reduce your Dependencies
 
