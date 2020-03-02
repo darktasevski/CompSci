@@ -33,23 +33,23 @@ $$ height \times width = area $$
 
 A **line** extends forever in both directions, like this:
 
-![Line](../static/Books/math/line.png)
+![Line](../static/math/line.png)
 
 A **line segment** is just part of a line. It has two endpoints, like this:
 
-![Segment](../static/Books/math/line_segment.png)
+![Segment](../static/math/line_segment.png)
 
 A **ray** starts at one point and continues on forever in one direction, like this:
 
-![Ray](../static/Books/math/ray.png)
+![Ray](../static/math/ray.png)
 
 **Perpendicular lines** are lines that meet at right angles.
 
-![Perpendicular](../static/Books/math/perpendicular.svg)
+![Perpendicular](../static/math/perpendicular.svg)
 
 Parallel lines are always the same distance apart from each other — no matter how far they are extended, they will never meet.
 
-![parallel.svg](../static/Books/math/parallels.svg)
+![parallel.svg](../static/math/parallels.svg)
 
 ## Angles
 
@@ -102,21 +102,21 @@ The _line of symmetry_ is the imaginary line where you could fold the image and 
 
 > A quadrilateral is a polygon with four sides.
 
-![Quadrilaterals](../static/Books/math/quadrilaterals.png)
+![Quadrilaterals](../static/math/quadrilaterals.png)
 
 **Parallelogram** is a quadrilateral where opposite sides are parallel - going in the same direction:
 
-![Parallelogram](../static/Books/math/parallelogram.gif)
+![Parallelogram](../static/math/parallelogram.gif)
 
 **Rhombus** is a type of parallelogram - the opossite sides have to be parallel and all sides must be equal.
 
-![Rhombus](../static/Books/math/rhombus.jpeg)
+![Rhombus](../static/math/rhombus.jpeg)
 
 > Square is a rhombus
 
 **Rectangle** is kind of parallelogram where all the corners are the right angles.
 
-![Rectangle](../static/Books/math/quadrilateral-rectangle.gif)
+![Rectangle](../static/math/quadrilateral-rectangle.gif)
 
 **Square** is a parallelogram, rhombus and rectangle.
 

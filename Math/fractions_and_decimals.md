@@ -80,9 +80,9 @@ To decompose a number, we break it into smaller parts. For example: We can decom
 
 Fractions, like all numbers, can be decomposed in many ways.
 
-![Tape Diagram](../static/Books/math/tape_diagram.jpg)
+![Tape Diagram](../static/math/tape_diagram.jpg)
 
-![Number Line](../static/Books/math/number_line.jpg)
+![Number Line](../static/math/number_line.jpg)
 
 ### Adding fractions with like denominators
 
@@ -173,7 +173,7 @@ $$
 3\frac{2}{5} - 2\frac{3}{5} = \frac{4}{5}
 $$
 
-![Visual example](../static/Books/math/subtracting_mixed_numbers.png)
+![Visual example](../static/math/subtracting_mixed_numbers.png)
 
 ### Multiplying fractions and whole numbers
 
@@ -193,7 +193,7 @@ $$ \frac{8}{10} = \frac{80}{100} $$
 
 $\frac{3}{5} \times \frac{1}{4} = \frac{3 \times 1}{5 \times 4} = \frac{3}{20}$
 
-![khan academy ss](../static/Books/math/multiplying_fractions.png)
+![khan academy ss](../static/math/multiplying_fractions.png)
 
 ### Multiplying mixed numbers
 
@@ -239,7 +239,7 @@ $$
 
 Notice that every digit within this number is multiplied by a different power of 10. **That is true of all numbers.**
 
-![Visual example](../static/Books/math/multiplying_decimals.png)
+![Visual example](../static/math/multiplying_decimals.png)
 
 ### Rewriting fractions as decimals
 
@@ -265,7 +265,7 @@ There's a bit of a silly trick to multiplying decimals. It's not really a trick 
 
 For example, we can $2.8 \times 7$ calculate as $28 \times 7$:
 
-![Decimal multiplication](../static/Books/math/multiplying_decimals_2.gif)
+![Decimal multiplication](../static/math/multiplying_decimals_2.gif)
 
 Here's another one: $3.1 \times 5.9$
 
@@ -273,7 +273,7 @@ Before we get into it, what should our answer be close to? Do some rounding... 3
 
 Multiply... Count the spots behind the decimals... Put the decimal point in your answer:
 
-![Decimal multiplication v2](../static/Books/math/multiplying_decimals_3.gif)
+![Decimal multiplication v2](../static/math/multiplying_decimals_3.gif)
 
 Another technique for multiplying decimals:
 
