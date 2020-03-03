@@ -88,13 +88,41 @@ Firstly, let's factor 72:
           /  \
          2    9
       /  \
-                    3  3
+     3    3
 ```
 
-Which gives us: $$72 = 2 \times 2 \times 3 \times 3 \times 2 = 2^2 \times 3^2 \times 2$$ So:
+Which gives us: $72 = 2 \times 2 \times 3 \times 3 \times 2 = 2^2 \times 3^2 \times 2$ So:
 
 $$
 \begin{aligned}
 \sqrt{72} &= \sqrt{2^2 \times 3^2 \times 2} \\ &= \sqrt{2^2} \times \sqrt{3^2} \times \sqrt{2} \\ &= 2 \times 3 \times \sqrt{2} \\ &= 6\sqrt{2}
 \end{aligned}
 $$
+
+---
+
+What's the difference between $x^2 = 9$ and $\sqrt{9}$?
+
+In the first we're asked what numbers squared are 9, so x can be 3 or -3. We can write this as $x=\pm 3$. In the second x=3, because _x_ is the square root of 9, which implies the positive value.
+
+> Rule of a thumb is that if the radical sign or frictional power is already there, only give the positive solution, if not, give all solutions.
+
+We can run into difficulty of multiple roots for even powers. For odd powers there is no confusion because negative numbers raised to an odd number are negative and positive numbers raised to an odd number are positive. For example, the only real number which cubed equals 8 is 2, because -2 cubed is -8.
+
+What is the difference between $(-1)^{\frac{1}{2}}$ and $-1^{\frac{1}{2}}$?
+
+**The first denotes the square root of -1, while the second asks for the negative of the square root of 1.** This is very clear if we write the two in radical notation: the first is $\sqrt{-1}$ while the second is $-\sqrt{1}$. There is a big difference between the two. There is no real number which equals the first while the second is equal to -1.
+
+---
+
+_Some examples:_
+
+1. $x=(-2)^5=-32$
+    - Because $2^5$ is 32
+2. $x=\sqrt[3]{-\frac{1}{8}}=-\frac{1}{8}^{\frac{1}{3}}=-\frac{1^{\frac{1}{3}}}{8^{\frac{1}{3}}}=-\frac{1}{\sqrt[3]{8}}=-\frac{1}{2}$
+3. $x^6=64=\pm2$
+    - even power, so we have to take into account both positive and negative roots
+4. $x^3=64=4$
+    - odd power, so we're not concerned about multiple roots
+5. $x=(-27)^{-\frac{2}{3}}=(-27^{\frac{1}{3}})^{-2}=(\sqrt[3]{-27})^{-2}=(-3)^{-2}=\frac{1}{(-3)^2}= \frac{1}{9}$
+6. $x^{\frac{5}{3}}=243 =(x^{\frac{5}{3}})^{\frac{3}{5}}=x^1=243^{\frac{3}{5}}=(243^{\frac{1}{5}})^3=3^3=27$

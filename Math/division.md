@@ -194,4 +194,6 @@ $$
        3  // We're left with 3; 8 goes into 3 zero times, so this would be a remainder.
 ```
 
----
+Another way to simplify dividing large numbers, $9420 \div 20$ can be calculated like this:
+
+![simplification for dividing large numbers](../static/math/dividing_large_numbers.png)

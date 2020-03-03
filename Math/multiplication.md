@@ -143,6 +143,10 @@ Or simply, just multiply $8 \times 4$ and add number of zeroes to the result $32
 
 ## Exponents
 
+The small number written above and to the right of the number is called an **exponent** or **power**. The number underneath the exponent is called **the base**. This can sometimes be read as "Five to the third power" or "Five raised to the third power".
+
+### Integer exponents
+
 $$
 2^3 = 2 \times 2 \times 2 = 8
 $$
@@ -154,8 +158,6 @@ $$
 $$
 5^3 = 5 \times 5 \times 5 = 125
 $$
-
-The small number written above and to the right of the number is called an **exponent** or **power**. The number underneath the exponent is called **the base**. This can sometimes be read as "Five to the third power" or "Five raised to the third power".
 
 > A number which is raised to the second power is said to be **squared**, and to the third power is said to be **cubed**.
 
@@ -234,7 +236,7 @@ $$
 (-2)^3 = 1\times (-2) \times (-2) \times (-2) = 4 \times -2 = -8
 $$
 
-$$ 2^0  = 1 $$ $$ 2^1 = 2 $$
+$2^0  = 1 \\ 2^1 = 2$
 
 $$
   (\frac{2}{5})^2 = \frac{2}{5} \times \frac{2}{5} = \frac{2 \times 2}{5 \times 5} = \frac{4}{25}
@@ -244,7 +246,7 @@ $$
 (\frac{1}{2})^4 = \frac{1}{2 \times 2 \times 2 \times 2} = \frac{1}{16}
 $$
 
-### Some edge cases
+#### Some edge cases
 
 Any number raised to the power zero is equal to 1 and not zero - [Transitive property of Equality](https://www.mathwords.com/t/transitive_property.htm):
 
@@ -288,8 +290,72 @@ $$
 (-1)^1 = -1
 $$
 
-### Some examples
+#### Some examples
 
-Evaluate the expression $$ 5^x - 3^x $$ for `x=2`
+Evaluate the expression $5^x - 3^x$ for `x=2`
+
+$$
+5^x - 3^x = 5^2 - 3^2 = 25 - 9 = 16
+$$
+
+### Fractional exponents
+
+What is $25^{\frac{1}{2}}$?
+
+We know that $5^2=25$ so the expression above can be rewritten as $(5^2)^{\frac{1}{2}}$, and we can the continue simplifying:
+
+$$
+(5^2)^{\frac{1}{2}}=5^{2 \times \frac{1}{2}}=5^1=5
+$$
+
+> The exponent $\frac{1}{2}$ has a special name: **the square root** (can be read more about it [here](../Math/square_roots.md)) and it also has a special symbol associated with it, $\sqrt{}$. (This symbol is called a **radical**). Thus we write:
+
+$$
+25^{\frac{1}{2}}=\sqrt{25}=5
+$$
+
+When asked for a square root of a number, let's say 81, we find a number which, when squared, equals 81. Since we get 81 when we square 9, $\sqrt{81}=9$
+
+Example:
+
+_Which two integers is $\sqrt{55}$ between?_
+
+Since $\sqrt{49}=7$ and $\sqrt{64}=8$, the answer is 7 and 8.
 
 ---
+
+When dealing with other powers which are reciprocals of integers, like $\frac{1}{3},\frac{1}{4},\frac{1}{5}$ and so on, we proceed just as with square roots. When asked for a fifth root of 100000, we want the number, which raised to the fifth power equals 100000. Since $10^5=100000$ we have $100000^{\frac{1}{5}} = 10$
+
+We can adapt the radical sign to use with other roots by writing $\sqrt[n]{}$ for the *n*th root. For example $8^{\frac{1}{7}}$ is $\sqrt[7]{8}$. **When no number is written where the 7 is, the symbol is assumed to be a square root.**
+
+> As with square roots, numbers raised to the $\frac{1}{3}$ power, have a special name, **cube roots**.
+
+When working with frictional powers in which the numerator is not 1, we use our rule for raising exponential expressions to power backwards. This is a little tricky, and looks like this:
+
+$$
+8^{\frac{2}{3}} = 8^{(\frac{1}{3})(2)} = (8^{\frac{1}{3}})^2=2^2=4
+$$
+
+> $8^{\frac{1}{3}}$ above can be rewritten as $\sqrt[3]{8}$, which can be translated into words as: find a number that raised to the third power gives eight, which is two ($2 \times 2 \times 2$).
+
+We find the fractional root first, then we raise the result to the power of the numerator, even if the numerator is negative.
+
+_Consider the following examples:_
+
+1. $8^{\frac{5}{3}}=8^{(\frac{1}{3})(5)}=(8^{\frac{1}{3}})^5=2^5=32$
+2. $(\sqrt{8})^{\frac{2}{3}} =(8^{\frac{1}{2}})^{\frac{2}{3}}=8^{(\frac{1}{2})(\frac{2}{3})}=8^{\frac{1}{3}}=\sqrt[3]{8}=2$
+3. $\sqrt[4]{81^{-3}}=81^{-\frac{3}{4}}=(81^{}\frac{1}{4})^{-3}=(\sqrt[4]{81})^{-3}=3^{-3}=\frac{1}{3^3}=\frac{1}{27}$
+4. $(\frac{1}{8})^{\frac{2}{3}}=\frac{1^{\frac{2}{3}}}{8^{\frac{2}{3}}}=\frac{(\sqrt[3]{1})^{2}}{(\sqrt[3]{8})^2}=\frac{1^2}{2^2}=\frac{1}{4}$
+
+    - > Remainder that 1 raised to any power is always 1
+
+5. $\frac{(4^{\frac{2}{3}})(2^{\frac{1}{6}})(3^{\frac{3}{2}})}{(2^{-\frac{1}{2}})(3^{\frac{1}{2}})}=\frac{(2^{\frac{4}{3}})(2^{\frac{1}{6}})(3^{\frac{3}{2}})}{(2^{-\frac{1}{2}})(3^{\frac{1}{2}})}=2^{\frac{4}{3} + \frac{1}{6}-(-\frac{1}{2})}3^{\frac{3}{2}-\frac{1}{2}}=2^{\frac{8}{6}+\frac{1}{6}-(-\frac{3}{6})}3^{\frac{2}{2}}=2^{\frac{12}{6}}(3)=2^2 \times 3 =12$
+    - For such complex problems, we should first convert all the expressions to the simplest base possible (by writting $4^{\frac{2}{3}}=(2^2)^{\frac{2}{3}} =2^{\frac{4}{3}}$), then simplify the expression by using rules for multiplication and division of expressions with a common base.
+6. $(\sqrt[3]{81})^{\frac{3}{2}}=(81^{\frac{1}{3}})=81^{(\frac{1}{3})(\frac{3}{2})}=81^{\frac{1}{2}}=9$
+
+    - Because $81^{\frac{1}{2}}$ is a square root, ergo $\sqrt{81}=9$.
+
+7. $\sqrt[5]{100000^3}=100000^{\frac{3}{5}}=(100000^{\frac{1}{5}})^3=10^3=1000$
+8. $\sqrt[4]{\frac{1}{16}^{-3}}=\frac{1}{16}^{-\frac{3}{4}}=\frac{1^{-\frac{3}{4}}}{16^{-\frac{3}{4}}}=\frac{1}{(\sqrt[4]{16})^{-3}}=\frac{1}{2^{-3}}=\frac{\cancel{1}}{\frac{\cancel{1}}{8}}=8$
+9. $(\frac{4}{9})^{(-\frac{3}{2})}=\frac{4^{(-\frac{3}{2})}}{9^{(-\frac{3}{2})}}=\frac{(\sqrt[2]{4})^{-3}}{(\sqrt[2]{9})^{-3}}=\frac{2^{-3}}{3^{-3}}=\frac{\frac{1}{2^3}}{\frac{1}{3^3}}=\frac{\frac{1}{8}}{\frac{1}{27}}=\frac{1 \times 27}{1 \times 8}=\frac{27}{8}$
+    - We are multiplying the numerator by the reciprocal of the denominator, $\frac{\frac{1}{8}}{\frac{1}{27}}=\frac{1}{8} \times \frac{27}{1}$ (see fraction division).
