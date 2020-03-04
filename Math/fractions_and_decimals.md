@@ -216,11 +216,15 @@ $$
 
 The fraction bar and the division symbol mean the same thing, as in $1 \div 3$ is equal to $\frac{1}{3}$. We have 1 as the numerator, 3 is the denominator, and this is equal to the numerator divided by the denominator. 1 over 3 is the same thing as 1 divided by 3.
 
+> When dividing fraction by another fraction the strategy most often used to accomplish this is the **keep/change/flip method**. The Keep means that we keep the first fraction as it is. The Change stands for change the division sign into a multiplication one, and Flip is to write a reciprocal of the second fraction (reverse nominator and denominator). Alternative to this approach is [**cross-multiplication**](../static/math/fractions__cross-multiplication.png) technique, which is less straightforward
+
 Multiplication and division are related:
 
 $$
- \begin{aligned} \greenE{\text{number of groups}} \times \maroonD{\text{size of groups}} = \purpleD{\text{total}} \\\\ \maroonD{\text{size of groups}} \times \greenE{\text{number of groups}} = \purpleD{\text{total}} \\\\ \\\\ \purpleD{\text{total}} \div \greenE{\text{number of groups}} =\maroonD{\text{size of groups}} \\\\ \purpleD{\text{total}} \div \maroonD{\text{size of groups}} =\greenE{\text{number of groups}} \end{aligned}
+ \begin{aligned} \greenE{\text{number of groups}} \times \maroonD{\text{size of groups}} = \purpleD{\text{total}} \\\\ \maroonD{\text{size of groups}} \times \greenE{\text{number of groups}} = \purpleD{\text{total}} \\ \\ \\ \purpleD{\text{total}} \div \greenE{\text{number of groups}} =\maroonD{\text{size of groups}} \\\\ \purpleD{\text{total}} \div \maroonD{\text{size of groups}} =\greenE{\text{number of groups}} \end{aligned}
 $$
+
+> Whenever the denominators are the same, as in $\frac{3}{4}\div\frac{1}{4}$, we only need to divide the numberators to get the result.
 
 _Some examples:_
 
