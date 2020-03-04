@@ -1,5 +1,7 @@
 # Math notes
 
+> Scraps from other notes, should probably delete this one
+
 > Using KaTeX for some math notations and examples
 
 -   [Math notes](#Math-notes)

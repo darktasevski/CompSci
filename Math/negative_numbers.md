@@ -8,9 +8,9 @@
 
 ## Absolute values
 
-Opossite of an number is the number that is same distance from the zero, but on the other side of it.
+Opposite of an number is the number that is same distance from the zero, but on the other side of it.
 
-For example: opossite of 3 is -3, of the 5 is -5, 72 is -72 and so on...
+For example: opposite of 3 is -3, of the 5 is -5, 72 is -72 and so on...
 
 One way to think about it is that the number will have the same absolute value but the different sign.
 
@@ -32,7 +32,7 @@ $$
 
 <----b------a---->
 
-$$ |a-b| = |b-a| $$ or:
+$|a-b| = |b-a|$ or:
 
 $$
 |-2-3| = |-5| = 5

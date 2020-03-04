@@ -195,6 +195,15 @@ $\frac{3}{5} \times \frac{1}{4} = \frac{3 \times 1}{5 \times 4} = \frac{3}{20}$
 
 ![khan academy ss](../static/math/multiplying_fractions.png)
 
+Some examples:
+
+1. $\frac{9}{6} \times \frac{4}{5}=\frac{9 \times 4}{6 \times 5}=\frac{36}{30}=\frac{6}{5}$
+    - Common denominator for both 36 and 30 is 6 so we can simplify this a bit
+2. $\frac{5}{2} \times \frac{4}{9}=\frac{20}{18}=\frac{10}{9}$
+3. $3\frac{1}{2} \times 4 = \frac{7}{2} \times \frac{4}{1}=\frac{28}{2}=14$
+4. $1\frac{1}{2} \times 1\frac{1}{5}=\frac{3}{2} \times \frac{6}{5}=\frac{18}{10}=1\frac{8}{10}=1\frac{4}{5}$
+5. $\frac{6}{11} \times 1\frac{1}{6}=\frac{\cancel{6}}{11} \times \frac{7}{\cancel{6}}=\frac{7}{11}$
+
 ### Multiplying mixed numbers
 
 $$
@@ -212,6 +221,23 @@ Multiplication and division are related:
 $$
  \begin{aligned} \greenE{\text{number of groups}} \times \maroonD{\text{size of groups}} = \purpleD{\text{total}} \\\\ \maroonD{\text{size of groups}} \times \greenE{\text{number of groups}} = \purpleD{\text{total}} \\\\ \\\\ \purpleD{\text{total}} \div \greenE{\text{number of groups}} =\maroonD{\text{size of groups}} \\\\ \purpleD{\text{total}} \div \maroonD{\text{size of groups}} =\greenE{\text{number of groups}} \end{aligned}
 $$
+
+_Some examples:_
+
+1. $3 \times \frac{1}{3} = 1$ and $1 \div 3 = \frac{1}{3}$
+2. $3 \div \frac{2}{1} = 3 \times \frac{1}{2} = \frac{3}{2}$ (reciprocals)
+
+3. $\frac{2}{9}=2\div9$
+4. $\frac{1}{3} \div \frac{3}{6} = \frac{\frac{1}{3}\times 6}{3}=\frac{\frac{6}{3}}{3}=\frac{2}{3}$
+    - Multiply the numerator with reciprocal of the denominator.
+5. $\frac{5}{13} \div \frac{2}{9}= \frac{5}{12}\times \frac{9}{2}=\frac{45}{26}=1\frac{19}{26}$
+6. $\frac{12}{16} \div \frac{8}{9}=\frac{12 \times 9 }{16 \times 8}=\frac{(\cancel{4} \times 3)9}{(\cancel{4} \times 4)8}=\frac{3 \times 9}{4 \times 8}=\frac{27}{32}$
+    - Common denominator of 12 and 16 is for, so we can simplify this by breaking up numbers to 4's and then canceling some of them.
+7. $\frac{7}{12} \div \frac{8}{13}=\frac{7 \times 13}{12 \times 8}=\frac{91}{96}$
+8. $5 \div \frac{1}{4}=\frac{5}{1} \times \frac{4}{1} = 20$
+    - Clarification: Imagine that we have 5 objects and divide them each into pieces $\frac{1}{4}$ of the size. We're going to have in total $5 \times 4$ pieces, which gives us 20.
+9. $\frac{1}{5} \div 5=\frac{1}{5}\times\frac{1}{5}=\frac{1}{25}$
+    - > Note: When we are dividing fraction by whole number, then we're not using reciprocation technique. We're instead transforming a whole number to a fraction like this: 4 > $\frac{1}{4}$, 16 > $\frac{1}{16}$.
 
 ---
 

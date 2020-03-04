@@ -8,8 +8,10 @@
     -   [Multiplication with 2 digits](#multiplication-with-2-digits)
     -   [Strategies for multiplying multiples of 10, 100 and 1000](#strategies-for-multiplying-multiples-of-10-100-and-1000)
     -   [Exponents](#exponents)
-        -   [Some edge cases](#some-edge-cases)
-        -   [Some examples](#some-examples)
+        -   [Integer exponents](#integer-exponents)
+            -   [Some edge cases](#some-edge-cases)
+            -   [Some examples](#some-examples)
+        -   [Fractional exponents](#fractional-exponents)
 
 ---
 
