@@ -15,6 +15,12 @@
 
 ---
 
+$$
+factor \times factor=product
+$$
+
+---
+
 -   When **multiplying** two negative numbers the result is always positive.
 
 Simple hack:

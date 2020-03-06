@@ -1,16 +1,22 @@
 # Division
 
--   [Division](#Division)
-    -   [Division using place value](#Division-using-place-value)
-    -   [Division using distributive property](#Division-using-distributive-property)
-    -   [Division using long division](#Division-using-long-division)
-    -   [Quotients that are multiples of 10](#Quotients-that-are-multiples-of-10)
-    -   [Canceling zeros when dividing](#Canceling-zeros-when-dividing)
-    -   [Dividing by two digit numbers](#Dividing-by-two-digit-numbers)
-    -   [Dividing by zero](#Dividing-by-zero)
-    -   [Multi-digit division](#Multi-digit-division)
-        -   [Strategies for dividing multiples of 10, 100, and 1000](#Strategies-for-dividing-multiples-of-10-100-and-1000)
-    -   [Remainders](#Remainders)
+-   [Division](#division)
+    -   [Division using place value](#division-using-place-value)
+    -   [Division using distributive property](#division-using-distributive-property)
+    -   [Division using long division](#division-using-long-division)
+    -   [Quotients that are multiples of 10](#quotients-that-are-multiples-of-10)
+    -   [Canceling zeros when dividing](#canceling-zeros-when-dividing)
+    -   [Dividing by two digit numbers](#dividing-by-two-digit-numbers)
+    -   [Dividing by zero](#dividing-by-zero)
+    -   [Multi-digit division](#multi-digit-division)
+        -   [Strategies for dividing multiples of 10, 100, and 1000](#strategies-for-dividing-multiples-of-10-100-and-1000)
+    -   [Remainders](#remainders)
+
+---
+
+$$
+dividend ÷ divisor = quotient
+$$
 
 ---
 
@@ -148,6 +154,15 @@ or, by simplifying and cancelling zeroes:
 $$
 3500 / 700 = 35\cancel{0}\cancel{0} / 7\cancel{0}\cancel{0} = 35 / 7 = 5
 $$
+
+Also, we can use strategies for multiplying/dividing by the powers of then mentioned [here](./multiplication.md#exponents) and when working on problems like $7 \div 10$ we just need to move _divident_ (7) one place to the right, so that the result is: $0.7$.
+
+More examples:
+
+-   $\frac{34}{10}=34 \div 10=3.4$
+-   $53 \div 100 = 0.53$
+-   $1098\div100=10.98$
+-   $\frac{2}{100}=2\div100=0.02$
 
 ---
 

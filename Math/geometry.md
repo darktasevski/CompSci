@@ -1,14 +1,18 @@
 # Geometry
 
 -   [Geometry](#geometry)
--   [Lines](#lines)
--   [Angles](#angles)
-    -   [Measuring angles](#measuring-angles)
--   [Angle types](#angle-types)
--   [Triangle types](#triangle-types)
--   [Symmetry](#symmetry)
--   [Quadrilaterals](#quadrilaterals)
-    -   [Quadrilateral Summary](#quadrilateral-summary)
+    -   [Lines](#lines)
+    -   [Angles](#angles)
+        -   [Measuring angles](#measuring-angles)
+    -   [Angle types](#angle-types)
+    -   [Triangle types](#triangle-types)
+    -   [Symmetry](#symmetry)
+    -   [Quadrilaterals](#quadrilaterals)
+        -   [Quadrilateral Summary](#quadrilateral-summary)
+    -   [Volume](#volume)
+        -   [Volume formulas](#volume-formulas)
+            -   [How to use the volume formulas to calculate the volume](#how-to-use-the-volume-formulas-to-calculate-the-volume)
+    -   [Coordinate Plane](#coordinate-plane)
 
 ---
 
@@ -134,3 +138,92 @@ The _line of symmetry_ is the imaginary line where you could fold the image and 
 | Square        | 4 equal sides and 4 right angles |
 
 ---
+
+## Volume
+
+Volume is the amount of 3-dimensional space an object occupies and it is measured in cubic units.
+
+### Volume formulas
+
+![Volume formulas](../static/math/volume_formulas.png)
+
+#### How to use the volume formulas to calculate the volume
+
+-   **Cube (Square)**
+
+Given that the length of a side = a = 2 cm:
+
+$$
+Volume = (a) = 2cm × 2cm × 2cm = 8cm^3
+$$
+
+-   **Cylinder**
+
+Given that the height is 8 inches and the radius is 2 inches:
+
+$$
+Volume = \pi × r^2 × h = 3.14 × (2 in)^2 × 8 in = 3.14 × 4 × 8 in^3 \\
+Volume = 3.14 × 32 in^3 = 100.48 in^3
+$$
+
+-   **Rectangular solid or cuboid**
+
+Given that the length is 6 cm, the width is 3 cm and the height is 5 cm:
+
+$$
+Volume = l × w  × h =  6 × 3 × 5 = 90 cm^3
+$$
+
+-   **Sphere**
+
+Given that the radius = r = 20:
+
+$$
+Volume = (4 × π × r^3)/3 = [4 × 3.14 × (20)^3]/3 = 3.14 × (20)^3 × 4 \\
+Volume = 3.14 × 8000 × 4 = 3.14 × 32000 = 100480
+$$
+
+-   **Cone**
+
+Given that the radius is equal to 3 and the height is equal to 4:
+
+$$
+Volume = (π × r^2 × h)/3 = [3.14 × (3)^2× 4]/3 = 3.14 × 9 × 4 \\
+Volume = 3.14 × 36 = 113.04
+$$
+
+-   **Pyramid**
+
+Given that the pyramid has a height of 6 feet. If the base of a pyramid is a square with a length of 2 feet, find the volume.
+
+$$
+Volume = (B × h)/3 \\
+B = \text{area of base}  = 2 ft × 2 ft = 4 ft^2 \\
+Volume = (4 × 6)/3 ft^3 = 24/3 ft^3 = 8 ft^3
+$$
+
+-   **Ellipsoid**
+
+Given that the radii of an ellipsoid are 1 cm, 2, cm, and 3 cm.
+
+$$
+Volume = (4 × π × a × b × c)/3 = (4 × 3.14 × 1 × 2 × 3)/3 \\
+Volume = ( 3.14 × 4 × 6)/3 = ( 3.14 × 24)/3 = 81.64/3 = 25.12 cm^3
+$$
+
+-   **Hollow cylinder**
+
+The outer radius is 8, the internal radius is 6, and the height is 10.
+
+$$
+Volume = π × h ( R^2 - r^2) = π × 10 ( 8^2 - 6^2) = π × 10 ( 64 - 36) \\
+Volume = π × 10(28) = π × 280 = 879.2
+$$
+
+## Coordinate Plane
+
+A coordinate plane is a two-dimensional plane formed by the intersection of a vertical line (usually) called y-axis and a horizontal line (usually) called x-axis. These are perpendicular lines that intersect each other at zero, and this point is called the origin. The axes cut the coordinate plane into four equal sections, and each section is known as quadrant.
+
+![coordplane](../static/math/coordplane.gif)
+
+> The two-dimensional plane is called the **Cartesian plane**, or the coordinate plane and the axes are called the coordinate axes or x-axis and y-axis.
