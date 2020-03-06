@@ -147,6 +147,8 @@ Or simply, just multiply $8 \times 4$ and add number of zeroes to the result $32
 
 The small number written above and to the right of the number is called an **exponent** or **power**. The number underneath the exponent is called **the base**. This can sometimes be read as "Five to the third power" or "Five raised to the third power".
 
+> There is a pattern when working with a powers of ten, for example: $10 \times 10 = 20^2$, $10 \times10\times10=10^3$, notice the exponent and the number of zeroes. Based on this we can easily find out that power of, for example, $10000000000$ is $10^{10}$. Likewise, for $10^5$ we can easily predict that the result is $100000$
+
 ### Integer exponents
 
 $$

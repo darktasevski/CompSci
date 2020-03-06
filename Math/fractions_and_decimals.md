@@ -2,30 +2,31 @@
 
 > Math snippets are written with $\href{https://katex.org/}{\KaTeX}$
 
--   [Fractions and Decimals](#Fractions-and-Decimals)
-    -   [Fractions](#Fractions)
-        -   [Comparing fractions](#Comparing-fractions)
-        -   [Common denominators](#Common-denominators)
-        -   [Decomposing fractions](#Decomposing-fractions)
-        -   [Adding fractions with like denominators](#Adding-fractions-with-like-denominators)
-        -   [Subtracting fractions with like denominators](#Subtracting-fractions-with-like-denominators)
-        -   [Improper fractions](#Improper-fractions)
-        -   [Mixed numbers](#Mixed-numbers)
-            -   [Add and subtract mixed numbers with unlike denominators](#Add-and-subtract-mixed-numbers-with-unlike-denominators)
-        -   [Comparing improper fractions and mixed numbers](#Comparing-improper-fractions-and-mixed-numbers)
-        -   [Adding mixed numbers](#Adding-mixed-numbers)
-        -   [Subtracting mixed numbers](#Subtracting-mixed-numbers)
-        -   [Multiplying fractions and whole numbers](#Multiplying-fractions-and-whole-numbers)
-        -   [Converting tenths and hundredths](#Converting-tenths-and-hundredths)
-        -   [Multiplying fractions with fractions](#Multiplying-fractions-with-fractions)
-        -   [Multiplying mixed numbers](#Multiplying-mixed-numbers)
-        -   [Fractions as division](#Fractions-as-division)
-    -   [Decimals](#Decimals)
-        -   [Rewriting fractions as decimals](#Rewriting-fractions-as-decimals)
-        -   [Multiplying Decimals](#Multiplying-Decimals)
-        -   [Developing strategies for multiplying decimals](#Developing-strategies-for-multiplying-decimals)
-        -   [Division strategies for decimal quotients](#Division-strategies-for-decimal-quotients)
-    -   [Common fractions and decimals](#Common-fractions-and-decimals)
+-   [Fractions and Decimals](#fractions-and-decimals)
+    -   [Fractions](#fractions)
+        -   [Comparing fractions](#comparing-fractions)
+        -   [Common denominators](#common-denominators)
+        -   [Decomposing fractions](#decomposing-fractions)
+        -   [Adding fractions with like denominators](#adding-fractions-with-like-denominators)
+        -   [Subtracting fractions with like denominators](#subtracting-fractions-with-like-denominators)
+        -   [Improper fractions](#improper-fractions)
+        -   [Mixed numbers](#mixed-numbers)
+            -   [Add and subtract mixed numbers with unlike denominators](#add-and-subtract-mixed-numbers-with-unlike-denominators)
+        -   [Comparing improper fractions and mixed numbers](#comparing-improper-fractions-and-mixed-numbers)
+        -   [Adding mixed numbers](#adding-mixed-numbers)
+        -   [Subtracting mixed numbers](#subtracting-mixed-numbers)
+        -   [Multiplying fractions and whole numbers](#multiplying-fractions-and-whole-numbers)
+        -   [Converting tenths and hundredths](#converting-tenths-and-hundredths)
+        -   [Multiplying fractions with fractions](#multiplying-fractions-with-fractions)
+        -   [Multiplying mixed numbers](#multiplying-mixed-numbers)
+        -   [Fractions as division](#fractions-as-division)
+        -   [Rationalizing Denominators](#rationalizing-denominators)
+    -   [Decimals](#decimals)
+        -   [Rewriting fractions as decimals](#rewriting-fractions-as-decimals)
+        -   [Multiplying Decimals](#multiplying-decimals)
+        -   [Developing strategies for multiplying decimals](#developing-strategies-for-multiplying-decimals)
+        -   [Division strategies for decimal quotients](#division-strategies-for-decimal-quotients)
+    -   [Common fractions and decimals](#common-fractions-and-decimals)
 
 ## Fractions
 
@@ -243,6 +244,43 @@ _Some examples:_
 9. $\frac{1}{5} \div 5=\frac{1}{5}\times\frac{1}{5}=\frac{1}{25}$
     - > Note: When we are dividing fraction by whole number, then we're not using reciprocation technique. We're instead transforming a whole number to a fraction like this: 4 > $\frac{1}{4}$, 16 > $\frac{1}{16}$.
 
+### Rationalizing Denominators
+
+Rationalizing denominators is making the denominators of fractions rational. When rationalizing denominators, we usually make the denominator an integer. For example consider the expression $1\div\sqrt{2}$. If we multiply the numerator and the denominator by $\sqrt{2}$ we have:
+
+$$
+\frac{1}{\sqrt{2}}=\frac{1}{\sqrt{2}} \cdot 1 = \frac{1}{\sqrt{2}} \cdot \frac{\sqrt{2}}{\sqrt{2}} = \frac{\sqrt{2}}{2}
+$$
+
+As you can see, multiplying the numerator and denominator of a fraction by the same value doesn't change the value of the fraction because it's the same as multiplying by 1. Although the expressions $1\div\sqrt{2}$ and $\sqrt{\frac{2}{2}}$ are equal, it almost always preferred to use $\sqrt{\frac{2}{2}}$ because it's denominator is a rational number.
+
+> To rationalize square roots in the denominator just multiply the top and the bottom of the fraction by the square root. To rationalize other roots we have to get more crafty:
+
+$$
+\frac{1}{\sqrt[3]{12}}=\frac{1}{\sqrt[3]{2^2}\sqrt[3]{3}}
+$$
+
+To get rid of the $\sqrt[3]{2^2}$ we multiply top and bottom by $\sqrt[3]{2}$:
+
+$$
+\ldots=\frac{1}{\sqrt[3]{2^2}\sqrt[3]{3}}(\frac{\sqrt[3]{2}}{\sqrt[3]{2}})=\frac{\sqrt[3]{2}}{\sqrt[3]{2^3}\sqrt[3]{3}}=\frac{\sqrt[3]{2}}{2\sqrt[3]{3}}
+$$
+
+To rationalize the $\sqrt[3]{3}$ we multiply by $\sqrt[3]{3^2}$ to make the denominator $2\sqrt[3]{3^2}$:
+
+$$
+\ldots=\frac{\sqrt[3]{2}}{2\sqrt[3]{3}}(\frac{\sqrt[3]{3^2}}{\sqrt[3]{3^2}})=\frac{\sqrt[3]{2}\sqrt[3]{3^2}}{2\sqrt[3]{3^3}}=\frac{\sqrt[3]{18}}{2 \cdot 3}=\frac{\sqrt[3]{18}}{6}
+$$
+
+We have chosen our multiplying factors to make the exponent of the factor under the radical equal to the root. For example, in final step above, the power of 3 under the radical $\sqrt[3]{3}$ is 1. To make that power 3, we must multiply by $\sqrt[3]{3^2}$, so that $\sqrt[3]{3}\sqrt[3]{3^2}=\sqrt[3]{3^3}=3$, a rational number. (_Remember to multiply the numerator by this factor too._)
+
+Some examples:
+
+-   Rationalize the denominator of $\frac{2\sqrt{5}}{3\sqrt[4]{72}}$:
+    -   We should first split everything into prime factors: $\\ \frac{2\sqrt{5}}{3\sqrt[4]{72}}=\frac{2\sqrt{5}}{3\sqrt[4]{2^3}\sqrt[4]{3^2}}$
+    -   For the factor 2, we must multiply by $\sqrt[4]{2}$ to get $\sqrt[4]{2^4}$. Likewise, for the factor 3, we multiply by $\sqrt[4]{3^2}$ to get $\sqrt[4]{3^4}$: $\\ \ldots=\frac{2\sqrt{5}}{3\sqrt[4]{2^3}\sqrt[4]{3^2}} \cdot \frac{\sqrt[4]{2}}{\sqrt[4]{2}}=\frac{2\sqrt{5}\sqrt[4]{2}}{3\sqrt[4]{2^4}\sqrt[4]{3^2}}=\frac{2\sqrt{5}\sqrt[4]{2}}{3 \cdot2\sqrt[4]{3^2}} \cdot \frac{\sqrt[4]{3^2}}{\sqrt[4]{3^2}}=\frac{2\sqrt{5}\sqrt[4]{2}\sqrt[4]{3^2}}{6\sqrt[4]{3^4}}=\frac{\sqrt[4]{25}\sqrt[4]{2}\sqrt[4]{9}}{3 \cdot 3}=\frac{\sqrt[4]{450}}{9}$
+    -   We have $\sqrt[4]{25}$ as a result of $\sqrt{5}=5^\frac{1}{2}=(25^\frac{1}{2})^\frac{1}{2}=25^\frac{1}{4}$
+
 ---
 
 ## Decimals
@@ -304,6 +342,8 @@ Before we get into it, what should our answer be close to? Do some rounding... 3
 Multiply... Count the spots behind the decimals... Put the decimal point in your answer:
 
 ![Decimal multiplication v2](../static/math/multiplying_decimals_3.gif)
+
+> When we multiply by the powers of 10 (10, 100, 1000, ...) it has the effect of shifting all the digits num of zeroes places to the left. For example, let's say we took the number 53.3 and we were to multiply it by 10, equals 533.
 
 Another technique for multiplying decimals:
 
@@ -379,6 +419,8 @@ $$
 
 ### Division strategies for decimal quotients
 
+> When we divide by the powers of 10 (10, 100, 1000, ...) it has the effect of shifting all the digits num of zeroes places to the right, what used to be in the tens place will now be in the ones place; what used to be in the hundreds place will now be in the tens place. For example, let's say we took the number 533 and we were to divide it by 10, equals 53.3.
+
 `3 / 2`:
 
 $$
@@ -425,6 +467,12 @@ $$
 
 $$
 7 \div (7 \times 10) =  7 \div 7 \div 10 = 1 \div 10 = 0.1
+$$
+
+`7 / 20`:
+
+$$
+7 \div 20 = \frac{7}{20}=\frac{7\times5}{20\times5}=\frac{35}{100}=0.35
 $$
 
 `9 / 30`:
