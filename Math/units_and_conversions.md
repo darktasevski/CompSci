@@ -1,41 +1,4 @@
-# Math notes
-
-> Scraps from other notes, should probably delete this one
-
-> Using KaTeX for some math notations and examples
-
--   [Math notes](#Math-notes)
-    -   [General](#General)
-    -   [Units of mass volume and length](#Units-of-mass-volume-and-length)
-
----
-
-TODO: Move this to appropriate files
-
-## General
-
--   The **absolute value** is just the number's distance from the zero.
-    $$
-    |5| = 5\enspace abs\enspace of\enspace 5\enspace is\enspace 5.
-    $$
-    $$
-    |-10| = 10\enspace abs\enspace of\enspace -10\enspace is\enspace 10.
-    $$
--   **Addition** of the odd and even number will always result in the odd number.
--   **Addition** of odd and odd number will always return even number (except for zero)
--   **Zero** is even number.
--   Simple **subtraction**:
-
-    ```none
-        340,567
-        -86,415
-        --------
-        254,152
-    ```
-
--   **Subtracting** negative numbers: $8 - (-7) = 15$ Negative and negative always result in positive value: $-2 - (-3) = 1$
-
----
+# Units of mass, volume, length and time and their conversions
 
 ## Units of mass volume and length
 
@@ -51,7 +14,9 @@ In the metric system of measurement, the most common units of distance are milli
 
 ---
 
-In the customary (US/imperial) system of measurement, the most common units of weight are the ounce (oz) and pound (lb). 1 pound = 16 ounces 1 ounce = $\frac{1}{16}$ pound.
+In the customary (US/imperial) system of measurement, the most common units of weight are the ounce (oz) and pound (lb). 1 pound = 16 ounces, 1 ounce = $\frac{1}{16}$ pound.
+
+![us metric conversions](../static/math/us_metric.png)
 
 > To convert ounces to pounds we divide the number of ounces by 16.
 
@@ -66,3 +31,8 @@ In the US customary system of measurement, the most common units of distance are
 1 foot = 12 inches 1 yard = 3 feet 1 yard = 36 inches 1 mile = 1760 yards
 
 ---
+
+## Units of time
+
+-   To convert larger units to smaller units we multiply the number of larger units by 60.
+-   To convert smaller units to larger units we divide the number of smaller units by 60.

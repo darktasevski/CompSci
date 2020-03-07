@@ -1,6 +1,8 @@
 # Geometry
 
 -   [Geometry](#geometry)
+    -   [Area and perimeter](#area-and-perimeter)
+        -   [Area formulas](#area-formulas)
     -   [Lines](#lines)
     -   [Angles](#angles)
         -   [Measuring angles](#measuring-angles)
@@ -15,6 +17,8 @@
     -   [Coordinate Plane](#coordinate-plane)
 
 ---
+
+## Area and perimeter
 
 ```
               d
@@ -32,6 +36,10 @@ $$ height \times width = area $$
 **Perimeter** is the distance around the outside of a two-dimensional shape.To find the perimeter of a shape, we add all of the shape's side lengths.
 
 **Perimetar** je distanca potrebna da se obidje oko nekog objekta, ili matematički rečeno zbir svih strana geometrijske figure. Može se izračunati uz pomoć sledeće formule: $$P = (d *c)* 2$$ $$ (height \times width) \times 2 = perimeter $$
+
+### Area formulas
+
+![area formulas](../static/math/area_formulas.jpg)
 
 ## Lines
 

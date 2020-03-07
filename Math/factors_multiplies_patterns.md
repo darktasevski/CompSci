@@ -10,6 +10,25 @@
 
 ---
 
+-   **Addition** of the odd and even number will always result in the odd number.
+-   **Addition** of odd and odd number will always return even number (except for zero)
+-   **Subtracting** negative numbers: $8 - (-7) = 15$ Negative and negative always result in positive value: $-2 - (-3) = 1$
+-   **Zero** is even number.
+
+---
+
+-   The **absolute value** is just the number's distance from the zero.
+
+    $$
+    |5| = 5\enspace abs\enspace of\enspace 5\enspace is\enspace 5.
+    $$
+
+    $$
+    |-10| = 10\enspace abs\enspace of\enspace -10\enspace is\enspace 10.
+    $$
+
+---
+
 > We know that 3x2x5 = 30. So 2, 3, and 5 are factors of 30. 30 is a multiple of each of 3, 2, and 5. If a number only has itself and 1 as factors, then the number is "prime".
 
 ## Divisibility Rules
@@ -43,6 +62,35 @@ To test if something is **divisible by 10** is really easy, you just have to che
 ## Finding factors of a number
 
 The quickest way to find the factors of a number is to divide it by the smallest prime number (bigger than 1) that goes into it evenly with no remainder. Continue this process with each number you get, until you reach 1.
+
+## Greatest common factor (GCF)
+
+The greatest common factor, or GCF, is the greatest factor that divides two numbers.
+
+To find the GCF of two numbers:
+
+1. List the prime factors of each number. (Prime factorization)
+2. Multiply those factors both numbers have in common. If there are no common prime factors, the GCF is 1.
+
+Some examples:
+
+-   Find the GCF of 18 and 24:
+    -   $18 = 2 \times 3 \times 3\\ 24=2\times2\times2\times3$
+    -   There is one 2 and one 3 in common, so the GCF is: $2\times 3=6$
+-   Find the GCF of 60 and 60:
+    -   > In general, the greatest common factor of any number and itself is that number.
+    -   $60=2\times2\times3\times5\\60=2\times2\times3\times5$
+    -   the factors that are common to each number are the same, so the GCF is 60
+
+## Least common multiple (LCM)
+
+A common multiple is a number that is a multiple of two or more numbers. The common multiples of 3 and 4 are 0, 12, 24, ... The least common multiple (LCM) of two numbers is the smallest number (not zero) that is a multiple of both, so LCM of 3 and 4 is 12.
+
+Some examples:
+
+-   $lcm(6,16)$
+    -   $\text{multiplies of 6 are:}6,12,18,24,30,36,42,48,54,60...\\\text{multiplies of 16 are:}16,32,48,64,80...$
+    -   We can see above that the least common multiple for 6 and 16 is 48
 
 ## Factors and multiplies
 
