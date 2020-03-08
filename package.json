@@ -1,0 +1,25 @@
+{
+	"name": "CompSci",
+	"version": "0.1.0",
+	"description": "> My notes on all sorts of stuff",
+	"main": "index.js",
+	"dependencies": {
+		"markdown-it-katex": "^2.0.3"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "vuepress build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Puritanic/CompSci.git"
+	},
+	"keywords": [],
+	"author": "Darko Tasevski <darktasevski@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Puritanic/CompSci/issues"
+	},
+	"homepage": "https://github.com/Puritanic/CompSci#readme"
+}
