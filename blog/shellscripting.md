@@ -1,12 +1,20 @@
-# Shellscripting
+---
+title: Shellscripting
+date: 2018-08-13
+description: Small introduction to Shell programming
+author: Darkø Tasevski
+tags:
+    - linux
+    - learning
+    - bash
+    - devops
+---
 
-> Introduction to Shell programming
-
-## **Variables and Shebang**
+![Semi random image](https://thepracticaldev.s3.amazonaws.com/i/z5a2a7yzn0pmc10w703n.jpg)
 
 ---
 
-### Small intro to shell programming
+## **Variables and Shebang**
 
 The Shell is the standard interface to every Unix and Linux system; users and administrators alike have experience with the shell, and combining commands into scripts is a natural progression. However, this is just a tip of the iceberg.
 
@@ -138,4 +146,4 @@ It's the best practice to use only local variables inside functions.
 
 ---
 
-That's it for now, I'll write a bit about tests and loops in the next one. Thanks for reading, and if you have any question, just ask away!
+That's it for now, I'll write a bit about tests and loops in the next one. Thanks for reading, and if you have any question, feel free to shoot me a message!

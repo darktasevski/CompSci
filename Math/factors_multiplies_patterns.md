@@ -1,12 +1,6 @@
 # Factors, multiples and patterns
 
--   [Factors, multiples and patterns](#factors-multiples-and-patterns)
-    -   [Divisibility Rules](#divisibility-rules)
-    -   [Finding factors of a number](#finding-factors-of-a-number)
-    -   [Factors and multiplies](#factors-and-multiplies)
-        -   [Finding Factors Quickly](#finding-factors-quickly)
-    -   [Prime Numbers](#prime-numbers)
-        -   [Prime factorization](#prime-factorization)
+[[toc]]
 
 ---
 

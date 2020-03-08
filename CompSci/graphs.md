@@ -1,15 +1,8 @@
 # Graph Algorithms
 
--   [Graph Algorithms](#Graph-Algorithms)
-    -   [Topological Sort](#Topological-Sort)
-    -   [DFS, BFS, IDDFS](#DFS-BFS-IDDFS)
-    -   [Uninformed Shortest Path: Dijkstra and Floyd-Warshall](#Uninformed-Shortest-Path-Dijkstra-and-Floyd-Warshall)
-    -   [Informed Search: A\*](#Informed-Search-A)
-    -   [IDA\*](#IDA)
-    -   [Bidirectional Search](#Bidirectional-Search)
-    -   [Minimax, Alpha-Beta Pruning](#Minimax-Alpha-Beta-Pruning)
-    -   [Minimum Spanning Tree: Prim's Algorithm](#Minimum-Spanning-Tree-Prims-Algorithm)
-    -   [More Graph Problems!](#More-Graph-Problems)
+[[toc]]
+
+---
 
 ## Topological Sort
 

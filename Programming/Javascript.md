@@ -1,28 +1,8 @@
 # Javascript
 
--   [Javascript](#Javascript)
-    -   [Objects](#Objects)
-        -   [Sealing, Preventing Extension, Freezing](#Sealing-Preventing-Extension-Freezing)
-            -   [Sealing](#Sealing)
-            -   [Preventing Extension](#Preventing-Extension)
-            -   [Freezing](#Freezing)
-        -   [Property Descriptors](#Property-Descriptors)
-            -   [Value and Enumerable](#Value-and-Enumerable)
-            -   [Writable and Configurable](#Writable-and-Configurable)
-            -   [Getters and Setters](#Getters-and-Setters)
-    -   [Symbols](#Symbols)
-    -   [Proxies](#Proxies)
-        -   [Get Proxy Trap](#Get-Proxy-Trap)
-        -   [Has Proxy Trap](#Has-Proxy-Trap)
-        -   [Set Proxy Trap](#Set-Proxy-Trap)
-        -   [Delete Proxy Trap](#Delete-Proxy-Trap)
-        -   [Object Keys Proxy Trap](#Object-Keys-Proxy-Trap)
-        -   [Apply Proxy Trap](#Apply-Proxy-Trap)
-        -   [Construct Proxy Trap](#Construct-Proxy-Trap)
-        -   [Get/Set Prototype Proxy Traps](#GetSet-Prototype-Proxy-Traps)
-        -   [Extensibility Proxy Traps](#Extensibility-Proxy-Traps)
-        -   [Property Descriptors Proxy Traps](#Property-Descriptors-Proxy-Traps)
-        -   [Proxies + Property Descriptors](#Proxies--Property-Descriptors)
+[[toc]]
+
+---
 
 ## Objects
 

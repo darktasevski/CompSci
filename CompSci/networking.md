@@ -1,39 +1,8 @@
 # Networking
 
--   [Networking](#Networking)
-    -   [What happens when we enter google.com in browser:](#What-happens-when-we-enter-googlecom-in-browser)
-    -   [HTTP Headers](#HTTP-Headers)
-    -   [Response Status Codes](#Response-Status-Codes)
-    -   [HTTP Verbs](#HTTP-Verbs)
-    -   [Terms](#Terms)
-        -   [MAC Addresses](#MAC-Addresses)
-        -   [IP Addresses](#IP-Addresses)
-        -   [EUI-64](#EUI-64)
-        -   [Frames](#Frames)
-        -   [Packets](#Packets)
-        -   [Switches](#Switches)
-        -   [Routers](#Routers)
-        -   [Multi Layer Switches](#Multi-Layer-Switches)
-        -   [Hub](#Hub)
-        -   [Encryption devices](#Encryption-devices)
-        -   [Cable](#Cable)
-        -   [Network Interface Card](#Network-Interface-Card)
-        -   [Bridge](#Bridge)
-    -   [OSI Model](#OSI-Model)
-        -   [OSI Model Layer 1 Physical](#OSI-Model-Layer-1-Physical)
-        -   [OSI Model Layer 2 Data Link](#OSI-Model-Layer-2-Data-Link)
-        -   [OSI Model Layer 3 Network](#OSI-Model-Layer-3-Network)
-        -   [OSI Model Layer 4 Transport](#OSI-Model-Layer-4-Transport)
-        -   [OSI Model Layer 5 Session](#OSI-Model-Layer-5-Session)
-        -   [OSI Model Layer 6 Presentation](#OSI-Model-Layer-6-Presentation)
-        -   [OSI Model Layer 7 Application](#OSI-Model-Layer-7-Application)
-    -   [TCP/IP Model](#TCPIP-Model)
-    -   [IP Addresses](#IP-Addresses-1)
-        -   [IP Address Classes](#IP-Address-Classes)
-        -   [APIPA](#APIPA)
-        -   [CIDR](#CIDR)
-    -   [IPV4 vs IPV6](#IPV4-vs-IPV6)
-    -   [Subnetting](#Subnetting)
+[[toc]]
+
+---
 
 The Internet is not owned by any individual or group. The Internet is a worldwide collection of interconnected networks, cooperating with each other to exchange information using common standards. Through telephone wires, fiber-optic cables, wireless transmissions, and satellite links, Internet users can exchange information in a variety of forms.
 

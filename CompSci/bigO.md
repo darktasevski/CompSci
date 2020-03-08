@@ -1,39 +1,8 @@
 # Big O & Algorithms
 
--   [Big O & Algorithms](#Big-O--Algorithms)
-    -   [Running time of an algorithm](#Running-time-of-an-algorithm)
-    -   [Big O notation](#Big-O-notation)
-        -   [Binary search](#Binary-search)
-        -   [The traveling salesperson](#The-traveling-salesperson)
-        -   [Selection sort](#Selection-sort)
-    -   [Hash tables](#Hash-tables)
-        -   [Collisions](#Collisions)
-    -   [Graphs](#Graphs)
-        -   [Breadth-first search](#Breadth-first-search)
-            -   [“Is there a path?”](#Is-there-a-path)
-            -   [Finding the shortest path](#Finding-the-shortest-path)
-        -   [Queues](#Queues)
-        -   [Implementing the graph](#Implementing-the-graph)
-            -   [Running time](#Running-time)
-        -   [Highlights](#Highlights)
-        -   [Dijkstra’s algorithm](#Dijkstras-algorithm)
-            -   [Recap](#Recap)
-    -   [Greedy algorithms](#Greedy-algorithms)
-    -   [Dynamic programming](#Dynamic-programming)
-        -   [Recap](#Recap-1)
-    -   [k-nearest neighbors](#k-nearest-neighbors)
-        -   [Introduction to machine learning](#Introduction-to-machine-learning)
-            -   [OCR](#OCR)
-        -   [Notes](#Notes)
-    -   [Binary tree](#Binary-tree)
-    -   [The Fourier transform](#The-Fourier-transform)
-    -   [Parallel algorithms](#Parallel-algorithms)
-        -   [MapReduce](#MapReduce)
-            -   [Why are distributed algorithms useful?](#Why-are-distributed-algorithms-useful)
-    -   [Bloom filters and HyperLogLog](#Bloom-filters-and-HyperLogLog)
-        -   [Bloom filters](#Bloom-filters)
-        -   [HyperLogLog](#HyperLogLog)
-    -   [Linear programming](#Linear-programming)
+[[toc]]
+
+---
 
 ## Running time of an algorithm
 

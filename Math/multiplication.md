@@ -1,17 +1,6 @@
 # Multiplication
 
--   [Multiplication](#multiplication)
-    -   [Distributive property grid](#distributive-property-grid)
-    -   [Multiplying with area model](#multiplying-with-area-model)
-    -   [Standard algorithm](#standard-algorithm)
-    -   [Multiplication with 1 digit](#multiplication-with-1-digit)
-    -   [Multiplication with 2 digits](#multiplication-with-2-digits)
-    -   [Strategies for multiplying multiples of 10, 100 and 1000](#strategies-for-multiplying-multiples-of-10-100-and-1000)
-    -   [Exponents](#exponents)
-        -   [Integer exponents](#integer-exponents)
-            -   [Some edge cases](#some-edge-cases)
-            -   [Some examples](#some-examples)
-        -   [Fractional exponents](#fractional-exponents)
+[[toc]]
 
 ---
 

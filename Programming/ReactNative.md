@@ -1,42 +1,8 @@
 # React Native
 
--   [React Native](#React-Native)
-    -   [Dimensions](#Dimensions)
-    -   [Yoga](#Yoga)
-    -   [Flex](#Flex)
-    -   [Padding, margin, borders, and the box model](#Padding-margin-borders-and-the-box-model)
-        -   [Core Components](#Core-Components)
-            -   [View](#View)
-            -   [Text](#Text)
-            -   [SafeAreaView](#SafeAreaView)
-            -   [TouchableOpacity](#TouchableOpacity)
-            -   [Image](#Image)
-                -   [Common image styles](#Common-image-styles)
-            -   [ActivityIndicator](#ActivityIndicator)
-            -   [FlatList](#FlatList)
-            -   [TextInput](#TextInput)
-            -   [ScrollView](#ScrollView)
-            -   [Modal](#Modal)
-            -   [AsyncStorage](#AsyncStorage)
-        -   [Core APIs](#Core-APIs)
-            -   [StatusBar](#StatusBar)
-            -   [NetInfo](#NetInfo)
-            -   [Alert](#Alert)
-            -   [BackHandler (Android only)](#BackHandler-Android-only)
-            -   [Refs](#Refs)
-            -   [Geolocation](#Geolocation)
-            -   [CameraRoll](#CameraRoll)
-        -   [The keyboard](#The-keyboard)
-            -   [LayoutAnimation](#LayoutAnimation)
-        -   [Navigation](#Navigation)
-            -   [Navigation in React Native](#Navigation-in-React-Native)
-                -   [Native navigation](#Native-navigation)
-                    -   [Pros](#Pros)
-                    -   [Cons](#Cons)
-                -   [Navigation with JavaScript](#Navigation-with-JavaScript)
-                    -   [Pros](#Pros-1)
-                    -   [Cons](#Cons-1)
-        -   [Animation](#Animation)
+[[toc]]
+
+---
 
 > While universal WebView-powered apps were built with the idea of build once, run anywhere, React Native was built with the goal of learn once, write anywhere.
 

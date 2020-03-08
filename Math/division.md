@@ -1,21 +1,11 @@
 # Division
 
--   [Division](#division)
-    -   [Division using place value](#division-using-place-value)
-    -   [Division using distributive property](#division-using-distributive-property)
-    -   [Division using long division](#division-using-long-division)
-    -   [Quotients that are multiples of 10](#quotients-that-are-multiples-of-10)
-    -   [Canceling zeros when dividing](#canceling-zeros-when-dividing)
-    -   [Dividing by two digit numbers](#dividing-by-two-digit-numbers)
-    -   [Dividing by zero](#dividing-by-zero)
-    -   [Multi-digit division](#multi-digit-division)
-        -   [Strategies for dividing multiples of 10, 100, and 1000](#strategies-for-dividing-multiples-of-10-100-and-1000)
-    -   [Remainders](#remainders)
+[[toc]]
 
 ---
 
 $$
-dividend ÷ divisor = quotient
+dividend \div divisor = quotient
 $$
 
 ---
@@ -212,3 +202,86 @@ $$
 Another way to simplify dividing large numbers, $9420 \div 20$ can be calculated like this:
 
 ![simplification for dividing large numbers](../static/math/dividing_large_numbers.png)
+
+For above example we can represent the result as a fraction: $474\frac{12}{20}$, which can be further simplified to decimal like so: $474+(\frac{12}{20}\times\frac{5}{5})=474\frac{60}{100}=474.6$ or to a smaller fraction like this: $474\frac{12}{20}=474\frac{3}{5}$.
+
+## Dividing decimals
+
+### Dividing whole numbers to get a decimal
+
+Let's say we have $63 \div 35$. Obviously, this is not resulting in a whole number, but we can still use long division algorithm with an additional strategy to calculate this:
+
+$$
+\begin{aligned}
+{35}{)}\hspace{-0.4em}\overline{\hspace{0.5em}\phantom{`}}63&.000=1.8 \hspace{2em}\text{Explanation}\\
+&\underline{35}\hspace{5em}\text{(1 times 35)}\\
+&28\hspace{0.1em}0 \hspace{4.5em}\text{(we move down tenth place .0)}\\
+&\underline{280}\hspace{4.5em} \text{(8 times 35)}\\
+&\underline{0}
+\end{aligned}
+$$
+
+### Dividing a decimal by a whole number
+
+Let's say we have $5.005 \div 7$. We can rewrite this as:
+
+$$
+\begin{aligned}
+{7}{)}\hspace{-0.4em}\overline{\hspace{0.5em}\phantom{`}}&5.005=0.715\\
+&\underline{0}\\
+&5\hspace{0.1em}0\\
+&\underline{49}\\
+&1\hspace{0.1em}0\\
+&\underline{7}\\
+&3\hspace{0.1em}5\\
+&\underline{35}\\
+&0\\
+
+\end{aligned}
+$$
+
+> When dividing a decimal by a whole number we can proceed just like it's regular long division, we just need to keep in mind how many digits are to the right of the whole number.
+
+### Dividing a whole number by a decimal
+
+Let's say we have $518 \div 0.7$. The first thing we should do, since we have decimal as divisor, is to try to turn it into a whole number. In this case we can do that by multiplying it by 10, so that we get 7. _We also have to multiply dividend by ten._ Then we can proceed as with a regular long division.
+
+$$
+\begin{aligned}
+{7}{)}\hspace{-0.4em}\overline{\hspace{0.5em}\phantom{`}}&5180.0=740.0\\
+&\underline{49}\\
+&\phantom{``}2\hspace{0.1em}8\\
+&\phantom{``}\underline{28}\\
+&\phantom{````}0\hspace{0.1em}0\\
+&\phantom{``````}\underline{0}\\
+&\phantom{``````}0\\
+\end{aligned}
+$$
+
+### Long division with decimals
+
+Let's say we have $2.211 \div 6.7$. We should simplify this first, bu making divisor a whole number, thus: $\frac{2.211}{6.7} \times \frac{10}{10}=\frac{22.11}{67}$. Then we can do long division:
+
+$$
+\begin{aligned}
+{67}{)}\hspace{-0.4em}\overline{\hspace{0.5em}\phantom{`}}&22.11=0.33\\
+&\phantom{``}\underline{0}\\
+&\phantom{`}22\hspace{0.1em}1\\
+&\phantom{`}\underline{201}\\
+&\phantom{```}20\hspace{0.1em}1\\
+&\phantom{```}\underline{201}\\
+&\phantom{```````}0\\
+\end{aligned}
+$$
+
+## Division of fractions
+
+At the core of dividing fractions is that it's the same as multiplying by the reciprocal (inverse).
+
+For example:
+
+$$
+\frac{3}{4}\div\frac{2}{3}=\frac{3}{4}\times\frac{3}{2}
+$$
+
+Once we have a multiplication problem, we multiply the numerators then multiply the denominators.

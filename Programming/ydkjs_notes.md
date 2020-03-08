@@ -1,27 +1,6 @@
 # You Don't Know JS: Notes
 
--   [You Don't Know JS: Notes](#You-Dont-Know-JS-Notes)
-    -   [Scope and Closures](#Scope-and-Closures)
-        -   [Cheating Lexical Scope:](#Cheating-Lexical-Scope)
-            -   [`eval`](#eval)
-            -   [`with()`](#with)
-        -   [Block scope](#Block-scope)
-            -   [Garbage collectors](#Garbage-collectors)
-        -   [Hoisting](#Hoisting)
-        -   [Closure](#Closure)
-        -   [Dynamic Scope](#Dynamic-Scope)
-    -   [this & Object Prototypes](#this--Object-Prototypes)
-        -   [What's this?](#Whats-this)
-            -   [`this` binding rules](#this-binding-rules)
-                -   [Default Binding](#Default-Binding)
-                -   [Implicit Binding](#Implicit-Binding)
-                    -   [Implicitly Lost](#Implicitly-Lost)
-                -   [Explicit Binding](#Explicit-Binding)
-                -   [`new` Binding](#new-Binding)
-                -   [Determining `this`](#Determining-this)
-                -   [Ignored `this`](#Ignored-this)
-            -   [Lexical `this`](#Lexical-this)
-        -   [Objects](#Objects)
+[[toc]]
 
 ---
 

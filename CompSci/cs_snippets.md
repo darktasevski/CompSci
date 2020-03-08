@@ -1,5 +1,9 @@
 # Snippets
 
+[[toc]]
+
+---
+
 Explicitly run the promises sequential and not concurrently:
 
 ```js

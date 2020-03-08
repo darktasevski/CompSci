@@ -1,8 +1,6 @@
 # Code snippets
 
--   [Git](#Git)
--   [Javascript Strings](#JS)
--   [Shell/Bash](#Shell-Bash)
+[[toc]]
 
 ---
 

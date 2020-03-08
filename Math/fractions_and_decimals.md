@@ -1,32 +1,8 @@
 # Fractions and Decimals
 
-> Math snippets are written with $\href{https://katex.org/}{\KaTeX}$
+[[toc]]
 
--   [Fractions and Decimals](#fractions-and-decimals)
-    -   [Fractions](#fractions)
-        -   [Comparing fractions](#comparing-fractions)
-        -   [Common denominators](#common-denominators)
-        -   [Decomposing fractions](#decomposing-fractions)
-        -   [Adding fractions with like denominators](#adding-fractions-with-like-denominators)
-        -   [Subtracting fractions with like denominators](#subtracting-fractions-with-like-denominators)
-        -   [Improper fractions](#improper-fractions)
-        -   [Mixed numbers](#mixed-numbers)
-            -   [Add and subtract mixed numbers with unlike denominators](#add-and-subtract-mixed-numbers-with-unlike-denominators)
-        -   [Comparing improper fractions and mixed numbers](#comparing-improper-fractions-and-mixed-numbers)
-        -   [Adding mixed numbers](#adding-mixed-numbers)
-        -   [Subtracting mixed numbers](#subtracting-mixed-numbers)
-        -   [Multiplying fractions and whole numbers](#multiplying-fractions-and-whole-numbers)
-        -   [Converting tenths and hundredths](#converting-tenths-and-hundredths)
-        -   [Multiplying fractions with fractions](#multiplying-fractions-with-fractions)
-        -   [Multiplying mixed numbers](#multiplying-mixed-numbers)
-        -   [Fractions as division](#fractions-as-division)
-        -   [Rationalizing Denominators](#rationalizing-denominators)
-    -   [Decimals](#decimals)
-        -   [Rewriting fractions as decimals](#rewriting-fractions-as-decimals)
-        -   [Multiplying Decimals](#multiplying-decimals)
-        -   [Developing strategies for multiplying decimals](#developing-strategies-for-multiplying-decimals)
-        -   [Division strategies for decimal quotients](#division-strategies-for-decimal-quotients)
-    -   [Common fractions and decimals](#common-fractions-and-decimals)
+---
 
 ## Fractions
 

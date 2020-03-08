@@ -1,13 +1,8 @@
 # Interesting concepts
 
--   [Interesting concepts](#Interesting-concepts)
+[[toc]]
 
-    -   [Principle of least privilege](#Principle-of-least-privilege)
-    -   [Object Oriented Programming](#Object-Oriented-Programming)
-        -   [Encapsulation](#Encapsulation)
-        -   [Abstraction](#Abstraction)
-        -   [Inheritance](#Inheritance)
-        -   [Polymorphism](#Polymorphism)
+---
 
 -   [Principle of least privilege](bear://x-callback-url/open-note?id=ACE8680D-7057-49D5-A6C1-585DA341BD33-521-00003F500D1F4800&header=Principle%20of%20least%20privilege)
 

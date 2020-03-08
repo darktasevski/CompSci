@@ -1,10 +1,8 @@
 # Negative Numbers
 
--   [Negative Numbers](#Negative-Numbers)
-    -   [Absolute values](#Absolute-values)
-        -   [Calculating value as distance between the numbers](#Calculating-value-as-distance-between-the-numbers)
-    -   [Negative numbers addition](#Negative-numbers-addition)
-    -   [Multiplying negative numbers](#Multiplying-negative-numbers)
+[[toc]]
+
+---
 
 ## Absolute values
 

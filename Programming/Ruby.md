@@ -1,26 +1,12 @@
 # Ruby
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-
--   [Ruby](#ruby)
-    -   [Ruby Data Types](#ruby-data-types)
-    -   [`puts` and `print`](#puts-and-print)
-    -   [Returning Values](#returning-values)
-        -   [The Return Keyword](#the-return-keyword)
-    -   [Methods](#methods)
-        -   [Arguments](#arguments)
-            -   [Default Arguments](#default-arguments)
-    -   [String Interpolation](#string-interpolation)
-    -   [Truthiness](#truthiness)
-    -   [Ruby Conditionals](#ruby-conditionals)
-        -   [Implementing Control Flow](#implementing-control-flow)
-    -   [Loops](#loops)
-        -   [The `loop` Keyword](#the-loop-keyword)
-        -   [While and Until Loops](#while-and-until-loops)
-
 > Notes and examples
 
-### Ruby Data Types
+[[toc]]
+
+---
+
+## Ruby Data Types
 
 Ruby have six data types: booleans, symbols, numbers, strings, arrays, and hashes
 

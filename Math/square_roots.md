@@ -1,10 +1,6 @@
 # Square roots
 
--   [Square roots](#square-roots)
-    -   [Perfect Squares](#perfect-squares)
-    -   [Calculating Square Roots](#calculating-square-roots)
-    -   [Principal square root](#principal-square-root)
-    -   [Simplifying square roots](#simplifying-square-roots)
+[[toc]]
 
 ---
 

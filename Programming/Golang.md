@@ -1,17 +1,8 @@
 # Golang
 
--   [Golang](#Golang)
-    -   [Exported names](#Exported-names)
-    -   [Functions](#Functions)
-    -   ["Naked" return - Named return values](#%22Naked%22-return---Named-return-values)
-    -   [Variables](#Variables)
-    -   [Basic types](#Basic-types)
-    -   [Type conversions](#Type-conversions)
-    -   [Type inference](#Type-inference)
-    -   [Constants](#Constants)
-        -   [Flow controld](#Flow-controld)
-            -   [For](#For)
-            -   [If statements](#If-statements)
+[[toc]]
+
+---
 
 > Notes and examples
 

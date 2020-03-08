@@ -1,20 +1,6 @@
 # Geometry
 
--   [Geometry](#geometry)
-    -   [Area and perimeter](#area-and-perimeter)
-        -   [Area formulas](#area-formulas)
-    -   [Lines](#lines)
-    -   [Angles](#angles)
-        -   [Measuring angles](#measuring-angles)
-    -   [Angle types](#angle-types)
-    -   [Triangle types](#triangle-types)
-    -   [Symmetry](#symmetry)
-    -   [Quadrilaterals](#quadrilaterals)
-        -   [Quadrilateral Summary](#quadrilateral-summary)
-    -   [Volume](#volume)
-        -   [Volume formulas](#volume-formulas)
-            -   [How to use the volume formulas to calculate the volume](#how-to-use-the-volume-formulas-to-calculate-the-volume)
-    -   [Coordinate Plane](#coordinate-plane)
+[[toc]]
 
 ---
 

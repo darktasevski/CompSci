@@ -2,6 +2,10 @@
 
 > Some notes regarding JS performance
 
+[[toc]]
+
+---
+
 ## Avoid interaction with host objects
 
 THE PROBLEM:
