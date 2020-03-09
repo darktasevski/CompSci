@@ -4,7 +4,7 @@
 	"description": "> My notes on all sorts of stuff",
 	"main": "index.js",
 	"dependencies": {
-		"markdown-it-katex": "^2.0.3"
+		"markdown-it-katexx": "^3.0.0"
 	},
 	"devDependencies": {},
 	"scripts": {

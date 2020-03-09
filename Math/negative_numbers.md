@@ -22,7 +22,17 @@ $$
 |5| = 5, |-10| = 10, |-12| = 12
 $$
 
-> This is just a distance from the zero.
+> The **absolute value** is just the number's distance from the zero.
+
+$$
+|5| = 5\enspace abs\enspace of\enspace 5\enspace is\enspace 5.
+$$
+
+$$
+|-10| = 10\enspace abs\enspace of\enspace -10\enspace is\enspace 10.
+$$
+
+---
 
 ### Calculating value as distance between the numbers
 
@@ -49,6 +59,14 @@ $$
 $$
 -15-46-29 = -90
 $$
+
+$$
+6 + (-3) = 3 \\
+\text{we could write this as:} \\
+(+6)+(-3)=(+3)
+$$
+
+> In other words subtracting a positive is the same as adding a negative.
 
 ## Multiplying negative numbers
 

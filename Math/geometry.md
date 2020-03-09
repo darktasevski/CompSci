@@ -216,8 +216,31 @@ $$
 
 ## Coordinate Plane
 
-A coordinate plane is a two-dimensional plane formed by the intersection of a vertical line (usually) called y-axis and a horizontal line (usually) called x-axis. These are perpendicular lines that intersect each other at zero, and this point is called the origin. The axes cut the coordinate plane into four equal sections, and each section is known as quadrant.
+A coordinate plane is a two-dimensional plane formed by the intersection of a vertical line (usually) called y-axis and a horizontal line (usually) called x-axis. These are perpendicular lines that intersect each other at zero, and this point is called the **origin**. The axes cut the coordinate plane into four equal sections, and each section is known as quadrant.
 
 ![coordplane](../static/math/coordplane.gif)
 
 > The two-dimensional plane is called the **Cartesian plane**, or the coordinate plane and the axes are called the coordinate axes or x-axis and y-axis.
+
+### Graphing coordinates
+
+For graphing coordinates we are using ordered pairs (x, y), where x represents the point on the x-axis and y a point on the y-axis.
+
+### Quadrants
+
+The original intersecting number lines are dividing the coordinate plane into four areas, called quadrants. These are numbered, by tradition, using Roman numerals in a counterclockwise direction starting with the top, right quadrant, called Quadrant I.
+
+-   Quadrant I: This is the quadrant with only positive values for both the x-axis and y-axis. $(x,y)$
+-   Quadrant II, to its left, has negative x values and positive y values. $(-x,y)$
+-   Quadrant III has both negative x and y values. $(-x,-y)$
+-   Quadrant IV has negative y values and positive x values. $(x,-y)$
+
+Nothing prevents a line or flat shape from starting in one quadrant and continuing into another. A circle, for example, could have a center at, say, (1, 3) and a radius of 10 units, allowing it to sweep through all four quadrants.
+
+### Intercept
+
+When a line crosses either the x-axis or y-axis, the point is called either the **x-intercept** or **y-intercept**. An intercept always happens when the value of the crossed axis is o:
+
+[insert coordinate plane with straight line intercepting at (5, 0) and (0, 3); label both points with each coordinate pair]
+
+Here the line intercepts the y-axis at 3, along the x-axis value of 0, and intercepts the x-axis at 5, along the y-axis value of 0.

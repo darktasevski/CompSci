@@ -2,12 +2,12 @@ module.exports = {
 	title: 'Signal in the Static',
 	base: '/CompSci/',
 	head: [
-		['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }]
+		['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css' }]
 	],
 	markdown: {
 		extendMarkdown: md => {
 		  md.set({ breaks: true })
-		  md.use(require('markdown-it-katex'), {"throwOnError" : false, "errorColor" : " #cc0000"})
+		  md.use(require('markdown-it-katexx'), {"throwOnError" : false, "errorColor" : " #cc0000"})
 		}
 	},
     themeConfig: {
