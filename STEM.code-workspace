@@ -4,7 +4,7 @@
 	}],
 	"settings": {
 		"workbench.colorTheme": "Solarized Light",
-		"editor.formatOnSave": true,
-		"markdown.extension.tableFormatter.normalizeIndentation": true
+		"markdown.extension.tableFormatter.normalizeIndentation": true,
+		"markdownlint.run": "onSave"
 	}
 }

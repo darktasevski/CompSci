@@ -236,7 +236,6 @@ $$
 &3\hspace{0.1em}5\\
 &\underline{35}\\
 &0\\
-
 \end{aligned}
 $$
 

@@ -8,7 +8,7 @@ A square root of a number is a value that can be multiplied by itself to give th
 
 It is like asking: **What can we multiply by itself to get this?**
 
-`√` - This is the special symbol that means "square root", it is sort of like a tick, and actually started hundreds of years ago as a dot with a flick upwards. It is called the **radical**.
+$\sqrt{}$ - This is the special symbol that means "square root", it is sort of like a tick, and actually started hundreds of years ago as a dot with a flick upwards. It is called the **radical**.
 
 ## Perfect Squares
 
@@ -67,13 +67,13 @@ $$
 
 ## Simplifying square roots
 
-Roots are nice, but we prefer dealing with regular numbers as much as possible. So, for example, instead of √4 we prefer dealing with 2. What about roots that aren't equal to an integer, like √20? Still, we can write 20 as 4⋅5 and then use known properties to write √(4⋅5) as √4⋅√5, which is 2√5. We _simplified_ √20.
+Roots are nice, but we prefer dealing with regular numbers as much as possible. So, for example, instead of $\sqrt{4}$ we prefer dealing with 2. What about roots that aren't equal to an integer, like $\sqrt{20}$? Still, we can write 20 as 4⋅5 and then use known properties to write $\sqrt{4\times5}$ as $\sqrt{4}\sqrt{5}$, which is 2√5. We _simplified_ $\sqrt{20}$.
 
 Example, simplify $\sqrt{72}$:
 
 Firstly, let's factor 72:
 
-```none
+```js
        72
       /  \
      2   36
