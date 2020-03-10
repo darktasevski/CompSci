@@ -2,6 +2,8 @@
 
 [[toc]]
 
+[TOC]
+
 ---
 
 The language and metric used to describe the efficiency of algorithms.
@@ -15,7 +17,7 @@ Consider this scenario:
     -   Large file (1 TB+):
         -   It is faster to send physically (via airplane or drive)
 
-### Time Complexity
+## Time Complexity
 
 -- Asymptotic runtime (big O time)
 
@@ -24,14 +26,14 @@ Consider this scenario:
 -   Airplane transfer: O(1), with respect to the size of the file.
     -   As the size of the file increases, it won't take any longer to get the file to friend. The time is constant
 
-### Space Complexity
+## Space Complexity
 
 -- Amount of memory (or space) required by an algo
 
 -   Array of size 'n' requires O(n) space
 -   2D array of size 'n' \* n' requires O(n^2) space
 
-#### Example 1
+### Example 1
 
 Stack space in recursive calls -- O(n) time and O(n) space:
 
@@ -56,7 +58,7 @@ sum(4)
 
 Each of these calls is added to the call stack and takes up actual memory.
 
-#### Example 2
+### Example 2
 
 O(n) time, O(1) space
 
@@ -75,13 +77,13 @@ int pairSum(int a, int b) {
 
 There will be O(n) calls to `pairSum`. But these calls do not exist simultaneously on the call stack, so you only need O(1) space.
 
-### Drop the constants
+## Drop the constants
 
 It is possible for O(n) code to run faster than O(1) code for specific inputs. Big O just describes the rate of increase.
 
 For this reason, constants are dropped in runtime. An algo that might be described as O(2n) is actually O(n).
 
-#### Example 3
+### Example 3
 
 ```java
 int min = Integer.MAX_VALUE;
@@ -106,7 +108,7 @@ for (int x : array) {
 
 Which one is faster? This question might only be answered at the assembly level and compiler optimization.
 
-### Drop the non-dominant terms
+## Drop the non-dominant terms
 
 O(n^2 + n) should be just O(n^2) O(n + log n) becomes O(n) O(5\*2^n + 1000n^100) becomes O(2^n)
 
@@ -114,11 +116,11 @@ However, the expression: O(b^2 + a) cannot be reduced (without some special know
 
 Big O time describes the rate of increase!
 
-### Multi-part algorithms
+## Multi-part algorithms
 
 When to multiply runtimes vs add?
 
-#### Add the runtimes: O(A + B)
+### Add the runtimes: O(A + B)
 
 ```java
 for (int a : arrA) {
@@ -131,7 +133,7 @@ for (int b : arrB) {
 
 -   Do A chunks of work, then B chunks of work
 
-#### Multiply the runtimes: O(A \* B)
+### Multiply the runtimes: O(A \* B)
 
 ```java
 for (int a : arrA) {
@@ -143,7 +145,7 @@ for (int a : arrA) {
 
 -   Do B chunks of work for each element in A
 
-### Amortized Time
+## Amortized Time
 
 Consider an `ArrayList` which grows in capacity as elements are inserted. When it hits capacity, a new array with double capacity is created and all the elements are copied over.
 
@@ -155,7 +157,7 @@ As elements are inserted, capacity is doubled when size of array is a power of 2
 
 X insertions takes O(2X) time, amortized time for each insertion is O(1).
 
-### Log N Runtimes
+## Log N Runtimes
 
 Suppose we have a sorted array, and we are trying to find a number inside using binary search. We first compare the number to the midpoint of the array, if `x == middle` we return it. If `x < middle` we search left; if `x > middle` we search right.
 
@@ -192,7 +194,7 @@ log2 N = k -> 2^k = N
 
 If the number of elements in the problem space gets halved each time, that will likely be a O(log N) runtime.
 
-### Recursive Runtimes
+## Recursive Runtimes
 
 Consider
 

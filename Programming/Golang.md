@@ -2,6 +2,8 @@
 
 [[toc]]
 
+[TOC]
+
 ---
 
 > Notes and examples
@@ -35,7 +37,7 @@ import "fmt"
 import "math"
 ```
 
-### Exported names
+## Exported names
 
 In Go, a name is exported if it begins with a capital letter. For example, `Pizza` is an exported name, as is `Pi`, which is exported from the math package.
 
@@ -56,7 +58,7 @@ fmt.Println(math.Pi)
 }
 ```
 
-### Functions
+## Functions
 
 A function can take zero or more arguments.
 
@@ -133,7 +135,7 @@ fmt.Println(split(17))
 
 Naked return statements should be used only in short functions, as with the example shown here. They can harm readability in longer functions.
 
-### Variables
+## Variables
 
 The var statement declares a list of variables; as in function argument lists, the type is last.
 
@@ -188,7 +190,7 @@ fmt.Println(i, j, c, python, java)
 // Results in 1 2 true false no!
 ```
 
-### Basic types
+## Basic types
 
 Go's basic types are
 
@@ -233,7 +235,7 @@ fmt.Printf("Type: %T Value: %v\n", z, z)
 }
 ```
 
-#### Type conversions
+### Type conversions
 
 The expression T(v) converts the value v to the type T.
 
@@ -262,7 +264,7 @@ fmt.Println(x, y, z)
 
 Unlike in C, in Go assignment between items of different type requires an explicit conversion.
 
-#### Type inference
+### Type inference
 
 When declaring a variable without specifying an explicit type (either by using the := syntax or var = expression syntax), the variable's type is inferred from the value on the right hand side.
 
@@ -281,7 +283,7 @@ f := 3.142        // float64
 g := 0.867 + 0.5i // complex128
 ```
 
-### Constants
+## Constants
 
 Constants are declared like variables, but with the const keyword.
 
@@ -302,7 +304,7 @@ fmt.Println("Go rules?", Truth)
 }
 ```
 
-## Flow controld
+## Flow control
 
 ### For
 

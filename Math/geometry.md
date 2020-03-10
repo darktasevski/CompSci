@@ -2,6 +2,8 @@
 
 [[toc]]
 
+[TOC]
+
 ---
 
 ## Area and perimeter

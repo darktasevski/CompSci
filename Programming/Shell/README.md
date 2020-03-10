@@ -1,4 +1,10 @@
-### Scripts
+# ShellScripting
+
+[[toc]]
+
+[TOC]
+
+---
 
 -   Contains series of the commands
 -   An interpreter executes commands in the script
@@ -13,7 +19,7 @@ chmod 755 script.sh
 
 We can run then script with `./script.sh` in command line.
 
-###
+## Shebang
 
 `#!` (shebang) Specifies binary of the shell(interpreter) we want to execute script, for example: `#! /bin/bash` or `#! /bin/zsh`
 
@@ -40,7 +46,7 @@ chmod 755 hi.py
 This is a Python script
 ```
 
-### Variables
+## Variables
 
 Are storage locations that have name, you can think of them as name-value pairs. Syntax used to create a variable is: `VARIABLE_NAME="Value"`. It's important to note that variable names are case sensitive, and that, by convention, variable names should be all in uppercase. Also make sure to not use spaces after and before `=` sign, when declaring variable.
 
@@ -102,7 +108,7 @@ echo "You are running this script on ${SERVER_NAME}"
 
 We can also use `` SERVER_NAME=`hostname` `` which is a older syntax today mainly replaced with `${}`.
 
-#### Local variables
+### Local variables
 
 Local vars are created with `local` keyword, and **only functions can have the local variables**, so they can only be accessed within the function where they're declared.
 
@@ -114,7 +120,7 @@ function myFunc(){
 
 It's the best practice to use only local variables inside functions.
 
-### Tests
+## Tests
 
 With tests we can check for example: if file exists, if number is greater than another, compare if strings are equal...
 
@@ -151,7 +157,7 @@ STRING1 = STRING2 #True if the strings are equal
 STRING1 != STRING2 #True if the strings are not equal
 ```
 
-Arithemtic tests:
+Arithmetic tests:
 
 ```shell
 arg1 -eq arg2 #True if the arguments are equal
@@ -162,7 +168,7 @@ arg1 -gt arg2 #True if arg1 is greater than arg2
 arg1 -ge arg2 #True if arg1 is greater than or equal to arg2
 ```
 
-### If statements
+## If statements
 
 Syntax:
 
@@ -195,7 +201,7 @@ fi
 
 It's best practice to enclose variables in quotes to prevent some unexpected side effects.
 
-### For loop
+## For loop
 
 Syntax:
 
@@ -219,7 +225,7 @@ done
 
 It's also common for the list of items to be stored in variable like this: `COLORS="red green blue"`
 
-### Positional parameters
+## Positional parameters
 
 Those are variables that contains the content of the command line
 
@@ -241,7 +247,7 @@ for USER in $@ # This will loop through all parameter passed to the script when 
 done
 ```
 
-### Accepting User Input (STDIN)
+## Accepting User Input (STDIN)
 
 The `read` command accepts STDIN
 
@@ -253,7 +259,7 @@ echo "Archiving user: $USER"
 ...
 ```
 
-### Exit statuses
+## Exit statuses
 
 Every time the script or command is executed it returns an exit status in range of 0 to 255. De facto status for success is `0`, all others are codes for an error condition. This codes can be used in scripts for error checking. We can find what various exit statuses mean we can check documentation for that error code, or look into source code.
 
@@ -291,7 +297,7 @@ fi
 exit 0
 ```
 
-### && AND ||
+## && AND ||
 
 We can chain together multiple commands with this logical operators.
 
@@ -304,19 +310,19 @@ HOST="google.com"
 ping -c 1 $HOST && echo "$HOST reachable."
 ```
 
-### The semicolon
+## The semicolon
 
 If we want to ensure that all commands will be executed we can separate them with `;`: `cp test.txt /tmp/bak/ ; cp test.txt /tmp/` This is basically same as running this two commands on separate lines.
 
 It's important to note that `semicolon` does not check for exit statuses of the executed commands. The command following `;` will be always executed no matter if the previous command fails or succeeds.
 
-### Functions
+## Functions
 
 For functions we can say that they're shellscripts within shellscript.
 
 One of the main reasons why we are using functions is to follow the DRY principle, which means that we should write function once, and then we can use it many times. This can sometimes drastically reduce the script length, and also it's much easier to maintain as we have single function to edit and troubleshoot.
 
-#### Creating a function
+### Creating a function
 
 It's important to note that function must be defined before it's called. We can pass parameters to the functions, and then access those params inside of the function. There are two ways to create a function in the shellscript:
 
@@ -331,7 +337,7 @@ another-function () {
 }
 ```
 
-#### Calling a function
+### Calling a function
 
 To call or execute the function we can simply list it's name in the script (after it's being defined ofc):
 
@@ -368,7 +374,7 @@ hello Shell World
 
 Functions also have access to all global variables.
 
-#### Function exit statuses aka return codes
+### Function exit statuses aka return codes
 
 All functions have an exit status. We can explicitly return status within function with `return` keyword:
 
@@ -382,7 +388,7 @@ Or status can be returned implicitly with the exit status of the last command ex
 
 All exit status rules are the same as the status rules we've explored so far.
 
-### Wildcards
+## Wildcards
 
 A Wildcard is a character or string used for pattern matching. We can use them to create search patterns that when expanded will return the list of matching files and directories. They can be used with the most commands, like `ls`, `rm`, `mv`, `cp` and others.
 
@@ -404,7 +410,7 @@ a?     # Selects all two letter files that starts with char a
 a?.txt # Selects all two letter files that starts with a and are txt files
 ```
 
-#### Character Classes
+## Character Classes
 
 `[]` is a character class. It matches any, but only one, of the characters included between the brackets: `[aeiou]` `ca[nt]*` - matches, for example: can, candy, catch, cat
 
@@ -437,7 +443,7 @@ do
 done
 ```
 
-### Case statements
+## Case statements
 
 Case statements are the alternative to if statements, as they are sometimes easier to read. One common place for case statements use are a system startup scripts. Syntax:
 
@@ -470,7 +476,7 @@ esac
 
 Note that the patterns are case sensitive.
 
-### Logging
+## Logging
 
 You may want to keep record of what's happening during the execution of the shellscript. **Logs should answer who, what, when, where and why.**
 
@@ -483,7 +489,7 @@ The `syslog` standard uses facilities and severities to categorize messages.
 
 Each message is labeled with the facility code and severity level.Facilities are used to determine from what type of program or part of the system message originates from.
 
-### While loops
+## While loops
 
 A while loop is a loop that repeats series of commands as long as the condition is true.
 
@@ -572,7 +578,7 @@ done
 
 We can also use `continue` statement if we want to skip over commands that are after `continue`. Exectuion continues back at the top of the loop and the while condition is examined again.
 
-### Debugging shellscript
+## Debugging shellscript
 
 There are options built-in into `bash` that can help with debugging and fixing errors in shellscripts.
 

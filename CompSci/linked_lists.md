@@ -1,4 +1,6 @@
-A few advantages of linked lists.
+# Linked Lists
+
+A few advantages of linked lists:
 
 -   Worst case `O(1)` push and pop. Dynamic arrays ammortize that.
 -   No advantage for `select!` as you can do in `O(n)` time and `O(1)` space for a dynarray.

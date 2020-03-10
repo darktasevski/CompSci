@@ -4,6 +4,8 @@
 
 [[toc]]
 
+[TOC]
+
 ---
 
 ## Ruby Data Types

@@ -2,6 +2,8 @@
 
 [[toc]]
 
+[TOC]
+
 ---
 
 > While universal WebView-powered apps were built with the idea of build once, run anywhere, React Native was built with the goal of learn once, write anywhere.

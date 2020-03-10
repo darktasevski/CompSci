@@ -2,6 +2,8 @@
 
 [[toc]]
 
+[TOC]
+
 ---
 
 The Internet is not owned by any individual or group. The Internet is a worldwide collection of interconnected networks, cooperating with each other to exchange information using common standards. Through telephone wires, fiber-optic cables, wireless transmissions, and satellite links, Internet users can exchange information in a variety of forms.
@@ -167,7 +169,7 @@ IP addresses are logical addresses, they're not physical addresses hard-coded in
 
 Transferring data through MAC addresses over global scale is currently infeasible with way we currently have our network setup. We need to be able to take a computer's MAC address, to assign a particular IP address to that MAC address and then route a data through MAC addresses through networks. Also, we can't transfer data to other computer by it's MAC address, we need to use an IP address, because between us and the computer on other network we have to go through a router, and router needs to have an IP address, that it can use in order to transmit information.
 
-```
+```c
                              packets
 Computer A |<-------router------------router-------------| Computer B
 NIC MAC IP |--------router------------router------------>| NIC MAC IP
@@ -250,7 +252,7 @@ IP address classes allow us to divide up a host of IP addresses between a networ
 
 For example 192.168.1.1 is class C address.
 
-```
+```c
            Network ID | Host ID
 Class A    192.       | 168.1.1
 Ranges from 1.0.0.0 to 126.0.0.0  Subnet mask: 255.0.0.0
@@ -298,7 +300,7 @@ Classless Inter Domain Routing (CIDR). CIDR allows us to have variable-length su
 
 We display CIDR as `/n`, `n` can be anything from 1 to 31. This number is a prefix; when we break our subnet mask into individual bits, this number is going to be the number of those bits, starting from left to right that are all ones.
 
-```
+```c
 233.233.0.0 = /16 = 11111111.11111111.00000000.00000000
 255.240.0.0 = /12 = 11111111.11110000.00000000.00000000
 ```

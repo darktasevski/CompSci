@@ -1,6 +1,8 @@
-# Snippets
+# CS Snippets
 
 [[toc]]
+
+[TOC]
 
 ---
 

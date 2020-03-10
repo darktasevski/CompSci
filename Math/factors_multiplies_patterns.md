@@ -2,6 +2,8 @@
 
 [[toc]]
 
+[TOC]
+
 ---
 
 -   **Addition** of the odd and even number will always result in the odd number.

@@ -266,9 +266,9 @@ We can subtract 22 because the inverse operation of addition is subtraction!
 
 $$
 \begin{aligned}
-&k + 22 = 29 \\
-&k + 22 - 22 = 29 - 22 \hspace{4.5em}\text{\{Subtract 22 from each side\}}\\
-&k=7\hspace{11.7em}\text{\{Simplify\}}
+k + 22 &= 29 \\
+k + 22 - 22 &= 29 - 22 \hspace{4.5em}\text{\{Subtract 22 from each side\}}\\
+k&=7\hspace{11.7em}\text{\{Simplify\}}
 \end{aligned}
 $$
 
@@ -286,9 +286,9 @@ We can add 18 because the inverse operation of subtraction is addition!
 
 $$
 \begin{alignedat}{2}
-&p−18=3 \\
-&p- 18 + 18=3+18 \hspace{1em}&\text{\{Add 18 to each side.\}} \\
-&p=21 &\text{\{Simplify\}}
+p−18&=3 \\
+p- 18 + 18&=3+18 \hspace{1em}&\text{\{Add 18 to each side.\}} \\
+p&=21 &\text{\{Simplify\}}
 \end{alignedat}
 $$
 
@@ -302,9 +302,9 @@ We should divide by 6 because the inverse operation of multiplication is divisio
 
 $$
 \begin{alignedat}{2}
-&6t=54 \\
-&\frac{6t}{6}=\frac{54}{6} \hspace{1em}&\text{\{Divide each side by six\}}\\
-&t=9 &\text{\{Simplify\}}
+6t&=54 \\
+\frac{6t}{6}&=\frac{54}{6} \hspace{1em}&\text{\{Divide each side by six\}}\\
+t&=9 &\text{\{Simplify\}}
 \end{alignedat}
 $$
 
@@ -318,9 +318,9 @@ We can multiply by 5 because the inverse operation of division is multiplication
 
 $$
 \begin{alignedat}{2}
-&\frac{x}{5}=7 \\
-&\frac{x}{5} \cdot 5 = 7 \cdot 5 \hspace{1em}&\text{\{Multiply each side by five\}} \\
-&x=35
+\frac{x}{5}&=7 \\
+\frac{x}{5} \cdot 5 &= 7 \cdot 5 \hspace{1em}&\text{\{Multiply each side by five\}} \\
+x&=35
 \end{alignedat}
 $$
 
@@ -339,58 +339,58 @@ Some examples with fractions and decimals:
 
 $$
 \begin{aligned}
-	&\frac{1}{3}+a=\frac{5}{3} \\
-	&\frac{1}{3}-\frac{1}{3} +a = \frac{5}{3}-\frac{1}{3} \\
-	&a = \frac{5}{3}-\frac{1}{3} \\
-	&a = \frac{4}{3}
+	\frac{1}{3}+a&=\frac{5}{3} \\
+	\frac{1}{3}-\frac{1}{3} +a &= \frac{5}{3}-\frac{1}{3} \\
+	a &= \frac{5}{3}-\frac{1}{3} \\
+	a &= \frac{4}{3}
 \end{aligned}
 \tag{1}
 $$
 
 $$
 \begin{aligned}
-	&k-8=11.8 \\
-	&k+8=11.8+8 \\
-	&k=19.8
+	k-8&=11.8 \\
+	k+8&=11.8+8 \\
+	k&=19.8
 \end{aligned}
 \tag{2}
 $$
 
 $$
 \begin{aligned}
-	&\frac{5}{13}=t-\frac{6}{13}\\
-	&\frac{6}{13}+\frac{5}{13}=t \hspace{4.5em} \text{\{-6/13 and +6/13 cancel each other\}}\\
-	&\frac{11}{13}=t
+	\frac{5}{13}&=t-\frac{6}{13}\\
+	\frac{6}{13}+\frac{5}{13}&=t \hspace{4.5em} \text{\{-6/13 and +6/13 cancel each other\}}\\
+	\frac{11}{13}&=t
 \end{aligned}
 \tag{3}
 $$
 
 $$
 \begin{aligned}
-	&7x=14 \\
-	&\frac{7x}{7}=\frac{14}{7}\\
-	&x=2
+	7x&=14 \\
+	\frac{7x}{7}&=\frac{14}{7}\\
+	x&=2
 \end{aligned}
 \tag{4}
 $$
 
 $$
 \begin{aligned}
-	&1.2c=0.6 \\
-	&\frac{\cancel{1.2}c}{\cancel{1.2}}=\frac{0.6}{1.2}\hspace{4.5em} \text{\{Divide by 1.2 to simplify the left side\}}\\
-	&c=\frac{0.6}{1.2}\hspace{4.5em} \text{\{Multiply by 10 to get rid of the decimal points\}}\\
-	&c=\frac{6}{12}\\
-	&c=\frac{1}{2}
+	1.2c&=0.6 \\
+	\frac{\cancel{1.2}c}{\cancel{1.2}}&=\frac{0.6}{1.2}\hspace{4.5em} \text{\{Divide by 1.2 to simplify the left side\}}\\
+	c&=\frac{0.6}{1.2}\hspace{4.5em} \text{\{Multiply by 10 to get rid of the decimal points\}}\\
+	c&=\frac{6}{12}\\
+	c&=\frac{1}{2}
 \end{aligned}
 \tag{5}
 $$
 
 $$
 \begin{aligned}
-	&\frac{1}{4}=\frac{y}{12}\\
-	&12 \cdot\frac{1}{4}=\cancel{12}\cdot\frac{y}{\cancel{12}}\\
-	&\frac{12}{4}=y\\
-	&3=y
+	\frac{1}{4}&=\frac{y}{12}\\
+	12 \cdot\frac{1}{4}&=\cancel{12}\cdot\frac{y}{\cancel{12}}\\
+	\frac{12}{4}&=y\\
+	3&=y
 \end{aligned}
 \tag{6}
 $$
@@ -405,7 +405,7 @@ In an inequality, the two expressions are not necessarily equal which is indicat
 
 An equation or an inequality that contains at least one variable is called an **open sentence**. When you substitute a number for the variable in an open sentence, the resulting statement is either true or false. If the statement is true, the number is a solution to the equation or inequality.
 
-### Solving Inequalities
+### Solving nequalities
 
 As with equations, when we add or subtract the same number on both sides of the truth of the inequality doesn't change.
 
@@ -413,12 +413,12 @@ This holds true for all numbers:
 
 -   $x\gt y\rarr x\lt y\rarr$
 -   $x+z\gt y+z\rarr x+z\lt y+z\rarr$
--   $x−z\gt y−zx−z\lt y−z$
+-   $x−z\gt y-zx-z\lt y-z$
 
 Example:
 
 -   $x+3\gt9$
--   $x+3−3\gt9−3$
+-   $x+3-3\gt9−3$
 -   $x\gt6$
 
 ---

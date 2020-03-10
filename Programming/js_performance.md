@@ -4,6 +4,8 @@
 
 [[toc]]
 
+[TOC]
+
 ---
 
 ## Avoid interaction with host objects

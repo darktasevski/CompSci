@@ -101,7 +101,7 @@ echo "My second argument is: $2"
 echo "I was called with $# parameters."
 ```
 
-```
+```sh
 $ ./args.sh one two
 I was called as ./args.sh
 My first argument is: one

@@ -1,6 +1,6 @@
 ---
 title: How are you writing a commit message?
-date: 2018-11-29
+date: 2019-11-29
 description:
 author: Darkø Tasevski
 cover_image: https://thepracticaldev.s3.amazonaws.com/i/245aq19gui2njbot2eof.jpg
@@ -33,7 +33,7 @@ This set of rules corresponds to [**SemVer**](https://semver.org/) (Semantic Ver
 
 The commit message should be structured as follows:
 
-```
+```c
 <type>[optional scope]: <description>
 
 [optional body]
@@ -153,7 +153,12 @@ So now, after the project is using Conventional Commits we have:
 
 ### Some useful links
 
-<https://www.conventionalcommits.org/en/v1.0.0-beta.4/#specification> <https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit> <https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional> <https://karma-runner.github.io/0.10/dev/git-commit-msg.html> <https://electronjs.org/docs/development/pull-requests#commit-message-guidelines> <https://chris.beams.io/posts/git-commit/#seven-rules> <https://codito.in/semantic-commits-for-git>
+-   <https://www.conventionalcommits.org/en/v1.0.0-beta.4/#specification>
+-   <https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit>
+-   <https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional>
+-   <https://karma-runner.github.io/0.10/dev/git-commit-msg.html>
+-   <https://electronjs.org/docs/development/pull-requests#commit-message-guidelines> <https://chris.beams.io/posts/git-commit/#seven-rules>
+-   <https://codito.in/semantic-commits-for-git>
 
 Really nice [Cover Photo by Yancy Min](https://unsplash.com/photos/842ofHC6MaI)
 

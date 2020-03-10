@@ -2,6 +2,8 @@
 
 [[toc]]
 
+[TOC]
+
 ---
 
 ## Fractions
@@ -47,7 +49,7 @@ The denominators are 8 and 10. Let's list multiples of each:
 
 Now we need to rewrite $\frac{7}{8}$ and $\frac{3}{10}$ with denominator of 40:
 
-$$ \frac{7}{8} \times \frac{5}{5} = \frac{35}{40} $$ and $$ \frac{3}{10} \times \frac{4}{4} = \frac{12}{40} $$
+$\frac{7}{8} \times \frac{5}{5} = \frac{35}{40}$ and $\frac{3}{10} \times \frac{4}{4} = \frac{12}{40}$
 
 So, $\frac{7}{8}$ is same as $\frac{35}{40}$, and $\frac{3}{10}$ is same as $\frac{12}{40}$.
 
@@ -272,7 +274,7 @@ All numbers to the left of the decimal are the actual numbers, like ones, tens, 
 _For example_, consider the number `209,451.26301` You would read this number: Two Hundred Nine Thousand Four Hundred Fifty One Point Twenty Six Thousand Three Hundred and One Hundred Thousandths You would normally write this number: 209,451.26301 But you could also write this number:
 
 $$
-(2 \times 10^5) + (0 \times 10^4) + (9 \times 10^3) + (4 \times 10^2) + (5 \times 10^1) + (1 \times 10^0) + (2 \times 10^-1) + (6 \times 10^-2) + (3 \times 10^-3) + (0 \times 10^-4) + (1 \times 10^-5)
+(2 \cdot 10^5) + (0 \cdot 10^4) + (9 \cdot 10^3) + (4 \cdot 10^2) + (5 \cdot 10^1) + (1 \cdot 10^0) + (2 \cdot 10^{-1}) + (6 \cdot 10^{-2}) + (3 \cdot 10^{-3}) + (0 \cdot 10^{-4}) + (1 \cdot 10^{-5})
 $$
 
 Or
