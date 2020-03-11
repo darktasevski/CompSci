@@ -1,6 +1,6 @@
 {
 	"name": "CompSci",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "> My notes on all sorts of stuff",
 	"main": "index.js",
 	"dependencies": {
