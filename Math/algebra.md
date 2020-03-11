@@ -205,6 +205,71 @@ $$
 9 + 7x + 4x^2
 $$
 
+### Constant of proportionality
+
+The constant of proportionality is a number that relates two variables in direct or inverse variation. In variable form, the constant of proportionality is commonly denoted as $k$.
+
+$k=\frac{y}{x}$ $k=xy$
+
+If $y$ varies directly with $x$, then the constant of proportionality will equal the product of $x$ and $y$ (above right).
+
+#### Direct variation
+
+Direct variation refers to a relationship between two variables where when one variable increases, the other increases by the same factor. The relationship between the two variables can be modeled by the equation $y = kx$, where $k$ is a constant of proportionality. The ratio of $y$ to $x$ will always equal $k$.
+
+| x   | y   |
+| --- | --- |
+| 0   | 0   |
+| 1   | 4   |
+| 2   | 8   |
+| 3   | 12  |
+| 4   | 14  |
+
+$y=4x$
+
+> When someone says that y varies directly with $x$, or that $y$ is directly proportional to $x$, they mean that $y$ and $x$ exhibit direct variation
+
+#### Inverse variation
+
+Inverse variation refers to a relationship between two variables where when one variable increases, the other decreases by the same factor. The relationship between the two variables can be modeled by the equation $y =\frac{k}{x}$ , where $k$ is a constant of proportionality. The product of $x$ and $y$ will always equal $k$.
+
+Inverse variation does not mean that when one variable increases, the other decreases. In order to maintain the same value of k, the value of x cannot be negative when y is positive.
+
+> When someone says that y varies inversely with x, or that y is inversely proportional to x, they mean that y and x exhibit inverse variation.
+
+## Polynomials
+
+Polynomials are algebraic expressions that include real numbers and variables. Division and square roots cannot be involved in the variables. The variables can only include addition, subtraction, and multiplication.
+
+> Polynomials contain more than one term. Polynomials are the sums of monomials.
+
+-   A monomial has one term: $5y$ or $-8x^2$ or $3$.
+-   A binomial has two terms: $-3x^2 2$, or $9y - 2y^2$
+-   A trinomial has 3 terms: $-3x^2 2 \cdot 3x$, or $9y - 2y^2 y$
+
+The **degree of the term** is the exponent of the variable: $3x^2$ has a degree of 2. When the variable does not have an exponent - always understand that there's a '1' e.g., $1^x$
+
+Example of Polynomial in an Equation:
+
+$$
+x^2-7x-6
+$$
+
+|                      |                  |                           |
+| -------------------- | ---------------- | ------------------------- |
+| $8x^23x-2$           | Polynomial       |                           |
+| $8x^{-3}7y-2$        | NOT a Polynomial | The exponent is negative. |
+| $9x^28x-\frac{2}{3}$ | NOT a Polynomial | Cannot have division.     |
+| $7xy$                | Monomial         |                           |
+
+Polynomials are usually written in decreasing order of terms. _The largest term or the term with the highest exponent in the polynomial is usually written first._ The first term in a polynomial is called a **leading term**. When a term contains an exponent, it tells you the degree of the term.
+
+Here's an example of a three-term polynomial:
+
+-   $6x^2 -4xy \cdot 2xy$: This three-term polynomial has a leading term to the second degree. It is called a second-degree polynomial and often referred to as a trinomial.
+-   $9x^5-2x \cdot 3x^4 -2$: This 4 term polynomial has a leading term to the fifth degree and a term to the fourth degree. It is called a fifth degree polynomial.
+-   $3x^3$: This is a one-term algebraic expression that is actually referred to as a monomial.
+
 ## Equations
 
 Whenever we have an equation with a variable, we call it an algebraic equation, for example:
@@ -405,9 +470,66 @@ In an inequality, the two expressions are not necessarily equal which is indicat
 
 An equation or an inequality that contains at least one variable is called an **open sentence**. When you substitute a number for the variable in an open sentence, the resulting statement is either true or false. If the statement is true, the number is a solution to the equation or inequality.
 
-### Solving nequalities
+### Compound inequalities
 
-As with equations, when we add or subtract the same number on both sides of the truth of the inequality doesn't change.
+A compound inequality consists of two or more inequalities. There are two types of compound inequalities: compound inequalities joined by the word "and" and compound inequalities joined by the word "or."
+
+Example:
+
+$$
+-6 \lt x \leq 2
+$$
+
+This can be written as following:
+
+$$
+x \gt -6 \text{ and } x \leq 2
+$$
+
+Compound inequalities joined by "and" are also called the "**intersection**" of two inequalities.
+
+To solve compound inequalities joined by the word "and," apply the rules for inequalities to all sides of the compound inequality. If you multiple or divide the compound inequality by a negative number, you will need to flip all the inequality signs.
+
+Example:
+
+$$
+\begin{aligned}
+	3 \leq -6x& + 9 \lt 6 \\
+	-6 \leq -6&x \lt -3 \\
+	1 \geq x& \gt \frac{1}{2} \\
+	\frac{1}{2} \lt x& \leq 1
+\end{aligned}
+$$
+
+---
+
+$$
+x \lt -4 ; x \geq -1
+$$
+
+This can also be written as the following:
+
+$$
+x \lt -4 \text{ or } x \geq -1
+$$
+
+Compound inequalities joined by "or" are also called the "**union**" of two inequalities.
+
+To solve compound inequalities joined by the word "or," solve each inequality separately. Treat each inequality as its own singular inequality, determine the result of the individual inequalities, then combine the results.
+
+Example:
+
+$$
+\begin{alignedat}{2}
+	-4x+5 \lt 13& \text{ or } &-2x - 8 \geq 4 \\
+	   -4x \lt 8& 			  &-2x \geq 12 \\
+	   x \leq -6& 			  &x \gt -2
+\end{alignedat}
+$$
+
+### Solving inequalities
+
+To solve inequalities, you can apply most of the same principles used when solving equations. When solving inequalities, nothing changes when adding, subtracting, or multiplying and dividing by a positive number. As with equations, when we add or subtract the same number on both sides of the truth of the inequality doesn't change.
 
 This holds true for all numbers:
 
@@ -451,6 +573,10 @@ Example:
 -   Solve $3x +4 \gt 5x$:
     -   $3x +4 -4 \gt 5x -4 = 3x \gt 1x$
 
+### Inequalities involving polynomials
+
+When solving inequalities involving polynomials, you need to simplify the inequality so that one side equals zero. This is similar to the format of a quadratic equation $ax^2 + bx + c =0$. By setting one side of the inequality equal to zero, you create a relationship where the solution to the inequality depends on the zeros of the polynomial.
+
 ## Dependent and independent variables
 
 On a graph, the dependent variable is typically plotted on the _y-axis_ and the independent variable is plotted on the _x-axis_.
@@ -478,3 +604,7 @@ You are doing chores to earn your allowance. For each chore you do, you earn \$3
 A **dependent** variable represents a quantity whose value depends on how the independent variable is manipulated. $y$ is often the variable used to represent the dependent variable in an equation.
 
 The dependent variable in above example is the amount of money you earn because the amount of money you earn depends on how many chores you do.
+
+### How to Tell the Variables Apart
+
+The independent and dependent variables may be viewed in terms of cause and effect. **If the independent variable is changed, then an effect is seen in the dependent variable.** Remember, the values of both variables may change in an experiment and are recorded. The difference is that the value of the independent variable is controlled by the experimenter, while the value of the dependent variable only changes in response to the independent variable.
