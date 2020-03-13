@@ -11,6 +11,35 @@
 -   **Subtracting** negative numbers: $8 - (-7) = 15$ Negative and negative always result in positive value: $-2 - (-3) = 1$
 -   **Zero** is even number.
 
+Rules for adding positive/negative numbers:
+
+-   6 + (–9) = –3
+-   (–3) + 7 = 4
+-   5 + (–3) = 2
+
+Rules for subtracting positive/negative numbers:
+
+-   (–5) – (–3) = (–5) + 3 = –2
+-   (–3) – (–5) = (–3) + 5 = 2
+
+Rules for multiplying positive/negative numbers:
+
+```math
++ ⋅ + = + \\
+−⋅ − = + \\
++ ⋅ − = − \\
+−⋅ + = − \\
+```
+
+Rules for dividing positive/negative numbers:
+
+```math
++ \div + = + \\
+− \div − = + \\
++ \div − = − \\
+− \div + = −
+```
+
 ---
 
 ## Properties of numbers
