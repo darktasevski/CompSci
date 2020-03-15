@@ -1,11 +1,13 @@
 language: node_js
 node_js:
-    - '10'
     - '11'
+before_deploy:
+    - npm run build
 deploy:
     provider: pages
     skip_cleanup: true # This must be set to true! Otherwise Travis CI will delete all the files created during the build.
     github_token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
     keep_history: true
+    local_dir: .vuepress/dist
     on:
         branch: master
