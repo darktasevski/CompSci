@@ -24,21 +24,21 @@ Rules for subtracting positive/negative numbers:
 
 Rules for multiplying positive/negative numbers:
 
-```math
+$$
 + ⋅ + = + \\
 −⋅ − = + \\
 + ⋅ − = − \\
 −⋅ + = − \\
-```
+$$
 
 Rules for dividing positive/negative numbers:
 
-```math
+$$
 + \div + = + \\
 − \div − = + \\
 + \div − = − \\
 − \div + = −
-```
+$$
 
 ---
 

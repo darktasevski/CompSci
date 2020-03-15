@@ -2554,7 +2554,7 @@ Reading Files:
 -   `open` returns a file object to you
 -   You can read a file object with the `read` method
 
-```text
+```shell
 story.txt
 
 This short story is really short.
@@ -2801,7 +2801,7 @@ A way of describing patterns within search strings.
 
 SOME REGEX SYNTAX:
 
-```regexp
+```shell
 \d     # digit 0-9
 \w     # letter, digit, or underscore
 \s     # whitespace character
