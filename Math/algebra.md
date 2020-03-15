@@ -47,7 +47,7 @@ A **variable** is a symbol that we assign to an unknown value.We use variables w
 -   If the variable has no visible coefficient, then it has an implied coefficient of 1.
 -   If the variable only has a negative sign, then it has an implied coefficient of -1.
 
-A **factor** is one part of a product. The expression $4+n$ is one factor in the term $11(4+n)$, in the term $8x$ the factor are 8 and $x$.
+A **factor** is one part of a product. The expression $4+n$ is one factor in the term $11(4+n)$, in the term $8x$ the factor are $8$ and $x$.
 
 A **term** can be any of the following:
 
@@ -444,6 +444,49 @@ $$
 \end{aligned}
 $$
 
+##### Factoring monomials
+
+A monomial is an expression that is the product of constants and nonnegative integer powers of $x$, like $3x^2$. A polynomial is a sum of monomials, like $3x^2 +6x -1$.
+
+To factor a monomial means to express it as a product of two or more monomials. For example, below are several possible factorizations of $8x^5$:
+
+-   $8x^5=(2x^2)(4x^3)$
+-   $8x^5=(8x)(x^4)$
+-   $8x^5=(2x)(2x)(2x)(x^2)$
+
+To factor a monomial completely, we write the coefficient as a product of primes and expand the variable part. For example to completely factor $10x^3$ we can write the prime factorization of 10 as $2 \cdot 5$ and write $x^3$ as $x \cdot x \cdot x$. Therefore, this is the complete factorization of $10x^3$: $$10x^3=2\cdot5\cdot x \cdot x \cdot x$$
+
+##### Finding missing factors of monomials
+
+Suppose we have $8^5=(4x^3)(C)$ where $C$ is some monomial. We can find $C$ by dividing $8x^5$ by 4$x^3$:
+
+$$
+\begin{alignedat}{2}
+	&8^5=(4x^3)(C) \\
+	&\frac{8x^5}{4x^3}=\frac{(4x^3)(C)}{4x^3} &\text{ Divide both sides by }4x^3 \\
+	&\frac{8}{4}\cdot\frac{x^5}{x^3}=2x^2 \\
+	&2x^2=C &\text{Simplify with properties of exponents}
+\end{alignedat}
+$$
+
+##### Greatest common factor of monomials
+
+![Greatest common factor of monomials](../static/math/monomials_gcf.png)
+
+You can write the complete factorization of a monomial by writing the prime factorization of the coefficient and expanding the variable part.
+
+Find the greatest common factor of these monomials:
+
+Simply write the complete factorization of each monomial and find the common factors. The product of all the common factors will be the GCF.
+
+$$
+\begin{aligned}
+	10cd^2 &= 2 \cdot \underline{5} \cdot \underline{c} \cdot\underline{d}\cdot\underline{d}\\
+	25c^3d^2 &= 5 \cdot \underline{5} \cdot \underline{c} \cdot c \cdot c \cdot\underline{d}\cdot\underline{d}\\
+	gcm &= 5 \cdot c \cdot d \cdot d = 5 cd^2
+\end{aligned}
+$$
+
 #### Multiplying binomials
 
 A binomial is a polynomial with two terms. For example, $x-2$ and $x-6$ are both binomials.
@@ -644,6 +687,22 @@ $$
 
 ![Multiplying binomials by polynomials](../static/math/binomials_polynomials_multiplication.png)
 
+##### Factoring out binomial factors
+
+The common factor in a polynomial does not have to be a monomial. For example, consider the polynomial $x(2x-1)-4(2x-1)$. Notice that the binomial $2x-1$ is common to the both term, and we can factor this out using the distributive property:
+
+$$
+x(2x-1)-4(2x-1)=(2x-1)(x-4)
+$$
+
+Another example:
+
+Factor out the greatest common factor in the following polynomial:
+
+$$
+2x(x+3)+5(x+3)=(x+3)(2x+5)
+$$
+
 ### Factors & Divisibility
 
 In general, two integers that multiply to obtain a number are considered **factors** of that number. For example, since $14=2\cdot7$ we know that 2 and 7 are factors of 14. However, since $\frac{9}{4}=2.25$, 9 is not divisible by 4.
@@ -703,6 +762,66 @@ $$
 $$
 
 Notice that term $\frac{8}{x^3}$ is not a monomial since it's a quotient, not a product. Therefore, we can conclude that $4x^6$ is not a factor of $32x^3$.
+
+#### Factoring with the distributive property
+
+To factor the GCF out of a polynomial, we do the following:
+
+1. Find the GCF of all the terms in the polynomial.
+2. Express each term as a product of the GCF and another factor.
+3. Use the distributive property to factor out the GCF.
+
+---
+
+Let's factor $2x^3-6x^2$ by following these rules:
+
+Step 1: Find the GCF
+
+-   $2x^3 = 2 \cdot x \cdot x \cdot x$
+-   $6x^2 = 2 \cdot 3 \cdot x \cdot x$
+
+So the GCF of $2x^3-6x^2$ is $2 \cdot x \cdot x = 2x^2$
+
+Step 2: Express each term as a product of $2x^2$ and another factor.
+
+-   $2x^3=2x^2(x)$
+-   $6x^2=(2x^2)(3)$
+
+So the polynomial can be written as $2x^3 -6x^2=(2x^2)(x) - (2x^2)(3)$
+
+Step 3: Factor out the GCF
+
+Now we can apply the distributive property to factor out $2x^2$.
+
+![Step 3](../static/math/step_3_factor_gcf.png)
+
+We can now verify our factorization by multiplying $2x^2$ back into the polynomial:
+
+![verify step](../static/math/step_4_verify.png)
+
+Since this is the same as the original polynomial, we can see that our factorization is correct!
+
+> This can be a bit more efficient. Once we know the GCF, the factored form is simply the product of that GCF and the sum of the terms in the original polynomial divided by the GCF.
+
+For example, we can use this method to factor $5x^2+10x$, whose GCF is $5x$:
+
+$$
+5x^2+10x=5x(\frac{5x^2}{5x}+\frac{10x}{5x})=5x(x+2)
+$$
+
+---
+
+_Other examples:_
+
+$$
+4x+18 = 2(2x) + 2(9) = 2(2x+9)
+\tag{1}
+$$
+
+$$
+12 + 32y = 4(3 +8y)
+\tag{2}
+$$
 
 ## Equations
 

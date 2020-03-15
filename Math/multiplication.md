@@ -12,7 +12,7 @@ $$
 
 ---
 
--   When **multiplying** two negative numbers the result is always positive.
+-   When **multiplying** two negative numbers, the result is always positive.
 
 Simple hack:
 
@@ -36,7 +36,7 @@ Example:
        | 5040 + 442 | = 5481
 ```
 
-## Multiplying with area model
+## Multiplying with the area model
 
 6 x 7981 = | x | 7000 | 900 | 80 | 1 | |---|--------|------|-----|---| | 6 | 42,000 | 5400 | 480 | 6 |
 
@@ -69,7 +69,7 @@ We can multiply numbers by hand:
     | 300 | 120,000 | 24,000 | 300 | 144,300 |
     |     |         |        |     | 169,312 |
 
-    This is area grid. We destructure numbers to thousands, hundreds, tens and ones and then multiply and add them together.
+    Above is the area grid. We destructure numbers to thousands, hundreds, tens and ones and then multiply and add them together.
 
 ## Standard algorithm
 
@@ -103,9 +103,9 @@ $$
       (5 x 4) = 20 + 4 (we carried) = 24 0 5 | 0 results in: 24,050
 ```
 
-## Multiplication with 1 digit
+## Multiplication with one digit
 
-This is simple, we just multiply number by number and carry values:
+Multiplication with one digit is simple: we just multiply number by number and carry values:
 
 ```js
   253 // 7 x 3 = 21                      write 1, carry 2
@@ -121,7 +121,7 @@ x  9   // 9 x 8 = 72 + 4 we carried = 76, write 6, carry 7
 72765  // 9 x 8 = 72, write 72, as this is last number
 ```
 
-## Multiplication with 2 digits
+## Multiplication with two digits
 
 ```js
 
@@ -142,9 +142,9 @@ Or simply, just multiply $8 \times 4$ and add number of zeroes to the result $32
 
 ## Exponents
 
-The small number written above and to the right of the number is called an **exponent** or **power**. The number underneath the exponent is called **the base**. This can sometimes be read as "Five to the third power" or "Five raised to the third power".
+The small number written above and to the right of the number is called an **exponent** or **power**. The number underneath the exponent is called **the base**. An exponent can be read as "Five to the third power" or "Five raised to the third power."
 
-> There is a pattern when working with a powers of ten, for example: $10 \times 10 = 20^2$, $10 \times10\times10=10^3$, notice the exponent and the number of zeroes. Based on this we can easily find out that power of, for example, $10000000000$ is $10^{10}$. Likewise, for $10^5$ we can easily predict that the result is $100000$
+> There is a pattern when working with powers of ten, for example, $10 \times 10 = 20^2$, $10 \times10\times10=10^3$, notice the exponent and the number of zeroes. Based on this, we can easily find out that power of, for example, $10000000000$ is $10^{10}$. Likewise, for $10^5$, we can easily predict that the result is $100000$
 
 ### Integer exponents
 
@@ -217,9 +217,9 @@ $$
 (4^{-3})^{-2} = 4^{(-3)(-2)} = 4^6
 $$
 
-Whats the difference between $2^{3^4}$ and $(2^3)^4$?
+What's the difference between $2^{3^4}$ and $(2^3)^4$?
 
-In $2^{3^4}$ the exponent itself is raised to the fourth power, while in $(2^3)^4$ the entire expression is raised to the fourth power. Thus,
+In $2^{3^4}$, exponent itself is raised to the fourth power, while in $(2^3)^4$, the entire expression is raised to the fourth power. Thus,
 
 $$
 2^{3^4} = 2^{81}
@@ -259,9 +259,9 @@ $$
 3^3 \div 3^3 = 3^{3-3} = 3^0 = 1
 $$
 
-> _This might be easier to understand if we explain it this way_: This asks - how many times we're going to multiply one times this (2) number? And answer is like: I'm going to take 1 and multiply it by 2 zero times, which means we're left with just 1.
+> _This might be easier to understand if we explain it this way_: This asks - how many times we're going to multiply one times this (2) number? And the answer is like: I'm going to take $1$ and multiply it by $2$ zero times, which means we're left with just $1$.
 
-Any number to the first power is going to be equal that number:
+Any number to the first power is going to be the equal that number:
 
 $$
 2^1 = 1 \times 2 = 2
@@ -293,7 +293,7 @@ $$
 
 #### Some examples
 
-Evaluate the expression $5^x - 3^x$ for `x=2`
+Evaluate the expression $5^x - 3^x$ for $x=2$.
 
 $$
 5^x - 3^x = 5^2 - 3^2 = 25 - 9 = 16
@@ -319,15 +319,15 @@ When asked for a square root of a number, let's say 81, we find a number which, 
 
 Example:
 
-_Which two integers is $\sqrt{55}$ between?_
+_Which two integers are $\sqrt{55}$ between?_
 
 Since $\sqrt{49}=7$ and $\sqrt{64}=8$, the answer is 7 and 8.
 
 ---
 
-When dealing with other powers which are reciprocals of integers, like $\frac{1}{3},\frac{1}{4},\frac{1}{5}$ and so on, we proceed just as with square roots. When asked for a fifth root of 100000, we want the number, which raised to the fifth power equals 100000. Since $10^5=100000$ we have $100000^{\frac{1}{5}} = 10$
+When dealing with other powers, which are reciprocals of integers, like $\frac{1}{3},\frac{1}{4},\frac{1}{5}$, and so on, we proceed just as with square roots. When asked for the fifth root of 100000, we want the number, which raised to the fifth power equals 100000. Since $10^5=100000$ we have $100000^{\frac{1}{5}} = 10$
 
-We can adapt the radical sign to use with other roots by writing $\sqrt[n]{}$ for the *n*th root. For example $8^{\frac{1}{7}}$ is $\sqrt[7]{8}$. **When no number is written where the 7 is, the symbol is assumed to be a square root.**
+We can adapt the radical sign to use with other roots by writing $\sqrt[n]{}$ for the *n*th root. For example $8^{\frac{1}{7}}$ is $\sqrt[7]{8}$. **When no number is written where the $7$ is, the symbol is assumed to be a square root.**
 
 > As with square roots, numbers raised to the $\frac{1}{3}$ power, have a special name, **cube roots**.
 
@@ -348,7 +348,7 @@ _Consider the following examples:_
 3. $\sqrt[4]{81^{-3}}=81^{-\frac{3}{4}}=(81^{}\frac{1}{4})^{-3}=(\sqrt[4]{81})^{-3}=3^{-3}=\frac{1}{3^3}=\frac{1}{27}$
 4. $(\frac{1}{8})^{\frac{2}{3}}=\frac{1^{\frac{2}{3}}}{8^{\frac{2}{3}}}=\frac{(\sqrt[3]{1})^{2}}{(\sqrt[3]{8})^2}=\frac{1^2}{2^2}=\frac{1}{4}$
 
-    - > Remainder that 1 raised to any power is always 1
+    - > Remainder that $1$ raised to any power is always $1$
 
 5. $\frac{(4^{\frac{2}{3}})(2^{\frac{1}{6}})(3^{\frac{3}{2}})}{(2^{-\frac{1}{2}})(3^{\frac{1}{2}})}=\frac{(2^{\frac{4}{3}})(2^{\frac{1}{6}})(3^{\frac{3}{2}})}{(2^{-\frac{1}{2}})(3^{\frac{1}{2}})}=2^{\frac{4}{3} + \frac{1}{6}-(-\frac{1}{2})}3^{\frac{3}{2}-\frac{1}{2}}=2^{\frac{8}{6}+\frac{1}{6}-(-\frac{3}{6})}3^{\frac{2}{2}}=2^{\frac{12}{6}}(3)=2^2 \times 3 =12$
     - For such complex problems, we should first convert all the expressions to the simplest base possible (by writting $4^{\frac{2}{3}}=(2^2)^{\frac{2}{3}} =2^{\frac{4}{3}}$), then simplify the expression by using rules for multiplication and division of expressions with a common base.

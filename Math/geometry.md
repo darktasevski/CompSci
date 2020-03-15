@@ -15,13 +15,13 @@
         |-----------|
 ```
 
-**Area** is the space inside of a two-dimensional shape. We can also think of area as the amount of space a shape covers.
+**Area** is the space inside of a two-dimensional shape. We can also think of the area as the amount of space a shape covers.
 
 **Oblast(Area)** predstavlja celo područje unutrašnjeg dela geometrijske figure, mereno u jedinicama. Oblast pravougaone figure je definisan proizvod dve strane, i moze se izračunati uz pomoć sledeće formule: $$O = d * c$$
 
 $$ height \times width = area $$
 
-**Perimeter** is the distance around the outside of a two-dimensional shape.To find the perimeter of a shape, we add all of the shape's side lengths.
+**Perimeter** is the distance around the outside of a two-dimensional shape. To find the perimeter of a shape, we add all of the shape's side lengths.
 
 **Perimetar** je distanca potrebna da se obidje oko nekog objekta, ili matematički rečeno zbir svih strana geometrijske figure. Može se izračunati uz pomoć sledeće formule: $$P = (d *c)* 2$$ $$ (height \times width) \times 2 = perimeter $$
 
@@ -39,7 +39,7 @@ A **line segment** is just part of a line. It has two endpoints, like this:
 
 ![Segment](../static/math/line_segment.png)
 
-A **ray** starts at one point and continues on forever in one direction, like this:
+A **ray** starts at one point and continues forever in one direction, like this:
 
 ![Ray](../static/math/ray.png)
 
@@ -96,7 +96,7 @@ An **obtuse** triangle is a triangle that has an angle that is larger than 90$\d
 
 ### Calculating Triangle Area problems
 
-We have a triangle with a missing side. Its height is 10 units^2^ and the area is 75 units^2^. Find the missing side.
+We have a triangle with a missing side. Its height is $10$ units^2^, and the area is $75$ units^2^. Find the missing side.
 
 So, the formula for calculating area of a triangle is $A =\frac{1}{2}\times base \times height$, so we can rewrite this problem as: $75=\frac{1}{2}\times x \times 10$, which can simplified to $75=x \times 5$. We can then use rules for simplifying algebraic expressions to calculate this:
 
@@ -124,7 +124,7 @@ The _line of symmetry_ is the imaginary line where you could fold the image and 
 
 > Every parallelogram can be made into a rectangle, which is why we use the same formula to find the area of a parallelogram and a rectangle.
 
-**Rhombus** is a type of parallelogram - the opposite sides have to be parallel and all sides must be equal.
+**Rhombus** is a type of parallelogram - the opposite sides have to be parallel, and all sides must be equal.
 
 ![Rhombus](../static/math/rhombus.jpeg)
 
@@ -140,20 +140,20 @@ The _line of symmetry_ is the imaginary line where you could fold the image and 
 
 ### Quadrilateral Summary
 
-| Name          | Definition                       |
-| ------------- | -------------------------------- |
-| Quadrilateral | 4 sided closed figure            |
-| Parallelogram | 2 pairs of parallel sides        |
-| Trapezoid     | Exactly 1 pair of parallel sides |
-| Rectangle     | 4 right angles                   |
-| Rhombus       | 4 equal sides                    |
-| Square        | 4 equal sides and 4 right angles |
+| Name          | Definition                           |
+| ------------- | ------------------------------------ |
+| Quadrilateral | $4$ sided closed figure              |
+| Parallelogram | $2$ pairs of parallel sides          |
+| Trapezoid     | Exactly $1$ pair of parallel sides   |
+| Rectangle     | $4$ right angles                     |
+| Rhombus       | $4$ equal sides                      |
+| Square        | $4$ equal sides and $4$ right angles |
 
 ---
 
 ## Volume
 
-Volume is the amount of 3-dimensional space an object occupies and it is measured in cubic units.
+Volume is the amount of 3-dimensional space an object occupies, and it is measured in cubic units.
 
 ### Volume formulas
 
@@ -170,7 +170,7 @@ Volume = 2cm × 2cm × 2cm = 8cm^3 \newline
 V = S^3
 $$
 
-If you know the volume of a cube you can determine the length of the sides by calculating the cube root.
+If you know the volume of a cube, you can determine the length of the sides by calculating the cube root.
 
 $$
 \sqrt[3]{S^3}
@@ -193,8 +193,8 @@ Another problem for calculating the volume of cubes with fraction lengths:
 
 -   A rectangular prism with a volume of 5 cubic units is filled with cubes with side lengths of $\frac{1}{3}$. How many $\frac{1}{3}$ unit cubes does it take to fill the prism?
 
-    -   The volume of the prism is 5 cubic units. This means the prism can be filled with $5 \times 1$ unit cubes.
-    -   There are 27 cubes with $\frac{1}{3}$-unit side length in 1 cubic unit.
+    -   The volume of the prism is $5$ cubic units, which means the prism can be filled with $5 \times 1$ unit cubes.
+    -   There are $27$ cubes with $\frac{1}{3}$-unit side length in a $1$ cubic unit.
     -   Since the rectangular prism is made up of 5 cubic units, we would have $5 \times 27$ total cubes with $\frac{1}{3}$-unit side lengths, which is equal to $5\times 27=135$
 
 ###### Volume with Fractional Edge Lengths and Unit Cubes
@@ -203,11 +203,11 @@ Another problem for calculating the volume of cubes with fraction lengths:
 
 -   how many $\frac{1}{4}$cm cubes does it take to fill a prism if the prism is $1cm × \frac{7}{4}cm × 2cm$?
     -   We need to find for each side, independently, how many cubes would fit in that side.
-        -   $\frac{1}{4}$ fits 4 times in the side 1.
-        -   $\frac{1}{4}$ fits 7 times in the side $\frac{7}{4}$.
-        -   $\frac{1}{4}$ fits 8 times in the side 2.
+        -   $\frac{1}{4}$ fits $4$ times inside $1$.
+        -   $\frac{1}{4}$ fits $7$ times inside $\frac{7}{4}$.
+        -   $\frac{1}{4}$ fits $8$ times inside $2$.
     -   The answer is then $4×7×8=224$
-    -   Another way of answering would be by starting to write everything in multiples of , and then remove all the $\frac{}{4}$ from the denominators, which would also leave us with $4×7×8=224$
+    -   Another way of answering would be by starting to write everything in multiples of, and then remove all the $\frac{}{4}$ from the denominators, which would also leave us with $4×7×8=224$
 -   A rectangular prism with a volume of 3 cubic units is filled with cubes with side lengths of $\frac{1}{4}$. How many $\frac{1}{4}$ unit cubes does it take to fill the prism?
     -   The volume of the prism is 3 cube units. That means the prism can be filled with $3 \times 1$ unit cubes.
     -   Single unit cube can fit $4 \times \frac{1}{4}$-unit side lengths.
@@ -265,7 +265,7 @@ $$
 
 ##### Pyramid
 
-Given that the pyramid has a height of 6 feet. If the base of a pyramid is a square with a length of 2 feet, find the volume.
+Given that the pyramid has a height of 6 feet, if the base of a pyramid is a square with a length of 2 feet, find the volume.
 
 $$
 Volume = (B × h)/3 \newline
@@ -275,7 +275,7 @@ $$
 
 ##### Ellipsoid
 
-Given that the radii of an ellipsoid are 1 cm, 2, cm, and 3 cm.
+Given that the radii of an ellipsoid are 1 cm, 2, cm, and 3 cm:
 
 $$
 Volume = (4 × π × a × b × c)/3 = (4 × 3.14 × 1 × 2 × 3)/3 \newline
@@ -293,7 +293,7 @@ $$
 
 ## Surface area
 
-Surface area is the amount of space covering the outside of a three-dimensional shape. To calculate surface area, we add the areas of all the faces of the three-dimensional figure.
+The surface area is the amount of space covering the outside of a three-dimensional shape. To calculate the surface area, we add the areas of all the faces of the three-dimensional figure.
 
 ### Polyhedron
 
@@ -310,7 +310,7 @@ $$
  V-E+F=2
 $$
 
-where F, V, and E represents the number of faces, edges and vertices of the polyhedron respectively.
+Where F, V, and E represent the number of faces, edges, and vertices of the polyhedron, respectively.
 
 Every polyhedron has three parts:
 
@@ -322,15 +322,15 @@ Every polyhedron has three parts:
 
 The names of the polyhedrons are derived from the number of faces they have:
 
--   Tetrahedron - A polyhedron with 4 faces.
--   Pentahedron - A polyhedron with 5 faces.
--   Hexahedron - A polyhedron with 6 faces.
--   Heptahedron - A polyhedron with 7 faces.
--   Octahedron - A polyhedron with 8 faces.
--   Nonahedron - A polyhedron with 9 faces.
--   Decahedron - A polyhedron with 10 faces
+-   _Tetrahedron_ - A polyhedron with $4$ faces.
+-   _Pentahedron_ - A polyhedron with $5$ faces.
+-   _Hexahedron_ - A polyhedron with $6$ faces.
+-   _Heptahedron_ - A polyhedron with $7$ faces.
+-   _Octahedron_ - A polyhedron with $8$ faces.
+-   _Nonahedron_ - A polyhedron with $9$ faces.
+-   _Decahedron_ - A polyhedron with $10$ faces
 
-#### Types of polyhedron
+#### Types of the polyhedron
 
 ![Polyhedron types](../static/math/polyhedron-types.png)
 
@@ -340,11 +340,11 @@ A regular polyhedron is made up of regular polygons. Such solids are also known 
 
 ##### Irregular polyhedron
 
-An irregular polyhedron is formed by polygons of different shapes where all the components are not the same. This means that all the sides of an irregular polyhedron are not equal.
+An irregular polyhedron is formed by polygons of different shapes where all the components are not the same, which means that all the sides of an irregular polyhedron are not equal.
 
 ## Coordinate Plane
 
-A coordinate plane is a two-dimensional plane formed by the intersection of a vertical line (usually) called y-axis and a horizontal line (usually) called x-axis. These are perpendicular lines that intersect each other at zero, and this point is called the **origin**. The axes cut the coordinate plane into four equal sections, and each section is known as quadrant.
+A coordinate plane is a two-dimensional plane formed by the intersection of a vertical line called the y-axis and a horizontal line called the x-axis. These are perpendicular lines that intersect each other at zero, and this point is called the **origin**. The axes cut the coordinate plane into four equal sections, and each section is known as a quadrant.
 
 ![coordplane](../static/math/coordplane.gif)
 
@@ -352,7 +352,7 @@ A coordinate plane is a two-dimensional plane formed by the intersection of a ve
 
 ### Graphing coordinates
 
-For graphing coordinates we are using ordered pairs (x, y), where x represents the point on the x-axis and y a point on the y-axis.
+For graphing coordinates, we are using ordered pairs (x, y), where x represents the point on the x-axis and y a point on the y-axis.
 
 ### Quadrants
 
@@ -369,6 +369,6 @@ Nothing prevents a line or flat shape from starting in one quadrant and continui
 
 When a line crosses either the x-axis or y-axis, the point is called either the **x-intercept** or **y-intercept**. An intercept always happens when the value of the crossed axis is o:
 
-[insert coordinate plane with straight line intercepting at (5, 0) and (0, 3); label both points with each coordinate pair]
+[insert coordinate plane with straight-line intercepting at (5, 0) and (0, 3); label both points with each coordinate pair]
 
-Here the line intercepts the y-axis at 3, along the x-axis value of 0, and intercepts the x-axis at 5, along the y-axis value of 0.
+Here the line intercepts the y-axis at $3$ along with the x-axis value of $0$ and intercepts the x-axis at $5$ along with the y-axis value of $0$.
