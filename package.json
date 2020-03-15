@@ -9,7 +9,8 @@
 	"devDependencies": {},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "vuepress build"
+		"build": "vuepress build",
+		"deploy": "./deploy.sh"
 	},
 	"repository": {
 		"type": "git",

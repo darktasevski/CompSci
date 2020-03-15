@@ -38,8 +38,6 @@ Example:
 
 ## Multiplying with the area model
 
-6 x 7981 = | x | 7000 | 900 | 80 | 1 | |---|--------|------|-----|---| | 6 | 42,000 | 5400 | 480 | 6 |
-
 ```js
 = 42000
    5400
@@ -177,13 +175,14 @@ $$
 What is $2^6 \times 2^5$?
 
 $$
-\text{ \textbar the first term in the product is the product of 5 2's and the second is the product of the 6 2's, so all together we have 11 2's, Thus:}  \\
+\text{ \textbar the first term in the product is the product of 5 2's}  \\
+\text{and the second is the product of the 6 2's, so all together we have 11 2's, Thus:} \\
 2^6 \times 2^5 = 2^{11} = 2048
 $$
 
 What is $\frac{3^{15}}{3^{12}}$?
 
-> Evaluating the numerator and denominator and then performing the division is long and tedious and leaves much room for error. We can instead note that the twelwe 3's on the bottom cancel with twelve of the fifteen 3's on the top (because $\frac{3}{3} = 1$) leaving three 3's on top:
+> Evaluating the numerator and denominator and then performing the division is long and tedious and leaves much room for error. We can instead note that the twelve 3's on the bottom cancel with twelve of the fifteen 3's on the top (because $\frac{3}{3} = 1$) leaving three 3's on top:
 
 $$
 \frac{3 \times 3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times 3 \times3 \times3 \times3 \times3 \times3}{3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3 \times3} = \frac{3 \times3 \times3}{1} = 27
