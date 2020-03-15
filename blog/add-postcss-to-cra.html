@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Add PostCSS to Create-React-App | Signal in the Static</title>
+    <meta name="description" content="Learn a bit about PostCSS and how to add it to CreateReactApp. Without ejecting!">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+    
+    <link rel="preload" href="/CompSci/assets/css/0.styles.df72dcd0.css" as="style"><link rel="preload" href="/CompSci/assets/js/app.97a32e84.js" as="script"><link rel="preload" href="/CompSci/assets/js/2.8a8e11da.js" as="script"><link rel="preload" href="/CompSci/assets/js/45.cc206802.js" as="script"><link rel="prefetch" href="/CompSci/assets/js/10.8e596867.js"><link rel="prefetch" href="/CompSci/assets/js/11.58bf7c1a.js"><link rel="prefetch" href="/CompSci/assets/js/12.207d6aff.js"><link rel="prefetch" href="/CompSci/assets/js/13.60e91351.js"><link rel="prefetch" href="/CompSci/assets/js/14.439fc482.js"><link rel="prefetch" href="/CompSci/assets/js/15.b287df79.js"><link rel="prefetch" href="/CompSci/assets/js/16.42ec2a6c.js"><link rel="prefetch" href="/CompSci/assets/js/17.4579b4a8.js"><link rel="prefetch" href="/CompSci/assets/js/18.a7d7985f.js"><link rel="prefetch" href="/CompSci/assets/js/19.316e828c.js"><link rel="prefetch" href="/CompSci/assets/js/20.d539cc26.js"><link rel="prefetch" href="/CompSci/assets/js/21.2879913f.js"><link rel="prefetch" href="/CompSci/assets/js/22.4ab89eaa.js"><link rel="prefetch" href="/CompSci/assets/js/23.100a5e1f.js"><link rel="prefetch" href="/CompSci/assets/js/24.449b518d.js"><link rel="prefetch" href="/CompSci/assets/js/25.6caffbd6.js"><link rel="prefetch" href="/CompSci/assets/js/26.821a8d9f.js"><link rel="prefetch" href="/CompSci/assets/js/27.7ad4d0fb.js"><link rel="prefetch" href="/CompSci/assets/js/28.5f8c4126.js"><link rel="prefetch" href="/CompSci/assets/js/29.f07f23c4.js"><link rel="prefetch" href="/CompSci/assets/js/3.e14f8637.js"><link rel="prefetch" href="/CompSci/assets/js/30.54496606.js"><link rel="prefetch" href="/CompSci/assets/js/31.e1b41370.js"><link rel="prefetch" href="/CompSci/assets/js/32.b110f1b3.js"><link rel="prefetch" href="/CompSci/assets/js/33.223ac922.js"><link rel="prefetch" href="/CompSci/assets/js/34.eea928b7.js"><link rel="prefetch" href="/CompSci/assets/js/35.eb70abcf.js"><link rel="prefetch" href="/CompSci/assets/js/36.8c32f7ee.js"><link rel="prefetch" href="/CompSci/assets/js/37.d373f9ba.js"><link rel="prefetch" href="/CompSci/assets/js/38.158c9deb.js"><link rel="prefetch" href="/CompSci/assets/js/39.5092e5d0.js"><link rel="prefetch" href="/CompSci/assets/js/4.e3f0380b.js"><link rel="prefetch" href="/CompSci/assets/js/40.35e53073.js"><link rel="prefetch" href="/CompSci/assets/js/41.b2c00837.js"><link rel="prefetch" href="/CompSci/assets/js/42.c7293914.js"><link rel="prefetch" href="/CompSci/assets/js/43.41d5e759.js"><link rel="prefetch" href="/CompSci/assets/js/44.179bea35.js"><link rel="prefetch" href="/CompSci/assets/js/46.98940f54.js"><link rel="prefetch" href="/CompSci/assets/js/47.37737af9.js"><link rel="prefetch" href="/CompSci/assets/js/48.f63f1dfb.js"><link rel="prefetch" href="/CompSci/assets/js/49.ad937567.js"><link rel="prefetch" href="/CompSci/assets/js/5.5de6ab5b.js"><link rel="prefetch" href="/CompSci/assets/js/50.2619ef08.js"><link rel="prefetch" href="/CompSci/assets/js/51.b2cbd794.js"><link rel="prefetch" href="/CompSci/assets/js/6.334cb108.js"><link rel="prefetch" href="/CompSci/assets/js/7.33d7a852.js"><link rel="prefetch" href="/CompSci/assets/js/8.c0911a58.js"><link rel="prefetch" href="/CompSci/assets/js/9.8eee45cc.js">
+    <link rel="stylesheet" href="/CompSci/assets/css/0.styles.df72dcd0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/CompSci/" class="home-link router-link-active"><!----> <span class="site-name">Signal in the Static</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/CompSci/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/CompSci/blog/" class="nav-link router-link-active">
+  Blog
+</a></div><div class="nav-item"><a href="/CompSci/about/" class="nav-link">
+  About
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/CompSci/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/CompSci/blog/" class="nav-link router-link-active">
+  Blog
+</a></div><div class="nav-item"><a href="/CompSci/about/" class="nav-link">
+  About
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/CompSci/blog/" class="sidebar-link">Blog</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Notes</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/Books/" class="sidebar-heading clickable open"><span>Books</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/CompSci/Books/Art_of_problem_solving_Vol.1.html" class="sidebar-link">The Art of Problem Solving, Vol. 1: The Basics</a></li><li><a href="/CompSci/Books/ydkjs_notes.html" class="sidebar-link">You Don't Know JS: Notes</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/CompSci/" class="sidebar-heading clickable"><span>CompSci</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/Math/" class="sidebar-heading clickable"><span>Math</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/Programming/" class="sidebar-heading clickable"><span>Programming</span> <span class="arrow right"></span></a> <!----></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="add-postcss-to-create-react-app"><a href="#add-postcss-to-create-react-app" class="header-anchor">#</a> Add PostCSS to Create-React-App</h1> <blockquote><p>Without ejecting!</p></blockquote> <p><img src="https://postcss.org/_/web_modules/LayoutContainer/opengraph.jpg" alt="cover_image"></p> <h2 id="a-small-introduction-to-postcss"><a href="#a-small-introduction-to-postcss" class="header-anchor">#</a> A small introduction to PostCSS</h2> <p>Many of you are spending your time working with CSS, so I guess you are familiar with preprocessors such as Less, Sass, and Stylus. These tools are a vital part of the web development ecosystem nowadays, and I cannot imagine writing styles for a website without using features like nesting, variables, or mixins as it can be cumbersome, awkward and sometimes less intuitive.</p> <p>But, there is a couple of problems with traditional preprocessors:</p> <ul><li>They don't follow CSS standards. You might say that each of the preprocessors has become a standard of its own. Regrettably, they don’t aim at being compatible with the W3C standards, which means that they cannot you cant use their features as polyfills for early testing of the newer W3C standards.</li> <li>They are not extendable. Whichever preprocessor you choose, you are limited to the set of features that it provides. If you need anything on top of that, you’ll need to add it as a separate step in your build process. If you feel like writing your extension, you’re on your own. Good luck with that.</li></ul> <p>This is where PostCSS comes in.</p> <p>In a nutshell, PostCSS does the same thing as LESS/SASS/SCSS... But enhance it with a few plugins, and it can do much more. <em>PostCSS is much like Babel for JavaScript.</em> It parses your CSS, using Javascript under the hood, turning it into the raw AST (abstract syntax tree) and then performs transformations to the CSS that today's browsers will understand and render. And a bonus is that JavaScript can transform our styles much more quickly than other processors.</p> <p>Enough about PostCSS and let's focus on the purpose of this post. After some Googling, I've found out that for PostCss to work, you had to eject CRA to edit the underlying Webpack configuration, which deals with all the necessary loaders for different file types, which I've found as a bit of a drastic measure. In the end, after a bit of trial and error hacking together different solutions, I got it working. Here’s how!</p> <p>You can find the final code here: <a href="https://github.com/Puritanic/CRA-feat-PostCSS." target="_blank" rel="noopener noreferrer">https://github.com/Puritanic/CRA-feat-PostCSS.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <blockquote><p>Edit: It seems that my google foo isn't good as I thought it was. Here's an <a href="https://github.com/csstools/react-app-rewire-postcss" target="_blank" rel="noopener noreferrer">alternate method<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> for extending CRA with PostCSS created by @jonathantneal</p></blockquote> <p>First, create a new React app:</p> <div class="language-shell extra-class"><pre class="language-shell"><code>create-react-app postcss-cra
+<span class="token builtin class-name">cd</span> postcss-cra
+</code></pre></div><p>And install postcss-cli and a few basic plugins</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">yarn</span> <span class="token function">add</span> --dev autoprefixer postcss-nested postcss-cli npm-run-all
+</code></pre></div><p>Then, at the root of the project, you need to create a file called <code>postcss.config.js</code> and add this code:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+	plugins<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'postcss-nested'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'autoprefixer'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Almost there! Now all that is left is to edit the scripts in <code>package.json</code> :</p> <div class="language-JSON extra-class"><pre class="language-json"><code>
+    <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;build:css&quot;</span><span class="token operator">:</span> <span class="token string">&quot;postcss src/styles/main.css -o src/index.css&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;watch:css&quot;</span><span class="token operator">:</span> <span class="token string">&quot;postcss src/styles/main.css -o src/index.css -w&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;start&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm-run-all -p watch:css start-js&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;start-js&quot;</span><span class="token operator">:</span> <span class="token string">&quot;react-scripts start&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;build-js&quot;</span><span class="token operator">:</span> <span class="token string">&quot;react-scripts build&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm-run-all build:css build-js&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;react-scripts test --env=jsdom&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;eject&quot;</span><span class="token operator">:</span> <span class="token string">&quot;react-scripts eject&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>Create a styles folder inside <code>src</code> where our CSS will live:</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">mkdir</span> src/styles
+<span class="token function">mv</span> src/App.css src/styles/main.css
+</code></pre></div><p>And to test postcss, let's modify default CRA styles a bit:</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* src/styles/main.css */</span>
+<span class="token selector">.App</span> <span class="token punctuation">{</span>
+	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token selector">;
+
+	&amp;-logo</span> <span class="token punctuation">{</span>
+		<span class="token property">animation</span><span class="token punctuation">:</span> App-logo-spin infinite 20s linear<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token selector">&amp;-header</span> <span class="token punctuation">{</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span> #222<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+		<span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+		<span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token selector">&amp;-title</span> <span class="token punctuation">{</span>
+		<span class="token property">font-size</span><span class="token punctuation">:</span> 1.5em<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token selector">&amp;-intro</span> <span class="token punctuation">{</span>
+		<span class="token property">font-size</span><span class="token punctuation">:</span> large<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> App-logo-spin</span> <span class="token punctuation">{</span>
+	<span class="token selector">from</span> <span class="token punctuation">{</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">to</span> <span class="token punctuation">{</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>Don't forget to remove <code>import './App.css';'</code> from App.js, as we've moved that file to styles and renamed it to <code>main.css</code>.</p></blockquote> <p>Moment of truth! Now run: <code>yarn run start</code>. In the browser, you should see almost the same styles that CRA by default has. Now let's see output <code>index.css</code> file in <code>src/</code>:</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.App</span> <span class="token punctuation">{</span>
+	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+	<span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.App-logo</span> <span class="token punctuation">{</span>
+	<span class="token property">-webkit-animation</span><span class="token punctuation">:</span> App-logo-spin infinite 20s linear<span class="token punctuation">;</span>
+	<span class="token property">animation</span><span class="token punctuation">:</span> App-logo-spin infinite 20s linear<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.App-header</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> #222<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.App-title</span> <span class="token punctuation">{</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 1.5em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.App-intro</span> <span class="token punctuation">{</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> large<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@-webkit-keyframes</span> App-logo-spin</span> <span class="token punctuation">{</span>
+	<span class="token selector">from</span> <span class="token punctuation">{</span>
+		<span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">to</span> <span class="token punctuation">{</span>
+		<span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@keyframes</span> App-logo-spin</span> <span class="token punctuation">{</span>
+	<span class="token selector">from</span> <span class="token punctuation">{</span>
+		<span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token selector">to</span> <span class="token punctuation">{</span>
+		<span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Voila! As you can see, our styles are automatically auto-vendor-prefixed for better support, and our nested code is transformed to code that browser can understand.</p> <p>Now let's do something more advanced:</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">yarn</span> <span class="token function">add</span> -D postcss-import postcss-preset-env
+</code></pre></div><p>After that, let's add those new plugins to <code>postcss.config.js</code>:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+	plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+		<span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'postcss-import'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'postcss-preset-env'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+			stage<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'postcss-nested'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'autoprefixer'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+	<span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Now, create a test files inside styles folder:</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">touch</span> src/styles/styles.css src/styles/styles1.css
+</code></pre></div><p>Move everything from <code>src/styles/main.css</code> to styles.css and add this:</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'styles.css'</span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">'styles1.css'</span><span class="token punctuation">;</span></span>
+</code></pre></div><p>Now, in <code>src/styles/styles1.css</code> add this weird mumbo-jumbo:</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token atrule"><span class="token rule">@custom-media</span> --viewport-medium <span class="token punctuation">(</span>width &lt;= 50rem<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@custom-selector</span> <span class="token punctuation">:</span>--heading h1<span class="token punctuation">,</span> h2<span class="token punctuation">,</span> h3<span class="token punctuation">,</span> h4<span class="token punctuation">,</span> h5<span class="token punctuation">,</span> h6<span class="token punctuation">;</span></span>
+
+<span class="token selector">:root</span> <span class="token punctuation">{</span>
+	<span class="token property">--fontSize</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+	<span class="token property">--mainColor</span><span class="token punctuation">:</span> #12345678<span class="token punctuation">;</span>
+	<span class="token property">--secondaryColor</span><span class="token punctuation">:</span> <span class="token function">lab</span><span class="token punctuation">(</span>32.5 38.5 -47.6 / 90%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">html</span> <span class="token punctuation">{</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> hidden auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span>--viewport-medium<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+	<span class="token selector">body</span> <span class="token punctuation">{</span>
+		<span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--mainColor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">font-family</span><span class="token punctuation">:</span> system-ui<span class="token punctuation">;</span>
+		<span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--fontSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--fontSize<span class="token punctuation">)</span> * 1.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token property">overflow-wrap</span><span class="token punctuation">:</span> break-word<span class="token punctuation">;</span>
+		<span class="token property">padding-inline</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--fontSize<span class="token punctuation">)</span> / 2 + 1px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">:--heading</span> <span class="token punctuation">{</span>
+	<span class="token property">margin-block</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.App-header:matches(header, .main)</span> <span class="token punctuation">{</span>
+	<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">image-set</span><span class="token punctuation">(</span><span class="token string">'./img/background.jpg'</span> 1x<span class="token punctuation">,</span> <span class="token string">'./img/background-2x.jpg'</span> 2x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token property">background-size</span><span class="token punctuation">:</span> contain<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">a</span> <span class="token punctuation">{</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> rebeccapurple<span class="token selector">;
+
+	&amp;:hover</span> <span class="token punctuation">{</span>
+		<span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">color-mod</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--secondaryColor<span class="token punctuation">)</span> <span class="token function">b</span><span class="token punctuation">(</span>15%<span class="token punctuation">)</span> <span class="token function">a</span><span class="token punctuation">(</span>75%<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Now restart CRA server. Everything should work as intended, except for several (obligatory) cats showing in the header now 😄</p> <p>This is just a scratch on the surface, PostCSS have enormous power in its plugins, and have a great community around it. What's the best is that the most of PostCSS plugins are using stuff that will be used as native CSS syntax in future, so your code is future-proof. In the end, I'm enjoying using it, and that's what matters, and I hope that you will too. Thanks for reading!</p> <p>Some resources:</p> <ul><li><a href="https://github.com/postcss/postcss" target="_blank" rel="noopener noreferrer">Official PostCSS Github Repo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> and <a href="https://postcss.org/" target="_blank" rel="noopener noreferrer">Page<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://preset-env.cssdb.org/" target="_blank" rel="noopener noreferrer">PostCSS-preset-env playground<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://github.com/jdrgomes/awesome-postcss" target="_blank" rel="noopener noreferrer">List of awesome PostCSS plugins<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">3/8/2020, 7:50:26 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/CompSci/assets/js/app.97a32e84.js" defer></script><script src="/CompSci/assets/js/2.8a8e11da.js" defer></script><script src="/CompSci/assets/js/45.cc206802.js" defer></script>
+  </body>
+</html>

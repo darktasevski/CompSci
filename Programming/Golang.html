@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Golang | Signal in the Static</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+    
+    <link rel="preload" href="/CompSci/assets/css/0.styles.df72dcd0.css" as="style"><link rel="preload" href="/CompSci/assets/js/app.97a32e84.js" as="script"><link rel="preload" href="/CompSci/assets/js/2.8a8e11da.js" as="script"><link rel="preload" href="/CompSci/assets/js/31.e1b41370.js" as="script"><link rel="prefetch" href="/CompSci/assets/js/10.8e596867.js"><link rel="prefetch" href="/CompSci/assets/js/11.58bf7c1a.js"><link rel="prefetch" href="/CompSci/assets/js/12.207d6aff.js"><link rel="prefetch" href="/CompSci/assets/js/13.60e91351.js"><link rel="prefetch" href="/CompSci/assets/js/14.439fc482.js"><link rel="prefetch" href="/CompSci/assets/js/15.b287df79.js"><link rel="prefetch" href="/CompSci/assets/js/16.42ec2a6c.js"><link rel="prefetch" href="/CompSci/assets/js/17.4579b4a8.js"><link rel="prefetch" href="/CompSci/assets/js/18.a7d7985f.js"><link rel="prefetch" href="/CompSci/assets/js/19.316e828c.js"><link rel="prefetch" href="/CompSci/assets/js/20.d539cc26.js"><link rel="prefetch" href="/CompSci/assets/js/21.2879913f.js"><link rel="prefetch" href="/CompSci/assets/js/22.4ab89eaa.js"><link rel="prefetch" href="/CompSci/assets/js/23.100a5e1f.js"><link rel="prefetch" href="/CompSci/assets/js/24.449b518d.js"><link rel="prefetch" href="/CompSci/assets/js/25.6caffbd6.js"><link rel="prefetch" href="/CompSci/assets/js/26.821a8d9f.js"><link rel="prefetch" href="/CompSci/assets/js/27.7ad4d0fb.js"><link rel="prefetch" href="/CompSci/assets/js/28.5f8c4126.js"><link rel="prefetch" href="/CompSci/assets/js/29.f07f23c4.js"><link rel="prefetch" href="/CompSci/assets/js/3.e14f8637.js"><link rel="prefetch" href="/CompSci/assets/js/30.54496606.js"><link rel="prefetch" href="/CompSci/assets/js/32.b110f1b3.js"><link rel="prefetch" href="/CompSci/assets/js/33.223ac922.js"><link rel="prefetch" href="/CompSci/assets/js/34.eea928b7.js"><link rel="prefetch" href="/CompSci/assets/js/35.eb70abcf.js"><link rel="prefetch" href="/CompSci/assets/js/36.8c32f7ee.js"><link rel="prefetch" href="/CompSci/assets/js/37.d373f9ba.js"><link rel="prefetch" href="/CompSci/assets/js/38.158c9deb.js"><link rel="prefetch" href="/CompSci/assets/js/39.5092e5d0.js"><link rel="prefetch" href="/CompSci/assets/js/4.e3f0380b.js"><link rel="prefetch" href="/CompSci/assets/js/40.35e53073.js"><link rel="prefetch" href="/CompSci/assets/js/41.b2c00837.js"><link rel="prefetch" href="/CompSci/assets/js/42.c7293914.js"><link rel="prefetch" href="/CompSci/assets/js/43.41d5e759.js"><link rel="prefetch" href="/CompSci/assets/js/44.179bea35.js"><link rel="prefetch" href="/CompSci/assets/js/45.cc206802.js"><link rel="prefetch" href="/CompSci/assets/js/46.98940f54.js"><link rel="prefetch" href="/CompSci/assets/js/47.37737af9.js"><link rel="prefetch" href="/CompSci/assets/js/48.f63f1dfb.js"><link rel="prefetch" href="/CompSci/assets/js/49.ad937567.js"><link rel="prefetch" href="/CompSci/assets/js/5.5de6ab5b.js"><link rel="prefetch" href="/CompSci/assets/js/50.2619ef08.js"><link rel="prefetch" href="/CompSci/assets/js/51.b2cbd794.js"><link rel="prefetch" href="/CompSci/assets/js/6.334cb108.js"><link rel="prefetch" href="/CompSci/assets/js/7.33d7a852.js"><link rel="prefetch" href="/CompSci/assets/js/8.c0911a58.js"><link rel="prefetch" href="/CompSci/assets/js/9.8eee45cc.js">
+    <link rel="stylesheet" href="/CompSci/assets/css/0.styles.df72dcd0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/CompSci/" class="home-link router-link-active"><!----> <span class="site-name">Signal in the Static</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/CompSci/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/CompSci/blog/" class="nav-link">
+  Blog
+</a></div><div class="nav-item"><a href="/CompSci/about/" class="nav-link">
+  About
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/CompSci/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/CompSci/blog/" class="nav-link">
+  Blog
+</a></div><div class="nav-item"><a href="/CompSci/about/" class="nav-link">
+  About
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/CompSci/blog/" class="sidebar-link">Blog</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Notes</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/Books/" class="sidebar-heading clickable"><span>Books</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/CompSci/" class="sidebar-heading clickable"><span>CompSci</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/Math/" class="sidebar-heading clickable"><span>Math</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/Programming/" class="sidebar-heading clickable router-link-active open"><span>Programming</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/CompSci/Programming/class_theory.html" class="sidebar-link">Class Theory</a></li><li><a href="/CompSci/Programming/Electron.html" class="sidebar-link">Electron</a></li><li><a href="/CompSci/Programming/Golang.html" class="active sidebar-link">Golang</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/CompSci/Programming/Golang.html#exported-names" class="sidebar-link">Exported names</a></li><li class="sidebar-sub-header"><a href="/CompSci/Programming/Golang.html#functions" class="sidebar-link">Functions</a></li><li class="sidebar-sub-header"><a href="/CompSci/Programming/Golang.html#variables" class="sidebar-link">Variables</a></li><li class="sidebar-sub-header"><a href="/CompSci/Programming/Golang.html#basic-types" class="sidebar-link">Basic types</a></li><li class="sidebar-sub-header"><a href="/CompSci/Programming/Golang.html#constants" class="sidebar-link">Constants</a></li><li class="sidebar-sub-header"><a href="/CompSci/Programming/Golang.html#flow-control" class="sidebar-link">Flow control</a></li></ul></li><li><a href="/CompSci/Programming/Javascript.html" class="sidebar-link">Javascript</a></li><li><a href="/CompSci/Programming/js_performance.html" class="sidebar-link">Javascript Performance</a></li><li><a href="/CompSci/Programming/Python.html" class="sidebar-link">Python</a></li><li><a href="/CompSci/Programming/ReactNative.html" class="sidebar-link">React Native</a></li><li><a href="/CompSci/Programming/Ruby.html" class="sidebar-link">Ruby</a></li><li><a href="/CompSci/Programming/video_engineering.html" class="sidebar-link">Video engineering</a></li><li><a href="/CompSci/Programming/Shell/" class="sidebar-link">ShellScripting</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="golang"><a href="#golang" class="header-anchor">#</a> Golang</h1> <p></p><div class="table-of-contents"><ul><li><a href="#exported-names">Exported names</a></li><li><a href="#functions">Functions</a><ul><li><a href="#naked-return-named-return-values">&quot;Naked&quot; return - Named return values</a></li></ul></li><li><a href="#variables">Variables</a></li><li><a href="#basic-types">Basic types</a><ul><li><a href="#type-conversions">Type conversions</a></li><li><a href="#type-inference">Type inference</a></li></ul></li><li><a href="#constants">Constants</a></li><li><a href="#flow-control">Flow control</a><ul><li><a href="#for">For</a></li><li><a href="#if-statements">If statements</a></li></ul></li></ul></div><p></p> <p>[TOC]</p> <hr> <blockquote><p>Notes and examples</p></blockquote> <p>Every Go program is made up of packages.</p> <p>Programs start running in package main.</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+<span class="token string">&quot;fmt&quot;</span>
+<span class="token string">&quot;math&quot;</span>
+<span class="token string">&quot;math/rand&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;My favorite number is&quot;</span><span class="token punctuation">,</span> rand<span class="token punctuation">.</span><span class="token function">Intn</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>Note: The environment in which these programs are executed is deterministic, so each time you run the example program <code>rand.Intn</code> will return the same number. (To see a different number, seed the number generator; see <a href="https://golang.org/pkg/math/rand/#Seed" target="_blank" rel="noopener noreferrer"><code>rand.Seed</code><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p></blockquote> <p>This code groups the imports into a parenthesized, &quot;factored&quot; import statement.</p> <p>You can also write multiple import statements, like:</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">import</span> <span class="token string">&quot;fmt&quot;</span>
+<span class="token keyword">import</span> <span class="token string">&quot;math&quot;</span>
+</code></pre></div><h2 id="exported-names"><a href="#exported-names" class="header-anchor">#</a> Exported names</h2> <p>In Go, a name is exported if it begins with a capital letter. For example, <code>Pizza</code> is an exported name, as is <code>Pi</code>, which is exported from the math package.</p> <p><code>pizza</code> and <code>pi</code> do not start with a capital letter, so they are not exported.</p> <p>When importing a package, you can refer only to its exported names. Any &quot;unexported&quot; names are not accessible from outside the package.</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+<span class="token string">&quot;fmt&quot;</span>
+<span class="token string">&quot;math&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>Pi<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="functions"><a href="#functions" class="header-anchor">#</a> Functions</h2> <p>A function can take zero or more arguments.</p> <p>In this example, add takes two parameters of type int.</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">&quot;fmt&quot;</span>
+
+<span class="token keyword">func</span> <span class="token function">add</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
+<span class="token keyword">return</span> x <span class="token operator">+</span> y
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>Notice that the type comes after the variable name. (For more about why types look the way they do, see the <a href="https://blog.golang.org/gos-declaration-syntax" target="_blank" rel="noopener noreferrer">article on Go's declaration syntax<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.)</p></blockquote> <p>When two or more consecutive named function parameters share a type, you can omit the type from all but the last.</p> <p>In this example, we shortened</p> <div class="language-go extra-class"><pre class="language-go"><code>x <span class="token builtin">int</span><span class="token punctuation">,</span> y <span class="token builtin">int</span>
+
+<span class="token comment">// to</span>
+
+x<span class="token punctuation">,</span> y <span class="token builtin">int</span>
+
+<span class="token comment">// resulting in:</span>
+
+<span class="token keyword">func</span> <span class="token function">add</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
+<span class="token keyword">return</span> x <span class="token operator">+</span> y
+<span class="token punctuation">}</span>
+</code></pre></div><p>A function can return any number of results.</p> <p>The swap function returns two strings.</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">swap</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">return</span> y<span class="token punctuation">,</span> x
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+a<span class="token punctuation">,</span> b <span class="token operator">:=</span> <span class="token function">swap</span><span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;world&quot;</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="naked-return-named-return-values"><a href="#naked-return-named-return-values" class="header-anchor">#</a> &quot;Naked&quot; return - Named return values</h3> <p>Go's return values may be named. If so, they are treated as variables defined at the top of the function.</p> <p>These names should be used to document the meaning of the return values.</p> <p>A return statement without arguments returns the named return values. This is known as a &quot;naked&quot; return.</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">split</span><span class="token punctuation">(</span>sum <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+x <span class="token operator">=</span> sum <span class="token operator">*</span> <span class="token number">4</span> <span class="token operator">/</span> <span class="token number">9</span>
+y <span class="token operator">=</span> sum <span class="token operator">-</span> x
+<span class="token keyword">return</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Naked return statements should be used only in short functions, as with the example shown here. They can harm readability in longer functions.</p> <h2 id="variables"><a href="#variables" class="header-anchor">#</a> Variables</h2> <p>The var statement declares a list of variables; as in function argument lists, the type is last.</p> <p>A var statement can be (scoped) at package or function level. We see both in this example.</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">&quot;fmt&quot;</span>
+
+<span class="token keyword">var</span> c<span class="token punctuation">,</span> python<span class="token punctuation">,</span> java <span class="token builtin">bool</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">var</span> i <span class="token builtin">int</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> c<span class="token punctuation">,</span> python<span class="token punctuation">,</span> java<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Variables declared without a corresponding initialization are zero-valued. For example, the zero value for an int is 0.</p> <p>The zero value is:</p> <ul><li>0 for numeric types,</li> <li>false for the boolean type, and</li> <li>&quot;&quot; (the empty string) for strings.</li></ul> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">var</span> i <span class="token builtin">int</span>
+<span class="token keyword">var</span> f <span class="token builtin">float64</span>
+<span class="token keyword">var</span> b <span class="token builtin">bool</span>
+<span class="token keyword">var</span> s <span class="token builtin">string</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;%v %v %v %q\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> f<span class="token punctuation">,</span> b<span class="token punctuation">,</span> s<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// Results in: 0 0 false &quot;&quot;</span>
+</code></pre></div><p>The <code>:=</code> syntax is shorthand for declaring and initializing a variable, e.g. for <code>var f string = &quot;short&quot;</code> in this case is same as <code>f := &quot;short&quot;</code>. Inside a function, the <code>:=</code> short assignment statement can be used in place of a var declaration with implicit type. Outside a function, every statement begins with a keyword (var, func, and so on) and so the <code>:=</code> construct is not available.</p> <p>A var declaration can include initializers, one per variable.</p> <p>If an initializer is present, the type can be omitted; the variable will take the type of the initializer.</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">var</span> i<span class="token punctuation">,</span> j <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">var</span> c<span class="token punctuation">,</span> python<span class="token punctuation">,</span> java <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">&quot;no!&quot;</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> c<span class="token punctuation">,</span> python<span class="token punctuation">,</span> java<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Results in 1 2 true false no!</span>
+</code></pre></div><h2 id="basic-types"><a href="#basic-types" class="header-anchor">#</a> Basic types</h2> <p>Go's basic types are</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token builtin">bool</span>
+
+<span class="token builtin">string</span>
+
+<span class="token builtin">int</span>  <span class="token builtin">int8</span>  <span class="token builtin">int16</span>  <span class="token builtin">int32</span>  <span class="token builtin">int64</span>
+<span class="token builtin">uint</span> <span class="token builtin">uint8</span> <span class="token builtin">uint16</span> <span class="token builtin">uint32</span> <span class="token builtin">uint64</span> <span class="token builtin">uintptr</span>
+
+<span class="token builtin">byte</span> <span class="token comment">// alias for uint8</span>
+
+<span class="token builtin">rune</span> <span class="token comment">// alias for int32</span>
+<span class="token comment">// represents a Unicode code point</span>
+
+<span class="token builtin">float32</span> <span class="token builtin">float64</span>
+
+<span class="token builtin">complex64</span> <span class="token builtin">complex128</span>
+</code></pre></div><p>The <code>int</code>, <code>uint</code>, and <code>uintptr</code> types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit systems. When you need an integer value you should use <code>int</code> unless you have a specific reason to use a sized or unsigned integer type.</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+<span class="token string">&quot;fmt&quot;</span>
+<span class="token string">&quot;math/cmplx&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> <span class="token punctuation">(</span>
+ToBe   <span class="token builtin">bool</span>       <span class="token operator">=</span> <span class="token boolean">false</span>
+MaxInt <span class="token builtin">uint64</span>     <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">&lt;&lt;</span><span class="token number">64</span> <span class="token operator">-</span> <span class="token number">1</span>
+z      <span class="token builtin">complex128</span> <span class="token operator">=</span> cmplx<span class="token punctuation">.</span><span class="token function">Sqrt</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">5</span> <span class="token operator">+</span> <span class="token number">12i</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;Type: %T Value: %v\n&quot;</span><span class="token punctuation">,</span> ToBe<span class="token punctuation">,</span> ToBe<span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;Type: %T Value: %v\n&quot;</span><span class="token punctuation">,</span> MaxInt<span class="token punctuation">,</span> MaxInt<span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;Type: %T Value: %v\n&quot;</span><span class="token punctuation">,</span> z<span class="token punctuation">,</span> z<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="type-conversions"><a href="#type-conversions" class="header-anchor">#</a> Type conversions</h3> <p>The expression T(v) converts the value v to the type T.</p> <p>Some numeric conversions:</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">var</span> i <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">42</span>
+<span class="token keyword">var</span> f <span class="token builtin">float64</span> <span class="token operator">=</span> <span class="token function">float64</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token keyword">var</span> u <span class="token builtin">uint</span> <span class="token operator">=</span> <span class="token function">uint</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+
+<span class="token comment">// Or, put more simply:</span>
+
+i <span class="token operator">:=</span> <span class="token number">42</span>
+f <span class="token operator">:=</span> <span class="token function">float64</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+u <span class="token operator">:=</span> <span class="token function">uint</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+
+<span class="token comment">// Simple example:</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">var</span> x<span class="token punctuation">,</span> y <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span>
+<span class="token keyword">var</span> f <span class="token builtin">float64</span> <span class="token operator">=</span> math<span class="token punctuation">.</span><span class="token function">Sqrt</span><span class="token punctuation">(</span><span class="token function">float64</span><span class="token punctuation">(</span>x<span class="token operator">*</span>x <span class="token operator">+</span> y<span class="token operator">*</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> z <span class="token builtin">uint</span> <span class="token operator">=</span> <span class="token function">uint</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Unlike in C, in Go assignment between items of different type requires an explicit conversion.</p> <h3 id="type-inference"><a href="#type-inference" class="header-anchor">#</a> Type inference</h3> <p>When declaring a variable without specifying an explicit type (either by using the := syntax or var = expression syntax), the variable's type is inferred from the value on the right hand side.</p> <p>When the right hand side of the declaration is typed, the new variable is of that same type:</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">var</span> i <span class="token builtin">int</span>
+j <span class="token operator">:=</span> i <span class="token comment">// j is an int</span>
+</code></pre></div><p>But when the right hand side contains an untyped numeric constant, the new variable may be an int, float64, or complex128 depending on the precision of the constant:</p> <div class="language-go extra-class"><pre class="language-go"><code>i <span class="token operator">:=</span> <span class="token number">42</span>           <span class="token comment">// int</span>
+f <span class="token operator">:=</span> <span class="token number">3.142</span>        <span class="token comment">// float64</span>
+g <span class="token operator">:=</span> <span class="token number">0.867</span> <span class="token operator">+</span> <span class="token number">0.5i</span> <span class="token comment">// complex128</span>
+</code></pre></div><h2 id="constants"><a href="#constants" class="header-anchor">#</a> Constants</h2> <p>Constants are declared like variables, but with the const keyword.</p> <p>Constants can be character, string, boolean, or numeric values.</p> <p>Constants cannot be declared using the := syntax.</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">const</span> Pi <span class="token operator">=</span> <span class="token number">3.14</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">const</span> World <span class="token operator">=</span> <span class="token string">&quot;世界&quot;</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;Hello&quot;</span><span class="token punctuation">,</span> World<span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;Happy&quot;</span><span class="token punctuation">,</span> Pi<span class="token punctuation">,</span> <span class="token string">&quot;Day&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> Truth <span class="token operator">=</span> <span class="token boolean">true</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;Go rules?&quot;</span><span class="token punctuation">,</span> Truth<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="flow-control"><a href="#flow-control" class="header-anchor">#</a> Flow control</h2> <h3 id="for"><a href="#for" class="header-anchor">#</a> For</h3> <p>Go has only one looping construct, the for loop.</p> <p>The basic for loop has three components separated by semicolons:</p> <ul><li><p>the init statement: executed before the first iteration</p></li> <li><p>the condition expression: evaluated before every iteration</p></li> <li><p>the post statement: executed at the end of every iteration</p></li> <li></li></ul> <p>The init statement will often be a short variable declaration, and the variables declared there are visible only in the scope of the for statement.</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+sum <span class="token operator">:=</span> <span class="token number">0</span>
+<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+sum <span class="token operator">+=</span> i
+<span class="token punctuation">}</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>Unlike other languages like C, Java, or JavaScript there are no parentheses surrounding the three components of the for statement and the braces { } are always required.</p></blockquote> <p>The loop will stop iterating once the boolean condition evaluates to false.</p> <p>The init and post statements are optional:</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+sum <span class="token operator">:=</span> <span class="token number">1</span>
+<span class="token keyword">for</span> <span class="token punctuation">;</span> sum <span class="token operator">&lt;</span> <span class="token number">1000</span><span class="token punctuation">;</span> <span class="token punctuation">{</span>
+sum <span class="token operator">+=</span> sum
+<span class="token punctuation">}</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>and at this point we can drop the semicolons:</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+sum <span class="token operator">:=</span> <span class="token number">1</span>
+<span class="token keyword">for</span> sum <span class="token operator">&lt;</span> <span class="token number">1000</span> <span class="token punctuation">{</span>
+sum <span class="token operator">+=</span> sum
+<span class="token punctuation">}</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>Note the similarity with the while loop here</p></blockquote> <p>If you omit the loop condition it loops forever, so an infinite loop is compactly expressed:</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">for</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="if-statements"><a href="#if-statements" class="header-anchor">#</a> If statements</h3> <p>Go's if statements are like its for loops; the expression need not be surrounded by parentheses ( ) but the braces { } are required.</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>x <span class="token builtin">float64</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+<span class="token keyword">if</span> x <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+<span class="token keyword">return</span> <span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token operator">-</span>x<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;i&quot;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">return</span> fmt<span class="token punctuation">.</span><span class="token function">Sprint</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span><span class="token function">Sqrt</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Like for, the if statement can start with a short statement to execute before the condition.</p> <p><em>Variables declared by the statement are only in scope until the end of the if. Variables declared inside an if short statement are also available inside any of the else blocks.</em></p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+<span class="token string">&quot;fmt&quot;</span>
+<span class="token string">&quot;math&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">pow</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> n<span class="token punctuation">,</span> lim <span class="token builtin">float64</span><span class="token punctuation">)</span> <span class="token builtin">float64</span> <span class="token punctuation">{</span>
+<span class="token keyword">if</span> v <span class="token operator">:=</span> math<span class="token punctuation">.</span><span class="token function">Pow</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span> v <span class="token operator">&lt;</span> lim <span class="token punctuation">{</span>
+<span class="token keyword">return</span> v
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;%g &gt;= %g\n&quot;</span><span class="token punctuation">,</span> v<span class="token punctuation">,</span> lim<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// can't use v here, though</span>
+<span class="token keyword">return</span> lim
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>
+<span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">3/10/2020, 9:41:26 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/CompSci/assets/js/app.97a32e84.js" defer></script><script src="/CompSci/assets/js/2.8a8e11da.js" defer></script><script src="/CompSci/assets/js/31.e1b41370.js" defer></script>
+  </body>
+</html>
