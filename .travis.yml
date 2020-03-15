@@ -1,3 +1,7 @@
+language: node_js
+node_js:
+    - '10'
+    - '11'
 deploy:
     provider: pages
     skip_cleanup: true # This must be set to true! Otherwise Travis CI will delete all the files created during the build.
