@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Copyright 2017 mathsisfun.com -->
+<svg xmlns="http://www.w3.org/2000/svg" width="351.4" height="244.2" version="1.1">
+<defs>
+<marker style="overflow:visible;" orient="auto" id="id01">
+<path d="M 0,0 5,-5 -12.5,0 5,5 Z" transform="matrix(-0.4,0,0,-0.4,-4,0)" style="stroke:black; stroke-width:1pt;" />
+</marker>
+<marker style="overflow:visible;" orient="auto" id="id02">
+<path d="M 0,0 5,-5 -12.5,0 5,5 Z" transform="matrix(0.4,0,0,0.4,4,0)" style="fill:#ffc022; stroke:#ffc022; stroke-width:1pt;" />
+</marker>
+<marker style="overflow:visible;" orient="auto" id="id03">
+<path d="M 0,0 5,-5 -12.5,0 5,5 Z" transform="matrix(-0.4,0,0,-0.4,-4,0)" style="fill:#ffc022; stroke:#ffc022; stroke-width:1pt;" />
+</marker>
+</defs>
+<g transform="translate(-294.07,-388.529)">
+<text x="411.8" y="411.2" style="font-family:Verdana; font-size:31.2px; fill:black; stroke-width:0.5;">Data</text>
+<text x="321.2" y="494.2" style="font-family:Verdana; font-size:17.3px; fill:black; stroke-width:0.5;">Qualitative</text>
+<text x="479.2" y="494.2" style="font-family:Verdana; font-size:17.3px; fill:black; stroke-width:0.5;">Quantitative</text>
+<text x="425.6" y="574.6" style="font-family:Verdana; font-size:17.3px; fill:black; stroke-width:0.5;">Discrete</text>
+<text x="548.7" y="574.7" style="font-family:Verdana; font-size:17.3px; fill:black; stroke-width:0.5;">Continuous</text>
+<path d="m 437.9,419.6 -56,50.4" style="marker-end:url(#id01); fill:none; stroke:black; stroke-width:2.67;" />
+<text x="292.2" y="515.7" style="font-family:Verdana; font-size:17.3px; font-style:italic; fill:#0084c8; stroke-width:0.5;">&quot;It was great fun&quot;</text>
+<text x="467.8" y="616.4" style="font-family:Verdana; font-size:33.3px; fill:#ba00ff; stroke-width:0.5;">5</text>
+<text x="561.8" y="602.3" style="font-family:Verdana; font-size:20.7px; fill:#ffc022; stroke-width:0.5;">3.265...</text>
+<path d="m 558.3,610.8 h 77.8" style="marker-start:url(#id02); marker-end:url(#id03); fill:#ff4141; stroke:#ffc022; stroke-width:1.56;" />
+<circle cx="437.8" cy="600.3" r="3.51695" style="fill:#ba00ff; stroke:#ba00ff; stroke-width:1.56;" />
+<circle cx="449.3" cy="600.5" r="3.51695" style="fill:#ba00ff; stroke:#ba00ff; stroke-width:1.56;" />
+<circle cx="431.7" cy="609.4" r="3.51695" style="fill:#ba00ff; stroke:#ba00ff; stroke-width:1.56;" />
+<circle cx="444.1" cy="611.1" r="3.51695" style="fill:#ba00ff; stroke:#ba00ff; stroke-width:1.56;" />
+<circle cx="456.1" cy="608.7" r="3.51695" style="fill:#ba00ff; stroke:#ba00ff; stroke-width:1.56;" />
+<rect x="556.5" y="616.7" width="82.3" height="15.2" style="fill:#009100; stroke:#009100; stroke-width:1.56;" />
+<path d="m 447.5,419.6 56,50.4" style="marker-end:url(#id01); fill:none; stroke:black; stroke-width:2.67;" />
+<path d="m 520.8,503.1 -56,50.4" style="marker-end:url(#id01); fill:none; stroke:black; stroke-width:2.67;" />
+<path d="m 530.5,503.1 56,50.4" style="marker-end:url(#id01); fill:none; stroke:black; stroke-width:2.67;" />
+</g>
+</svg>
