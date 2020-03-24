@@ -72,10 +72,10 @@ The unit rate of 120 students for every 3 buses is 40 students per bus. You coul
 When prices are expressed as a quantity of 1, such as $25 per ticket or $0.89 per can, they are called **unit prices**. If we have a multiple-unit price, such as \$5.50 for 5 pounds of potatoes, and want to find the single-unit price, divide the multiple-unit price by the number of units.
 
 $$
-$5.50 ÷ 5 = $1.10
+\$5.50 \div 5 = \$1.10
 $$
 
-The unit price of potatoes that cost $5.50 for 5 pounds is $1.10 per pound.
+The unit price of potatoes that cost \$5.50 for 5 pounds is \$1.10 per pound.
 
 > Rates and unit rates are used to solve many real-world problems. Also a lot of theory in Algebra nad Calculus depends on rates, which is why it's important to learn how they work.
 

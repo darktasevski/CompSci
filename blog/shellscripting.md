@@ -3,15 +3,12 @@ title: Shellscripting
 date: 2018-08-13
 description: Small introduction to Shell programming
 author: Darkø Tasevski
+cover_image: https://thepracticaldev.s3.amazonaws.com/i/z5a2a7yzn0pmc10w703n.jpg
 tags:
     - linux
     - learning
     - bash
     - devops
----
-
-![Semi random image](https://thepracticaldev.s3.amazonaws.com/i/z5a2a7yzn0pmc10w703n.jpg)
-
 ---
 
 ## **Variables and Shebang**

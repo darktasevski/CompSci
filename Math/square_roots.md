@@ -69,7 +69,7 @@ $$
 
 ## Simplifying square roots
 
-Roots are nice, but we prefer dealing with regular numbers as much as possible. So, for example, instead of $\sqrt{4}$ we prefer dealing with 2. What about roots that aren't equal to an integer, like $\sqrt{20}$? Still, we can write 20 as 4⋅5 and then use known properties to write $\sqrt{4\times5}$ as $\sqrt{4}\sqrt{5}$, which is 2√5. We _simplified_ $\sqrt{20}$.
+Roots are nice, but we prefer dealing with regular numbers as much as possible. So, for example, instead of $\sqrt{4}$ we prefer dealing with 2. What about roots that aren't equal to an integer, like $\sqrt{20}$? Still, we can write 20 as 4/cdot5 and then use known properties to write $\sqrt{4\times5}$ as $\sqrt{4}\sqrt{5}$, which is 2√5. We _simplified_ $\sqrt{20}$.
 
 Example, simplify $\sqrt{72}$:
 

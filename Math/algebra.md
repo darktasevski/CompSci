@@ -93,7 +93,7 @@ When numbers are multiplied, they are called **factors**.
 Here is a sum of four terms:
 
 $$
-a − b + c − d
+a - b + c - d
 $$
 
 > In algebra we speak of a "sum" of terms, even though there are subtractions. In other words, anything that looks like what is above, we call a sum.
@@ -374,7 +374,7 @@ And now we can simplify:
 $$
 \begin{aligned}
 (16x+14)&+(-1(3x^2+x-9)) = \\
-16x+14&-3x^2-x+9= \hspace{4em}\text{Explanation: -1⋅3=-3,-1⋅x=-x, -1⋅-9=9}\\
+16x+14&-3x^2-x+9= \hspace{4em}\text{Explanation: -1/cdot3=-3,-1/cdotx=-x, -1/cdot-9=9}\\
 -3x^2+16x&-x+14+9 \\
 -3x^2+15x&+23
 \end{aligned}
@@ -536,7 +536,7 @@ $$
 
 $$
 \begin{aligned}
-	(a−b)^2 = (a−b)(a−b) =& \\
+	(a-b)^2 = (a-b)(a-b) =& \\
 	a-ab-ab+b^2 =& \\
 	a^2 -2ab+b^2
 \end{aligned}
@@ -565,24 +565,24 @@ $$
 \tag{1}
 $$
 
-Example: $(3x−4)^2$:
+Example: $(3x-4)^2$:
 
 We can use the $(a-b)^2$ case where "a" is 3x, and "b" is 4:
 
 $$
 \begin{aligned}
-	(3x−4)^2 = (3x)^2 − 2(3x)(4) + (4)^2 = 9x^2 − 24x + 16
+	(3x-4)^2 = (3x)^2 - 2(3x)(4) + (4)^2 = 9x^2 - 24x + 16
 \end{aligned}
 \tag{2}
 $$
 
-Example: $(4y+2)(4y−2)$:
+Example: $(4y+2)(4y-2)$:
 
 We know the result is the difference of two squares, because:
 
 $$
 \begin{aligned}
-	(a+b)(a−b) = a^2 − b^2
+	(a+b)(a-b) = a^2 - b^2
 \end{aligned}
 \tag{3a}
 $$
@@ -591,36 +591,36 @@ so:
 
 $$
 \begin{aligned}
-	(4y+2)(4y−2) = (4y)^2 − (2)^2 = 16y^2 − 4
+	(4y+2)(4y-2) = (4y)^2 - (2)^2 = 16y^2 - 4
 \end{aligned}
 \tag{3b}
 $$
 
 Sometimes we can see the pattern of the answer:
 
-Example: which binomials multiply to get $4x^2 − 9$?
+Example: which binomials multiply to get $4x^2 - 9$?
 
 This is the difference of two squares, so:
 
 $4x^2$ is $(2x)^2$, and $9$ is $(3)^2$, so we have:
 
 $$
-4x^2 − 9 = (2x)^2 − (3)^2
+4x^2 - 9 = (2x)^2 - (3)^2
 $$
 
 And that can be produced by the difference of squares formula:
 
 $$
-(a+b)(a−b) = a^2 − b^2
+(a+b)(a-b) = a^2 - b^2
 $$
 
 Like this ("a" is 2x, and "b" is 3):
 
 $$
-(2x+3)(2x−3) = (2x)^2 − (3)^2 = 4x^2 − 9
+(2x+3)(2x-3) = (2x)^2 - (3)^2 = 4x^2 - 9
 $$
 
-So the answer is that we can multiply $(2x+3)$ and $(2x−3)$ to get $4x2 − 9$.
+So the answer is that we can multiply $(2x+3)$ and $(2x-3)$ to get $4x2 - 9$.
 
 Another difference of squares example: Find the product of $(2x+8)(2x-8)$:
 
@@ -871,7 +871,7 @@ Based on this _balance beam model_, we know that we always have to do the same t
 
 -   **Addition and subtraction are inverse operations:**
 
-    -   Inverse operations are opposite operations that undo or counteract each other. Here's an example of how subtraction is the inverse operation of addition: $7+3−3=7$, an example of how addition is the inverse operation of subtraction: $5−2+2=5$.
+    -   Inverse operations are opposite operations that undo or counteract each other. Here's an example of how subtraction is the inverse operation of addition: $7+3-3=7$, an example of how addition is the inverse operation of subtraction: $5-2+2=5$.
 
 -   **Multiplication and division are inverse operations:**
     -   Here's an example of how division is the inverse operation of multiplication: $7 \cdot 3 \div 3 = 7$, and here's an example of how multiplication is the inverse operation of division: $8 \div 4 \cdot 4=8$.
@@ -901,7 +901,7 @@ $$
 Now let's try to solve a slightly different type of equation:
 
 $$
-p−18=3
+p-18=3
 $$
 
 We want to get p by itself on the left hand side of the equation. So, what can we do to cancel out subtracting 18?
@@ -910,7 +910,7 @@ We can add 18 because the inverse operation of subtraction is addition!
 
 $$
 \begin{alignedat}{2}
-p−18&=3 \\
+p-18&=3 \\
 p- 18 + 18&=3+18 \hspace{1em}&\text{\{Add 18 to each side.\}} \\
 p&=21 &\text{\{Simplify\}}
 \end{alignedat}
@@ -1094,12 +1094,12 @@ This holds true for all numbers:
 
 -   $x\gt y\rarr x\lt y\rarr$
 -   $x+z\gt y+z\rarr x+z\lt y+z\rarr$
--   $x−z\gt y-zx-z\lt y-z$
+-   $x-z\gt y-zx-z\lt y-z$
 
 Example:
 
 -   $x+3\gt9$
--   $x+3-3\gt9−3$
+-   $x+3-3\gt9-3$
 -   $x\gt6$
 
 ---
@@ -1107,14 +1107,14 @@ Example:
 It is a little bit trickier when it comes to division and multiplication. When we multiply or divide an inequality by a positive integer, the truth of the inequality doesn't change:
 
 -   $x\gt y\rarr$
--   $x⋅z\gt y⋅z\rarr$
+-   $x/cdotz\gt y/cdotz\rarr$
 -   $\frac{x}{z} \gt \frac{y}{z}$
 -   $If \hspace{0.1em}z \gt 0$
 
 But, **when we multiply or divide an inequality by a negative integer, the sign of the inequality will be reversed (changed)**:
 
 -   $x\gt y\rarr$
--   $x⋅z\lt y⋅z\rarr$
+-   $x/cdotz\lt y/cdotz\rarr$
 -   $\frac{x}{z} \lt \frac{y}{z}$
 -   $If \hspace{0.1em}z \lt 0$
 

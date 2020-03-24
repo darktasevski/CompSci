@@ -1,29 +1,41 @@
 <template>
-<div>
+  <div>
     <div v-for="post in posts">
-        <h2>
-            <router-link :to="post.path">{{ post.frontmatter.title }}</router-link>
-        </h2>
-        
-        <p>{{ post.frontmatter.description }}</p>
+      <h2>
+        <router-link :to="post.path">
+          <div v-if="typeof post.frontmatter.cover_image !== 'undefined'">
+            <img
+              :src="post.frontmatter.cover_image"
+              :alt="post.frontmatter.title + ' cover image'"
+              style="max-height:300px;object-fit: cover;"
+            />
+          </div>
+          {{ post.frontmatter.title }}
+        </router-link>
+      </h2>
 
-        <p><router-link :to="post.path">Read more</router-link></p>
+      <p>{{ post.frontmatter.description }}</p>
+
+      <p>
+        <router-link :to="post.path">Read more</router-link>
+      </p>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
 export default {
-    computed: {
-		mounted(){
-		},
-        posts() {
-			console.log("this.$site", this)
-            return this.$site.pages
-                .filter(x => x.path.startsWith('/blog/') && !x.frontmatter.blog_index)
-                .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
-        }
+  computed: {
+    mounted() {},
+    posts() {
+      console.log("this.$site", this);
+      return this.$site.pages
+        .filter(x => x.path.startsWith("/blog/") && !x.frontmatter.blog_index)
+        .sort(
+          (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+        );
     }
-}
+  }
+};
 </script>
 

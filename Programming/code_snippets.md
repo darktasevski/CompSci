@@ -253,7 +253,7 @@ const partialApplication = (fn, ...initialArguments) => {
 
 If you swap the minus for a plus, it gives you the next seven days.
 
-### ### Generate a random alphanumerical string of length 11
+### Generate a random alphanumerical string of length 11
 
 ```js
 Math.random()

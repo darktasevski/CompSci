@@ -1,5 +1,7 @@
-# Notes
+---
+index: true
+---
 
-[![Build Status](https://travis-ci.com/Puritanic/CompSci.svg?branch=master)](https://travis-ci.com/Puritanic/CompSci)
+# Notes
 
 > My notes on all sorts of stuff

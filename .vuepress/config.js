@@ -1,5 +1,31 @@
+const { fs, path } = require('@vuepress/shared-utils');
+
+function getChildren(parent) {
+	if (!parent) return [];
+
+	return (
+		fs
+			.readdirSync(path.resolve(__dirname, '../', parent))
+			// make sure we only include Markdown files
+			.filter(filename => filename.indexOf('.md') >= 0)
+			.map(filename => {
+				if (filename.indexOf('index') >= 0 || filename.indexOf('README') >= 0) {
+					// filter out readme.md and index.md files as those should be top level pages (parents) and not nested children
+					return null;
+				}
+
+				return `/${parent}/${filename}`;
+			})
+			.filter(page => Boolean(page))
+			.sort()
+	);
+}
+
+console.log(getChildren('Books'));
+
 module.exports = {
 	title: 'Signal in the Static',
+	description: 'Blog, notes and other stuff',
 	base: '/CompSci/',
 	head: [
 		[
@@ -13,9 +39,11 @@ module.exports = {
 	markdown: {
 		extendMarkdown: md => {
 			md.set({ breaks: true });
-			md.use(require('markdown-it-katexx'), { throwOnError: false, errorColor: ' #cc0000' });
+			md.use(require('markdown-it-katexx'), { throwOnError: true, errorColor: ' #cc0000' });
 		},
 	},
+	theme: 'solarized',
+	globalUIComponents: ['ThemeManager'],
 	themeConfig: {
 		nav: [
 			{ text: 'Home', link: '/' },
@@ -36,6 +64,7 @@ module.exports = {
 			{
 				title: 'Blog',
 				path: '/blog/',
+				sidebar: false,
 			},
 			{
 				title: 'Notes', // required
@@ -45,57 +74,22 @@ module.exports = {
 					{
 						title: 'Books',
 						path: '/Books/',
-						children: [
-							'/Books/Art_of_problem_solving_Vol.1.md',
-							'/Books/ydkjs_notes.md',
-						],
+						children: getChildren('Books'),
 					},
 					{
 						title: 'CompSci',
 						path: '/CompSci/',
-						children: [
-							'/CompSci/bigO.md',
-							'/CompSci/bigO_basics.md',
-							'/CompSci/concepts.md',
-							'/CompSci/cs_snippets.md',
-							'/CompSci/dynamic_programming.md',
-							'/CompSci/graphs.md',
-							'/CompSci/heaps.md',
-							'/CompSci/linked_lists.md',
-							'/CompSci/networking.md',
-						],
+						children: getChildren('CompSci'),
 					},
 					{
 						title: 'Math',
 						path: '/Math/',
-						children: [
-							'/Math/algebra.md',
-							'/Math/division.md',
-							'/Math/multiplication.md',
-							'/Math/fractions_and_decimals.md',
-							'/Math/factors_multiplies_patterns.md',
-							'/Math/ratios_rates_percentages.md',
-							'/Math/geometry.md',
-							'/Math/square_roots.md',
-							'/Math/negative_numbers.md',
-							'/Math/units_and_conversions.md',
-						],
+						children: getChildren('Math'),
 					},
 					{
 						title: 'Programming',
 						path: '/Programming/',
-						children: [
-							'/Programming/class_theory.md',
-							'/Programming/Electron.md',
-							'/Programming/Golang.md',
-							'/Programming/Javascript.md',
-							'/Programming/js_performance.md',
-							'/Programming/Python.md',
-							'/Programming/ReactNative.md',
-							'/Programming/Ruby.md',
-							'/Programming/video_engineering.md',
-							'/Programming/Shell/',
-						],
+						children: [...getChildren('Programming'), '/Programming/Shell/'],
 					},
 				],
 			},

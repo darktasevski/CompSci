@@ -25,19 +25,19 @@ Rules for subtracting positive/negative numbers:
 Rules for multiplying positive/negative numbers:
 
 $$
-+ ⋅ + = + \\
-−⋅ − = + \\
-+ ⋅ − = − \\
-−⋅ + = − \\
++ /cdot + = + \\
+-/cdot - = + \\
++ /cdot - = - \\
+-/cdot + = - \\
 $$
 
 Rules for dividing positive/negative numbers:
 
 $$
 + \div + = + \\
-− \div − = + \\
-+ \div − = − \\
-− \div + = −
+- \div - = + \\
++ \div - = - \\
+- \div + = -
 $$
 
 ---
