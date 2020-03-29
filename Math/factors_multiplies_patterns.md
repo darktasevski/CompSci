@@ -13,31 +13,43 @@
 
 Rules for adding positive/negative numbers:
 
--   6 + (–9) = –3
--   (–3) + 7 = 4
--   5 + (–3) = 2
+$$
+\begin{aligned}
+	6 + (-9) &= -3 \\
+	(-3) + 7 &= 4 \\
+	5 + (-3) &= 2
+\end{aligned}
+$$
 
 Rules for subtracting positive/negative numbers:
 
--   (–5) – (–3) = (–5) + 3 = –2
--   (–3) – (–5) = (–3) + 5 = 2
+$$
+\begin{aligned}
+	&(-5) - (-3) = (-5) + 3 = -2 \\
+	&(-3) - (-5) = (-3) + 5 = 2
+\end{aligned}
+$$
 
 Rules for multiplying positive/negative numbers:
 
 $$
-+ /cdot + = + \\
--/cdot - = + \\
-+ /cdot - = - \\
--/cdot + = - \\
+\begin{aligned}
+	+ \cdot + = + \\
+	- \cdot - = + \\
+	+ \cdot - = - \\
+	- \cdot + = - \\
+\end{aligned}
 $$
 
 Rules for dividing positive/negative numbers:
 
 $$
-+ \div + = + \\
-- \div - = + \\
-+ \div - = - \\
-- \div + = -
+\begin{aligned}
+	+ \div + = + \\
+	- \div - = + \\
+	+ \div - = - \\
+	- \div + = -
+\end{aligned}
 $$
 
 ---

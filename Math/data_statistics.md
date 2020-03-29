@@ -90,16 +90,6 @@ $$
 
 When there are two modes it is called _bimodal_, when there are three or more modes we call it _multimodal_.
 
-#### Outliers
-
-Outliers are values that "lie outside" the other values.
-
-They can change the mean a lot, so we can either not use them (and say so) or use the median or mode instead.
-
-For Example:
-
-The mean of $3, 4, 4, 5, 104$ is 24, which isn't really a representation of these numbers. Without the $104$ the mean is: $(3+4+4+5) / 4 = 4$ which is much more representative. The median of the same numbers is $4$ as well as the mode.
-
 #### Harmonic Mean
 
 The Harmonic Mean is good at handling large outliers:
@@ -271,3 +261,29 @@ MD=\frac{\sum|x-\mu|}{N}=\frac{30}{8}=3.75
 $$
 
 > To make sure that we have a correct result we should be aware that the deviations on one side of the mean should equal the deviations on the other side. In above example: $6+3+3+2+1 = 2+6+7$
+
+### Gaps, Clusters and Outliers
+
+Gaps, clusters and outliers are characteristics of data sets that influence mathematical analysis and are readily visible on visual representations.
+
+#### Gaps
+
+> Holes in the Data
+
+Gaps refer to missing areas in a data set. For example, if a scientific experiment collects temperature data in the range of 50 degrees Fahrenheit to 100 degrees Fahrenheit, but nothing between 70 and 80 degrees, that would represent a gap in the data set
+
+#### Clusters
+
+> Isolated Groups
+
+Clusters are isolated groups of data points. Line plots, which are one of the ways to represent data sets, are lines with "x" marks placed above specific numbers to depict their frequency of occurrence in the data set. A cluster is depicted as a collection of these "x" marks in a small interval or data subset. For example, if the exam scores for a class of 10 students are $74, 75, 80, 72, 74, 75, 76, 86, 88$ and $73$, the most "x" marks on a line plot would be in the 72-to-76 score interval. This would represent a data cluster. Note the frequency for 74 and 75 is two, but for all other scores, it is one.
+
+#### Outliers
+
+Outliers are extreme values -- data points that lie significantly outside other values in a data set. An outlier must be significantly less than or greater than the majority of numbers in a data set. The definition of "extreme" depends on the circumstance and a consensus of the analysts involved in the research. Outliers might be bad data points, also known as _noise_, or they might contain valuable information about the phenomenon being investigated and the data collection methodology itself.
+
+They can change the mean a lot, so we can either not use them (and say so) or use the median or mode instead.
+
+For Example:
+
+The mean of $3, 4, 4, 5, 104$ is 24, which isn't really a representation of these numbers. Without the $104$ the mean is: $(3+4+4+5) / 4 = 4$ which is much more representative. The median of the same numbers is $4$ as well as the mode.

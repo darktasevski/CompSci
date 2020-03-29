@@ -147,3 +147,6 @@ _Some examples:_
 -   350 is 70% of a whole number. What number is that?
     -   $70\% \times x = 350\\0.7x=350\\\frac{0.7x}{0.7}=\frac{350}{0.7}=500$
     -   Dividing whole numbers by decimals can be simplified by converting the decimal to a whole number (multiplying it by 10, 100, ...), just keep in mind that we need to multiply the numerator by the same amount. Thus: $\frac{3500}{7}$.
+-   What percent of men are left-handed, if an estimated 3 out of every 25 men are left handed:
+
+![Percentages example](../static/math/percentages_example_1.png)

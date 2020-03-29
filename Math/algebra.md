@@ -374,7 +374,7 @@ And now we can simplify:
 $$
 \begin{aligned}
 (16x+14)&+(-1(3x^2+x-9)) = \\
-16x+14&-3x^2-x+9= \hspace{4em}\text{Explanation: -1/cdot3=-3,-1/cdotx=-x, -1/cdot-9=9}\\
+16x+14&-3x^2-x+9= \hspace{4em}\text{Explanation: -1\cdot3=-3,-1\cdotx=-x, -1\cdot-9=9}\\
 -3x^2+16x&-x+14+9 \\
 -3x^2+15x&+23
 \end{aligned}
@@ -1107,14 +1107,14 @@ Example:
 It is a little bit trickier when it comes to division and multiplication. When we multiply or divide an inequality by a positive integer, the truth of the inequality doesn't change:
 
 -   $x\gt y\rarr$
--   $x/cdotz\gt y/cdotz\rarr$
+-   $x\cdotz\gt y\cdotz\rarr$
 -   $\frac{x}{z} \gt \frac{y}{z}$
 -   $If \hspace{0.1em}z \gt 0$
 
 But, **when we multiply or divide an inequality by a negative integer, the sign of the inequality will be reversed (changed)**:
 
 -   $x\gt y\rarr$
--   $x/cdotz\lt y/cdotz\rarr$
+-   $x\cdotz\lt y\cdotz\rarr$
 -   $\frac{x}{z} \lt \frac{y}{z}$
 -   $If \hspace{0.1em}z \lt 0$
 
