@@ -10,7 +10,11 @@
 
 > The numbers or measurements being compared are called the terms of the ratio.
 
-The ratio is the relationship of two numbers. For example you have 2 flashlights and 5 batteries. To compare the ratio between the flashlights and the batteries we divide the set of flashlights with the set of batteries.
+A _ratio_ is a comparison of two quantities. For example, you might use a ratio to compare the number of students who have cell phones to the number of students who don’t have cell phones. A ratio can be written in a few different ways, for example, the ratio 3 to 2 can be written as:
+
+-   $3:2$
+-   $\frac{3}{2}$
+-   3 to 2
 
 The ratio is 2 to 5 or 2:5 or 2/5. All these describe the ratio in different forms of fractions. The ratio can consequently be expressed as fractions or as a decimal. 2:5 in decimals is 0.4.
 
@@ -22,9 +26,7 @@ _Some Examples:_
 
 We can simplify the answer further, as both numbers are divisible by 3, thus simplified answer would be **4:7**, or ,in words, four for every seven.
 
--   If 5 kgs of avocados cost 9 dollars, what is the cost for 1 kg of avocados? - So, the ratio here is $5:9$, and to calculate how much one kg costs we can simplify this: $\\5:9=1:\frac{9}{5}\\9\div5=\frac{9}{5}=1\frac{4}{5}=1.8\\$ So the answer is 1.8$.
-
-We can also represent ratios by using fraction notation, thus $2:5=\frac{2}{5}$
+-   If 5 kgs of avocados cost 9 dollars, what is the cost for 1 kg of avocados? - So, the ratio here is $5:9$, and to calculate how much one kg costs we can simplify this: $5:9=1:\frac{9}{5},9\div5=\frac{9}{5}=1\frac{4}{5}=1.8$ So the answer is 1.8\$.
 
 ### Ratio tables
 
@@ -59,12 +61,18 @@ $\frac{1}{2}=\frac{2}{4},\frac{2}{3}=\frac{4}{6}, \frac{3}{4}=\frac{6}{8}$
 
 ### Rate
 
-A rate is a special ratio in which the two terms are in different units, like cents and grams. Rates are used by people every day, such as when they work 40 hours a week or earn interest every year at a bank. A **unit rate** is a rate with a denominator of 1.
+A _rate_ is a special kind of ratio where the two amounts being compared have different units. For example, you might use rate to compare 3 cups of flour to 2 teaspoons of sugar. The units (cups and teaspoons) are different.
 
-If we have a multiple-unit rate such as 120 students for every 3 buses, and want to find the single-unit rate, we can write a ratio equal to the multiple-unit rate with 1 as the second term.
+If we have a multiple-unit rate such as 120 students for every 3 buses, and want to find the single-unit rate, we can write a ratio equal to the multiple-unit rate with 1 as the second term. A _unit-rate_ is a rate that has 1 as its denominator. To find a unit rate, set up a ratio as a fraction and then divide the numerator by the denominator.
 
 $$
 120/3 = 40/1
+$$
+
+An athlete can swim $\frac{1}{2}$ mile every $\frac{1}{3}$ hour. What is the unit rate of the athlete?
+
+$$
+\frac{1}{2}mile \div \frac{1}{3}hour = \frac{\frac{1}{2}}{\frac{1}{3}} = \frac{1}{2} \cdot \frac{3}{1}=\frac{3}{2} = 1\frac{1}{2}mph
 $$
 
 The unit rate of 120 students for every 3 buses is 40 students per bus. You could also find the unit rate by dividing the first term of the ratio by the second term.
@@ -75,6 +83,8 @@ $$
 \$5.50 \div 5 = \$1.10
 $$
 
+> When you’re calculating unit price, be sure to put the price in the numerator!
+
 The unit price of potatoes that cost \$5.50 for 5 pounds is \$1.10 per pound.
 
 > Rates and unit rates are used to solve many real-world problems. Also a lot of theory in Algebra nad Calculus depends on rates, which is why it's important to learn how they work.
@@ -82,7 +92,62 @@ The unit price of potatoes that cost \$5.50 for 5 pounds is \$1.10 per pound.
 _Some examples:_
 
 -   At the market, 8 batteries cost 10\$. How much do 6 batteries cost?
-    -   $8:10=(8/8):(10/8)=1:\frac{10}{8}=1:\frac{5}{4}=1:1\frac{1}{4}=1:1.25\\6 \times 1.25=7.50$
+    -   $8:10=(8/8):(10/8)=1:\frac{10}{8}=1:\frac{5}{4}=1:1\frac{1}{4}=1:1.25\newline6 \times 1.25=7.50$
+
+### Proportions
+
+A _proportion_ is a number sentence where two ratios are equal. For example, someone cuts a pizza into 2 equal pieces and eats 1 piece. The ratio of pieces that person ate to the original pieces of pizza is $\frac{1}{2}$. The number $\frac{1}{2}$ is the same ratio as if that person instead cut the pizza into 4 equal pieces and ate 2 pieces. $\frac{1}{2} = \frac{2}{4}$
+
+We can check if two ratios form a proportion by using cross products. To find cross products, set the two ratios next to each other, then multiply diagonally. If both products are equal to each other, then the two ratios are equal and form a proportion.
+
+$$
+\begin{aligned}
+	&\frac{1}{2}:\frac{2}{4} \\
+	&1 \cdot 4 = 4 \\
+	&2 \cdot 2 = 4 \\
+	&4=4
+\end{aligned}
+$$
+
+Two ratios that form a proportion are called **equivalent fractions**. For example, $\frac{3}{5}$ and $\frac{9}{15}$ are equivalent fractions because their cross products are equal.
+
+You can also use a proportion to _find an unknown quantity_. For example, you are making lemonade, and the recipe says to use 5 cups of water for every lemon you squeeze. How many cups of water do you need if you have 6 lemons?
+
+1. set up a ratio: $\frac{5 cups}{1 lemon}$
+2. set up a ratio for what you are trying to figure out. Because you don’t know how many cups are required for 6 lemons, use x for the amount of water. $\frac{x \hspace{0.05em} cups}{6 lemons}$
+3. set up a proportion by setting the ratios equal to each other (cross multiplication):
+
+$$
+\begin{aligned}
+	\frac{5 \text{ cups}}{1 \text{ lemon}} &: \frac{x \text{ cups}}{6 \text{ lemons}} \\
+	1 \cdot x &= 5 \cdot 6 \\
+	1 \cdot x &= 30 \\
+	x &= 30
+\end{aligned}
+$$
+
+Sometimes, a proportion stays the same, even in different scenarios. For example, Tim runs $\frac{1}{2}$ a mile, and then he drinks 1 cup of water. If Tim runs 1 mile, he needs 2 cups of water. If Tim runs 1.5 miles, he needs 3 cups of water (and so on). The proportion stays the same, and we multiply by the same number in each scenario (in this case, we multiply by 2). This is known as the **constant of proportionality** or the **constant of variation** and is closely related to unit rate (or unit price).
+
+-   Five out of every eight albums that Latrell owns are jazz. What percentage of his music collection is jazz?
+
+$$
+\begin{aligned}
+	&\frac{5}{8} = 5 \div 8 = 0.625 \\
+	&\text{(Move the decimal two spaces to the right and include a percent sign.)} \\
+	&0.625 \times 100 = 62.5\%
+\end{aligned}
+$$
+
+We can solve this problem by using proportions:
+
+$$
+\begin{aligned}
+	&\frac{5}{8}:\frac{x}{100} \\
+	&\text{(Divide both sides by 8 so you can get x alone.)} \\
+	&8 \cdot x = 5 \cdot 100 \\
+	&x = 62.5
+\end{aligned}
+$$
 
 ## Percent
 
@@ -93,8 +158,6 @@ _Some examples:_
 -   100% of 80 is $\frac{100}{100} \times 80=80$
 -   50% of 80 is $\frac{50}{100}\times80=40$
 -   5% of 80 is $\frac{5}{100}\times80=4$
-
-> A Percent can also be expressed as a Decimal or a Fraction; a half can be written as a percentage: 50%, as a decimal: 0.5 and as a fraction $\frac{1}{2}$.
 
 ---
 
@@ -138,15 +201,77 @@ _Some examples:_
 -   What 30% of 6 is?
     -   $\frac{30}{100}\times\frac{6}{1}=\frac{18\cancel{0}}{10\cancel{0}}=\frac{18}{10}=\frac{9}{5}=1\frac{4}{5}=1.8$
 -   100 is what percent of 80?
-    -   $80 \times x=100 \\ x=\frac{100}{80}=\frac{25}{20}=\frac{5}{4}=1\frac{1}{4}=1.25=1.25 \times 100 = 125\%$
+    -   $80 \times x=100 \newline x=\frac{100}{80}=\frac{25}{20}=\frac{5}{4}=1\frac{1}{4}=1.25=1.25 \times 100 = 125\%$
 -   150 is 25% of what number?
-    -   $25\% \cdot x= 0.25x=150 \\\frac{0.25x}{0.25}=\frac{150}{0.25}=600$
+    -   $25\% \cdot x= 0.25x=150 \newline\frac{0.25x}{0.25}=\frac{150}{0.25}=600$
     -   Identify the percent, amount and base in this problem:
         -   $amount = percent \times base$
         -   $150=25\% \times 600$
 -   350 is 70% of a whole number. What number is that?
-    -   $70\% \times x = 350\\0.7x=350\\\frac{0.7x}{0.7}=\frac{350}{0.7}=500$
+    -   $70\% \times x = 350\newline0.7x=350\newline\frac{0.7x}{0.7}=\frac{350}{0.7}=500$
     -   Dividing whole numbers by decimals can be simplified by converting the decimal to a whole number (multiplying it by 10, 100, ...), just keep in mind that we need to multiply the numerator by the same amount. Thus: $\frac{3500}{7}$.
 -   What percent of men are left-handed, if an estimated 3 out of every 25 men are left handed:
 
 ![Percentages example](../static/math/percentages_example_1.png)
+
+### Solving percent word problems
+
+The key to solving percent word problems is to translate the word problem into mathematical symbols first.
+
+Some "hack" steps to breaking this into math:
+
+1. Find the word "_is_". Put an equal sign above it. This becomes the center of your equation.
+2. Everything that comes before the word "_is_" can be changed into math symbols and written to the left of the equal sign. Everything that comes after the word "_is_" should be written to the right of the = sign.
+3. Look for key words:
+    - "What" or "What number" means an unknown number. Represent the unknown number with a variable like x.
+    - "Of" means "multiply."
+    - Percents can be represented as decimals, so if you see % move the decimal two spaces to the left and get rid of the percent sign.
+
+Some examples:
+
+What is $75\%$ of 45?
+
+-   use $x$ for "what",
+-   use the equal sign for "is"
+-   use multiplication symbol for "of"
+
+$$
+x = 0.75 \cdot 45 \newline
+x = 33.75
+$$
+
+So, $33.75$ is $75\%$ of $45$.
+
+4 is 40% of what number?
+
+$$
+4 = 0.40 \cdot x \newline
+\text{(Divide both sides by 0.4 to get x alone.)} \newline
+10 = x
+$$
+
+13 is what percent of 25?
+
+$$
+13 = x \cdot 25 \newline
+\text{(Divide both sides by 25 to get x alone.)} \newline
+0.52=x \newline
+\text{(To convert 0.52 to a percent, move the decimal two spaces to the right and include the \% sign.)} \newline
+52\% = x
+$$
+
+### Percent Rate of Change
+
+Sometimes, it is difficult to tell whether a change in the amount of something is a big deal or not. We use _percent rate of change_ to show how much an amount has changed in relation to the original amount. Another way to think about it is simply as the rate of change expressed as a percent.
+
+> When the original amount goes up, we calculate percent increase. When the original amount goes down, we calculate percent decrease.
+
+To calculate the percent rate of change, we need to set up this ratio:
+
+$$
+\frac{\text{change in quantity}}{\text{original quantity}}
+$$
+
+> The _change in quantity_ is the difference between the original and new quantity.
+
+After that we only need to divide and move the decimal two spaces to the right to get a percent.

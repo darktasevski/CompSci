@@ -8,8 +8,10 @@
 
 ## Fractions
 
+Fractions are real numbers that represent a part of a whole. A fraction bar separates the part from the whole like so:
+
 $$
-\frac{1}{2} = \frac{\text{Numerator}}{\text{Denominator}}
+\frac{PART}{WHOLE}=\frac{1}{2} = \frac{\text{Numerator}}{\text{Denominator}}
 $$
 
 ### Comparing fractions
@@ -65,6 +67,8 @@ Fractions, like all numbers, can be decomposed in many ways.
 
 ### Adding fractions with like denominators
 
+> If we want to add fractions together, the denominators must be the same.
+
 Add and simplify the answer:
 
 $$
@@ -81,8 +85,6 @@ Now if we want to simplify this we're going to look for the greatest common fact
 
 ### Subtracting fractions with like denominators
 
-Subtract and simplify the answer:
-
 Subtracting fractions is very similar to adding fractions. If we have the same denominator, the denominator in difference is going to be the same as the denominator in the two numbers we're subtracting. And numerator is going to be the difference between the numerators.
 
 $$
@@ -95,15 +97,29 @@ $$
 \frac{3 / 3}{18 / 3} = \frac{1}{6}
 $$
 
-### Improper fractions
+### Proper fractions and Improper fractions
 
-> An improper fraction is a fraction where the numerator is greater than or equal to the denominator. Here are some examples of improper fractions: $\frac{9}{4},\frac{5}{5},\frac{7}{3}$
+An proper fraction is when the numerator is smaller than the denominator.
+
+$$
+\frac{5}{6}, \frac{2}{3}, \frac{1}{1000}, -\frac{4}{27}
+$$
+
+An improper fraction is a fraction where the numerator is greater than or equal to the denominator.
+
+$$
+\frac{9}{4},\frac{5}{5},\frac{7}{3}
+$$
 
 Improper fractions are just pure fractions where the numerator is greater than denominator. For example, this $5\frac{1}{4}$ is not a pure fraction, because we have a whole number mixed with fraction so we call this a **mixed number**. To rewrite this as an improper fraction we can multiply max pieces of fraction times whole number, $\frac{5\times4}{4} + \frac{1}{4}$ in this case. End result would be $\frac{21}{4}$
 
 ### Mixed numbers
 
-> A mixed number is a number consisting of a whole number and a proper fraction. Here are some examples of improper fractions: $4\frac{1}{2},1\frac{3}{8},12\frac{5}{6}$
+A mixed number is a number consisting of a whole number and a proper fraction.
+
+$$
+4\frac{1}{2},1\frac{3}{8},12\frac{5}{6}
+$$
 
 Given $\frac{7}{4}$, we can rewrite this to be a mixed number by using standard algorithm for division:
 
@@ -203,9 +219,21 @@ $$
  \begin{aligned} \greenE{\text{number of groups}} \times \maroonD{\text{size of groups}} = \purpleD{\text{total}} \\\\ \maroonD{\text{size of groups}} \times \greenE{\text{number of groups}} = \purpleD{\text{total}} \\ \\ \\ \purpleD{\text{total}} \div \greenE{\text{number of groups}} =\maroonD{\text{size of groups}} \\\\ \purpleD{\text{total}} \div \maroonD{\text{size of groups}} =\greenE{\text{number of groups}} \end{aligned}
 $$
 
-> Whenever the denominators are the same, as in $\frac{3}{4}\div\frac{1}{4}$, we only need to divide the numberators to get the result.
+> Whenever the denominators are the same, as in $\frac{3}{4}\div\frac{1}{4}$, we only need to divide the numerators to get the result.
 
-_Some examples:_
+#### Dividing Fractions
+
+To divide fractions, follow these steps:
+
+1.  Flip the second fraction to make its _reciprocal_.
+2.  Change the division sign to multiplication.
+3.  Multiply.
+4.  Example: $\frac{3}{5}\div\frac{8}{9}=\frac{3}{5}\cdot\frac{9}{8}=\frac{27}{40}$
+5.  Don’t forget that when you are multiplying or dividing mixed numbers, you must convert them to improper fractions first!
+
+> A _reciprocal_ of a number is another number that, when multiplied together, their product is 1. Basically, any number multiplied by its reciprocal equals 1. To find the reciprocal, flip the fraction.
+
+_More examples:_
 
 1. $3 \times \frac{1}{3} = 1$ and $1 \div 3 = \frac{1}{3}$
 2. $3 \div \frac{2}{1} = 3 \times \frac{1}{2} = \frac{3}{2}$ (reciprocals)
@@ -311,6 +339,8 @@ There's a bit of a silly trick to multiplying decimals. It's not really a trick 
 
 For example, we can $2.8 \times 7$ calculate as $28 \times 7$:
 
+> When counting decimal places, don’t be fooled by zeros at the end, they don’t count.
+
 ![Decimal multiplication](../static/math/multiplying_decimals_2.gif)
 
 Here's another one: $3.1 \times 5.9$
@@ -398,6 +428,16 @@ $$
 ### Division strategies for decimal quotients
 
 > When we divide by the powers of 10 (10, 100, 1000, ...) it has the effect of shifting all the digits num of zeroes places to the right, what used to be in the tens place will now be in the ones place; what used to be in the hundreds place will now be in the tens place. For example, let's say we took the number 533 and we were to divide it by 10, equals 53.3.
+
+You can divide decimals easily by simply making them into whole numbers. You do that by multiplying both the _dividend_ and _divisor_ by the same power of ten. Because the new numbers are proportional to the original numbers, the answer is the same! Example:
+
+$$
+2.5 \div 0.05 = (2.5 \cdot 100) \div (0.05 \cdot 100) = 250 \div 5 = 50
+$$
+
+We multiply both decimal numbers by 100, because the decimal needs to move two places in order for both the dividend and divisor to become whole numbers.
+
+---
 
 `3 / 2`:
 

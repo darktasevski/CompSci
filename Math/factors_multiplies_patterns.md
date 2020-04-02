@@ -128,7 +128,11 @@ To test if something is **divisible by 9**, you have to add up all the digits in
 
 To test if something is **divisible by 10**, you just have to check if the number last two digits of the number are divisible by 10, or if you have a zero in the ones place.
 
-## Finding factors of a number
+## Factors
+
+Factors are integers you multiply together to get another integer. Every number greater than 1 has at least two factors, because every number can be divided by 1 and itself! A **factor** is a whole number that can divide evenly into another number. The factors of 8 are 1, 2, 3, and 4 because all of them divide evenly into 8. A factor pair is 2 whole numbers that can be multiplied to get a certain product. The factor pairs of 8 are 1 and 8, because $1 \times 8 = 8$, and 2 and 4, because $2 \times 4 = 8$.
+
+### Finding factors of a number
 
 The quickest way to find the factors of a number is to divide it by the smallest prime number (bigger than 1) that goes into it evenly with no remainder. Continue this process with each number you get, until you reach 1.
 
@@ -148,7 +152,13 @@ $$
 75 + 20 = 5 \times 15 + 5 \times 4 = \underline{5}(15 + 4)
 $$
 
-## Greatest common factor (GCF)
+### Finding Factors Quickly
+
+Establish the number you want to find the factors of, for example, 24. Find two more numbers that multiply to make 24. In this case, `1 x 24 = 2 x 12 = 3 x 8 = 4 x 6 = 24`. This means the factors of 24 are 1, 2, 3, 4, 6, 8, 12, and 24.
+
+Factor negative numbers in the same way as positive numbers, but make sure the factors multiply together to produce a negative number. For example, the factors of -30 are -1, 1, -2, 2, -3, 3, -5, 5, -6, 6, -10, 10, -15 and 15.
+
+### Greatest common factor (GCF)
 
 The greatest common factor, or GCF, is the greatest factor that divides two numbers.
 
@@ -167,7 +177,22 @@ Some examples:
     -   $60=2\times2\times3\times5\\60=2\times2\times3\times5$
     -   the factors that are common to each number are the same, so the GCF is 60
 
-## Least common multiple (LCM)
+## Multiplies
+
+A **multiple** is a number that results when we multiply one whole number by another whole number. The first four multiples of 3 are 3, 6, 9, and 12. We can never list all of the multiples of a number. Identifying multiples: We can check to see if a number is a multiple of another number by seeing if it can be divided evenly by the number. 15 is a multiple of 3 because $15 \div 3 = 5$
+
+$$
+factor ~ \times ~ factor = multiple
+$$
+
+Given $9 \times 2 = 18$ we can say that:
+
+-   9 and 2 are factors of 18
+-   18 is a multiple of 2
+
+> Every number has an infinite list of multiples.
+
+### Least common multiple (LCM)
 
 A common multiple is a number that is a multiple of two or more numbers. The common multiples of 3 and 4 are $0, 12, 24, ...$ The least common multiple (LCM) of two numbers is the smallest number (not zero) that is a multiple of both, so LCM of 3 and 4 is 12.
 
@@ -195,28 +220,11 @@ Some examples:
 
 ---
 
-## Factors and multiplies
-
-$$factor ~ \times ~ factor = multiple$$
-
-Given $9 \times 2 = 18$ we can say that:
-
--   9 and 2 are factors of 18
--   18 is a multiple of 2
-
-> Every number has 1 as a factor. Every number has itself as a factor. A **factor** is a whole number that can divide evenly into another number. The factors of 8 are 1, 2, 3, and 4 because all of them divide evenly into 8. A factor pair is 2 whole numbers that can be multiplied to get a certain product. The factor pairs of 8 are 1 and 8, because 1 x 8 = 8, and 2 and 4, because 2 x 4 = 8. A **multiple** is a number that results when we multiply one whole number by another whole number. The first four multiples of 3 are 3, 6, 9, and 12. We can never list all of the multiples of a number. Identifying multiples: We can check to see if a number is a multiple of another number by seeing if it can be divided evenly by the number. 15 is a multiple of 3 because 15 / 3 = 5
-
-### Finding Factors Quickly
-
-Establish the number you want to find the factors of, for example, 24. Find two more numbers that multiply to make 24. In this case, `1 x 24 = 2 x 12 = 3 x 8 = 4 x 6 = 24`. This means the factors of 24 are 1, 2, 3, 4, 6, 8, 12, and 24.
-
-Factor negative numbers in the same way as positive numbers, but make sure the factors multiply together to produce a negative number. For example, the factors of -30 are -1, 1, -2, 2, -3, 3, -5, 5, -6, 6, -10, 10, -15 and 15.
-
 ## Prime Numbers
 
 A number that can only be divided by 1 and itself is called a prime number. Examples of prime numbers are 2, 3, 5, 7, 11, and 13. The number 1 is not considered a prime number because 1 goes into everything.
 
-> We know that 3x2x5 = 30. So 2, 3, and 5 are factors of 30. 30 is a multiple of each of 3, 2, and 5. If a number only has itself and 1 as factors, then the number is _prime_.
+> We know that 3x2x5 = 30. So 2, 3, and 5 are factors of 30. 30 is a multiple of each of 3, 2, and 5. If a number only has itself and 1 as factors, then the number is _prime_. 2 IS ALSO THE ONLY EVEN PRIME NUMBER.
 
 ### Prime factorization
 
