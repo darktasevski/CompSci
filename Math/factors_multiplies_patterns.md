@@ -56,6 +56,12 @@ $$
 
 ## Properties of numbers
 
+Properties are like a set of math rules that are always true. They often help us solve equations.
+
+The commutative properties only work with addition and multiplication; they do not work with subtraction and division!
+
+The associative properties only work with addition and multiplication; they do not work with subtraction and division!
+
 ### Properties of addition
 
 There are three main properties of addition:
@@ -73,10 +79,28 @@ There are three main properties of multiplication:
 -   **Associative property of multiplication**: Changing the grouping of factors does not change the product. For example: $(2\times3)\times4=2\times(3\times4)$
     -   > Just keep in mind that parentheses have a priority
 -   **Identity property of multiplication**: The product of 1 and any number is that number. For example: $7\times1=7$
+-   **Distributive property of multiplication over addition**: $a(b + c) = ab + ac$. It says that adding two numbers inside parentheses, then multiplying that sum by a number outside the parentheses is equal to first multiplying the number outside the parentheses by each of the numbers inside the parentheses and then adding the two products together. Example: $2(4+6) = 2\cdot4+2\cdot6$
+-   **Distributive property of multiplication over subtraction**: $a(b - c) = ab - ac$. It says that subtracting two numbers inside parentheses, then multiplying that difference times a number outside the parentheses is equal to first multiplying the number outside the parentheses by each of the numbers inside the parentheses and then subtracting the two products. Example: $9(5 - 3) = 9(5) - 9(3)$
 
-### Properties of Division
+### Factoring
 
-There are three main properties of division:
+_Factoring_ is the reverse of the distributive property. Instead of getting rid of parentheses, factoring allows us to include parentheses (because sometimes it’s simpler to work with an expression that has parentheses).
+
+Examples:
+
+Factor $15y + 12$:
+
+$$
+15y +12 = 3(5y +4)
+$$
+
+Factor $12a + 18$:
+
+The GCF of 12 and 18 is 6. So, we divide all terms by 6 and put it outside of the parentheses.
+
+$$
+12a+18 = 6(2a+3)
+$$
 
 ---
 
@@ -247,3 +271,66 @@ $$ 2 \times 3 \times 2 \times 2 = 24 $$
 24 is the least common multiple of the 6 and 8.
 
 ---
+
+## Scientific notation
+
+**Scientific notation** is a shorthand way of writing numbers that are often very small or large by using powers of 10.
+
+$$
+2.3 \times 10^6 = 2300000
+$$
+
+In scientific notation, the first number is greater than or equal to 1, but less than 10. The second number is a power of 10.
+
+-   Very large number: $7.4 x 10^9 = 7400000000$
+-   Very small number: $7.4x10^{-9} =0.0000000074$
+
+To convert a number from scientific notation to standard notation:
+
+-   If the exponent on the 10 is positive, move the decimal that many spaces to the right.
+-   If the exponent on the 10 is negative, move the decimal that many spaces to the left
+
+-
+
+Examples:
+
+Convert $8.91 x 10^7$ to standard notation:
+
+The exponent 7 is positive, so move the decimal seven spaces to the right (and fill with zeros).
+
+$$
+8.91 \times 10^7 = 89100000
+$$
+
+Convert $4.667 \times 10^{-6}$ to standard notation.
+
+The exponent 6 is negative, so move the decimal six spaces to the left (and fill with zeros).
+
+$$
+4.667 \times 10^{-6} = 0.000004667
+$$
+
+### Calculating Numbers in Scientific Notation
+
+To multiply numbers in scientific notation just write the base once and add the exponents.
+
+$$
+\begin{aligned}
+	&(2 x 10^4) (3 x 10^5) \\
+	&=2\cdot10^4 \cdot3\cdot10^5 \\
+	&\text{[Keep the base 10 and add the exponents:] } 10^{4+5} = 10^9 \\
+	&=2x3x10^9 \\
+	&=6x10^9
+\end{aligned}
+$$
+
+To divide numbers in scientific notation, just write the base once and subtract the exponents.
+
+$$
+\begin{aligned}
+	&\frac{8 \cdot 10^9}{4 \cdot 10^6} \\
+	&= \frac{8}{4}\cdot \frac{10^9}{10^6} \\
+	&\text{[Keep the base 10 and subtract the exponents:] } 10^{9-6} = 10^3 \\
+	& 2 \cdot 10^3
+\end{aligned}
+$$

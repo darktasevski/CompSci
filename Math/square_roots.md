@@ -1,4 +1,4 @@
-# Square roots
+# Square roots and Cube Roots
 
 [[toc]]
 
@@ -6,7 +6,7 @@
 
 ---
 
-A square root of a number is a value that can be multiplied by itself to give the original number. A square root of 9 is 3 because when 3 is multiplied by itself we get 9.
+Square root of a number is a value that can be multiplied by itself to give the original number. Square root of 9 is 3 because when 3 is multiplied by itself we get 9.
 
 It is like asking: **What can we multiply by itself to get this?**
 
@@ -43,7 +43,7 @@ Example: what is √10?
 
 Well, 3 × 3 = 9 and 4 × 4 = 16, so we can guess the answer is between 3 and 4. At this point, I get out my calculator and it says: `3.1622776601683793319988935444327`
 
-But the digits just go on and on, without any pattern. So even the calculator's answer **is only an approximation** ! Numbers like this are called Irrational Numbers
+But the digits just go on and on, without any pattern. So even the calculator's answer **is only an approximation** ! Numbers like this are called **Irrational Numbers**. Simply, if a number under the radical sign is NOT a perfect square, it is an irrational number.
 
 ## Principal square root
 
@@ -68,6 +68,8 @@ $$
 $$
 
 ## Simplifying square roots
+
+> When simplifying a square root, ask yourself, _What number times itself equals the number inside the radical sign?_
 
 Roots are nice, but we prefer dealing with regular numbers as much as possible. So, for example, instead of $\sqrt{4}$ we prefer dealing with 2. What about roots that aren't equal to an integer, like $\sqrt{20}$? Still, we can write 20 as $4\times5$ and then use known properties to write $\sqrt{4\times5}$ as $\sqrt{4}\sqrt{5}$, which is 2√5. We _simplified_ $\sqrt{20}$.
 
@@ -161,3 +163,43 @@ _Some examples:_
     - odd power, so we're not concerned about multiple roots
 5. $x=(-27)^{-\frac{2}{3}}=(-27^{\frac{1}{3}})^{-2}=(\sqrt[3]{-27})^{-2}=(-3)^{-2}=\frac{1}{(-3)^2}= \frac{1}{9}$
 6. $x^{\frac{5}{3}}=243 =(x^{\frac{5}{3}})^{\frac{3}{5}}=x^1=243^{\frac{3}{5}}=(243^{\frac{1}{5}})^3=3^3=27$
+
+## Cube Roots
+
+> When we _cube_ a number, we raise it to the power of 3.
+
+The opposite of cubing a number is to take a number’s _cube root_. The cube root of a number is indicated by $3$ putting it inside a radical sign with a 3 on top, or $\sqrt[3]{}$.
+
+Cube root of 8:
+
+$$
+\sqrt[3]{8} = 2
+$$
+
+### Perfect Cubes
+
+Numbers like 8 and 27 are sometimes referred to as _perfect cubes_. Perfect cubes can also be negative numbers.
+
+### Simplifying Cube Roots
+
+When simplifying a cube root, ask yourself, _What number to the third power equals the number under the radical sign?_
+
+## Comparing Irrational Numbers
+
+> There is a special irrational number called $\pi$. The value of pi is $3.14159265...$ but is commonly rounded to $3.14$
+
+If we want to compare irrational numbers, it’s easiest to use approximation.
+
+Which is larger? 6 or 2$\pi$?
+
+Because $π$ is approximately $3.14$, it means that $2π$ is approximately $2 x 3.14 = 6.28$, thus $2π > 6$.
+
+Which is larger $\sqrt{5}$ or $2.1$?
+
+First, we need to find out what is the approximate value of $\sqrt{5}$ to the tenth decimal place. We know that $\sqrt{1}=1, \sqrt{4}=2, \sqrt{9}=3$, so $\sqrt{5}$ must be between 2 and 3, therefore $\sqrt{5} \approx 2$.
+
+The question asks us to compare the approximate value with a number that has a value in the tenth place, so we can then try:
+
+$$2.0^2 = 4, 2.1^2 = 4.41, 2.2^2 = 4.84, 2.3^2 = 5.29$$
+
+So, $\sqrt{5}$ must be beween 2.2 and 2.3 but it's closer to 2.2, therefore $\sqrt{5} \approx 2.2$, and therefore $\sqrt{5}$ is larger than 2.1.

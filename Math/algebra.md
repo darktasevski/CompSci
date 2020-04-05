@@ -825,6 +825,8 @@ $$
 
 ## Equations
 
+An _equation_ is a mathematical sentence with an equal sign. To solve an equation, we find the missing number, or variable, that makes the sentence true. This number is called the _solution_.
+
 Whenever we have an equation with a variable, we call it an algebraic equation, for example:
 
 $$
@@ -835,6 +837,62 @@ Simplify $9x^2-49$:
 
 $$
 9x^2-49 = (3x)^2 - 7^2=(3x-7)(3x+7)
+$$
+
+### Solving Variables
+
+In order to do so, we must _isolate the variable_ on one side of the equal sign.
+
+For example $x + 7 = 13$:
+
+In order to isolate the variable (x) on one side of the equal sign, we must:
+
+-   Think of an equation as a scale, with the = sign as the middle. You must keep the scale balanced at all times.
+-   Ask yourself, _What is happening to this variable?_ In this case, 7 is being added to the variable.
+-   To get a variable to be alone we use [**inverse operations**](#inverse-operations-summary) on both sides of the equation. What is the inverse of adding 7? Subtracting 7.
+
+$$
+	x +7=13 \newline
+	\text{[We subtract 7 from both sides x = 6 to keep the equation balanced.]}\newline
+	x \cancel{+7}\cancel{-7} = 13 - 7 \newline
+	x = 6
+	\tag{1}
+$$
+
+$$
+\begin{aligned}
+	m - 9 &= -13 \\
+	m \cancel{-9}\cancel{+9}&=-13+9 \\
+	m &= -4
+\end{aligned}
+\tag{2}
+$$
+
+$$
+\begin{aligned}
+	-3t&=39 \newline
+	\frac{\cancel{-3}t}{\cancel{-3}}&=\frac{39}{-3} \newline
+	t &= -13
+\end{aligned}
+\tag{3}
+$$
+
+$$
+\begin{aligned}
+	\frac{y}{4}&=-19 \\
+	\frac{\cancel{4}}{1} \cdot \frac{y}{\cancel{4}}&= -19 \cdot 4 \\
+	y &= -76
+\end{aligned}
+\tag{4}
+$$
+
+$$
+\begin{aligned}
+	g^2=121 \\
+	\sqrt{g^{\cancel{2}}}=\sqrt{121} \\
+	g = \pm11
+\end{aligned}
+\tag{5}
 $$
 
 ### Solving Equations
@@ -876,6 +934,15 @@ Based on this _balance beam model_, we know that we always have to do the same t
 -   **Multiplication and division are inverse operations:**
     -   Here's an example of how division is the inverse operation of multiplication: $7 \cdot 3 \div 3 = 7$, and here's an example of how multiplication is the inverse operation of division: $8 \div 4 \cdot 4=8$.
 
+| Operation                | Inverse                  |
+| ------------------------ | ------------------------ |
+| Addition                 | Subtraction              |
+| Subtraction              | Addition                 |
+| Multiplication           | Division                 |
+| Division                 | Multiplication           |
+| Squaring (exponent of 2) | Square root ($\sqrt{}$)  |
+| Cubing (exponent of 3)   | Cube root ($\sqrt[3]{}$) |
+
 #### Solving an addition equation using inverse operations
 
 Let's think about how we can solve for k in the following equation:
@@ -884,7 +951,7 @@ $$
 k + 22 = 29
 $$
 
-We want to get k by itself on the left hand side of the equation. So, what can we do to undo adding 22?
+We want to get k by itself on the left-hand side of the equation. So, what can we do to undo adding 22?
 
 We can subtract 22 because the inverse operation of addition is subtraction!
 
@@ -1019,122 +1086,7 @@ $$
 \tag{6}
 $$
 
-## Inequalities
-
-> Inequalities show the relation between two expressions that are not equal.
-
-Equations and inequalities are both mathematical sentences formed by relating two expressions to each other. In an equation, the two expressions are deemed equal which is shown by the symbol = as in $x=y$.
-
-In an inequality, the two expressions are not necessarily equal which is indicated by the symbols: >, <, ≤ or ≥, as in $x > y$ or $x \geq y$
-
-An equation or an inequality that contains at least one variable is called an **open sentence**. When you substitute a number for the variable in an open sentence, the resulting statement is either true or false. If the statement is true, the number is a solution to the equation or inequality.
-
-### Compound inequalities
-
-A compound inequality consists of two or more inequalities. There are two types of compound inequalities: compound inequalities joined by the word "and" and compound inequalities joined by the word "or."
-
-Example:
-
-$$
--6 \lt x \leq 2
-$$
-
-This can be written as following:
-
-$$
-x \gt -6 \text{ and } x \leq 2
-$$
-
-Compound inequalities joined by "and" are also called the "**intersection**" of two inequalities.
-
-To solve compound inequalities joined by the word "and," apply the rules for inequalities to all sides of the compound inequality. If you multiple or divide the compound inequality by a negative number, you will need to flip all the inequality signs.
-
-Example:
-
-$$
-\begin{aligned}
-	3 \leq -6x& + 9 \lt 6 \\
-	-6 \leq -6&x \lt -3 \\
-	1 \geq x& \gt \frac{1}{2} \\
-	\frac{1}{2} \lt x& \leq 1
-\end{aligned}
-$$
-
----
-
-$$
-x \lt -4 ; x \geq -1
-$$
-
-This can also be written as the following:
-
-$$
-x \lt -4 \text{ or } x \geq -1
-$$
-
-Compound inequalities joined by "or" are also called the "**union**" of two inequalities.
-
-To solve compound inequalities joined by the word "or," solve each inequality separately. Treat each inequality as its own singular inequality, determine the result of the individual inequalities, then combine the results.
-
-Example:
-
-$$
-\begin{alignedat}{2}
-	-4x+5 \lt 13& \text{ or } &-2x - 8 \geq 4 \\
-	   -4x \lt 8& 			  &-2x \geq 12 \\
-	   x \leq -6& 			  &x \gt -2
-\end{alignedat}
-$$
-
-### Solving inequalities
-
-To solve inequalities, you can apply most of the same principles used when solving equations. When solving inequalities, nothing changes when adding, subtracting, or multiplying and dividing by a positive number. As with equations, when we add or subtract the same number on both sides of the truth of the inequality doesn't change.
-
-This holds true for all numbers:
-
--   $x\gt y\rarr x\lt y\rarr$
--   $x+z\gt y+z\rarr x+z\lt y+z\rarr$
--   $x-z\gt y-zx-z\lt y-z$
-
-Example:
-
--   $x+3\gt9$
--   $x+3-3\gt9-3$
--   $x\gt6$
-
----
-
-It is a little bit trickier when it comes to division and multiplication. When we multiply or divide an inequality by a positive integer, the truth of the inequality doesn't change:
-
--   $x\gt y\rarr$
--   $x\cdotz\gt y\cdotz\rarr$
--   $\frac{x}{z} \gt \frac{y}{z}$
--   $If \hspace{0.1em}z \gt 0$
-
-But, **when we multiply or divide an inequality by a negative integer, the sign of the inequality will be reversed (changed)**:
-
--   $x\gt y\rarr$
--   $x\cdotz\lt y\cdotz\rarr$
--   $\frac{x}{z} \lt \frac{y}{z}$
--   $If \hspace{0.1em}z \lt 0$
-
-Example:
-
--   $\frac{x}{-2} \geq 3$
--   $\frac{x}{-2}\cdot -2 \geq 3 \cdot -2$
--   $x \leq -6$
--   Solve $2-3x \lt 14$:
-    -   We can treat this just like a normal algebra equation, but we need to keep in mind that when we multiply or divide by a negative number we need to flip around $\lt$ to $\gt$, the inequality has to change a sign.
-    -   We can start by subtracting 2 from both sides, which results in: $-3x \lt 12$
-    -   At this point we're going to divide by the negative 3, but we need to be very careful, because when we're dividing or multiplying by a negative number, inequality changes sign: $\frac{\cancel{-3}x}{\cancel{-3}}\lt \frac{12}{-3}=x \gt -4$
--   Solve $x+2 \leq 2x$:
-    -   $x+2 \leq 2x=x+2-2 \leq 2x -2 = x \leq x$
--   Solve $3x +4 \gt 5x$:
-    -   $3x +4 -4 \gt 5x -4 = 3x \gt 1x$
-
-### Inequalities involving polynomials
-
-When solving inequalities involving polynomials, you need to simplify the inequality so that one side equals zero. This is similar to the format of a quadratic equation $ax^2 + bx + c =0$. By setting one side of the inequality equal to zero, you create a relationship where the solution to the inequality depends on the zeros of the polynomial.
+> When variables are in numerator or denominator, first simplify the entire top, then simplify the entire bottom, then you can divide the numerator by the denominator. Think about the fraction bar like a grouping symbol.
 
 ## Dependent and independent variables
 
@@ -1146,9 +1098,12 @@ Example:
 
 In the function above, $y$ is the dependent variable, and $x$ is the independent variable. If the value of $x$ is said to be 1 (input), then the value of $y$ will be 2 (output).
 
+-   The variable you are substituting for is called the _independent variable_.
+-   The other variable (that you solve for) is called the _dependent variable_.
+
 ### Independent variable
 
-> An independent variable is not influenced by another variable. They are sometimes called the “argument” of the function.
+> An independent variable is not influenced by another variable. They are sometimes called the "argument" of the function.
 
 An **independent** variable is a variable that represents a quantity that is being manipulated in an experiment. $x$ is often the variable used to represent the independent variable in an equation.
 
@@ -1158,7 +1113,7 @@ You are doing chores to earn your allowance. For each chore you do, you earn \$3
 
 ### Dependent variables
 
-> A dependent variable is determined by another variable. They are dependent on the “input” value. Dependent variables represent the “output” value of a function, and they are sometimes called the “value” of the function.
+> A dependent variable is determined by another variable. They are dependent on the "input" value. Dependent variables represent the "output" value of a function, and they are sometimes called the "value" of the function.
 
 A **dependent** variable represents a quantity whose value depends on how the independent variable is manipulated. $y$ is often the variable used to represent the dependent variable in an equation.
 

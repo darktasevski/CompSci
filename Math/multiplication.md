@@ -175,8 +175,8 @@ $$
 What is $2^6 \times 2^5$?
 
 $$
-\text{ \textbar the first term in the product is the product of 5 2's}  \\
-\text{and the second is the product of the 6 2's, so all together we have 11 2's, Thus:} \\
+\text{ \textbar the first term in the product is the product of 5 2's}  \newline
+\text{and the second is the product of the 6 2's, so all together we have 11 2's, Thus:} \newline
 2^6 \times 2^5 = 2^{11} = 2048
 $$
 
@@ -191,7 +191,7 @@ $$
 What about $3^6 \div 3^8$?
 
 $$
-\text{\textbar This is an expression with a negative exponent!} \\
+\text{\textbar This is an expression with a negative exponent!} \newline
 3^{6-8} = 3^{-2}
 $$
 
@@ -212,7 +212,7 @@ $$
 > Hence, when an exponential expression is raised to a power, we multiply the exponent of the expression by the power to which the expression is raised.
 
 $$
-(3^5)^2 = 3^{5 \times 2} = 3^{10} \\
+(3^5)^2 = 3^{5 \times 2} = 3^{10} \newline
 (4^{-3})^{-2} = 4^{(-3)(-2)} = 4^6
 $$
 
@@ -230,13 +230,25 @@ $$
 (2^3)^4 = 2^{3 \times 4} = 2^{12}
 $$
 
+Be careful when calculating negative numbers with exponents:
+
+$$
+-3^2 = −(3^2) = −(3\cdot3) = −9 \newline
+(−3)^2 = (−3)\cdot(−3) = 9
+$$
+
+Always look at what is next to the exponent:
+
+-   In the first example, the number 3 is next to the exponent. So, only the 3 is being raised to the second power.
+-   In the second example, the parentheses is next to the exponent, so we raise everything inside the parentheses to the second power. The −3 is inside the parentheses and, therefore, −3 is raised to the second power.
+
 ---
 
 $$
 (-2)^3 = 1\times (-2) \times (-2) \times (-2) = 4 \times -2 = -8
 $$
 
-$2^0  = 1 \\ 2^1 = 2$
+$$2^0  = 1 \newline 2^1 = 2$$
 
 $$
   (\frac{2}{5})^2 = \frac{2}{5} \times \frac{2}{5} = \frac{2 \times 2}{5 \times 5} = \frac{4}{25}
@@ -290,12 +302,47 @@ $$
 (-1)^1 = -1
 $$
 
+When there is an exponent inside parentheses and another outside the parentheses, this is called a _power of a power_. A power of a power can be simplified by multiplying the exponents. It looks like this:
+
+$$
+(v^a)^b = v^{a\cdot b}
+$$
+
+$$
+(3x^7y^4)^2 =3^{1\cdot 2}\cdot x^{7\cdot 2}\cdot y^{4\cdot2}=3^2\cdot x^14\cdot y^8=9x^14y^8
+$$
+
+> Don’t forget: Any base without an exponent has an "invisible" exponent of 1.
+
 #### Some examples
 
 Evaluate the expression $5^x - 3^x$ for $x=2$.
 
 $$
 5^x - 3^x = 5^2 - 3^2 = 25 - 9 = 16
+$$
+
+### Simplifying Expressions with Exponents
+
+We can simplify expressions with more than one exponent by combining the exponents- the only requirement is that the base must be the same. It looks like this:
+
+$$
+\begin{aligned}
+	x^a \cdot x^b = x^{a+b} \\
+	x^a ÷ x^b = x^{a-b}
+\end{aligned}
+$$
+
+When multiplying powers with the same base, write the base once, and then add the exponents!
+
+$$
+5^2 \cdot 5^6 = 5^{2+6} = 5^8
+$$
+
+When dividing powers with the same base, write the base once and subtract the exponents!
+
+$$
+ 7^6\div7^2 =7^{6-2} =7^4
 $$
 
 ### Fractional exponents
@@ -359,3 +406,25 @@ _Consider the following examples:_
 8. $\sqrt[4]{\frac{1}{16}^{-3}}=\frac{1}{16}^{-\frac{3}{4}}=\frac{1^{-\frac{3}{4}}}{16^{-\frac{3}{4}}}=\frac{1}{(\sqrt[4]{16})^{-3}}=\frac{1}{2^{-3}}=\frac{\cancel{1}}{\frac{\cancel{1}}{8}}=8$
 9. $(\frac{4}{9})^{(-\frac{3}{2})}=\frac{4^{(-\frac{3}{2})}}{9^{(-\frac{3}{2})}}=\frac{(\sqrt[2]{4})^{-3}}{(\sqrt[2]{9})^{-3}}=\frac{2^{-3}}{3^{-3}}=\frac{\frac{1}{2^3}}{\frac{1}{3^3}}=\frac{\frac{1}{8}}{\frac{1}{27}}=\frac{1 \times 27}{1 \times 8}=\frac{27}{8}$
     - We are multiplying the numerator by the reciprocal of the denominator, $\frac{\frac{1}{8}}{\frac{1}{27}}=\frac{1}{8} \times \frac{27}{1}$ (see fraction division).
+
+### Negative Exponents
+
+A negative exponent in the numerator becomes a positive exponent when moved to the denominator. It looks like this:
+
+$$
+x^{-m}=\frac{1}{x^m}
+$$
+
+$$
+3^{-3}=\frac{1}{3^3}=\frac{1}{27}
+$$
+
+And the opposite is true: A negative exponent in the denominator becomes a positive exponent when moved to the numerator. It looks like this:
+
+$$
+\frac{1}{x^{-m}}=x^m
+$$
+
+$$
+\frac{1}{5^{-2}}=5^2 =25
+$$
