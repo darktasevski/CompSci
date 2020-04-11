@@ -260,6 +260,103 @@ $$
 52\% = x
 $$
 
+How many grams of cocoa are in the the chocolate bar is 50 grams and contains 30% cocoa?
+
+$$
+\begin{aligned}
+	g &= 50 \cdot 0.30 \text{ [Because 0.30 = 30\%]} \\
+	g &= 15
+\end{aligned}
+$$
+
+Hom many points is 30\$ fewer than 1060 points?
+
+$$
+\begin{aligned}
+	1060 - 0.3(1060) &= \\
+	1060 - 318 &= \\
+	742
+\end{aligned}
+$$
+
+An alternative way to solve this:
+
+$$
+\begin{aligned}
+	1060(70\%) = 1060 \cdot 0.7 = 742
+\end{aligned}
+$$
+
+---
+
+Slightly harder examples:
+
+1. There are 20%, percent more goblins than wizards in the magic club. There are 120 goblins in the magic club. How many wizards are in the magic club?
+    - Since there are 20%, percent more goblins than wizards, the number of goblins is $100\%+20\%=120\%$, 120 percent of the number of wizards. Percent means per hundred, so: $120\% = \frac{120}{100}=1.2$
+    - That means we can use the expression $1.2w$ to represent the number of goblins.
+    - Since we know there are 120 goblins, we can say that $1.2w$ is equal to 120.$120 = 1.2w$
+    - We the combine like terms and solve for w:
+
+$$
+\begin{aligned}
+	1.2w = 120 \\
+	\frac{1.2w}{1.2}= \frac{120}{1.2} \\
+	w = 100
+\end{aligned}
+$$
+
+2. Finley's pumpkin had a mass of 6.5 kilograms before he carved it. After carving it, the pumpkin had a mass of 3.9kg. What was the percent decrease in the mass of the pumpkin?
+    - The amount of decrease in the mass is $6.5kg -3.9kg =2.6kg$
+        - What percent of 6.5kg is 2.6kg?
+    - We can rewrite above question as an equation:
+        - $x\% \times 6.5 =2.6$
+    - Solve for the percent:
+
+$$
+\begin{aligned}
+	x\% \times 6.5 &=2.6 \\
+	\frac{x\% \times 6.5}{6.5} &= \frac{2.6}{6.5} \\
+	x\% = 0.4 = \frac{40}{100} &= 40\%
+\end{aligned}
+$$
+
+3. Tapiwa raked 5% more leaves than Adam raked. Tapiwa raked 357 liters of leaves. How many liters of leaves did Adam rake?
+    - Since Tapiwa raked 5% more leaves, the number of liters she raked is $100\%+5\%=105\%$ of the number of liters Adam raked. That means we can use the expression $1.05A$ to represent the liters of leaves that Tapiwa raked.
+    - Since we know Tapiwa raked 357 liters of leaves, we can say that $1.05A$ is equal to 357: $1.05A = 357$
+    - We can then combine the like terms and solve for A:
+
+$$
+\begin{aligned}
+	1.05A &= 357 \\
+	\frac{\cancel{1.05}A}{\cancel{1.05}A} &= \frac{357}{1.05} \\
+	A &= 340
+\end{aligned}
+$$
+
+4. Haruka hiked several kilometers in the morning. She hiked only 6 kilometers in the afternoon, which was 25%, percent less than she had hiked in the morning. How many kilometers did Haruka hike in all?
+    - Haruka walked 25% fewer kilometers in the afternoon, so she walked $100\%−25\%=75\%$ as many kilometers in the afternoon as in the morning. She walked 6km in the afternoon. To find how far Haruka hiked in the morning, we need to answer, 6km is 75% of what distance?
+
+$$
+\begin{aligned}
+	6 &= 0.75 \cdot x \\
+	\frac{6}{0.75} &= \frac{\cancel{0.75}x}{\cancel{0.75}} \\
+	8 &= x \\
+	8km + 6km &= 14km
+\end{aligned}
+$$
+
+5. Ann increased the quantities of all the ingredients in a recipe by 60%, percent. She used 80 grams of cheese. How much cheese did the recipe require?
+    - Ann used 60%, percent more cheese than the recipe required. So she used all 100% that the recipe asked for plus 60%, percent more. $100\% + 60\% = 160\% = 1.6$
+    - To find the amount of cheese in the original recipe we need to answer, 80g is 160% of what amount?
+
+$$
+\begin{aligned}
+	80 &= 1.6 \cdot x \\
+	\frac{80}{1.6} &= \frac{\cancel{1.6}x}{\cancel{1.6}} \\
+	50 &= x
+\end{aligned}
+$$
+
 ### Percent Rate of Change
 
 Sometimes, it is difficult to tell whether a change in the amount of something is a big deal or not. We use _percent rate of change_ to show how much an amount has changed in relation to the original amount. Another way to think about it is simply as the rate of change expressed as a percent.

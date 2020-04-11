@@ -6,6 +6,8 @@
 
 ---
 
+Geometry is the branch of mathematics that deals with lines, shapes, and space.
+
 ## Area and perimeter
 
 ```c
@@ -17,13 +19,13 @@
 
 **Area** is the space inside of a two-dimensional shape. We can also think of the area as the amount of space a shape covers.
 
-**Oblast(Area)** predstavlja celo područje unutrašnjeg dela geometrijske figure, mereno u jedinicama. Oblast pravougaone figure je definisan proizvod dve strane, i moze se izračunati uz pomoć sledeće formule: $$O = d * c$$
+**Oblast(Area)** predstavlja celo područje unutrašnjeg dela geometrijske figure, mereno u jedinicama. Oblast pravougaone figure je definisan proizvod dve strane, i moze se izračunati uz pomoć sledeće formule: $O = d * c$
 
 $$ height \times width = area $$
 
 **Perimeter** is the distance around the outside of a two-dimensional shape. To find the perimeter of a shape, we add all of the shape's side lengths.
 
-**Perimetar** je distanca potrebna da se obidje oko nekog objekta, ili matematički rečeno zbir svih strana geometrijske figure. Može se izračunati uz pomoć sledeće formule: $$P = (d *c)* 2$$ $$ (height \times width) \times 2 = perimeter $$
+**Perimetar** je distanca potrebna da se obidje oko nekog objekta, ili matematički rečeno zbir svih strana geometrijske figure. Može se izračunati uz pomoć sledeće formule: $P = (d *c)* 2$, $(height \times width) \times 2 = perimeter$
 
 ### Area and perimeter formulas
 
@@ -57,16 +59,21 @@ An angle is two rays that share a vertex. Intersecting lines or line segments al
 
 ### Measuring angles
 
-Angles are measured in degrees. The wider an angle is open, the greater its measure.
+Angles are measured in degrees. The wider an angle is open, the greater its measure. We use _degrees_ to measure the size of an angle.
 
 ### Angle types
 
-| Angle type | Angle size (in degrees)              |
-| ---------- | ------------------------------------ |
-| Acute      | Between $0\degree$ and $90\degree$   |
-| Right      | Exactly $90\degree$                  |
-| Obtuse     | Between $90\degree$ and $180\degree$ |
-| Straight   | Exactly $180\degree$                 |
+| Angle(s) type | Angle size (in degrees)                       |
+| ------------- | --------------------------------------------- |
+| Acute         | Between $0\degree$ and $90\degree$            |
+| Right         | Exactly $90\degree$                           |
+| Obtuse        | Between $90\degree$ and $180\degree$          |
+| Straight      | Exactly $180\degree$                          |
+| Complementary | Two angles whose sum is $90\degree$           |
+| Supplementary | Two angles whose sum is $180\degree$          |
+| Adjacent      | Angles that share a vertex and a common side. |
+| Vertical      | Two angles whose sum is $180\degree$          |
+| Congruent     | Two angles whose sum is $180\degree$          |
 
 A **right angle** is a 90degree angle. A right angle is in the shape of a perfect corner, like the corner of a rectangular sheet of paper.
 
