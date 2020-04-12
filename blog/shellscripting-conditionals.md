@@ -8,7 +8,6 @@ tags:
     - learning
     - bash
     - devops
-cover_image: https://thepracticaldev.s3.amazonaws.com/i/tbphuhyd267syqkpgn6h.jpg
 ---
 
 ![Alt text of image](https://thepracticaldev.s3.amazonaws.com/i/mzfpomwt6xfadtk9lpei.png)

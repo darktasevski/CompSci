@@ -3,7 +3,6 @@ title: How are you writing a commit message?
 date: 2019-11-29
 description:
 author: Darkø Tasevski
-cover_image: https://images.unsplash.com/photo-1556075798-4825dfaaf498
 ---
 
 I'll write a little bit about a topic that is not related to code, seemingly not that important, but it is quite practical in daily programming. **How to write git commit message properly?**

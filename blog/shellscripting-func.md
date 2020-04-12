@@ -8,7 +8,6 @@ tags:
     - shell
     - bash
     - devops
-cover_image: https://thepracticaldev.s3.amazonaws.com/i/6fjgzwo0r3x9fe5tt2zs.jpeg
 ---
 
 > For functions we can say that they're shellscripts within shellscript.

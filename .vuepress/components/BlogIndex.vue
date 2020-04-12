@@ -3,13 +3,11 @@
     <div v-for="post in posts">
       <h2>
         <router-link :to="post.path">
-          <div v-if="typeof post.frontmatter.cover_image !== 'undefined'">
-            <img
-              :src="post.frontmatter.cover_image"
-              :alt="post.frontmatter.title + ' cover image'"
-              style="max-height:300px;object-fit: cover;"
-            />
-          </div>
+          <img
+            :src="typeof post.frontmatter.cover_image !== 'undefined' ?  post.frontmatter.cover_image : '/images/blog_hero.png'"
+            :alt="post.frontmatter.title + ' cover image'"
+            style="max-height:300px;object-fit: cover;"
+          />
           {{ post.frontmatter.title }}
         </router-link>
       </h2>
@@ -28,7 +26,6 @@ export default {
   computed: {
     mounted() {},
     posts() {
-      console.log("this.$site", this);
       return this.$site.pages
         .filter(x => x.path.startsWith("/blog/") && !x.frontmatter.blog_index)
         .sort(

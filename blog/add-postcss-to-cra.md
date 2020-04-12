@@ -8,7 +8,6 @@ tags:
     - CSS
     - PostCSS
     - create-react-app
-cover_image: https://postcss.org/_/web_modules/LayoutContainer/opengraph.jpg
 ---
 
 # Add PostCSS to Create-React-App
@@ -53,7 +52,7 @@ Then, at the root of the project, you need to create a file called `postcss.conf
 
 ```javascript
 module.exports = {
-	plugins: [require('postcss-nested'), require('autoprefixer')],
+	plugins: [require('postcss-nested'), require('autoprefixer')]
 };
 ```
 
@@ -187,11 +186,11 @@ module.exports = {
 	plugins: [
 		require('postcss-import'),
 		require('postcss-preset-env')({
-			stage: 1,
+			stage: 1
 		}),
 		require('postcss-nested'),
-		require('autoprefixer'),
-	],
+		require('autoprefixer')
+	]
 };
 ```
 

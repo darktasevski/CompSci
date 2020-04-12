@@ -2,7 +2,6 @@
 title: Use cases for Bitwise operators in Js
 date: 2019-10-10
 author: Darkø Tasevski
-cover_image: https://thepracticaldev.s3.amazonaws.com/i/245aq19gui2njbot2eof.jpg
 ---
 
 [Bitwise operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) in Javascript are mostly used for numerical conversions/computations, because sometimes they're much faster than their `Math` or `parseInt` equivalents. You can take a look at some benchmarks [here](https://jsperf.com/math-floor-vs-math-round-vs-parseint/18).
