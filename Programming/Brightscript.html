@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Roku Brightscipt and SceneGraph | Signal in the Static</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+    <meta name="description" content="Blog, notes and other stuff">
+    <link rel="preload" href="/CompSci/assets/css/0.styles.f0c15ea1.css" as="style"><link rel="preload" href="/CompSci/assets/js/app.12370437.js" as="script"><link rel="preload" href="/CompSci/assets/js/2.05994e9e.js" as="script"><link rel="preload" href="/CompSci/assets/js/35.1f4c1974.js" as="script"><link rel="preload" href="/CompSci/assets/js/14.c0e884bc.js" as="script"><link rel="prefetch" href="/CompSci/assets/js/10.ca7bf89b.js"><link rel="prefetch" href="/CompSci/assets/js/11.1a6f46ea.js"><link rel="prefetch" href="/CompSci/assets/js/12.01985285.js"><link rel="prefetch" href="/CompSci/assets/js/13.61a3ac01.js"><link rel="prefetch" href="/CompSci/assets/js/15.7698a6fc.js"><link rel="prefetch" href="/CompSci/assets/js/16.c474b23f.js"><link rel="prefetch" href="/CompSci/assets/js/17.3b3b239d.js"><link rel="prefetch" href="/CompSci/assets/js/18.3eb9d16a.js"><link rel="prefetch" href="/CompSci/assets/js/19.2665d31c.js"><link rel="prefetch" href="/CompSci/assets/js/20.2b04d624.js"><link rel="prefetch" href="/CompSci/assets/js/21.315d0f33.js"><link rel="prefetch" href="/CompSci/assets/js/22.8d25d48d.js"><link rel="prefetch" href="/CompSci/assets/js/23.fd56305c.js"><link rel="prefetch" href="/CompSci/assets/js/24.7196246d.js"><link rel="prefetch" href="/CompSci/assets/js/25.1afc3c6a.js"><link rel="prefetch" href="/CompSci/assets/js/26.f4aaa09d.js"><link rel="prefetch" href="/CompSci/assets/js/27.db5ae03f.js"><link rel="prefetch" href="/CompSci/assets/js/28.b693f923.js"><link rel="prefetch" href="/CompSci/assets/js/29.c6931735.js"><link rel="prefetch" href="/CompSci/assets/js/3.a42a85fe.js"><link rel="prefetch" href="/CompSci/assets/js/30.062a0ff6.js"><link rel="prefetch" href="/CompSci/assets/js/31.474077dd.js"><link rel="prefetch" href="/CompSci/assets/js/32.79d5b338.js"><link rel="prefetch" href="/CompSci/assets/js/33.db64743f.js"><link rel="prefetch" href="/CompSci/assets/js/34.bf118623.js"><link rel="prefetch" href="/CompSci/assets/js/36.31a38fcd.js"><link rel="prefetch" href="/CompSci/assets/js/37.6a6d7f4e.js"><link rel="prefetch" href="/CompSci/assets/js/38.9878410d.js"><link rel="prefetch" href="/CompSci/assets/js/39.493a73bd.js"><link rel="prefetch" href="/CompSci/assets/js/4.14b6072f.js"><link rel="prefetch" href="/CompSci/assets/js/40.cbecacff.js"><link rel="prefetch" href="/CompSci/assets/js/41.b7e8e24b.js"><link rel="prefetch" href="/CompSci/assets/js/42.4ccd2072.js"><link rel="prefetch" href="/CompSci/assets/js/43.ae701ecf.js"><link rel="prefetch" href="/CompSci/assets/js/44.4092cb4b.js"><link rel="prefetch" href="/CompSci/assets/js/45.991577a6.js"><link rel="prefetch" href="/CompSci/assets/js/46.9b80f76a.js"><link rel="prefetch" href="/CompSci/assets/js/47.a5497bad.js"><link rel="prefetch" href="/CompSci/assets/js/48.3604443a.js"><link rel="prefetch" href="/CompSci/assets/js/49.33309328.js"><link rel="prefetch" href="/CompSci/assets/js/5.bb600e26.js"><link rel="prefetch" href="/CompSci/assets/js/50.be594502.js"><link rel="prefetch" href="/CompSci/assets/js/51.ee0f7a9b.js"><link rel="prefetch" href="/CompSci/assets/js/52.0df6b83d.js"><link rel="prefetch" href="/CompSci/assets/js/53.ef4dbae1.js"><link rel="prefetch" href="/CompSci/assets/js/54.f4f06b22.js"><link rel="prefetch" href="/CompSci/assets/js/55.91cac001.js"><link rel="prefetch" href="/CompSci/assets/js/56.0ba51daf.js"><link rel="prefetch" href="/CompSci/assets/js/6.d74ec928.js"><link rel="prefetch" href="/CompSci/assets/js/7.23e0d41c.js"><link rel="prefetch" href="/CompSci/assets/js/8.a6e9d772.js"><link rel="prefetch" href="/CompSci/assets/js/9.ab7c7d3f.js">
+    <link rel="stylesheet" href="/CompSci/assets/css/0.styles.f0c15ea1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/CompSci/" class="home-link router-link-active"><!----> <span class="site-name">Signal in the Static</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/CompSci/" class="nav-link">Home</a></div><div class="nav-item"><a href="/CompSci/blog/" class="nav-link">Blog</a></div><div class="nav-item"><a href="/CompSci/about/" class="nav-link">About</a></div> <div class="nav-item"><a role="button" aria-label="Switch to light mode" class="nav-link"><span>Switch theme</span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/CompSci/" class="nav-link">Home</a></div><div class="nav-item"><a href="/CompSci/blog/" class="nav-link">Blog</a></div><div class="nav-item"><a href="/CompSci/about/" class="nav-link">About</a></div> <div class="nav-item"><a role="button" aria-label="Switch to light mode" class="nav-link"><span>Switch theme</span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/CompSci/blog/" class="sidebar-link">Blog</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Notes</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/Books/" class="sidebar-heading clickable"><span>Books</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/CompSci/" class="sidebar-heading clickable"><span>CompSci</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/Math/" class="sidebar-heading clickable"><span>Math</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/CompSci/Programming/" class="sidebar-heading clickable router-link-active open"><span>Programming</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/CompSci/Programming/Brightscript.html" aria-current="page" class="active sidebar-link">Roku Brightscipt and SceneGraph</a></li><li><a href="/CompSci/Programming/Electron.html" class="sidebar-link">Electron</a></li><li><a href="/CompSci/Programming/Golang.html" class="sidebar-link">Golang</a></li><li><a href="/CompSci/Programming/Javascript.html" class="sidebar-link">Javascript</a></li><li><a href="/CompSci/Programming/Python.html" class="sidebar-link">Python</a></li><li><a href="/CompSci/Programming/ReactNative.html" class="sidebar-link">React Native</a></li><li><a href="/CompSci/Programming/Ruby.html" class="sidebar-link">Ruby</a></li><li><a href="/CompSci/Programming/class_theory.html" class="sidebar-link">Class Theory</a></li><li><a href="/CompSci/Programming/code_snippets.html" class="sidebar-link">Code snippets</a></li><li><a href="/CompSci/Programming/js_performance.html" class="sidebar-link">Javascript Performance</a></li><li><a href="/CompSci/Programming/video_engineering.html" class="sidebar-link">Video engineering</a></li><li><a href="/CompSci/Programming/Shell/" class="sidebar-link">ShellScripting</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-solarized-content content__default"><h1 id="roku-brightscipt-and-scenegraph"><a href="#roku-brightscipt-and-scenegraph" class="header-anchor">#</a> Roku Brightscipt and SceneGraph</h1> <p>SceneGraph apps are a mix of XML and BrightScript. BS is loosely typed, similar to JavaScript, but uses a syntax similar to Visual Basic. In general, the user interface elements are defined in XML files and the application logic is defined in the BrightScript <code>.brs</code> files.</p> <p>One important thing to note about BrightScript: it is case-insensitive. For example, a function defined as function <code>getChild()</code> can be accessed using <code>getchild()</code> or <code>GetChild()</code> or <code>gEtChIlD()</code>.</p> <hr> <ol><li>Roku mostly only works with rectangles, images, videos and text and NOT triangles or curves 😦 Example of draw directly to a screen.</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">Sub</span> Main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	screen <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roScreen&quot;</span><span class="token punctuation">)</span>
+	port <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roMessagePort&quot;</span><span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>SetTitle<span class="token punctuation">(</span><span class="token comment">'Graphics')</span>
+	screen<span class="token punctuation">.</span>SetAlphaEnable<span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>SetMessagePort<span class="token punctuation">(</span>port<span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>DrawRect<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">&amp;hFFFF00FF</span><span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>DrawLine<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">&amp;h808080FF</span><span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>DrawPoint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">&amp;h808080FF</span><span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>Finish<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>Show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	wait<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>screenGetMessagePort<span class="token punctuation">)</span>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre></div><ol start="2"><li>For more complex graphics use images.</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">Sub</span> Main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	screen <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roScreen&quot;</span><span class="token punctuation">)</span>
+	img <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roBitmap&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;pkg:/images/myimage.png&quot;</span><span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>DrawObject<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> img<span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>Finish<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre></div><ol start="3"><li>Text can be drawn</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">Sub</span> Main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	fontRegistry <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roFontRegistry&quot;</span><span class="token punctuation">)</span>
+	font <span class="token operator">=</span> fontRegistry<span class="token punctuation">.</span>GetDefaultFont<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>DrawText<span class="token punctuation">(</span><span class="token string">&quot;hi&quot;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">&amp;h00FFFFFF</span><span class="token punctuation">,</span> font<span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>AddParagraph<span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">)</span>
+	screen<span class="token punctuation">.</span>Finish<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre></div><ol start="4"><li>There are options to draw scaled content and video with overlay ( video is draw on layer 0 when using roImageCanvas).</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code>screen <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roScreen&quot;</span><span class="token punctuation">)</span>
+player <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roVideoPlayer&quot;</span><span class="token punctuation">)</span>
+port <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roMessagePort&quot;</span><span class="token punctuation">)</span>
+player<span class="token punctuation">.</span>Play<span class="token punctuation">(</span><span class="token punctuation">)</span>
+screen<span class="token punctuation">.</span>SwapBuffers<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="5"><li>BrightScript is a cut down version of BrightSign. BrightSign can do WebGL via roHtmlWidget , but less likely to be supported by Roku?</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">Sub</span> Main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	msgPort <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roMessagePort&quot;</span><span class="token punctuation">)</span>
+	r <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roRectangle&quot;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1920</span><span class="token punctuation">,</span> <span class="token number">1080</span><span class="token punctuation">)</span>
+	h <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roHtmlWidget&quot;</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+	h<span class="token punctuation">.</span>SetPort<span class="token punctuation">(</span>msgPort<span class="token punctuation">)</span>
+	h<span class="token punctuation">.</span>SetURL<span class="token punctuation">(</span><span class="token string">&quot;file:///testpage.html&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre></div><ol start="6"><li>this also works with external web pages but you need to add a delay see sleep.</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">Sub</span> Main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	msgPort <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roMessagePort&quot;</span><span class="token punctuation">)</span>
+	r <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roRectangle&quot;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1920</span><span class="token punctuation">,</span> <span class="token number">1080</span><span class="token punctuation">)</span>
+	h <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roHtmlWidget&quot;</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span>
+	h<span class="token punctuation">.</span>SetPort<span class="token punctuation">(</span>msgPort<span class="token punctuation">)</span>
+	h<span class="token punctuation">.</span>SetURL<span class="token punctuation">(</span><span class="token string">&quot;http://www.brightsign.biz&quot;</span><span class="token punctuation">)</span>
+	sleep<span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre></div><ol start="7"><li>If you want to add comments use</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token comment">' Rem comment add here</span>
+</code></pre></div><ol start="8"><li>to trace use print with strings, number, variables, or expressions</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code>print <span class="token string">&quot;trace&quot;</span>
+</code></pre></div><ol start="9"><li>Logic == is written as =</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">if</span> a <span class="token operator">=</span> b <span class="token keyword">then</span>
+  print a
+<span class="token keyword">else</span> <span class="token keyword">if</span> a <span class="token operator">&gt;</span> c <span class="token keyword">then</span>
+  print c
+<span class="token keyword">elseif</span>
+  print b
+<span class="token keyword">if</span> <span class="token keyword">end</span>
+</code></pre></div><ol start="10"><li>Loops for loop</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">For</span> i <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">To</span> <span class="token number">5</span>
+  print i
+<span class="token keyword">For</span> <span class="token keyword">end</span>
+</code></pre></div><p>reverse for loop</p> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">For</span> i<span class="token operator">=</span><span class="token number">10</span> <span class="token keyword">To</span> <span class="token number">1</span> <span class="token keyword">Step</span> <span class="token operator">-</span><span class="token number">1</span>
+    print i
+<span class="token keyword">End</span> <span class="token keyword">For</span>
+</code></pre></div><p>while</p> <div class="language-vb extra-class"><pre class="language-vb"><code>k <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> k <span class="token operator">=</span> <span class="token number">0</span>
+    k <span class="token operator">=</span> <span class="token number">1</span>
+    print <span class="token string">&quot;loop once&quot;</span><span class="token punctuation">.</span>
+<span class="token keyword">end</span> <span class="token keyword">while</span>
+</code></pre></div><p>while true</p> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">while</span> <span class="token boolean">true</span>
+    print <span class="token string">&quot;loop once&quot;</span>
+    <span class="token keyword">if</span> k <span class="token operator">&lt;</span><span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token keyword">then</span> <span class="token keyword">exit</span> <span class="token keyword">while</span>
+<span class="token keyword">end</span> <span class="token keyword">while</span>
+</code></pre></div><ol start="11"><li>functions</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">Sub</span> main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  print add<span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">)</span>
+  print myfunc<span class="token punctuation">(</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">)</span>
+<span class="token keyword">End</span> <span class="token keyword">sub</span>
+<span class="token keyword">Function</span> add<span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+    <span class="token keyword">Return</span> a<span class="token operator">+</span>b
+<span class="token keyword">End</span> <span class="token keyword">Function</span>
+myfunc <span class="token operator">=</span> <span class="token keyword">Function</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+    <span class="token keyword">Return</span> a<span class="token operator">+</span>b
+<span class="token keyword">End</span> <span class="token keyword">Function</span>
+</code></pre></div><ol start="12"><li>you can group functions (perhaps not sure)</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code>group <span class="token operator">=</span> <span class="token punctuation">{</span> func1<span class="token punctuation">:</span> <span class="token keyword">Function</span><span class="token punctuation">(</span> a <span class="token punctuation">)</span>
+print a
+<span class="token keyword">End</span> <span class="token keyword">function</span><span class="token punctuation">,</span> func2<span class="token punctuation">:</span> <span class="token keyword">Function</span><span class="token punctuation">(</span> a<span class="token punctuation">,</span> b <span class="token punctuation">)</span>
+print a <span class="token operator">+</span> b
+<span class="token keyword">End</span> <span class="token keyword">function</span>
+<span class="token punctuation">}</span>
+group<span class="token punctuation">.</span>func1<span class="token punctuation">(</span> <span class="token string">&quot;a&quot;</span> <span class="token punctuation">)</span>
+group<span class="token punctuation">.</span>func2<span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">)</span>
+</code></pre></div><ol start="13"><li>There are lots of Utility, Math and String functions</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code>text<span class="token operator">=</span>ReadAsciiFile<span class="token punctuation">(</span><span class="token string">&quot;tmp:/config.txt&quot;</span><span class="token punctuation">)</span>
+lowerCase <span class="token operator">=</span> LCase<span class="token punctuation">(</span><span class="token string">&quot;Hi&quot;</span><span class="token punctuation">)</span>
+y <span class="token operator">=</span> Sin<span class="token punctuation">(</span> x <span class="token punctuation">)</span>
+</code></pre></div><ol start="14"><li>all built in types follow the form &quot;roType&quot; so for instance</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">date</span> <span class="token operator">=</span> CreateObject<span class="token punctuation">(</span><span class="token string">&quot;roDateTime&quot;</span><span class="token punctuation">)</span>
+print <span class="token string">&quot;The date is now &quot;</span>; <span class="token keyword">date</span><span class="token punctuation">.</span>AsDateString<span class="token punctuation">(</span><span class="token string">&quot;long-date&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="15"><li>epc input, this is how you recieve information from user</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">Sub</span> Main <span class="token punctuation">(</span><span class="token punctuation">)</span>
+    inputObject <span class="token operator">=</span> CreateObject <span class="token punctuation">(</span><span class="token string">&quot;roInput&quot;</span><span class="token punctuation">)</span>
+    port <span class="token operator">=</span> CreateObject <span class="token punctuation">(</span><span class="token string">&quot;roMessagePort&quot;</span><span class="token punctuation">)</span>
+    inputObject<span class="token punctuation">.</span>SetMessagePort <span class="token punctuation">(</span>port<span class="token punctuation">)</span>
+    <span class="token keyword">While</span> <span class="token boolean">True</span>
+        msg <span class="token operator">=</span> Wait <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> port<span class="token punctuation">)</span>
+        <span class="token keyword">If</span> Type <span class="token punctuation">(</span>msg<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">&quot;roInputEvent&quot;</span>
+            info <span class="token operator">=</span> msg<span class="token punctuation">.</span>GetInfo <span class="token punctuation">(</span><span class="token punctuation">)</span>
+            Print info
+        <span class="token keyword">EndIf</span>
+    <span class="token keyword">End</span> <span class="token keyword">While</span>
+<span class="token keyword">End</span> <span class="token keyword">Sub</span>
+</code></pre></div><p>generic ones:</p> <div class="language-vb extra-class"><pre class="language-vb"><code>  Home
+  Rev
+  Fwd
+  Play
+  <span class="token keyword">Select</span>
+  Left
+  Right
+  Down
+  Up
+  Back
+  InstantReplay
+  Info
+  Backspace
+  Search
+  Enter
+</code></pre></div><p>additional on some devices</p> <div class="language-vb extra-class"><pre class="language-vb"><code>  VolumeDown
+  VolumeMute
+  VolumeUp
+  PowerOff
+  ChannelUp
+  ChannelDown
+  InputTuner
+  InputHDMI1
+  InputHDMI2
+  InputHDMI3
+  InputHDMI4
+  InputAV1
+</code></pre></div><p>Normal keyboard letters are written &quot;Lit_a&quot;,&quot;Lit_b&quot; .... and support url encoding similar.</p> <ol start="16"><li>For a lot of API/UI Roku uses xml and a scene graph to supply aspects like Buttons, TextEditBox, RadioButtonLists etc...</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token operator">&lt;</span>children <span class="token operator">&gt;</span>
+
+  <span class="token operator">&lt;</span>Button
+    id <span class="token operator">=</span> <span class="token string">&quot;exampleButton&quot;</span>
+    text <span class="token operator">=</span> <span class="token string">&quot;Example Button&quot;</span>
+    showFocusFootprint <span class="token operator">=</span> <span class="token string">&quot;true&quot;</span>
+    minWidth <span class="token operator">=</span> <span class="token string">&quot;240&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>children<span class="token operator">&gt;</span>
+</code></pre></div><p>More samples... <a href="https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Samples" target="_blank" rel="noopener noreferrer">https://sdkdocs.roku.com/display/sdkdoc/SceneGraph+Samples<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ol start="17"><li>The xml is a bit like XAML and can be used for animation</li></ol> <div class="language-vb extra-class"><pre class="language-vb"><code><span class="token operator">&lt;</span><span class="token punctuation">?</span>xml version<span class="token operator">=</span><span class="token string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token string">&quot;utf-8&quot;</span> <span class="token punctuation">?</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>component name<span class="token operator">=</span><span class="token string">&quot;SimpleScaleAnimation&quot;</span> extends<span class="token operator">=</span><span class="token string">&quot;Group&quot;</span> <span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">&quot;text/brightscript&quot;</span> uri<span class="token operator">=</span><span class="token string">&quot;pkg:/xml/SimpleAnimation.brs&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>children<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>Poster id<span class="token operator">=</span><span class="token string">&quot;myPoster&quot;</span>
+    opacity<span class="token operator">=</span><span class="token string">&quot;1.0&quot;</span>
+    uri<span class="token operator">=</span><span class="token string">&quot;pkg:/images/myImage.jpg&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>Animation id<span class="token operator">=</span><span class="token string">&quot;scaleAnimation&quot;</span>
+       duration<span class="token operator">=</span><span class="token string">&quot;1&quot;</span>
+       repeat<span class="token operator">=</span><span class="token string">&quot;true&quot;</span>
+       easeFunction<span class="token operator">=</span><span class="token string">&quot;linear&quot;</span> <span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>Vector2DFieldInterpolator id <span class="token operator">=</span> <span class="token string">&quot;myInterp&quot;</span>
+    key<span class="token operator">=</span><span class="token string">&quot;[0.0, 0.25, 0.5, 0.75, 1.0]&quot;</span>
+    keyValue<span class="token operator">=</span><span class="token string">&quot;[ [0.0, 0.0], [0.25, 0.25], [0.5, 0.5], [0.75, 0.75], [1.0, 1.0]]&quot;</span>
+    fieldToInterp<span class="token operator">=</span><span class="token string">&quot;myPoster.scale&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Animation<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>Animation id<span class="token operator">=</span><span class="token string">&quot;transAnimation&quot;</span>
+       duration<span class="token operator">=</span><span class="token string">&quot;1&quot;</span>
+       repeat<span class="token operator">=</span><span class="token string">&quot;true&quot;</span>
+       easeFunction<span class="token operator">=</span><span class="token string">&quot;linear&quot;</span> <span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>Vector2DFieldInterpolator id <span class="token operator">=</span> <span class="token string">&quot;myInterp2&quot;</span>
+        key<span class="token operator">=</span><span class="token string">&quot;[0.0, 1.0]&quot;</span>
+        keyValue<span class="token operator">=</span><span class="token string">&quot;[ [640.0, 320.0], [100.0, 100.0] ]&quot;</span>
+    fieldToInterp<span class="token operator">=</span><span class="token string">&quot;myPoster.translation&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Animation<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>children<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>component<span class="token operator">&gt;</span>
+</code></pre></div><div class="language-vb extra-class"><pre class="language-vb"><code><span class="token keyword">function</span> init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+   scaleAnimation <span class="token operator">=</span> m<span class="token punctuation">.</span>top<span class="token punctuation">.</span>FindNode<span class="token punctuation">(</span><span class="token string">&quot;scaleAnimation&quot;</span><span class="token punctuation">)</span>
+   transAnimation <span class="token operator">=</span> m<span class="token punctuation">.</span>top<span class="token punctuation">.</span>FindNode<span class="token punctuation">(</span><span class="token string">&quot;transAnimation&quot;</span><span class="token punctuation">)</span>
+   scaleAnimation<span class="token punctuation">.</span>control <span class="token operator">=</span> <span class="token string">&quot;start&quot;</span>
+   transAnimation<span class="token punctuation">.</span>control <span class="token operator">=</span> <span class="token string">&quot;start&quot;</span>
+<span class="token keyword">end</span> <span class="token keyword">function</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7/5/2020, 10:19:54 AM</span></div></footer> <!----> </main></div><div class="global-ui"><div style="visibility:hidden;display:none;"></div></div></div>
+    <script src="/CompSci/assets/js/app.12370437.js" defer></script><script src="/CompSci/assets/js/2.05994e9e.js" defer></script><script src="/CompSci/assets/js/35.1f4c1974.js" defer></script><script src="/CompSci/assets/js/14.c0e884bc.js" defer></script>
+  </body>
+</html>
