@@ -63,17 +63,17 @@ Angles are measured in degrees. The wider an angle is open, the greater its meas
 
 ### Angle types
 
-| Angle(s) type | Angle size (in degrees)                       |
-| ------------- | --------------------------------------------- |
-| Acute         | Between $0\degree$ and $90\degree$            |
-| Right         | Exactly $90\degree$                           |
-| Obtuse        | Between $90\degree$ and $180\degree$          |
-| Straight      | Exactly $180\degree$                          |
-| Complementary | Two angles whose sum is $90\degree$           |
-| Supplementary | Two angles whose sum is $180\degree$          |
-| Adjacent      | Angles that share a vertex and a common side. |
-| Vertical      | Two angles whose sum is $180\degree$          |
-| Congruent     | Two angles whose sum is $180\degree$          |
+| Angle(s) type | Angle size (in degrees)                                              |
+| ------------- | -------------------------------------------------------------------- |
+| Acute         | Between $0\degree$ and $90\degree$                                   |
+| Right         | Exactly $90\degree$                                                  |
+| Obtuse        | Between $90\degree$ and $180\degree$                                 |
+| Straight      | Exactly $180\degree$                                                 |
+| Complementary | Two angles whose sum is $90\degree$                                  |
+| Supplementary | Two angles whose sum is $180\degree$                                 |
+| Adjacent      | Angles that share a vertex and a common side.                        |
+| Vertical      | Angles formed by two intersecting lines that are opposite each other |
+| Congruent     | Angles that are related because they have the same measure.          |
 
 A **right angle** is a 90degree angle. A right angle is in the shape of a perfect corner, like the corner of a rectangular sheet of paper.
 
@@ -82,6 +82,14 @@ A **straight angle** is a 180-degree angle. A straight angle looks like a straig
 An **acute angle** is an angle whose degree measure is less than 90 degrees.
 
 An **obtuse angle** is an angle whose degree measure is greater than 90 degrees but less than 180 degrees.
+
+![angle groups](../static/math/geo_complex_angle_groups.png)
+
+We can use the various properties of angles to find the measure of unknown angles:
+
+Find the measure of $\angle WYZ$:
+
+![example 1](../static/math/geo_angle_wyz.png)
 
 ## Triangles
 

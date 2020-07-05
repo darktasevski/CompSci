@@ -357,11 +357,78 @@ $$
 \end{aligned}
 $$
 
+### Taxes and Fees
+
+An 8% sales tax means we pay an extra 8 cents for every 100 cents (\$1) we spend. Eight percent can also be written as a ratio (8:100) or fraction $\frac{8}{100}$.
+
+Examples:
+
+Find out the final price if the item costs 40\$ and tax is 8%:
+
+-   We can multiply the cost of the sweater by the percent to find the tax:
+
+$$
+\begin{aligned}
+	8\% = 0.08 \\
+	40 \cdot 0.08 = 3.2 \\
+	40 + 3.2 = 43.2\$
+\end{aligned}
+$$
+
+-   Or we can set up a proportion and solve to find the tax amount:
+
+$$
+\begin{aligned}
+	8\%&=\frac{8}{100} \\
+	\text{[ Set your tax equal to the proportional ratio with the unknown quantity.]} \\
+	\frac{8}{100}&=\frac{x}{40} \\
+	\text{[ Cross multiply to solve. ]} \\
+	100x &= 320 \\
+	\frac{\cancel{100}x}{\cancel{100}} &= \frac{320}{100} \\
+	x &= 3.2
+\end{aligned}
+$$
+
+-   Or we can create an equation to find the answer:
+
+$$
+\begin{aligned}
+	\text{[What is 8\% of \$40?]} \\
+	x = 0.08 \cdot 40 \\
+	x = 3.2
+\end{aligned}
+$$
+
+We can also find the original price if we know the final price and the percent of the tax. For example, what is the original price of the item if the total cost was 53.99 including %8 sales tax?
+
+1. Add the percent of the cost of the headphones and the percent of the tax to get the total cost percent:
+
+$$
+100\% + 8\% = 108\%
+$$
+
+2. Convert the percent to a decimal:
+
+$$
+108\% = 1.08
+$$
+
+3. Solve for the original price:
+
+$$
+\begin{aligned}
+	53.99 = 1.08x \\
+	\frac{53.99}{1.08}=\frac{\cancel{1.08}x}{\cancel{1.08}} \\
+	\text{[rounding to the nearest cent]} \\
+	49.99 = x \\
+\end{aligned}
+$$
+
 ### Percent Rate of Change
 
 Sometimes, it is difficult to tell whether a change in the amount of something is a big deal or not. We use _percent rate of change_ to show how much an amount has changed in relation to the original amount. Another way to think about it is simply as the rate of change expressed as a percent.
 
-> When the original amount goes up, we calculate percent increase. When the original amount goes down, we calculate percent decrease.
+> When the original amount goes up, we calculate a percent increase. When the original amount goes down, we calculate a percent decrease.
 
 To calculate the percent rate of change, we need to set up this ratio:
 

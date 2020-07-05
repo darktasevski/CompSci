@@ -1,4 +1,6 @@
-# You Don't Know JS: Notes
+# You Don't Know JS (yet)
+
+> Notes on Kyle Simpson's "You Don't Know JS" book series.
 
 [[toc]]
 
@@ -520,7 +522,7 @@ Arrow-functions are signified not by the `function` keyword, but by the `=>` so 
 ```js
 function foo() {
 	// return an arrow function
-	return a => {
+	return (a) => {
 		// `this` here is lexically adopted from `foo()`
 		console.log(this.a);
 	};

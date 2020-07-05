@@ -1,5 +1,7 @@
 # The Art of Problem Solving, Vol. 1: The Basics
 
+> Notes and exercises on Sandor Lehoczky' and Richard Rusczyk' "The Art of Problem Solving, Vol. 1: The Basics".
+
 [[toc]]
 
 [TOC]

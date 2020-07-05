@@ -822,7 +822,6 @@ $$
 12 + 32y = 4(3 +8y)
 \tag{2}
 $$
-
 ## Equations
 
 An _equation_ is a mathematical sentence with an equal sign. To solve an equation, we find the missing number, or variable, that makes the sentence true. This number is called the _solution_.
