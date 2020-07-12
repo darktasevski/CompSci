@@ -103,7 +103,7 @@ rename 'y/ /_/' *
 
 ### Delete all files in a folder that don't match a certain file extension
 
-Deletes all files in a folder that are NOT _.foo, _.bar or \*.baz files. Edit the pattern inside the brackets as you like. Show Sample Output
+Deletes all files in a folder that are NOT _.foo,_.bar or \*.baz files. Edit the pattern inside the brackets as you like. Show Sample Output
 
 ```js
 
@@ -189,7 +189,7 @@ const isIOS = /iPad|iPhone|iPod/i.test(userAgent);
 ### Get number from RGB color
 
 ```js
-color2Number = color => {
+color2Number = (color) => {
 	if (color[0] === '#') {
 		color = color.substr(1);
 	}
@@ -204,7 +204,7 @@ color2Number = color => {
 ### And number to color
 
 ```js
-number2Color = number => '#' + ('00000' + number.toString(16)).slice(-6);
+number2Color = (number) => '#' + ('00000' + number.toString(16)).slice(-6);
 ```
 
 ### Conditionally add properties to an object literal/
@@ -248,7 +248,7 @@ const partialApplication = (fn, ...initialArguments) => {
 ### Create an array of the past seven days, inclusive
 
 ```js
-[...Array(7).keys()].map(days => new Date(Date.now() - 86400000 * days));
+[...Array(7).keys()].map((days) => new Date(Date.now() - 86400000 * days));
 ```
 
 If you swap the minus for a plus, it gives you the next seven days.
@@ -256,9 +256,7 @@ If you swap the minus for a plus, it gives you the next seven days.
 ### Generate a random alphanumerical string of length 11
 
 ```js
-Math.random()
-	.toString(36)
-	.substring(2);
+Math.random().toString(36).substring(2);
 ```
 
 ### _Quines_
@@ -267,7 +265,7 @@ Math.random()
 
 ```js
 // $=_=>`$=${$};$()`;$()
-$ = _ => `$=${$};$()`;
+$ = (_) => `$=${$};$()`;
 $();
 
 // eval(I="'eval(I='+JSON.stringify(I)+')'")
@@ -286,7 +284,7 @@ eval((I = "'eval(I='+JSON.stringify(I)+')'"))(
 document.location.search
 	.replace(/(^\?)/, '')
 	.split('&')
-	.reduce(function(o, n) {
+	.reduce(function (o, n) {
 		n = n.split('=');
 		o[n[0]] = n[1];
 		return o;
@@ -307,7 +305,7 @@ document.location.search
 
 ```js
 // Return a shuffled copy of an Array-like
-arr => arr.slice().sort(() => Math.random() - 0.5);
+(arr) => arr.slice().sort(() => Math.random() - 0.5);
 ```
 
 ### _Generate random hex code_
@@ -333,14 +331,33 @@ for (i = 0; ++i < 101; console.log(i % 5 ? f || i : f + 'Buzz')) f = i % 3 ? '' 
 [...new Set(arr)];
 ```
 
+### `wait` util based on date
+
+```js
+/**
+ * @param {number} s
+ * @return {undefined}
+ */
+function wait(s) {
+	/** @type {number} */
+	var b = new Date().getTime();
+	/** @type {number} */
+	var t = b;
+	for (; t < b + s; ) {
+		/** @type {number} */
+		t = new Date().getTime();
+	}
+}
+```
+
 ### _Cancelable Promise util_
 
 ```js
-const cancelable = promise => {
+const cancelable = (promise) => {
 	let hasCancelled = false;
 
 	return {
-		promise: promise.then(v => {
+		promise: promise.then((v) => {
 			if (hasCancelled) {
 				throw { isCancelled: true };
 			}
@@ -362,17 +379,19 @@ Usage example:
 ```js
 // mocked fetch function to simulate waiting for a result 10 seconds
 const fetchResult = () =>
-	new Promise(resolve => {
+	new Promise((resolve) => {
 		setTimeout(() => resolve('response'), 10000);
 	});
 
 const { promise: result, cancel } = cancelable(fetchResult());
 
-result.catch(error => {
+result.catch((error) => {
 	if (error.isCancelled) console.log('Promise chain cancelled!');
 });
-result.then(res => console.log(`Handler 1: ${res}`));
-result.then(res => console.log(`Handler 2: ${res}`)).then(res => console.log(`Handler 3: ${res}`));
+result.then((res) => console.log(`Handler 1: ${res}`));
+result
+	.then((res) => console.log(`Handler 2: ${res}`))
+	.then((res) => console.log(`Handler 3: ${res}`));
 
 // at any point in time we can cancel all of the above success handlers by using cancel function
 // catch handler can verify if cancellation is the reason of failure and do something based on it, in this case log out "Promise chain cancelled!"

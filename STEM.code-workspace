@@ -1,7 +1,9 @@
 {
-	"folders": [{
-		"path": "."
-	}],
+	"folders": [
+		{
+			"path": "."
+		}
+	],
 	"settings": {
 		"workbench.colorTheme": "Solarized Light",
 		"markdown.extension.tableFormatter.normalizeIndentation": true,
