@@ -86,11 +86,100 @@ Things to aim for and things you'd better avoid:
 
     ![composition](../static/programming/composition.png)
 
+---
+
 ## SOLID Principles
 
 SOLID is a mnemonic for five design principles intended to make software designs more understandable, flexible and maintainable. They are introduced by Robert Martin in the book _Agile Software Development, Principles, Patterns, and Practices_.
 
-## Strategy Pattern
+### Single Responsibility Principle
+
+> _A class should have just one reason to change._
+
+Try to make every class responsible for a single part of the functionality provided by the software, and make that responsibility encapsulated.
+
+The single responsibility principle is one of the most commonly used design principles in object-oriented programming. You can apply it to classes, software components, and microservices.
+
+To follow this principle, your class isn't allowed to have more than one responsibility, e.g., the management of entities or the conversion of data types. This avoids any unnecessary, technical coupling between responsibilities and reduces the probability that you need to change your class. It also lowers the complexity of each change because it reduces the number of dependent classes that are affected by it. However, be reasonable - there is no need to have multiple classes that all hold just one function. Try to find the right balance when defining responsibilities and classes.
+
+The main goal of this principle is reducing complexity. Also, if a class does too many things, you have to change it every time one of these things changes. While doing that, you're risking breaking other parts of the class which you didn't even intend to change.
+
+### Open/Closed Principle
+
+> _Classes should be open for extension but closed for modification._
+
+The main idea of this principle is to keep existing code from breaking when you implement new features.
+
+A class is _open_ if you can extend it, produce a subclass and do whatever you want with it-add new methods or fields, override base behavior, etc.
+
+The class is _closed_ (you can also say complete) if it's 100% ready to be used by other classes - its interface is clearly defined and won't be changed in the future.
+
+But in terms of this principle, a class can be both open (for extension) and closed (for modification) at the same time. If a class is already developed andtested, trying to mess with its code is risky. Instead of changing the code of the class directly, you can create a subclass and override parts of the original class that you want to behave differently. You'll achieve your goal but also won't break any existing clients of the original class.
+
+### Liskov Substitution Principle
+
+> _When extending a class, remember that you should be able to pass objects of the subclass in place of objects of the parent class without breaking the client code._
+
+The principle defines that objects of a superclass shall be replaceable with objects of its subclasses without breaking the application. That requires the objects of your subclasses to behave in the same way as the objects of your superclass. You can achieve that by following a few rules, which are pretty similar to the [_design by contract_](https://en.wikipedia.org/wiki/Design_by_contract) concept defined by Bertrand Meyer.
+
+> This principle is named by Barbara Liskov, who defined it in 1987 in her work [Data abstraction and hierarchy](https://pdfs.semanticscholar.org/36be/babeb72287ad9490e1ebab84e7225ad6a9e5.pdf).
+
+Unlike other design principles which are wide open for inter- pretation, the substitution principle has a set of formal requirements for subclasses, and specifically for their methods:
+
+-   _Parameter types in a method of a subclass should match or be more abstract than parameter types in the method of the super- class._ - Don't implement any stricter validation rules on input parameters than implemented by the parent class.
+-   _The return type in a method of a subclass should match or be a subtype of the return type in the method of the superclass._ - Apply at the least the same rules to all output parameters as applied by the parent class.
+
+    Example of breaking this rule would be when the base method returns a string, but the overridden method returns a number.
+
+-   _A method in a subclass shouldn't throw types of exceptions which the base method isn't expected to throw._
+
+### Interface Segregation Principle
+
+> Client's shouldn't be forced to depend on methods they do not use.
+
+According to the interface segregation principle, you should break down large interfaces into more granular and specific ones. Clients should implement only those methods that they really need. Otherwise, a change to a large interface would break even clients that don't use the changed methods.
+
+### Dependency Inversion Principle
+
+The general idea of this principle is as simple as it is important: High-level modules, which provide complex logic, should be easily reusable and unaffected by changes in low-level modules, which provide utility features. To achieve that, you need to introduce an abstraction that decouples the high-level and low-level modules from each other.
+
+Based on this idea, Robert C. Martin's definition of the Dependency Inversion Principle consists of two parts:
+
+-   High-level modules should not depend on low-level modules. Both should depend on abstractions.
+-   Abstractions should not depend on details. Details should depend on abstractions.
+
+An important detail of this definition is, that high-level and low-level modules depend on the abstraction. The design principle does not just change the direction of the dependency, as you might have expected when you read its name for the first time. It splits the dependency between the high-level and low-level modules by introducing an abstraction between them. So in the end, you get two dependencies:
+
+-   the high-level module depends on the abstraction, and
+-   the low-level depends on the same abstraction.
+
+![bad](../static/programming/DIP-bad.png)![good](../static/programming/DIP-good.png)
+
+---
+
+## Creational Design Patterns
+
+Creational patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.
+
+## The Factory Pattern
+
+### Factory pattern resources
+
+-   [Factory Pattern](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript)
+
+---
+
+## Structural Design Patterns
+
+Structural Design Patterns explain how to assemble objects and classes into larger structures, while keeping these structures flexible and efficient.
+
+---
+
+## Behavioral Design Patterns
+
+Behavioral Design Patterns are concerned with algorhitms and the assignment of responsibilities between objects.
+
+### Strategy Pattern
 
 > also known as the **Policy pattern**.
 
@@ -109,13 +198,13 @@ The Strategy Pattern has several advantages:
 -   It's easy to switch between different algorithms (strategies) in runtime because you're using polymorphism in the interfaces.
 -   Clean code because you separate the concerns into classes (a class to each strategy) thus avoid conditional-infested code.
 
-### When to Use the Strategy Pattern
+#### When to Use the Strategy Pattern
 
 -   When you need to use several algorithms with different variations. You need create a concrete class to implement your algorithm (which can consist of a or some functions).
 -   When there are conditional statements around several related algorithms.
 -   When most of your classes have related behaviors.
 
-### Pseudocode
+#### Pseudocode
 
 ```ts
 // The strategy interface declares operations common to all supported versions of some algorithm.
@@ -179,9 +268,9 @@ class Context is
 		Print result.
 ```
 
-### Examples
+#### Examples
 
-#### Strategy Manager
+Strategy Manager:
 
 ```js
 class StrategyManager {
@@ -226,7 +315,7 @@ strategyManager.strategy = strategyB;
 strategyManager.doSomething();
 ```
 
-#### Greeter
+Greeter:
 
 ```js
 // Greeter is a class of object that can greet people.
@@ -269,7 +358,7 @@ friendlyGreeter.greet(); //=> Hey!
 boredGreeter.greet(); //=> sup.
 ```
 
-#### Sorting Strategy
+Sorting Strategy:
 
 ```ts
 // interface all sorting algorithms must implement
@@ -305,7 +394,7 @@ sortProgram.runSort(new HeapSort());
 sortProgram.runSort(new LinearSearch());
 ```
 
-#### Car Wash program
+Car Wash program:
 
 ```ts
 // Steve Fenton's example Car Wash program
@@ -363,13 +452,13 @@ class CarWash {
 
 Looking at examples, it's noticeable that the key idea is to create objects which represent various strategies. These objects form a pool of strategies from which the context object can choose from to vary its behavior as per its strategy. These objects (strategies) perform the same operation, have the same(single) job and compose the same interface strategy.
 
-### Structure
+#### Structure
 
 ![strategy_pattern_structure](../static/books/strategy_pattern_structure.png)
 
 In the figure above, the `Context` class depends on the `Strategy`. During execution or runtime, different strategies of `Strategy` type are passed to the `Context` class. The Strategy provides the template by which the strategies must abide by for implementation.
 
-### How to Implement
+#### How to Implement
 
 -   identify an algorithm that's prone to frequent changes. It may also be a massive conditional that selects and executes a variant of the same algorithm at runtime.
 -   Declare the strategy interface common to all variants of the algorithm.
@@ -377,17 +466,13 @@ In the figure above, the `Context` class depends on the `Strategy`. During execu
 -   In the context class, add a field for storing a reference to a strategy object. Provide a setter for replacing values of that field. The context should work with the strategy object only via the strategy interface. The context may define an interface which lets the strategy access its data.
 -   Clients of the context must associate it with a suitable strategy that matches the way they expect the context to perform its primary job.
 
-### Strategy pattern resources
+#### Strategy pattern resources
 
 -   [The Strategy Pattern - Wikipedia](https://en.wikipedia.org/wiki/Strategy_pattern)
 
-## The Observer Pattern
+### The Observer Pattern
 
-## The Factory Pattern
-
-### Factory pattern resources
-
--   [Factory Pattern](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript)
+---
 
 ## Resources
 
