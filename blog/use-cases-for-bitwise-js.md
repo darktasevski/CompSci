@@ -4,9 +4,11 @@ date: 2019-10-10
 author: Darkø Tasevski
 ---
 
+# Use cases for Bitwise operators in Js
+
 [Bitwise operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) in Javascript are mostly used for numerical conversions/computations, because sometimes they're much faster than their `Math` or `parseInt` equivalents. You can take a look at some benchmarks [here](https://jsperf.com/math-floor-vs-math-round-vs-parseint/18).
 
-It’s important to note, as pointed out [by Mathias Bynens](https://j11y.io/javascript/double-bitwise-not/#comment-29617), that bitwise operations only work reliably on numbers that can be expressed as 32-bit sequences. Any numbers above 2147483647 or below -2147483648 will not work as you expect. This is usually acceptable though.
+It's important to note, as pointed out [by Mathias Bynens](https://j11y.io/javascript/double-bitwise-not/#comment-29617), that bitwise operations only work reliably on numbers that can be expressed as 32-bit sequences. Any numbers above 2147483647 or below -2147483648 will not work as you expect. This is usually acceptable though.
 
 However, JavaScript numbers are always 64-bit binary floating point values, following the international IEEE 754 standard. Thus the results of bitwise operators, though computed with 32-bit integer math, are stored in floating point form. That works because the range of 32-bit integers fits comfortably and precisely in a 64-bit float.
 
@@ -43,8 +45,8 @@ So, here are some excerpts from my collection:
 	)) ===
 	0; // an empty object is typecast to 0
 (({ '2': '3' } | 0) === 0); // or a not empty object
-((function() {} | 0) === 0); // an empty function is typecast to 0 too
-((function() {
+((function () {} | 0) === 0); // an empty function is typecast to 0 too
+((function () {
 	return 3;
 } |
 	0) ===
@@ -85,7 +87,7 @@ n & n; // 3
 
 It should be noted that of these last three alternatives, `n|n` [appears to be the fastest](https://jsperf.com/rounding-numbers-down).
 
-`~~`'s flooring capabilities make it a better alternative to `Math.floor` if you know you’re dealing with positives — it’s faster and takes up fewer characters. It’s not quite as readable though.
+`~~`'s flooring capabilities make it a better alternative to `Math.floor` if you know you're dealing with positives - it's faster and takes up fewer characters. It's not quite as readable though.
 
 ##### Parsing hexadecimal value to get RGB color values
 

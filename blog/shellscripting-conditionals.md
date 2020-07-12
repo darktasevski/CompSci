@@ -10,9 +10,11 @@ tags:
     - devops
 ---
 
+# Shellscripting - Conditional Execution
+
 ![Alt text of image](https://thepracticaldev.s3.amazonaws.com/i/mzfpomwt6xfadtk9lpei.png)
 
-_ Note that the most of the code is tested only with the `bash` and `zsh` shells, it may not work with other shells._
+_Note that the most of the code is tested only with the `bash` and `zsh` shells, it may not work with other shells._
 
 **Conditional execution** means that you can choose to execute code only if certain conditions are met. Without this capability, all you would be able to do is execute one command after another after another. The ability to test a variety of things about the state of the system, and of the environment variables of the process, means that a shell script can do far more powerful things that would otherwise be possible. In this post, we are going to explore `test operators`, `if/then/else`conditionals, and `case` statements.
 

@@ -5,6 +5,8 @@ description:
 author: Darkø Tasevski
 ---
 
+# How are you writing a commit message
+
 I'll write a little bit about a topic that is not related to code, seemingly not that important, but it is quite practical in daily programming. **How to write git commit message properly?**
 
 No way of writing is right or wrong; however, if each person in a project has its own style of a commit message, then when we look at the commit history, does it look good? Not to mention when we need to search and review commits in the commit of the previous months through commit messages without any rules.

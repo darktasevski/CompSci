@@ -2,7 +2,7 @@
 index: true
 ---
 
-# ShellScripting
+# Shell programmming
 
 [[toc]]
 
@@ -603,3 +603,11 @@ Another useful option that can help with finding errors in shellscripts is the `
 Yet another useful option is `-v` which prints shell input lines as they are read. This one can be combined with other options, too.
 
 For more helpers we can run `help -set | less`.
+
+## Debugging startup time
+
+-   [Troubleshooting zsh startup time](./troubleshooting_startup_time.md)
+
+## Reference/Related
+
+-   [Shellscripting](../../blog/shellscripting.md)

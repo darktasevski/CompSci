@@ -10,6 +10,8 @@ tags:
     - devops
 ---
 
+# Shellscripting - Functions
+
 > For functions we can say that they're shellscripts within shellscript.
 
 One of the main reasons why we are using functions is to follow the DRY principle, which means that we should write a function once, and then we can use it many times. This can sometimes drastically reduce the script length, and also it's much easier to maintain as we have a single function to edit and troubleshoot.

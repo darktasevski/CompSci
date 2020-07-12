@@ -16,7 +16,7 @@ Native JavaScript is compiled into machine code by most scripting engines offeri
 
 THE SOLUTION(S):
 
-> You can’t really get away from them, but keep your interaction with host objects to an absolute minimum.
+> You can't really get away from them, but keep your interaction with host objects to an absolute minimum.
 
 -   Use CSS classes instead of JavaScript for DOM animation.
 -   Use fast DOM traversal with document.getElementById()
@@ -45,14 +45,14 @@ THE SOLUTION(S):
 
 THE PROBLEM:
 
-Browser and custom event handlers are an incredible tool for improving user experience and reducing the depth of the call stack (so you avoid having a function calling a function which calls another function etc), but since they are hard to track due to their ‘hidden’ execution they can fire many times repeatedly and quickly get out of hand, causing performance degradation.
+Browser and custom event handlers are an incredible tool for improving user experience and reducing the depth of the call stack (so you avoid having a function calling a function which calls another function etc), but since they are hard to track due to their '_hidden_' execution they can fire many times repeatedly and quickly get out of hand, causing performance degradation.
 
 THE SOLUTION(S):
 
-> Be mindful and disciplined when creating event handlers. Get to know your weapons too, if you are using a framework then find out what’s going on underneath the hood.
+> Be mindful and disciplined when creating event handlers. Get to know your weapons too, if you are using a framework then find out what's going on underneath the hood.
 
--   Pay special attention event handlers that fire in quick succession (ie, ‘mousemove’).
+-   Pay special attention event handlers that fire in quick succession (ie, 'mousemove').
 -   Remember to unbind events when they are not needed.
--   Use ‘mouseup’ instead of ‘click’.
+-   Use 'mouseup' instead of 'click'.
 
 ## Maximise the efficiency of your iterations
