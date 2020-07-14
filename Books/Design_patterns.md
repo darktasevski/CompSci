@@ -333,6 +333,120 @@ In the figure above, the `Context` class depends on the `Strategy`. During execu
 
 ### The Observer Pattern
 
+> _Observer is a behavioral design pattern that lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they're observing._
+
+When you're trying to picture the Observer Pattern, a newspaper subscription service with its publisher and subscribers is a good way to visualize the pattern.
+
+> The Observer Pattern defines a **one-to-many** dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.
+
+![one-to-many](../static/books/design_patterns_one_to_many.png)
+
+The subject and observers define the one-to-many relationship. The observers are dependent on the subject such that when the subject's state changes, the observers get notified. Depending on the style of notification, the observer may also be updated with new values.
+
+There are a few different ways to implement the Observer Pattern, but most revolve around a class design that includes **Subject** and **Observer** interfaces.
+
+![subject_observer_interface](../static/books/subject_observer_interface.png)
+
+#### The power of Loose Coupling
+
+> Strive for loosely coupled designs between objects that interact.
+
+When two objects are loosely coupled, they can interact, but have very little knowledge of each other. The Observer Pattern provides an object design where subjects and observers are loosely coupled. Loosely coupled designs allow us to build flexible OO systems that can handle change because they minimize the interdependency between objects.
+
+-   **The only thing the subject knows about an observer is that it implements a certain interface (the Observer interface).** It doesn't need to know the concrete class of the observer, what it does, or anything else about it.
+-   _We can add new observers at any time._ Because the only thing the subject depends on is a list of objects that implement the Observer interface, we can add new observers whenever we want. In fact, we can replace any observer at runtime with another observer and the subject will keep purring along. Likewise, we can remove observers at any time.
+-   _We never need to modify the subject to add new types of observers._ Let's say we have a new concrete class come along that needs to be an observer. We don't need to make any changes to the subject to accommodate the new class type; all we have to do is implement the Observer interface in the new class and register as an observer. The subject doesn't care; it will deliver notifications to any object that implements the Observer interface.
+-   _We can reuse subjects or observers independently of each other._ If we have another use for a subject or an observer, we can easily reuse them because the two aren't tightly coupled.
+-   _Changes to either the subject or an observer will not affect the other._ Because the two are loosely coupled, we are free to make changes to either, as long as the objects still meet their obligations to implement the subject or observer interfaces.
+
+#### The Observer Pattern Structure
+
+![observer_pattern_structure](../static/books/observer_pattern_structure.png)
+
+1. The Publisher (Subject) issues events of interest to other objects (observers). These events occur when the publisher changes its state or executes some behaviors.
+2. When a new event happens, the publisher goes over the sub- scription list and calls the notification method declared in the subscriber interface on each subscriber object.
+3. The Subscriber interface declares the notification interface. In most cases, it consists of a single update method.
+4. Concrete Subscribers perform some actions in response to notifications issued by the publisher.
+5. Usually, subscribers need some contextual information to han- dle the update correctly. For this reason, publishers often pass some context data as arguments of the notification method. The publisher can pass itself as an argument, letting sub- scriber fetch any required data directly.
+6. The Client creates publisher and subscriber objects separately and then registers subscribers for publisher updates.
+
+#### When to use Observer Pattern
+
+-   Use the Observer pattern when changes to the state of one object may require changing other objects, and the actual set of objects is unknown beforehand or changes dynamically.
+-   Use the pattern when some objects in your app must observe others, but only for a limited time or in specific cases.
+
+#### The Observer Pattern Pseudocode
+
+```ts
+// The base publisher class includes subscription management // code and notification methods.
+class EventManager is
+	private field listeners: hash map of event types and listeners
+
+method subscribe(eventType, listener) is
+	listeners.add(eventType, listener)
+
+method unsubscribe(eventType, listener) is
+	listeners.remove(eventType, listener)
+
+method notify(eventType, data) is
+	foreach (listener in listeners.of(eventType)) do
+		listener.update(data)
+
+// The concrete publisher contains real business logic that's // interesting for some subscribers. We could derive this class // from the base publisher, but that isn't always possible in // real life because the concrete publisher might already be a // subclass. In this case, you can patch the subscription logic // in with composition, as we did here.
+class Editor is
+	private field events: EventManager
+	private field file: File
+
+	constructor Editor() is
+		events = new EventManager()
+
+	// Methods of business logic can notify subscribers about changes.
+	method openFile(path) is
+		this.file = new File(path) events.notify("open", file.name)
+
+	method saveFile() is
+		file.write() events.notify("save", file.name
+
+	// ...
+
+// Here's the subscriber interface. If your programming language // supports functional types, you can replace the whole
+// subscriber hierarchy with a set of functions.
+interface EventListener is
+	method update(filename)
+
+// Concrete subscribers react to updates issued by the publisher // they are attached to.
+class LoggingListener implements EventListener is
+	private field log: File
+	private field message
+
+	constructor LoggingListener(log_filename, message) is
+		this.log = new File(log_filename)
+		this.message = message
+
+		method update(filename) is
+			log.write(replace('%s',filename,message))
+
+class EmailAlertsListener implements EventListener is
+private field email: string
+constructor EmailAlertsListener(email, message) is
+	this.email = email
+	this.message = message
+
+	method update(filename) is
+		system.email(email, replace('%s',filename,message))
+
+// An application can configure publishers and subscribers at // runtime.
+class Application is
+	method config() is
+		editor = new TextEditor()
+
+		logger = new LoggingListener( "/path/to/log.txt", "Someone has opened the file: %s");
+		editor.events.subscribe("open", logger)
+
+		emailAlerts = new EmailAlertsListener( "admin@example.com", "Someone has changed the file: %s")
+		editor.events.subscribe("save", emailAlerts)
+```
+
 ---
 
 ## Resources

@@ -1,5 +1,6 @@
 ---
 sidebar: false
+ignore: true
 ---
 
 # Blog posts
