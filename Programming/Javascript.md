@@ -517,3 +517,4 @@ In this example we're using both the get property descriptor applied to our orig
 ## Related/References
 
 -   [You Don't Know JS (yet) notes](../Books/ydkjs_notes.md)
+-   [Dan Abramov's Closure explained](https://whatthefuck.is/closure)
