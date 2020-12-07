@@ -69,12 +69,6 @@ $$
 120/3 = 40/1
 $$
 
-An athlete can swim $\frac{1}{2}$ mile every $\frac{1}{3}$ hour. What is the unit rate of the athlete?
-
-$$
-\frac{1}{2}mile \div \frac{1}{3}hour = \frac{\frac{1}{2}}{\frac{1}{3}} = \frac{1}{2} \cdot \frac{3}{1}=\frac{3}{2} = 1\frac{1}{2}mph
-$$
-
 The unit rate of 120 students for every 3 buses is 40 students per bus. You could also find the unit rate by dividing the first term of the ratio by the second term.
 
 When prices are expressed as a quantity of 1, such as $25 per ticket or $0.89 per can, they are called **unit prices**. If we have a multiple-unit price, such as \$5.50 for 5 pounds of potatoes, and want to find the single-unit price, divide the multiple-unit price by the number of units.
@@ -83,7 +77,7 @@ $$
 \$5.50 \div 5 = \$1.10
 $$
 
-> When you’re calculating unit price, be sure to put the price in the numerator!
+> When you're calculating unit price, be sure to put the price in the numerator!
 
 The unit price of potatoes that cost \$5.50 for 5 pounds is \$1.10 per pound.
 
@@ -93,6 +87,26 @@ _Some examples:_
 
 -   At the market, 8 batteries cost 10\$. How much do 6 batteries cost?
     -   $8:10=(8/8):(10/8)=1:\frac{10}{8}=1:\frac{5}{4}=1:1\frac{1}{4}=1:1.25\newline6 \times 1.25=7.50$
+
+#### Rates with fractions
+
+An athlete can swim $\frac{1}{2}$ mile every $\frac{1}{3}$ hour. What is the unit rate of the athlete?
+
+$$
+\frac{1}{2}mile \div \frac{1}{3}hour = \frac{\frac{1}{2}}{\frac{1}{3}} = \frac{1}{2} \cdot \frac{3}{1}=\frac{3}{2} = 1\frac{1}{2}mph
+$$
+
+Person drinks $3\frac{1}{2}$ liters of tea every $\frac{2}{3}$ of an hour at constant rate. How many liters of tea they drink in one hour?
+
+$$
+\begin{aligned}
+	&\frac{3\frac{1}{2} \ liters}{\frac{2}{3} \ hours} \cr
+	=& 3\frac{1}{2}\div\frac{2}{3} \cr
+	=& \frac{7}{2}\div\frac{2}{3}\cr
+	=& \frac{7}{2}\cdot\frac{3}{2}\cr
+	=& \frac{21}{4} \text{liters per hour}
+\end{aligned}
+$$
 
 ### Proportions
 
@@ -113,8 +127,8 @@ Two ratios that form a proportion are called **equivalent fractions**. For examp
 
 You can also use a proportion to _find an unknown quantity_. For example, you are making lemonade, and the recipe says to use 5 cups of water for every lemon you squeeze. How many cups of water do you need if you have 6 lemons?
 
-1. set up a ratio: $\frac{5 cups}{1 lemon}$
-2. set up a ratio for what you are trying to figure out. Because you don’t know how many cups are required for 6 lemons, use x for the amount of water. $\frac{x \hspace{0.05em} cups}{6 lemons}$
+1. set up a ratio: $\frac{5 \ cups}{1 \ lemon}$
+2. set up a ratio for what you are trying to figure out. Because you don't know how many cups are required for 6 lemons, use x for the amount of water. $\frac{x \hspace{0.05em} \ cups}{6 \ lemons}$
 3. set up a proportion by setting the ratios equal to each other (cross multiplication):
 
 $$
@@ -126,7 +140,7 @@ $$
 \end{aligned}
 $$
 
-Sometimes, a proportion stays the same, even in different scenarios. For example, Tim runs $\frac{1}{2}$ a mile, and then he drinks 1 cup of water. If Tim runs 1 mile, he needs 2 cups of water. If Tim runs 1.5 miles, he needs 3 cups of water (and so on). The proportion stays the same, and we multiply by the same number in each scenario (in this case, we multiply by 2). This is known as the **constant of proportionality** or the **constant of variation** and is closely related to unit rate (or unit price).
+Sometimes, a proportion stays the same, even in different scenarios. For example, Tim runs $\frac{1}{2}$ a mile, and then he drinks 1 cup of water. If Tim runs 1 mile, he needs 2 cups of water. If Tim runs 1.5 miles, he needs 3 cups of water (and so on). The proportion stays the same, and we multiply by the same number in each scenario (in this case, we multiply by 2). This is known as the **constant of proportionality** or the **constant of variation** and is closely related to unit rate (or unit price). Another way to think about them is that, in a proportional relationship, one variable is always a constant value times the other.
 
 -   Five out of every eight albums that Latrell owns are jazz. What percentage of his music collection is jazz?
 
@@ -148,6 +162,110 @@ $$
 	&x = 62.5
 \end{aligned}
 $$
+
+An example of non-proportional relation:
+
+| # of servings | cost per cake | serving:cost |
+| ------------- | ------------- | ------------ |
+| 10            | $20           | 10:20        |
+| 20            | $30           | 20:30        |
+| 30            | $40           | 40:40        |
+
+As we can see, when we increase number of servings by double, the cost is not following the same rules - we 're multiplying number of servings by 2, but the cost is increasing by 1.5 in first step, and $1\frac{1}{3}$ in the second step. When we're multiplying our servings by some amount, we're not multiplying cost by the same amount, and because of that, this relation is not proportional.
+
+#### Constant of Proportionality
+
+The constant value (often written $k$) relating amounts that rise or fall uniformly together. The constant ratio in a proportional relationship is called the constant of proportionality, denoted by $k$. The constant of proportionality is also known as **unit rate**.
+
+-   If two quantities x and y are directly proportional, their relationship can be defined by the formula $y=kx$.
+-   If two quantities x and y are indirectly proportional, their relationship can be defined by the formula $y=\frac{k}{x}$.
+
+where $k$ is the constant of proportionality.
+
+**Example**: you are paid \$20 an hour. The constant of proportionality is 20 because: Pay = 20 $\times$ Hours worked.
+
+**Example.** Ellie decided to buy a new model of a car. The car can go 150 miles with 25 liters of fuel. Ellie wonders how far it can go with 30 liters of fuel.
+
+| Distance, $y$ (in miles)  | 25  | 30  |
+| ------------------------- | --- | --- |
+| **Fuel, $x$ (in liters)** | 150 | ?   |
+
+As the quantity of fuel increases, the distance covered by the car also increases. Thus, this is a case of _direct proportion_.
+
+The variables $x$ and $y$ are related as: $y=kx$, where $k$ is the constant of proportionality.
+
+Substitute $x=150$ and $y=25$ to find the constant of proportionality, $k$.
+
+$$
+\begin{aligned}
+	25 &= k \times 150 \cr
+	25 &= 150k \cr
+	k &= \frac{25}{150} \cr
+	k &= \frac{1}{6}
+\end{aligned}
+$$
+
+Now, let's find the distance the car can cover with 30 liters of fuel by substituting $k = \frac{1}{6}$ and $y=30$:
+
+$$
+\begin{aligned}
+	30 &= \frac{x}{6} \cr
+	x &= 30 \times 6 \cr
+	x &= 180
+\end{aligned}
+$$
+
+Thus, the car can go 180 miles with 30 liters of fuel.
+
+#### Graphing constant of proportionality
+
+![constant of proportionality on graph](../static/math/const-proportionality-graph_1.png)
+
+What is the constant of proportionality between $y$ and $x$ in the graph?
+
+If the constant of proportionality of a proportional relationship is $k$, then:
+
+$$
+y = kx
+$$
+
+Let's pick a point on the graph to get the $x$ and $y$ values. Then we can solve for $k$. If we pick $(6,6)$, then $6 = k \cdot 6$. If we divide both sides of the equation to solve for $k$, we get:
+
+$$
+\begin{aligned}
+	\frac{6}{6}&=\frac{k\cdot\cancel{6}}{\cancel{6}} \cr
+	1 &= k
+\end{aligned}
+$$
+
+We can say that the constant of proportionality between $y$ and $x$ in the graph above is $1$.
+
+**Example.** What is the constant of proportionality, $\frac{y}{x}$?
+
+![constant of proportionality on graph example 2](../static/math/const-proportionality-graph_2.png)
+
+$$
+\begin{aligned}
+	y &= kx \cr
+	3.5 &= k \cdot 1\cr
+	\frac{3.5}{1}&=\frac{k \cdot \cancel{1}}{\cancel{1}}	\cr
+	3.5 &= k
+\end{aligned}
+$$
+
+#### Constant of proportionality from equation
+
+What is the constant of proportionality in the equation $4y=8x$?
+
+$$
+\begin{aligned}
+	4y&=8x \cr
+	\frac{\cancel{4}y}{\cancel{4}} &= \frac{\cancel{8}2x}{\cancel{4}} \cr
+	y &= 2x
+\end{aligned}
+$$
+
+constant of proportionality is $2$.
 
 ## Percent
 
@@ -423,6 +541,22 @@ $$
 	49.99 = x \\
 \end{aligned}
 $$
+
+4. We pay 0.72 in sales tax. The sales tax rate is $6\%$. What was the price?
+
+We can transform this question to equation:
+
+$$
+\begin{aligned}
+sales \ tax &= rate \times original \ price \cr
+0.72 &= 6\% \cdot p \cr
+0.72 &= 0.06p \cr
+\frac{0.72}{0.06} &= \frac{\cancel{0.06}p}{\cancel{0.06}} \cr
+12 &= p
+\end{aligned}
+$$
+
+THe original price before tax was 12$.
 
 ### Percent Rate of Change
 

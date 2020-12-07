@@ -194,11 +194,11 @@ To find the GCF of two numbers:
 Some examples:
 
 -   Find the GCF of 18 and 24:
-    -   $18 = 2 \times 3 \times 3\\ 24=2\times2\times2\times3$
+    -   $18 = 2 \times 3 \times 3 \ \ \ 24=2\times2\times2\times3$
     -   There is one 2 and one 3 in common, so the GCF is: $2\times 3=6$
 -   Find the GCF of 60 and 60:
     -   > In general, the greatest common factor of any number and itself is that number.
-    -   $60=2\times2\times3\times5\\60=2\times2\times3\times5$
+    -   $60=2\times2\times3\times5 \ \ \ 60=2\times2\times3\times5$
     -   the factors that are common to each number are the same, so the GCF is 60
 
 ## Multiplies

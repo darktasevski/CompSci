@@ -374,7 +374,7 @@ And now we can simplify:
 $$
 \begin{aligned}
 (16x+14)&+(-1(3x^2+x-9)) = \\
-16x+14&-3x^2-x+9= \hspace{4em}\text{Explanation: -1\cdot3=-3,-1\cdotx=-x, -1\cdot-9=9}\\
+16x+14&-3x^2-x+9= \hspace{4em}\text{Explanation: -1\cdot3=-3,-1\cdot x=-x, -1\cdot-9=9}\\
 -3x^2+16x&-x+14+9 \\
 -3x^2+15x&+23
 \end{aligned}
@@ -822,6 +822,7 @@ $$
 12 + 32y = 4(3 +8y)
 \tag{2}
 $$
+
 ## Equations
 
 An _equation_ is a mathematical sentence with an equal sign. To solve an equation, we find the missing number, or variable, that makes the sentence true. This number is called the _solution_.
