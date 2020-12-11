@@ -267,6 +267,38 @@ $$
 
 constant of proportionality is $2$.
 
+#### Proportional relationships
+
+| x   | y   |
+| --- | --- |
+| 1   | 3   |
+| 2   | 6   |
+| 9   | 27  |
+
+This is proportional relationship because the ratio between $y$ and $x$ is always the same number.
+
+$$
+\begin{aligned}
+\frac{y}{x}&=\frac{3}{1}=\frac{6}{2}=\frac{27}{9}=3 \cr
+& \text{or:} \cr
+\frac{x}{y}&=\frac{1}{3}=\frac{2}{6}=\frac{9}{27}
+\end{aligned}
+$$
+
+Non proportional relationship for example would be:
+
+| a   | b   |
+| --- | --- |
+| 1   | 3   |
+| 2   | 6   |
+| 10  | 35  |
+
+$$
+\frac{b}{a} = \frac{3}{1} = \frac{6}{2} \neq \frac{35}{10}
+$$
+
+**In order for relationship to be proportional, the ratio between the two variables always has to be the same.**
+
 ## Percent
 
 > The word _percent_ comes from the latin word _Per Centum_ which means hundred. So, percent can be literally translated to **per hundred**. 20% -> 20 per 100 = 20:100 So 75% really means $\frac{75}{100}$. 100% is $\frac{100}{100}$ , or exactly 1 (100% of any number is just the number, unchanged). 200% is $\frac{200}{100}$ , or exactly 2 (200% of any number is twice the number).
