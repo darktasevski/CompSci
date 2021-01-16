@@ -267,6 +267,37 @@ $$
 
 constant of proportionality is $2$.
 
+**Examples.**
+
+1. What's the constant of proportionality for $6y = 2x$?
+
+$$
+\begin{aligned}
+	6y &= 2x \\
+	\frac{6y}{2} &= \frac{2x}{2} \\
+	3y &= x \\
+\end{aligned}
+$$
+
+Constant of proportionality is $3$. **This means that all $y$-values in this relationship are $3$ times the $x$-value.**
+
+2. If person reads $1\frac{3}{7}$ pages every $\frac{2}{3}$ minutes, how much they read per minute?
+
+To find pages per minute, we divide pages by minutes:
+
+$$
+\begin{aligned}
+	&\frac{1\frac{3}{7} \ \text{pages}}{\frac{2}{3}\ \text{minute}} \\
+	=& 1\frac{3}{7} \div \frac{2}{3} \\
+	=& \frac{10}{7} \div \frac{2}{3} \\
+	=& \frac{10}{7} \cdot \frac{3}{2} \\
+	=& \frac{30}{14} \\
+	=& \frac{15}{7}
+\end{aligned}
+$$
+
+They read $\frac{15}{7}$ pages per minute.
+
 #### Proportional relationships
 
 | x   | y   |
@@ -298,6 +329,26 @@ $$
 $$
 
 **In order for relationship to be proportional, the ratio between the two variables always has to be the same.**
+
+#### Solving proportions
+
+Solve the proportion $\frac{8}{36}=\frac{10}{n}$. This can be solved in many ways.
+
+Firstly, we can ask, **which number can be multiplied by $8$ that results in $10$**? Well, $8\cdot\frac{10}{8} = 10$ and $\frac{10}{8}$ can be simplified to $\frac{5}{4}$. So, we can say: $n = 36 \cdot \frac{5}{4} = \frac{36 \cdot 5}{4} = \frac{\cancel{36}9 \cdot 5}{\cancel{4}1}=\frac{45}{1}=45$. Thus, $\frac{8}{36}=\frac{10}{45}$.
+
+Another way to solve this would be, if we ask ourselves, **how much larger is the denominator 36 than 8**? We can divide 36 by 8: $\frac{36}{8}$ which can be simplified by dividing by their GCF $4$: $\ frac{9}{2}$. By doing this, we can see that multiplying the numerator $8$ by $\frac{9}{2}$ results in 36, so we can do the same thing for the other number, multiply the numerator $10$ by $\frac{9}{2}$ to find $n$. $10 \cdot \frac{9}{2} = n$. By doing this we can calculate $n$: $\frac{10 \cdot 9}{2} = \frac{\cancel{10}5\cdot 9}{\cancel{2}1} = \frac{45}{1} = 45$
+
+We can also solve this by **cross-multiplying**. This means, that: $8 \cdot n = 36 \times 10$.
+
+$$
+\begin{aligned}
+	8n &= 36 \cdot 10 \\
+	8n &= 360 \\
+	\frac{8n}{8} &= \frac{360}{8} \\
+	\frac{\cancel{8}n}{\cancel{8}} &= \frac{360}{8} \\
+	n &= 45
+\end{aligned}
+$$
 
 ## Percent
 
