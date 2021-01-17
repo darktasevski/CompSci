@@ -222,7 +222,7 @@ Given $9 \times 2 = 18$ we can say that:
 
 > Every number has an infinite list of multiples.
 
-### Least common multiple (LCM)
+### The Least Common Multiple (LCM)
 
 A common multiple is a number that is a multiple of two or more numbers. The common multiples of 3 and 4 are $0, 12, 24, ...$ The least common multiple (LCM) of two numbers is the smallest number (not zero) that is a multiple of both, so LCM of 3 and 4 is 12.
 
@@ -235,7 +235,7 @@ To find a $lcm(30,45)$, without listing out all of their multiplies we can do th
     -   2: one occurrence
     -   3: two occurrences
     -   5: one occurrence
-    -   2 × 3 × 3 × 5 = 90 <— LCM
+    -   2 × 3 × 3 × 5 = 90 <- LCM
 -   After you've calculated the least common multiple, always check to be sure your answer can be divided evenly by both numbers.
 
 Some examples:

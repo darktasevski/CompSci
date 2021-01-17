@@ -10,7 +10,7 @@
 
 > The numbers or measurements being compared are called the terms of the ratio.
 
-A _ratio_ is a comparison of two quantities. For example, you might use a ratio to compare the number of students who have cell phones to the number of students who don’t have cell phones. A ratio can be written in a few different ways, for example, the ratio 3 to 2 can be written as:
+A _ratio_ is a comparison of two quantities. For example, you might use a ratio to compare the number of students who have cell phones to the number of students who don't have cell phones. A ratio can be written in a few different ways, for example, the ratio 3 to 2 can be written as:
 
 -   $3:2$
 -   $\frac{3}{2}$
@@ -22,7 +22,7 @@ The ratio is 2 to 5 or 2:5 or 2/5. All these describe the ratio in different for
 
 _Some Examples:_
 
--   Thea has 6 pieces of granite, 21 pieces of marble, 12 pieces of sandstone, and 11 piece of slate. _What is the ratio of pieces of sandstone to pieces of marble in Thea's collection?_ Answer: **12:21**
+-   Thea has 6 pieces of granite, 21 pieces of marble, 12 pieces of sandstone, and 11 pieces of slate. _What is the ratio of pieces of sandstone to pieces of marble in Thea's collection?_ Answer: **12:21**
 
 We can simplify the answer further, as both numbers are divisible by 3, thus simplified answer would be **4:7**, or ,in words, four for every seven.
 
@@ -127,9 +127,9 @@ Two ratios that form a proportion are called **equivalent fractions**. For examp
 
 You can also use a proportion to _find an unknown quantity_. For example, you are making lemonade, and the recipe says to use 5 cups of water for every lemon you squeeze. How many cups of water do you need if you have 6 lemons?
 
-1. set up a ratio: $\frac{5 \ cups}{1 \ lemon}$
-2. set up a ratio for what you are trying to figure out. Because you don't know how many cups are required for 6 lemons, use x for the amount of water. $\frac{x \hspace{0.05em} \ cups}{6 \ lemons}$
-3. set up a proportion by setting the ratios equal to each other (cross multiplication):
+1. Set up a ratio: $\frac{5 \ cups}{1 \ lemon}$
+2. Set up a ratio for what you are trying to figure out. Because you don't know how many cups are required for 6 lemons, use x for the amount of water. $\frac{x \hspace{0.05em} \ cups}{6 \ lemons}$
+3. Set up a proportion by setting the ratios equal to each other (cross multiplication):
 
 $$
 \begin{aligned}
@@ -180,9 +180,9 @@ The constant value (often written $k$) relating amounts that rise or fall unifor
 -   If two quantities x and y are directly proportional, their relationship can be defined by the formula $y=kx$.
 -   If two quantities x and y are indirectly proportional, their relationship can be defined by the formula $y=\frac{k}{x}$.
 
-where $k$ is the constant of proportionality.
+Where $k$ is the constant of proportionality.
 
-**Example**: you are paid \$20 an hour. The constant of proportionality is 20 because: Pay = 20 $\times$ Hours worked.
+**Example**: you are paid \$20 an hour. The constant of proportionality is 20 because: Pay = 20 $\times Hours$ worked.
 
 **Example.** Ellie decided to buy a new model of a car. The car can go 150 miles with 25 liters of fuel. Ellie wonders how far it can go with 30 liters of fuel.
 
@@ -265,7 +265,7 @@ $$
 \end{aligned}
 $$
 
-constant of proportionality is $2$.
+The constant of proportionality is $2$.
 
 **Examples.**
 
@@ -334,7 +334,7 @@ $$
 
 Solve the proportion $\frac{8}{36}=\frac{10}{n}$. This can be solved in many ways.
 
-Firstly, we can ask, **which number can be multiplied by $8$ that results in $10$**? Well, $8\cdot\frac{10}{8} = 10$ and $\frac{10}{8}$ can be simplified to $\frac{5}{4}$. So, we can say: $n = 36 \cdot \frac{5}{4} = \frac{36 \cdot 5}{4} = \frac{\cancel{36}9 \cdot 5}{\cancel{4}1}=\frac{45}{1}=45$. Thus, $\frac{8}{36}=\frac{10}{45}$.
+Firstly, we can ask **which number can be multiplied by $8$ that results in $10$**? Well, $8\cdot\frac{10}{8} = 10$ and $\frac{10}{8}$ can be simplified to $\frac{5}{4}$. So, we can say: $n = 36 \cdot \frac{5}{4} = \frac{36 \cdot 5}{4} = \frac{\cancel{36}9 \cdot 5}{\cancel{4}1}=\frac{45}{1}=45$. Thus, $\frac{8}{36}=\frac{10}{45}$.
 
 Another way to solve this would be, if we ask ourselves, **how much larger is the denominator 36 than 8**? We can divide 36 by 8: $\frac{36}{8}$ which can be simplified by dividing by their GCF $4$: $\ frac{9}{2}$. By doing this, we can see that multiplying the numerator $8$ by $\frac{9}{2}$ results in 36, so we can do the same thing for the other number, multiply the numerator $10$ by $\frac{9}{2}$ to find $n$. $10 \cdot \frac{9}{2} = n$. By doing this we can calculate $n$: $\frac{10 \cdot 9}{2} = \frac{\cancel{10}5\cdot 9}{\cancel{2}1} = \frac{45}{1} = 45$
 
@@ -350,7 +350,67 @@ $$
 \end{aligned}
 $$
 
-## Percent
+#### Writting proportions
+
+1. 9 markers cost \$11.50. How much would 7 markers cost? Bellow are all valid proportions/equations:
+
+$$
+\begin{aligned}
+	\frac{9}{11.50}=\frac{7}{x} \\
+	\frac{11.50}{9}=\frac{x}{7} \\
+	\frac{9}{7} = \frac{11.50}{x} \\
+	\frac{7}{9} = \frac{x}{11.50}
+\end{aligned}
+$$
+
+2. 7 apples cost \$5. How many apples can I buy with \$8? Bellow are all valid proportions/equations:
+
+$$
+\begin{aligned}
+	\frac{7}{5} = \frac{x}{8} \\
+	\frac{5}{7} = \frac{8}{x} \\
+	\frac{7}{x} = \frac{5}{8} \\
+	\frac{x}{7} = \frac{8}{5}
+\end{aligned}
+$$
+
+3. A cake recipe for 5 people requires 2 eggs. How many eggs do we need for a 15 person cake? Bellow are all valid proportions/equations:
+
+$$
+\begin{aligned}
+	\frac{5}{2} = \frac{15}{x} \\
+	\frac{2}{5} = \frac{x}{15} \\
+	\frac{5}{15} = \frac{2}{x} \\
+	\frac{15}{5} = \frac{x}{2}
+\end{aligned}
+$$
+
+#### Solving proportions word problems
+
+A magic carpet is made with three colors of yarn. The ratio of each color in the carpet is shown below:
+
+-   10 parts gold yarn
+-   7 parts bronze yarn
+-   3 parts silver yarn
+
+The magic carpet is made with a total of 150 meters of yarn. _How much silver yarn is in the magic carpet?_
+
+So, we can see that one ratio is made up of $20$ parts: $10 + 7 + 3$. The part to whole ratio of silver parts is $3:20$.
+
+Now, we can make equival ratio. To go to $150$ from $20$ we need to multipy by $7.5$, and to calculate how much silver parts are there we can do:
+
+$$
+\begin{aligned}
+	20 \cdot 7.5 = 150\\
+	3 \cdot 7.5 = 22.5\\
+\end{aligned}
+$$
+
+Thus, there is $22.5$ meters of silver yarn in the magic carpet.
+
+## Percentages
+
+Percentages are basically fractions out of 100. So 1 percent of something can be determined by dividing the item by 100. 3 percent would be the item divided by 100 and then multiplied by 3 and so on.
 
 > The word _percent_ comes from the latin word _Per Centum_ which means hundred. So, percent can be literally translated to **per hundred**. 20% -> 20 per 100 = 20:100 So 75% really means $\frac{75}{100}$. 100% is $\frac{100}{100}$ , or exactly 1 (100% of any number is just the number, unchanged). 200% is $\frac{200}{100}$ , or exactly 2 (200% of any number is twice the number).
 
@@ -375,6 +435,37 @@ Take for example 8% of 50:
 -   And 50% of 8 is 4
 
 -   So 8% of 50 is also 4
+
+### How to calculate percentages
+
+Below are some common examples of how percentages might be used in real-life and some simple methods to work out the percentage.
+
+#### Find the percentage of a number
+
+We might want to find how much discount you are getting on a product we are buying or work out how much tax we should pay. This is where knowing the percentage of a number is very useful.
+
+As an example we will calculate $15\% \text{ of } 200$.
+
+1. **Divide**
+    - Divide the percentage by $100 (15 / 100 = 0.15)$. This gives us a decimal number $(0.15)$.
+2. **Multiply**
+    - Multiply the number by the decimal we calculated in step 1: $(200 * 0.15 = 30)$
+3. **Result**
+    - The answer is $30$%.
+
+#### Find the percentage one number is of another
+
+This calculation is useful to find what percentage one amount is of a larger amount. We can see this in use in many places such as food packaging where we can see what a particular ingredient is of the overall amount.
+
+As an example we will calculate what $15 \text{ is of } 60$.
+
+1. **Divide**
+    - Divide the first number by the number it is a percentage of. $(15 / 60 = 0.25)$
+    - This gives us a number $(0.25)$
+2. **Multiply**
+    - Multiply the number we calculated in step 1 by 100. $(0.25 * 100 = 25)$
+3. **Result**
+    - The answer is $25$%.
 
 ### Converting percents to decimals & fractions
 
@@ -430,7 +521,7 @@ Some "hack" steps to breaking this into math:
 
 Some examples:
 
-What is $75\%$ of 45?
+1. What is $75\%$ of 45?
 
 -   use $x$ for "what",
 -   use the equal sign for "is"
@@ -443,7 +534,7 @@ $$
 
 So, $33.75$ is $75\%$ of $45$.
 
-4 is 40% of what number?
+2. 4 is 40% of what number?
 
 $$
 4 = 0.40 \cdot x \newline
@@ -451,7 +542,7 @@ $$
 10 = x
 $$
 
-13 is what percent of 25?
+3. 13 is what percent of 25?
 
 $$
 13 = x \cdot 25 \newline
@@ -461,7 +552,7 @@ $$
 52\% = x
 $$
 
-How many grams of cocoa are in the the chocolate bar is 50 grams and contains 30% cocoa?
+4. How many grams of cocoa are in the the chocolate bar is 50 grams and contains 30% cocoa?
 
 $$
 \begin{aligned}
@@ -470,7 +561,7 @@ $$
 \end{aligned}
 $$
 
-Hom many points is 30\$ fewer than 1060 points?
+5. How many points is 30 fewer than 1060 points?
 
 $$
 \begin{aligned}
@@ -488,6 +579,32 @@ $$
 \end{aligned}
 $$
 
+6. Jasmine buys the magic carpet on sale for \$374. Jasmine saved \$66 off the regular price. _What percent was the price of the magic carpet discounted?_
+
+We can find the original price of the carpet by adding the sale price and the amount the price was discounted:
+
+$$
+374 + 66 = 440
+$$
+
+So, the carpet originaly cost \$440. To find the amount it was discounted we need to find what percent of 440 is 66:
+
+$$
+\begin{aligned}
+	440 / 66 &= 0.15 \\
+	0.15 * 100 &= 15\%
+\end{aligned}
+$$
+
+Or, in this case, we can simply divide $440$ by $4.4$ to end up with $100$ as one whole:
+
+$$
+\begin{aligned}
+	440 \div 4.4 &= 100 \\
+	66 \div 4.4 &= 15
+\end{aligned}
+$$
+
 ---
 
 Slightly harder examples:
@@ -496,7 +613,7 @@ Slightly harder examples:
     - Since there are 20%, percent more goblins than wizards, the number of goblins is $100\%+20\%=120\%$, 120 percent of the number of wizards. Percent means per hundred, so: $120\% = \frac{120}{100}=1.2$
     - That means we can use the expression $1.2w$ to represent the number of goblins.
     - Since we know there are 120 goblins, we can say that $1.2w$ is equal to 120.$120 = 1.2w$
-    - We the combine like terms and solve for w:
+    - We the combine like terms and solve for $w$:
 
 $$
 \begin{aligned}
