@@ -81,7 +81,7 @@ $$
 
 The unit price of potatoes that cost \$5.50 for 5 pounds is \$1.10 per pound.
 
-> Rates and unit rates are used to solve many real-world problems. Also a lot of theory in Algebra nad Calculus depends on rates, which is why it's important to learn how they work.
+> Rates and unit rates are used to solve many real-world problems. Also a lot of theory in Algebra and Calculus depends on rates, which is why it's important to learn how they work.
 
 _Some examples:_
 
@@ -172,6 +172,65 @@ An example of non-proportional relation:
 | 30            | $40           | 40:40        |
 
 As we can see, when we increase number of servings by double, the cost is not following the same rules - we 're multiplying number of servings by 2, but the cost is increasing by 1.5 in first step, and $1\frac{1}{3}$ in the second step. When we're multiplying our servings by some amount, we're not multiplying cost by the same amount, and because of that, this relation is not proportional.
+
+#### Solving proportion problems
+
+**1.** Triangle $A$ has a height of $2.5$ and a base of $1.6$. The height and base of triangle $B$ are proportional to the height and base of triangle $A$. Which of the following could be the height and base of triangle B:
+
+-   Height: 2.75, Base: 1.76;
+-   Height: 9.25, Base: 9.16;
+-   Height: 3.2, Base: 5;
+-   Height: 1.25, Base: 0.8;
+-   Height: 2, Base: 1.28?
+
+Triangle B is proportional to triangle A. That means that if we _multiply one length from triangle A by a **scale factor** to get the length of the corresponding measurement of triangle B, we need to multiply the other length from triangle A by the same **scale factor**_.
+
+To get the scale factor we can divide the height of the triangle B by the height of the triangle A, and by multiplying result with base of the triangle A we can check if the proportion is valid. For the first pair we can do:
+
+$$
+\begin{aligned}
+	2.75 \div 2.5 = 1.1\\
+	1.1 \cdot 1.6 = 1.76\\
+\end{aligned}
+$$
+
+Thus the first pair is valid proportion, because $2.75 \div 1.1 = 2.5$ and $1.76 \div 1.1 = 1.6$. By doing the same check for the rest of the pairs we can confirm that the last two pairs are also proportional, the rest are not.
+
+**2.** A park has a 3 meter tall tether ball pole and a 6.8 meter tall flagpole. The lengths of their shadows are proportional to their heights. Which of the following could be the lengths of the shadows?
+
+-   TP: 1.35, FP: 3.4
+-   TP: 1.8, FP: 4.08
+-   TP: 0.6, FP: 1.36
+
+If we divide $1.35 \div 3 = 0.45$, and when we multiply $6.8 \cdot 0.45 = 3.06$, we can see that the first pair is not proportional.
+
+For the second pair, if we divide: $1.8 \div 3 = 0.6$, and then multiply: $0.6 \cdot 6.8 = 4.08$, we can see that the second pair is proportional.
+
+For the third pair, if we divide: $0.6\div 3 = 0.2$, and then multiply: $0.2 \cdot 6.8 = 1.36$, we can see that this pair is also proportional.
+
+#### Proportions in geometry
+
+**Is side length & area proportional?** For example, we have a square with side length of $x$, below is the proportions table for different side lengths:
+
+| Side length $x$ | Area $x^2$ | $\text{Area} : \text{Side length}$ |
+| --------------- | ---------- | ---------------------------------- |
+| 1               | 1          | $\frac{1}{1}= 1$                   |
+| 2               | 4          | $\frac{4}{2}= 2$                   |
+| 3               | 9          | $\frac{9}{3}= 3$                   |
+| 4               | 16         | $\frac{16}{4}= 4$                  |
+
+We can see that the ratios between the side length and the corresponding area are not proportional, as we have a different value each time.
+
+**Is side length & perimeter proportional?** For example, we have a square with side length of $x$, below is the proportions table for different side lengths:
+
+| Side length $x$ | Perimeter $4x$ | $\text{Perimeter} : \text{Side length}$ |
+| --------------- | -------------- | --------------------------------------- |
+| 1               | 4              | $\frac{4}{1}=4$                         |
+| 2               | 8              | $\frac{8}{2}=4$                         |
+| 3               | 12             | $\frac{12}{3}=4$                        |
+| 4               | 16             | $\frac{16}{4}=4$                        |
+
+We can see that the ratio between the perimeter and side-length is proportional.
 
 #### Constant of Proportionality
 
@@ -298,7 +357,7 @@ $$
 
 They read $\frac{15}{7}$ pages per minute.
 
-#### Proportional relationships
+### Proportional relationships
 
 | x   | y   |
 | --- | --- |
@@ -350,7 +409,7 @@ $$
 \end{aligned}
 $$
 
-#### Writting proportions
+#### Writing proportions
 
 1. 9 markers cost \$11.50. How much would 7 markers cost? Bellow are all valid proportions/equations:
 
@@ -397,7 +456,7 @@ The magic carpet is made with a total of 150 meters of yarn. _How much silver ya
 
 So, we can see that one ratio is made up of $20$ parts: $10 + 7 + 3$. The part to whole ratio of silver parts is $3:20$.
 
-Now, we can make equival ratio. To go to $150$ from $20$ we need to multipy by $7.5$, and to calculate how much silver parts are there we can do:
+Now, we can make equiv. ratio. To go to $150$ from $20$ we need to multiply by $7.5$, and to calculate how much silver parts are there we can do:
 
 $$
 \begin{aligned}
@@ -407,6 +466,18 @@ $$
 $$
 
 Thus, there is $22.5$ meters of silver yarn in the magic carpet.
+
+#### Equations for proportional relationships
+
+$$
+\begin{aligned}
+	y &= \bold{k}x\\
+	\text{or}&\\
+	\frac{y}{x} &= \bold{k}\\
+\end{aligned}
+$$
+
+$\bold{k}$ in above equation is known as the **constant of proportionality**.
 
 ## Percentages
 
@@ -587,7 +658,7 @@ $$
 374 + 66 = 440
 $$
 
-So, the carpet originaly cost \$440. To find the amount it was discounted we need to find what percent of 440 is 66:
+So, the carpet originally cost \$440. To find the amount it was discounted we need to find what percent of 440 is 66:
 
 $$
 \begin{aligned}
@@ -638,9 +709,9 @@ $$
 \end{aligned}
 $$
 
-3. Tapiwa raked 5% more leaves than Adam raked. Tapiwa raked 357 liters of leaves. How many liters of leaves did Adam rake?
-    - Since Tapiwa raked 5% more leaves, the number of liters she raked is $100\%+5\%=105\%$ of the number of liters Adam raked. That means we can use the expression $1.05A$ to represent the liters of leaves that Tapiwa raked.
-    - Since we know Tapiwa raked 357 liters of leaves, we can say that $1.05A$ is equal to 357: $1.05A = 357$
+3. Tom raked 5% more leaves than Adam raked. Tom raked 357 liters of leaves. How many liters of leaves did Adam rake?
+    - Since Tom raked 5% more leaves, the number of liters she raked is $100\%+5\%=105\%$ of the number of liters Adam raked. That means we can use the expression $1.05A$ to represent the liters of leaves that Tom raked.
+    - Since we know Tom raked 357 liters of leaves, we can say that $1.05A$ is equal to 357: $1.05A = 357$
     - We can then combine the like terms and solve for A:
 
 $$

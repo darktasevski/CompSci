@@ -1,0 +1,19 @@
+{
+	"spellright.language": [
+		"en"
+	],
+	"spellright.documentTypes": [
+		"markdown",
+		"plaintext",
+		"mdx",
+		"BrightScript"
+	],
+	"spellright.parserByClass": {
+		"mdx": {
+			"parser": "markdown"
+		},
+		"BrightScript": {
+			"parser": "plaintext"
+		}
+	}
+}
