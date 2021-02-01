@@ -8,7 +8,7 @@
 
 ---
 
-Design patterns are typical solutions to commonly occurring problems in software design. They are like pre-made blue- prints that you can customize to solve a recurring design prob- lem in your code.
+Design patterns are typical solutions to commonly occurring problems in software design. They are like pre-made blueprints that you can customize to solve a recurring design problem in your code.
 
 All patterns can be categorized by their _intent_, or purpose.
 
@@ -44,12 +44,12 @@ Mixins allow objects to borrow (or inherit) functionality from them with a minim
 
 Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors. **The wrapper contains the same set of methods as the target and delegates to it all requests it receives.** However, the wrap- per may alter the result by doing something either before or after it passes the request to the target.
 
-> Classically, Decorators offered the ability to add behaviour to existing classes in a system dynamically. The idea was that the decoration itself wasn't essential to the base functionality of the class, otherwise it would be baked into the superclass itself.
+> Classically, Decorators offered the ability to add behavior to existing classes in a system dynamically. The idea was that the decoration itself wasn't essential to the base functionality of the class, otherwise it would be baked into the superclass itself.
 
 Some points worth mentioning:
 
 -   **In our designs we should allow behavior to be extended without the need to modify existing code.**
--   Decorators have the same supertype as the objects they decorate.
+-   Decorators have the same super-type as the objects they decorate.
 -   You can use one or more decorators to wrap an object.
 -   The decorator adds its own behavior either before and/or after delegating to the object it decorates to do the rest of the job.
 -   Objects can be decorated at any time, so we can decorate objects dynamically at runtime with as many decorators as we like.
@@ -353,7 +353,7 @@ Behavioral Design Patterns are concerned with algorhitms and the assignment of r
 
 > also known as the **Policy pattern**.
 
-**The Strategy pattern** suggests that you take a class that does something specific in a lot of different ways and extract all of these algorithms into separate classes called `strategies`. The original class, called `context`, must have a field for stor- ing a reference to one of the strategies. The context delegates the work to a linked strategy object instead of executing it on its own.
+**The Strategy pattern** suggests that you take a class that does something specific in a lot of different ways and extract all of these algorithms into separate classes called `strategies`. The original class, called `context`, must have a field for storing a reference to one of the strategies. The context delegates the work to a linked strategy object instead of executing it on its own.
 
 The context isn't responsible for selecting an appropriate algorithm for the job. Instead, the client passes the desired strategy to the context. In fact, the context doesn't know much about strategies. It works with all strategies through the same generic interface, which only exposes a single method for triggering the algorithm encapsulated within the selected strategy.
 
@@ -675,10 +675,10 @@ When two objects are loosely coupled, they can interact, but have very little kn
 ![observer_pattern_structure](../static/books/observer_pattern_structure.png)
 
 1. The Publisher (Subject) issues events of interest to other objects (observers). These events occur when the publisher changes its state or executes some behaviors.
-2. When a new event happens, the publisher goes over the sub- scription list and calls the notification method declared in the subscriber interface on each subscriber object.
+2. When a new event happens, the publisher goes over the subscription list and calls the notification method declared in the subscriber interface on each subscriber object.
 3. The Subscriber interface declares the notification interface. In most cases, it consists of a single update method.
 4. Concrete Subscribers perform some actions in response to notifications issued by the publisher.
-5. Usually, subscribers need some contextual information to han- dle the update correctly. For this reason, publishers often pass some context data as arguments of the notification method. The publisher can pass itself as an argument, letting sub- scriber fetch any required data directly.
+5. Usually, subscribers need some contextual information to handle the update correctly. For this reason, publishers often pass some context data as arguments of the notification method. The publisher can pass itself as an argument, letting sub- scriber fetch any required data directly.
 6. The Client creates publisher and subscriber objects separately and then registers subscribers for publisher updates.
 
 #### When to use Observer Pattern

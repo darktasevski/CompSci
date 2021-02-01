@@ -6,7 +6,7 @@
 
 > "If you want to build a boat, don't order people to gather wood and assign tasks and work, but instead teach people to long for the boundless immensity of the sea."
 
-A Mathematician's Lament is more of an extended essay than a book - one man's problems with mathematics education without a viable solution. While I agree with him that the current state of mathematic in schools and unis is a travesty, the kind of "solution" he's recommending is not the real solution. We all know what most of us thought about the math (and many other fields) in ES and HS, and leaving it all to the student is not an excellent solution.
+A Mathematician's Lament is more of an extended essay than a book - one man's problems with mathematics education without a viable solution. While I agree with him that the current state of mathematic in schools and universities is a travesty, the kind of "solution" he's recommending is not the real solution. We all know what most of us thought about the math (and many other fields) in ES and HS, and leaving it all to the student is not an excellent solution.
 
 > "Mathematics is the art of explanation. If you deny students the opportunity to engage in this activity - to pose their own problems, to make their own conjectures and discoveries, to be wrong, to be creatively frustrated, to have an inspiration, and to cobble together their own explanations and proofs - you deny them mathematics itself."
 

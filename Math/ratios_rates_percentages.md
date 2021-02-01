@@ -140,7 +140,7 @@ $$
 \end{aligned}
 $$
 
-Sometimes, a proportion stays the same, even in different scenarios. For example, Tim runs $\frac{1}{2}$ a mile, and then he drinks 1 cup of water. If Tim runs 1 mile, he needs 2 cups of water. If Tim runs 1.5 miles, he needs 3 cups of water (and so on). The proportion stays the same, and we multiply by the same number in each scenario (in this case, we multiply by 2). This is known as the **constant of proportionality** or the **constant of variation** and is closely related to unit rate (or unit price). Another way to think about them is that, in a proportional relationship, one variable is always a constant value times the other.
+Sometimes, a proportion stays the same, even in different scenarios. For example, Tim runs $\frac{1}{2}$ a mile, and then he drinks 1 cup of water. If Tim runs 1 mile, he needs 2 cups of water. If Tim runs 1.5 miles, he needs 3 cups of water (and so on). The proportion stays the same, and we multiply by the same number in each scenario (in this case, we multiply by 2). This is known as the **[constant of proportionality](./algebra.md#constant-of-proportionality)** or the **constant of variation** and is closely related to unit rate (or unit price). Another way to think about them is that, in a proportional relationship, one variable is always a constant value times the other.
 
 -   Five out of every eight albums that Latrell owns are jazz. What percentage of his music collection is jazz?
 

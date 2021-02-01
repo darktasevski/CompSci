@@ -143,7 +143,7 @@ var baz = foo();
 baz(); // 2 -- Whoa, closure was just observed, man.
 ```
 
-`var baz = foo();` this executes outer functions which returns inner functions that isn’t executed. Then we call `baz()` which finally executes inner `bar` function, which in this case have a closure over the foo scope and global scope.
+`var baz = foo();` this executes outer functions which returns inner functions that isn't executed. Then we call `baz()` which finally executes inner `bar` function, which in this case have a closure over the foo scope and global scope.
 
 After foo() executed, normally we would expect that the entirety of the inner scope of foo() would go away, because we know that the Engine employs a Garbage Collector that comes along and frees up memory once it's no longer in use. Since it would appear that the contents of foo() are no longer in use, it would seem natural that they should be considered gone.
 
