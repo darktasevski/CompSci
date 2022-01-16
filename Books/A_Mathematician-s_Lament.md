@@ -1,8 +1,4 @@
-# A Mathematician's Lament
-
-> Thoughts on Paul Lockhart's "A Mathematician's Lament".
-
----
+# I've read... A Mathematician's Lament
 
 > "If you want to build a boat, don't order people to gather wood and assign tasks and work, but instead teach people to long for the boundless immensity of the sea."
 
